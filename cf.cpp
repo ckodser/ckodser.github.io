@@ -63,84 +63,76 @@
 
 using namespace :: std;
 
-const ll maxn=5e6;
+const ll maxn=3e5+500;
 const ll inf=1e9+800;
 const ll mod=1e9+7;
 
-ll fen[maxn];
-pii ki[maxn];
-ll ans[maxn];
+bool ok[maxn];
+ll be_koj[maxn];
+ll amel[maxn];
+ll dp[maxn];
+vector<ll> gg[maxn];
 
-void update_fen(ll x,ll v){
-	for(x++;x<maxn;x+=(x&(-x))){
-		fen[x]+=v;
-	}
-}
-void update(ll x,pii a){
-	ki[x]=a;
-	update_fen(x,+1);
-}
-ll lower_fen(ll x){
-	ll ans=0;
-	for(ll i=21;i>=0;i--){
-		if(fen[ans+(1<<i)]<x){
-			x-=fen[ans+(1<<i)];
-			ans+=(1<<i);
-		}
-	}
-	return ans;//?? ans+1 ans-1;
-}
-pair<ll,pii> lower_b(ll x){
-	ll a=lower_fen(x);
-	return mp(a,ki[a]);
-}
-void clea(ll x){
-	ki[x]=mp(0,0);
-	update_fen(x,-1);
+
+void is_some_number_exzits_that_gcd_of_that_with(ll j,/* is*/ll i){
+	
 }
 int main(){
-	ll n,m;
-	cin>>n>>m;
-	for(ll i=1;i<=n;i++){
-		update(m+i,mp(-1,i));
-	}
-	for(ll qw=0;qw<m;qw++){
-		ll x,y;
-		cin>>x>>y;
-		pair<ll,pii>  b=lower_b(y);
-		pii a=b.S;
-		if(a.F!=-1 && a.F!=x){
-			cout<<-1;
-			return 0;
-		}	
-		a.F=x;
-		clea(b.F);
-		update(m-qw,a);
-	}
-	set<ll> st;
-	for(ll i=1;i<=n;i++){
-		st.insert(i);
-		pii a=lower_b(i).S;
-		ans[a.S]=a.F;
-	}
-	for(ll i=1;i<=n;i++){
-		if(ans[i]!=-1){
-			if(st.find(ans[i])==st.end()){
-				cout<<-1;
-				return 0;
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	cout.tie(0);
+
+	for(ll i=2;i<maxn;i++){
+		if(amel[i]==0){
+			amel[i]=i;
+			for(ll j=2*i;j<maxn;j+=i){
+				amel[j]=i;
 			}
-			st.erase(ans[i]);
 		}
 	}
-	for(ll i=1;i<=n;i++){
-		if(ans[i]==-1){
-			ans[i]=(*st.begin());
-			st.erase(st.begin());
+	be_koj[1]=1;
+	for(ll i=2;i<maxn;i++){
+		if(i%(amel[i]*amel[i])==0){
+			be_koj[i]=be_koj[i/amel[i]];
+		}else{
+			be_koj[i]=be_koj[i/amel[i]]*amel[i];
 		}
 	}
-	for(ll i=1;i<=n;i++){
-		cout<<ans[i]<<' ';
+	for(ll i=2;i<maxn;i++){
+		ll a=i;
+		while(a!=1){
+			gg[i].pb(a/be_koj[a]);
+			a=be_koj[a];
+		}
 	}
+	ll n;
+	cin>>n;
+	for(ll i=0;i<n;i++){
+		ll v;
+		cin>>v;
+		v=be_koj[v];
+		ok[v]=1;
+	}
+	for(ll i=1;i<maxn;i++){
+		if(ok[i]){
+			for(ll j=i*2;j<maxn;j+=i){
+				ok[j]=0;
+			}
+		}
+	}
+	for(ll i=maxn-2;i>=1;i--){
+		dp[i]=inf;
+		if(ok[i]){
+			dp[i]=1;
+		}
+		for(ll j=2*i;j<maxn;j+=i){
+			ll k=j/i;
+			if(is_some_number_exzits_that_gcd_of_that_with(j,i)){
+				dp[i]=min(dp[i],dp[j]+1);
+			}
+		}
+	}
+	cout<<dp[1];
 }
 
 
