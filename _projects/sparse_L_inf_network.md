@@ -32,11 +32,11 @@ As shown above, neurons calculate L-inf distance only in some dimensions and oth
 Which means we remove 98% of edges, without any accuracy, certified accuracy decrease.
 
 the approch which we choose edges to remove was very simple. Using training dataset we count in how many samples an spesific edge cause the L-inf distance change. L-inf distance could be seen as a max function on absolute values. Mathematically\
-$\| W \| = max(\|W_i\|)$\
+$$\| W \| = max(\|W_i\|)$$\
 So in each Maximum we checked which element matters. After this calculation we remove edges which counted less than a specific constant.
 
 
 This work raise an interesting questions, if this network doesn't use its full capacity, what happens if it does? It is an important question since it is proved that robustness need more parameter and if our network doesn't use its full capacity it somehow means it has fewer parameters.
 to mitigate this issue I purposed median-neuron which calculate\
-$y=median(X_i-W_i)+b$ instead of $y=max(\|X_i-W_i\|)$\
+$$y=median(X_i-W_i)+b$$ instead of $$y=max(\|X_i-W_i\|)$$\
 At first it seems, this neuron could get higher accuracy and robust accuracy since median is a robust function by its nature. Nevertheless, we were not able to train this network properly.
