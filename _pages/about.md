@@ -5,7 +5,7 @@ permalink: /
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic2.jpg
   image_circular: false # crops the image to make it circular
   address: >
     <p>Computer Engineering Department<br>Sharif University of Technology<br>Tehran, Iran </p>
