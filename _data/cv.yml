@@ -73,9 +73,8 @@
   contents:
     - year: 2019
       items:
-        - Silver Medal, International Olympiad in Informatics
-        - Bronze Medal, InfoCup
-        -
+        - [Silver Medal](http://stats.ioinformatics.org/people/6837), International Olympiad in Informatics
+        - Bronze Medal [Info1Cup](https://www.info1cup.com/)
     - year: 2018
       items: 
         - National Gold medal (first place), national Olympiad in Informatics
