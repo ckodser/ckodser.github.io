@@ -8,9 +8,6 @@ children:
     - title: youtube
       permalink: https://youtube.ckodser.ir/login
     - title: divider
-    - title: C server
-      permalink: https://cserver.ckodser.ir
-    - title: divider
     - title: decaf compiler
       permalink: https://decaf-compiler.ckodser.ir
 ---
