@@ -5,8 +5,8 @@ nav: true
 nav_order: 6
 dropdown: true
 children: 
-    - title: publications
-      permalink: /publications/
+    - title: youtube
+      permalink: https://youtube.ckodser.ir
     - title: divider
     - title: projects
       permalink: /projects/
