@@ -16,14 +16,14 @@
       year: 2019
       description:
         - Computer Engineering
-        - GPA, 18.31
-        - last two semisters average grade, 19.66
+        - GPA, 18.31/20
+        - last two semisters average grade, 19.66/20
     - title: High School
       institution: National Organization for Development of Exceptional Talents, Tehran, Iran
       year: 2016
       description:
         - Mathematics and Physics
-        - General Grade Average (GPA), 18.22
+        - General Grade Average (GPA), 18.22/20
 
 - title: Honors and Awards
   type: time_table
