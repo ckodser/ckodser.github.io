@@ -2,11 +2,11 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Arshia Soltani Moakhar
     - name: Date of Birth
-      value: 14th March 1879
+      value: 14th April 2021
     - name: Languages
-      value: English, German
+      value: English, Persian
 
 - title: Education
   type: time_table
