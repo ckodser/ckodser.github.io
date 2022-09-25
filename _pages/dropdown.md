@@ -10,4 +10,7 @@ children:
     - title: divider
     - title: decaf compiler
       permalink: https://decaf-compiler.ckodser.ir
+    - title: divider
+    - title: C server
+      permalink: https://cserver.ckodser.ir
 ---
