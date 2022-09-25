@@ -40,3 +40,9 @@ This work raise an interesting questions, if this network doesn't use its full c
 to mitigate this issue I purposed median-neuron which calculate\
 $$y=median(X_i-W_i)+b$$ instead of $$y=max(\|X_i-W_i\|)$$\
 At first it seems, this neuron could get higher accuracy and robust accuracy since median is a robust function by its nature. Nevertheless, we were not able to train this network properly.
+
+In addition to median we tried r-th element in the sorted array function. It means each neuron has a learnable $$R$$ and its output calculated as follows\
+$$y=(Sorted(X_i-W_i)_R)+b$$ to make these $$R$$s learnable, we should apply some normalization to R-th element function; Therefore during training we applied 
+$$y=\sum_{i} {Sorted(X_j-W_j)_i}^T(R-i)$$\Which T is an increasing function. 
+
+codes are in [Github](https://github.com/ckodser/L_inf_dist_mean).
