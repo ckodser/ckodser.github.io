@@ -6,8 +6,11 @@ nav_order: 6
 dropdown: true
 children: 
     - title: youtube
-      permalink: https://youtube.ckodser.ir
+      permalink: https://youtube.ckodser.ir/login
     - title: divider
-    - title: projects
-      permalink: /projects/
+    - title: C server
+      permalink: https://cserver.ckodser.ir
+    - title: divider
+    - title: decaf compiler
+      permalink: https://decaf-compiler.ckodser.ir
 ---
