@@ -170,7 +170,10 @@
     {%- if sameaslinks != blank -%}
         {%- assign sameaslinks = sameaslinks | split: "" -%}
     {%- endif -%}
-
+    {%- if site.telegram_id -%}
+        {%- capture link -%}https://t.me/{{ site.telegram_id }}{%- endcapture -%}
+        {%- assign sameaslinks = sameaslinks | push: link -%}
+    {%- endif -%}
     <script type="application/ld+json">
       {
         "author":

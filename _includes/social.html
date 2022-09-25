@@ -79,6 +79,9 @@
             {%- if site.discord_id -%}
             <a href="https://discord.com/users/{{ site.discord_id }}" title="Discord"><i class="fab fa-discord"></i></a>
             {% endif %}
+            {%- if site.telegram_id -%}
+            <a href="https://t.me/{{ site.telegram_id }}" title="Telegram"><i class="fab fa-telegram"></i></a>
+            {% endif %}
             {%- if site.rss_icon -%}
             <a href="{{ site.baseurl }}/feed.xml" title="RSS Feed"><i class="fas fa-rss-square"></i></a>
             {% endif %}
