@@ -12,7 +12,7 @@ profile:
 
 news: false  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: false  # includes social icons at the bottom of the page
+social: True  # includes social icons at the bottom of the page
 ---
 
 I have wanted to be a researcher since middle school, fascinated with mathematics problems. I followed my interest in high school by attending the computer science olympiad, which led to my silver medal in International Olympiad in Informatics. Further, by majoring in computer engineering, I joined Dr. Rohab Lab. With this Lab (Robust and Interpretable Machine Learning Lab), I published a paper in NeurIPS 2022 about OOD detection and adversarial training.
