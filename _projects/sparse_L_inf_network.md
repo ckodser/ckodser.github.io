@@ -27,3 +27,7 @@ In the first experiment I Found out this network could sparsified with 98% purin
 <div class="caption">
     This illustration shows how an L-inf distance neuron sparsified. 
 </div>
+
+As shown above, neurons calculate L-inf distance only in some dimensions and other dimensions ignored, each dimension is an edge in the above graph.
+Which means we remove 98% of edges, without any accuracy, certified accuracy decrease.
+
