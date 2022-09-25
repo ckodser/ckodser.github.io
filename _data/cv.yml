@@ -71,27 +71,32 @@
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2019
+      items:
+        - Silver Medal, International Olympiad in Informatics
+        - Bronze Medal, InfoCup
+        -
+    - year: 2018
       items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
+        - National Gold medal (first place), national Olympiad in Informatics
+    - year: 2017
+      items:
+        - National Silver medal, national Olympiad in Informatics
 
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Robust Machine Learning
       items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Adversasrial Training
+        - Out of Distribution Detection
+    - title: Game Theory
       items:
-        - Description 1.
-        - Description 2.
+        - Self-Interest Neurons
+        - Mechanic Deseign
+        - ReInforcement Learning in Game theory
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Swimming, Hiking.
