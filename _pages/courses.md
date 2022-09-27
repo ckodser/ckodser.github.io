@@ -1,22 +1,8 @@
 ---
-layout: page
+layout: courses
 permalink: /courses/
 title: courses
 nav: true
 nav_order: 5
+courses_pdf: grades.pdf
 ---
-
-## Courses
-
-# online courses
-[arshia](https://google.com)
-[bardia](https://google.com)
-
-# offline courses
-
-<ul>
-a
-</ul>
-<ul>
-t
-</ul>

@@ -1,0 +1,55 @@
+- title: Online Courses
+  type: nested_list
+  contents:
+    - title: Machine learning Courses
+      items:
+        - <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/3U56KCTFN8KD"> Deep Learning Specialization, 2021 </a>
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/2WXT6RD5A8LY"> Neural Networks and Deep Learning, 2021 </a>
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/UMK6LL2VAKLX"> Improving Deep Neural Networks, Hyperparameter Tuning, Regularization and Optimization, 2021</a>
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/B9CYKBBNCEL9">  Structuring Machine Learning Projects, 2021 </a>
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/62R7MENJTSCR"> Convolutional Neural Networks, 2021</a>
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/BEAF6BY4LNKD"> Sequence Models, 2021</a>
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/MMVX9T8RWVVW"> Practical Reinforcement Learning, 2021</a>
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/9EQQCMTTVTEZ"> Build Basic Generative Adversarial Networks (GANs), 2021</a>
+    - title: Game theory Courses
+      items:
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/WDCQMGAWS8B9"> Game Theory, 2020</a>
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/9QCQN979T7YL"> Game Theory II, Advanced Applications, 2020</a>
+
+- title: Sharif University Courses
+  type: nested_list
+  contents:
+    - title: Theoritical Courses
+      items:
+        - DISCRETE STRUCTURES | 20.0
+        - DATA STRUCT & ALGO | 20.0
+        - DESIGN OF ALGORITHMS | 20.0
+        - ARTIFICIAL INTELLIGENCE | 20.0
+        - GAME THEORY | 20.0
+        - MACHINE LEARNING | 20.0
+        - PROGRAMMING LANGUAGES | 20.0
+        - ADV INFO RETRIEVAL | 19.9
+        - THEORY OF MACH & LANG | 19.5
+        - LINEAR ALGEBRA | 18.8
+        - ENG PROBABILITY & STAT | 18.2
+    - title: Labs
+      items:
+        - OPERATING SYSTEMS LAB | 20.0
+        - LOGIC DESIGN LAB | 20.0
+        - PHYSICS LAB 2 | 19.7
+        - CMPTR ARCHITECTURE LAB | 19.3
+    - title: Hardware Courses
+      items:
+        - DIGITAL SYSTEMS DESIGN | 19.2
+        - LOGIC DESIGN | 19.0
+        - COMPUTER ARCHITECTURE | 16.5
+    - title: Software Courses
+      items:
+        - ADVANCED PROGRAMMING | 20.0
+        - COMPUTER SIMULATION | 20.0
+        - COMPILER DESIGN | 20.0
+        - COMPUTER NETWORKS | 20.0
+        - OPERATING SYSTEMS | 17.2
+        - COMPUTER STRUCT & LANG | 17.1
+
+
