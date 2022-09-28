@@ -1,20 +1,17 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
     {% for content in entry.contents %}
       <li class="list-group-item">
-        <div class="row">
-          {% if content.grade %}
-            <div class="col-xs-2 cl-sm-2 col-md-2 text-center" style="width: 75px;">
-              <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px;">
-                {{ content.grade }}
-              </span>
-            </div>
-          {% endif %}
-          <div class="col-xs-10 cl-sm-10 col-md-10 mt-2 mt-md-0">
-            {% if content.course_name %}
-            <h6 class="title font-weight-bold ml-1 ml-md-4">{{content.course_name}}</h6>
-            {% endif %}
-          </div>
-        </div>
+          <h5 class="font-italic">{{ content.title }}</h5>
+          <ul class="subitems">
+            {% for subitem in content.items %}
+              <li><span class="subitem">
+                  <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px; display:inline-block;">
+                    {{subitem.grade}}
+                  </span>
+                  <h6 class="title font-weight-bold ml-1 ml-md-4" style="display:inline-block;"> {{subitem.course_name}} </h6>
+              </span></li>
+            {% endfor %}
+          </ul>
       </li>
     {% endfor %}
-    </ul>
+</ul>

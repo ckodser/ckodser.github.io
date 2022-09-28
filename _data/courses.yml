@@ -17,39 +17,63 @@
         - <a href="https://www.coursera.org/account/accomplishments/certificate/9QCQN979T7YL"> Game Theory II, Advanced Applications, 2020</a>
 
 - title: Sharif University Courses
-  type: nested_list
+  type: course_with_grade
   contents:
     - title: Theoritical Courses
       items:
-        - DISCRETE STRUCTURES | 20.0
-        - DATA STRUCT & ALGO | 20.0
-        - DESIGN OF ALGORITHMS | 20.0
-        - ARTIFICIAL INTELLIGENCE | 20.0
-        - GAME THEORY | 20.0
-        - MACHINE LEARNING | 20.0
-        - PROGRAMMING LANGUAGES | 20.0
-        - ADV INFO RETRIEVAL | 19.9
-        - THEORY OF MACH & LANG | 19.5
-        - LINEAR ALGEBRA | 18.8
-        - ENG PROBABILITY & STAT | 18.2
+        - course_name: DISCRETE STRUCTURES 
+          grade:  20.0
+        - course_name: DATA STRUCT & ALGO 
+          grade:  20.0
+        - course_name: DESIGN OF ALGORITHMS 
+          grade:  20.0
+        - course_name: ARTIFICIAL INTELLIGENCE 
+          grade:  20.0
+        - course_name: GAME THEORY 
+          grade:  20.0
+        - course_name: MACHINE LEARNING 
+          grade:  20.0
+        - course_name: PROGRAMMING LANGUAGES 
+          grade:  20.0
+        - course_name: ADV INFO RETRIEVAL 
+          grade:  19.9
+        - course_name: THEORY OF MACH & LANG 
+          grade:  19.5
+        - course_name: LINEAR ALGEBRA 
+          grade:  18.8
+        - course_name: ENG PROBABILITY & STAT 
+          grade:  18.2
     - title: Labs
       items:
-        - OPERATING SYSTEMS LAB | 20.0
-        - LOGIC DESIGN LAB | 20.0
-        - PHYSICS LAB 2 | 19.7
-        - CMPTR ARCHITECTURE LAB | 19.3
+        - course_name: OPERATING SYSTEMS LAB 
+          grade:  20.0
+        - course_name: LOGIC DESIGN LAB 
+          grade:  20.0
+        - course_name: PHYSICS LAB 2 
+          grade:  19.7
+        - course_name: CMPTR ARCHITECTURE LAB 
+          grade:  19.3
     - title: Hardware Courses
       items:
-        - DIGITAL SYSTEMS DESIGN | 19.2
-        - LOGIC DESIGN | 19.0
-        - COMPUTER ARCHITECTURE | 16.5
+        - course_name: DIGITAL SYSTEMS DESIGN 
+          grade:  19.2
+        - course_name: LOGIC DESIGN 
+          grade:  19.0
+        - course_name: COMPUTER ARCHITECTURE 
+          grade:  16.5
     - title: Software Courses
       items:
-        - ADVANCED PROGRAMMING | 20.0
-        - COMPUTER SIMULATION | 20.0
-        - COMPILER DESIGN | 20.0
-        - COMPUTER NETWORKS | 20.0
-        - OPERATING SYSTEMS | 17.2
-        - COMPUTER STRUCT & LANG | 17.1
+        - course_name: ADVANCED PROGRAMMING 
+          grade:  20.0
+        - course_name: COMPUTER SIMULATION 
+          grade:  20.0
+        - course_name: COMPILER DESIGN 
+          grade:  20.0
+        - course_name: COMPUTER NETWORKS 
+          grade:  20.0
+        - course_name: OPERATING SYSTEMS 
+          grade:  17.2
+        - course_name: COMPUTER STRUCT & LANG 
+          grade:  17.1
 
 
