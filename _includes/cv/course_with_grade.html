@@ -1,3 +1,9 @@
+{% if page.grade_pdf %}
+            <h2 class="post-title"> Grades
+            <a href="{{ page.grade_pdf | prepend: 'assets/pdf/' | relative_url}}" target="_blank" rel="noopener noreferrer" class="float-right"><i class="fas fa-file-pdf"></i></a>
+            </h2>
+{% endif %}
+
 <ul class="card-text font-weight-light list-group list-group-flush">
     {% for content in entry.contents %}
       <li class="list-group-item">

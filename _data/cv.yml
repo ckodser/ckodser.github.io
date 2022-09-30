@@ -99,6 +99,7 @@
 
 - title: Sharif University Courses
   type: course_with_grade
+  grade_pdf: grades.pdf
   contents:
     - title: Theoritical Courses
       items:
