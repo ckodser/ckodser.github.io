@@ -71,6 +71,87 @@
       institution: Rasta
       year: 2021
 
+- title: Online Courses
+  type: nested_list
+  contents:
+    - title: Machine learning Courses
+      items:
+        - <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/3U56KCTFN8KD"> Deep Learning Specialization, 2021 </a>
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/2WXT6RD5A8LY"> Neural Networks and Deep Learning, 2021 </a>
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/UMK6LL2VAKLX"> Improving Deep Neural Networks, Hyperparameter Tuning, Regularization and Optimization, 2021</a>
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/B9CYKBBNCEL9">  Structuring Machine Learning Projects, 2021 </a>
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/62R7MENJTSCR"> Convolutional Neural Networks, 2021</a>
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/BEAF6BY4LNKD"> Sequence Models, 2021</a>
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/MMVX9T8RWVVW"> Practical Reinforcement Learning, 2021</a>
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/9EQQCMTTVTEZ"> Build Basic Generative Adversarial Networks (GANs), 2021</a>
+    - title: Game theory Courses
+      items:
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/WDCQMGAWS8B9"> Game Theory, 2020</a>
+        - <a href="https://www.coursera.org/account/accomplishments/certificate/9QCQN979T7YL"> Game Theory II, Advanced Applications, 2020</a>
+
+- title: Sharif University Courses
+  type: course_with_grade
+  contents:
+    - title: Theoritical Courses
+      items:
+        - course_name: DISCRETE STRUCTURES
+          grade:  20.0
+        - course_name: DATA STRUCT & ALGO
+          grade:  20.0
+        - course_name: DESIGN OF ALGORITHMS
+          grade:  20.0
+        - course_name: ARTIFICIAL INTELLIGENCE
+          grade:  20.0
+        - course_name: GAME THEORY
+          grade:  20.0
+        - course_name: MACHINE LEARNING
+          grade:  20.0
+        - course_name: PROGRAMMING LANGUAGES
+          grade:  20.0
+        - course_name: ADV INFO RETRIEVAL
+          grade:  19.9
+        - course_name: THEORY OF MACH & LANG
+          grade:  19.5
+        - course_name: LINEAR ALGEBRA
+          grade:  18.8
+        - course_name: ENG PROBABILITY & STAT
+          grade:  18.2
+    - title: Labs
+      items:
+        - course_name: OPERATING SYSTEMS LAB
+          grade:  20.0
+        - course_name: LOGIC DESIGN LAB
+          grade:  20.0
+        - course_name: PHYSICS LAB 2
+          grade:  19.7
+        - course_name: CMPTR ARCHITECTURE LAB
+          grade:  19.3
+    - title: Hardware Courses
+      items:
+        - course_name: DIGITAL SYSTEMS DESIGN
+          grade:  19.2
+        - course_name: LOGIC DESIGN
+          grade:  19.0
+        - course_name: COMPUTER ARCHITECTURE
+          grade:  16.5
+    - title: Software Courses
+      items:
+        - course_name: ADVANCED PROGRAMMING
+          grade:  20.0
+        - course_name: COMPUTER SIMULATION
+          grade:  20.0
+        - course_name: COMPILER DESIGN
+          grade:  20.0
+        - course_name: COMPUTER NETWORKS
+          grade:  20.0
+        - course_name: OPERATING SYSTEMS
+          grade:  17.2
+        - course_name: COMPUTER STRUCT & LANG
+          grade:  17.1
+
+
+
+
 - title: Other Interests
   type: list
   contents:
