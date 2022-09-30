@@ -154,21 +154,26 @@
   contents:
     - title: Machine Learning
       items:
-        - Python (advance)
-        - Pytorch (advance)
-        - TensorBoard (advance)
-        - latex (advance)
-        - CUDA
-        - tensorflow
-        - Scrapy, Scraping and Web Crawling
+        - name: Python
+          mode: advance
+        - name: Pytorch
+          mode: advance
+        - name: TensorBoard
+          mode: advance
+        - name: latex
+          mode: advance
+        - name: CUDA
+        - name: tensorflow
+        - name: Scrapy, Scraping and Web Crawling
     - title: Coding
       items:
-        - C++ (advance)
-        - Java
-        - Java Script
-        - Linux
-        - Git
-        - Django
+        - name: C++
+          mode: advance
+        - name: Java
+        - name: Java Script
+        - name: Linux
+        - name: Git
+        - name: Django
 
 
 
