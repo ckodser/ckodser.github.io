@@ -55,11 +55,11 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Problem Design Team Leader
+    - title: Algorithmic Problem Design Team Leader
       institution: National Team selection
-      year: 20221-2022
+      year: 2021-2022
 
-    - title: Problem Design Team Leader
+    - title: Algorithmic Problem Design Team Leader
       institution: National Summer camp
       year: 2020
 
@@ -68,8 +68,16 @@
       year: 2021
 
     - title: Game Theory Course Design, Team Leader
-      institution: Rasta
+      institution: Rastaiha
       year: 2021
+
+    - title: Data Analyst, 3 month
+      institution: Tosan Ofogh Hezareh, Algorithmic Trading
+      year: 2020
+
+    - title: Android developer Intern, 3 month
+      institution: YektaNet, Advertisement Company
+      year: 2018
 
 - title: Online Courses
   type: nested_list
