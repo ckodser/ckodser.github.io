@@ -5,7 +5,7 @@
           <ul class="subitems">
             {% for subitem in content.items %}
               <li><span class="subitem">
-                  <h6 class="title font-weight-bold ml-1 ml-md-4" style="display:inline-block;"> {{subitem.name}} </h6>
+                  <h6 class="title font-weight-bold ml-1 ml-md-4" style="display:inline-block; min-width: 100px;"> {{subitem.name}} </h6>
                   {% if subitem.mode %}
                   <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px; display:inline-block;">
                     {{subitem.mode}}

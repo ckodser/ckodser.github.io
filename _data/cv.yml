@@ -163,19 +163,27 @@
         - name: latex
           mode: advance
         - name: CUDA
+          mode: intermediate
         - name: tensorflow
-        - name: Scrapy, Scraping and Web Crawling
+          mode: intermediate
+        - name: Scrapy (Scraping and Web Crawling)
+          mode: intermediate
     - title: Coding
       items:
         - name: C++
           mode: advance
         - name: Java
-        - name: Java Script
+          mode: advance
         - name: Linux
+          mode: advance
         - name: Git
+          mode: advance
+        - name: Java Script
+          mode: intermediate
         - name: Django
-
-
+          mode: intermediate
+        - name: Racket
+          mode: intermediate
 
 - title: Other Interests
   type: list
