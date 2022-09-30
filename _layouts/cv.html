@@ -25,6 +25,8 @@ layout: default
                    {% include cv/time_table.html %}
                   {% elsif entry.type == "course_with_grade" %}
                     {% include cv/course_with_grade.html %}
+                  {% elsif entry.type == "skills" %}
+                    {% include cv/skills.html %}
                   {% else %}
                     {{ entry.contents }}
                   {% endif %}

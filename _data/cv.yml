@@ -55,11 +55,11 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Problem design team leader
+    - title: Problem Design Team Leader
       institution: National Team selection
       year: 20221-2022
 
-    - title: Problem design team leader
+    - title: Problem Design Team Leader
       institution: National Summer camp
       year: 2020
 
@@ -67,14 +67,14 @@
       institution: National Summer camp
       year: 2021
 
-    - title: Game Theory course design, team leader
+    - title: Game Theory Course Design, Team Leader
       institution: Rasta
       year: 2021
 
 - title: Online Courses
   type: nested_list
   contents:
-    - title: Machine learning Courses
+    - title: Machine Learning Courses
       items:
         - <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/3U56KCTFN8KD"> Deep Learning Specialization, 2021 </a>
         - <a href="https://www.coursera.org/account/accomplishments/certificate/2WXT6RD5A8LY"> Neural Networks and Deep Learning, 2021 </a>
@@ -149,6 +149,26 @@
         - course_name: COMPUTER STRUCT & LANG
           grade:  17.1
 
+- title: Skills
+  type: skills
+  contents:
+    - title: Machine Learning
+      items:
+        - Python (advance)
+        - Pytorch (advance)
+        - TensorBoard (advance)
+        - latex (advance)
+        - CUDA
+        - tensorflow
+        - Scrapy, Scraping and Web Crawling
+    - title: Coding
+      items:
+        - C++ (advance)
+        - Java
+        - Java Script
+        - Linux
+        - Git
+        - Django
 
 
 
