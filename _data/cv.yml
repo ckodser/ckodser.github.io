@@ -131,61 +131,60 @@
   contents:
     - title: Theoritical Courses
       items:
-        - course_name: DISCRETE STRUCTURES
+        - course_name: Discrete Structures
           grade:  20.0
-        - course_name: DATA STRUCT & ALGO
+		- course_name: Data Struct & Algo
           grade:  20.0
-        - course_name: DESIGN OF ALGORITHMS
+		- course_name: Design Of Algorithms
           grade:  20.0
-        - course_name: ARTIFICIAL INTELLIGENCE
+		- course_name: Artificial Intelligence
           grade:  20.0
-        - course_name: GAME THEORY
+		- course_name: Game Theory
           grade:  20.0
-        - course_name: MACHINE LEARNING
+		- course_name: Machine Learning
           grade:  20.0
-        - course_name: PROGRAMMING LANGUAGES
+		- course_name: Programming Languages
           grade:  20.0
-        - course_name: ADV INFO RETRIEVAL
+		- course_name: Adv Info Retrieval (natrul Language Processing)
           grade:  19.9
-        - course_name: THEORY OF MACH & LANG
+		- course_name: Theory Of Mach & Lang
           grade:  19.5
-        - course_name: LINEAR ALGEBRA
+		- course_name: Linear Algebra
           grade:  18.8
-        - course_name: ENG PROBABILITY & STAT
+		- course_name: Eng Probability And Statatic
           grade:  18.2
     - title: Labs
       items:
-        - course_name: OPERATING SYSTEMS LAB
+		- course_name: Operating Systems Lab
           grade:  20.0
-        - course_name: LOGIC DESIGN LAB
+		- course_name: Logic Design Lab
           grade:  20.0
-        - course_name: PHYSICS LAB 2
+		- course_name: Physics Lab 2
           grade:  19.7
-        - course_name: CMPTR ARCHITECTURE LAB
+		- course_name: Cmptr Architecture Lab
           grade:  19.3
     - title: Hardware Courses
       items:
-        - course_name: DIGITAL SYSTEMS DESIGN
+		- course_name: Digital Systems Design
           grade:  19.2
-        - course_name: LOGIC DESIGN
+		- course_name: Logic Design
           grade:  19.0
-        - course_name: COMPUTER ARCHITECTURE
+		- course_name: Computer Architecture
           grade:  16.5
     - title: Software Courses
       items:
-        - course_name: ADVANCED PROGRAMMING
+		- course_name: Advanced Programming
           grade:  20.0
-        - course_name: COMPUTER SIMULATION
+		- course_name: Computer Simulation
           grade:  20.0
-        - course_name: COMPILER DESIGN
+		- course_name: Compiler Design
           grade:  20.0
-        - course_name: COMPUTER NETWORKS
+		- course_name: Computer Networks
           grade:  20.0
-        - course_name: OPERATING SYSTEMS
+		- course_name: Operating Systems
           grade:  17.2
-        - course_name: COMPUTER STRUCT & LANG
+		- course_name: Computer Struct & Lang
           grade:  17.1
-
 - title: Skills
   type: skills
   contents:
