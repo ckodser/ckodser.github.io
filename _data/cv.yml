@@ -63,10 +63,6 @@
       institution: National Summer camp
       year: 2020
 
-    - title: Main Graph Theory Instructor
-      institution: National Summer camp
-      year: 2021
-
     - title: Game Theory Course Design, Team Leader
       institution: Rastaiha
       year: 2021
@@ -78,6 +74,20 @@
     - title: Android developer Intern, 3 month
       institution: YektaNet, Advertisement Company
       year: 2018
+
+- title: Teaching
+  type: time_table
+  contents:
+    - title: Main Graph Theory Instructor
+      institution: Iran National Summer camp
+      year: 2021
+    - title: Algorithm Instructor
+      institution: National Team camp in informatics
+      year: 2021-2022
+    - title: Algorithm Instructor
+      institution: Allameh Helli High School, Affiliated with National Organization for Development of Exceptional Talents.
+      year: 2021
+
 
 - title: Online Courses
   type: nested_list
