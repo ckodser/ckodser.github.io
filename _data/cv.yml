@@ -63,6 +63,9 @@
     - title: Algorithm Instructor
       institution: National Team camp for Iran National Olympiad in Informatics
       year: 2021-2022
+      description:
+        - The national team consists of the four chosen students from 10000 students.
+        - I am responsible for some of the graph algorithms, e.g. maximum flow.
     - title: Algorithm Instructor
       institution: Allameh Helli High School
       description: Affiliated with National Organization for Development of Exceptional Talents.
