@@ -58,6 +58,10 @@
     - title: Algorithmic Problem Design Team Leader
       institution: National Team selection
       year: 2021-2022
+      description:
+        - The team designed <b>novel</b> and <b>challenging</b> algorithmic problems.
+        - Exams chose Iran national team, is sent to International Olympiad in Informatics
+        - As a leader, I manage the team and meetings. Evaluate problems and assign problems to members for test generation.
 
     - title: Algorithmic Problem Design Team Leader
       institution: National Summer camp
@@ -65,10 +69,16 @@
 
     - title: Game Theory Course Design, Team Leader
       institution: Rastaiha
+      description:
+        - The team decsigned a two parts online course for high school students.
+        - First part topic was "Truthful Allocation Mechanisms Without Payments"
+        - secpnd part was about collaboration. Core Value and Shapley Value.
       year: 2021
 
     - title: Data Analyst, 3 month
-      institution: Tosan Ofogh Hezareh, Algorithmic Trading
+      institution: Tosan Ofogh Hezareh
+      description:
+        - Tosan is a Algorithmic Trading company.
       year: 2020
 
     - title: Android developer Intern, 3 month
@@ -81,6 +91,8 @@
     - title: Main Graph Theory Instructor
       institution: Summer camp for Iran National Olympiad in Informatics
       year: 2021
+      description:
+        - 40 students who are chosen from 10000 students by three exams participate in the summer camp
     - title: Algorithm Instructor
       institution: National Team camp for Iran National Olympiad in Informatics
       year: 2021-2022
@@ -90,7 +102,7 @@
       year: 2021
     - title: Algorithm tutor
       institution: Hiva Karami & Negar Arj
-      description: Hiva has achieved a national gold medal in INOI. She was the first girl to achieve this medal in the last ten years.
+      description: Hiva has achieved a national gold medal in INOI. She was the first girl to achieve this medal in the past ten years.
       year: 2020-2021
 
 
