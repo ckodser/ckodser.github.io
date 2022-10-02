@@ -2,7 +2,7 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description: Repositories which I'm a main contributor. Most of these works done as a course final project. 
+description: Repositories to which I'm a major contributor. Most of these works were done as a course final project.
 nav: true
 nav_order: 3
 ---
