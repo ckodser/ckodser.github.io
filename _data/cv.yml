@@ -135,7 +135,7 @@
           grade: 20.0
         - course_name: Data Struct & Algorithms
           grade: 20.0
-        - course_name: Design Of Algorithms
+        - course_name: Design of Algorithms
           grade: 20.0
         - course_name: Artificial Intelligence
           grade: 20.0
@@ -145,9 +145,9 @@
           grade: 20.0
         - course_name: Programming Languages
           grade: 20.0
-        - course_name: Advanced Information Retrieval(nlp)
+        - course_name: Advanced Information Retrieval(NLP)
           grade: 19.9
-        - course_name: Theory Of Mach & Lang
+        - course_name: Theory of Machines & Languages
           grade: 19.5
         - course_name: Linear Algebra
           grade: 18.8
@@ -183,7 +183,8 @@
           grade: 20.0
         - course_name: Operating Systems
           grade: 17.2
-        - course_name: Computer Struct & Lang
+        - course_name: Computer Struct & Languages
+          grade: 17.1
 - title: Skills
   type: skills
   contents:
