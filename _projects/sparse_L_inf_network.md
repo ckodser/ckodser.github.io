@@ -16,7 +16,7 @@ L-inf dist neurons are introduced by , [zhang2021towards](https://github.com/zbh
     This illustration shows how an L-inf distance neuron works.
 </div>
 
-As shown in the illustration, each neuron calculated L-inf dist of its input to some learnable point, plus a fix constant. With this formulation Lipschitz of each neuron output with respect to its input is $1$; Therefore each layers Lipschitz is equal to $1$ and further the whole network is Lipschitz one. Lipschitz's networks could easily certify their robustness under L-inf perturbations.\
+As shown in the illustration, each neuron calculated L-inf dist of its input to some learnable point, plus a fix constant. With this formulation Lipschitz of each neuron output with respect to its input is $$1$$; Therefore each layers Lipschitz is equal to $$1$$ and further the whole network is Lipschitz one. Lipschitz's networks could easily certify their robustness under L-inf perturbations.\
 In the first experiment I Found out this network could sparsified with 98% puring ratio without losing accuracy or certified accuracy.
 
 <div class="row">
