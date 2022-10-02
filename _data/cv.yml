@@ -17,7 +17,7 @@
       description:
         - Computer Engineering
         - GPA, 18.33/20
-        - last two semisters average grade, 19.66/20
+        - last two semesters' average grade, 19.66/20
     - title: High School
       institution: National Organization for Development of Exceptional Talents, Tehran, Iran
       year: 2016
@@ -34,7 +34,7 @@
         - Bronze Medal Info1Cup
     - year: 2018
       items:
-        - National Gold medal (first place), national Olympiad in Informatics
+        - National Gold medal (first place), National Olympiad in Informatics
     - year: 2017
       items:
         - National Silver medal, national Olympiad in Informatics
@@ -49,8 +49,8 @@
     - title: Game Theory
       items:
         - Self-Interest Neurons
-        - Mechanic Deseign
-        - ReInforcement Learning in Game theory
+        - Mechanic Design
+        - Reinforcement Learning in Game theory
 
 - title: Teaching
   type: time_table
@@ -65,17 +65,17 @@
       year: 2021-2022
       description:
         - The national team consists of the four chosen students from 10000 students.
-        - I am responsible for some of the graph algorithms, e.g. maximum flow.
+        - I am responsible for some graph algorithms, e.g., maximum flow.
     - title: Algorithm Instructor
       institution: Allameh Helli High School
-      description: Affiliated with National Organization for Development of Exceptional Talents.
+      description: Affiliated with the National Organization for Development of Exceptional Talents.
       year: 2021
     - title: Game Theory Course Design, Team Leader
       institution: Rastaiha(NGO)
       description:
-        - The team decsigned a two parts online course for high school students.
-        - First part topic was "Truthful Allocation Mechanisms Without Payments"
-        - secpnd part was about collaboration. Core Value and Shapley Value.
+        - The team designed a two parts online course for high school students.
+        - The first part topic was "Truthful Allocation Mechanisms Without Payments."
+        - The second part was about collaboration. Core Value and Shapley Value.
       year: 2021
     - title: Algorithm tutor
       institution: Hiva Karami & Negar Arj
@@ -86,11 +86,11 @@
   type: time_table
   contents:
     - title: Algorithmic Problem Design Team Leader
-      institution: National Team selection
+      institution: National Team Selection
       year: 2021-2022
       description:
         - The team designed <b>novel</b> and <b>challenging</b> algorithmic problems.
-        - Exams chose Iran national team, is sent to International Olympiad in Informatics
+        - Exams chose Iran national team, which is sent to International Olympiad in Informatics
         - As a leader, I manage the team and meetings. Evaluate problems and assign problems to members for test generation.
 
     - title: Algorithmic Problem Design Team Leader
@@ -100,7 +100,7 @@
     - title: Data Analyst, 3 month
       institution: Tosan Ofogh Hezareh
       description:
-        - Tosan is a Algorithmic Trading company.
+        - Tosan is an Algorithmic Trading company.
       year: 2021
 
     - title: Android developer Intern, 3 month
@@ -129,7 +129,7 @@
   type: course_with_grade
   grade_pdf: grades.pdf
   contents:
-    - title: Theoritical Courses
+    - title: Theoretical Courses
       items:
         - course_name: Discrete Structures
           grade: 20.0
@@ -200,7 +200,7 @@
           mode: advance
         - name: CUDA
           mode: intermediate
-        - name: tensorflow
+        - name: TensorFlow
           mode: intermediate
         - name: Scrapy (Scraping and Web Crawling)
           mode: intermediate
