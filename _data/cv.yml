@@ -132,59 +132,58 @@
     - title: Theoritical Courses
       items:
         - course_name: Discrete Structures
-          grade:  20.0
-		- course_name: Data Struct & Algo
-          grade:  20.0
-		- course_name: Design of Algorithms
-          grade:  20.0
-		- course_name: Artificial Intelligence
-          grade:  20.0
-		- course_name: Game Theory
-          grade:  20.0
-		- course_name: Machine Learning
-          grade:  20.0
-		- course_name: Programming Languages
-          grade:  20.0
-		- course_name: Advanced Information Retrieval(NLP)
-          grade:  19.9
-		- course_name: Theory of Mach & Lang
-          grade:  19.5
-		- course_name: Linear Algebra
-          grade:  18.8
-		- course_name: Eng Probability And Statatic
-          grade:  18.2
+          grade: 20.0
+        - course_name: Data Struct & Algorithms
+          grade: 20.0
+        - course_name: Design Of Algorithms
+          grade: 20.0
+        - course_name: Artificial Intelligence
+          grade: 20.0
+        - course_name: Game Theory
+          grade: 20.0
+        - course_name: Machine Learning
+          grade: 20.0
+        - course_name: Programming Languages
+          grade: 20.0
+        - course_name: Advanced Information Retrieval(nlp)
+          grade: 19.9
+        - course_name: Theory Of Mach & Lang
+          grade: 19.5
+        - course_name: Linear Algebra
+          grade: 18.8
+        - course_name: Eng Probability And Statatic
+          grade: 18.2
     - title: Labs
       items:
-		- course_name: Operating Systems Lab
-          grade:  20.0
-		- course_name: Logic Design Lab
-          grade:  20.0
-		- course_name: Physics Lab 2
-          grade:  19.7
-		- course_name: Cmptr Architecture Lab
-          grade:  19.3
+        - course_name: Operating Systems Lab
+          grade: 20.0
+        - course_name: Logic Design Lab
+          grade: 20.0
+        - course_name: Physics Lab 2
+          grade: 19.7
+        - course_name: Cmptr Architecture Lab
+          grade: 19.3
     - title: Hardware Courses
       items:
-		- course_name: Digital Systems Design
-          grade:  19.2
-		- course_name: Logic Design
-          grade:  19.0
-		- course_name: Computer Architecture
-          grade:  16.5
+        - course_name: Digital Systems Design
+          grade: 19.2
+        - course_name: Logic Design
+          grade: 19.0
+        - course_name: Computer Architecture
+          grade: 16.5
     - title: Software Courses
       items:
-		- course_name: Advanced Programming
-          grade:  20.0
-		- course_name: Computer Simulation
-          grade:  20.0
-		- course_name: Compiler Design
-          grade:  20.0
-		- course_name: Computer Networks
-          grade:  20.0
-		- course_name: Operating Systems
-          grade:  17.2
-		- course_name: Computer Struct & Lang
-          grade:  17.1
+        - course_name: Advanced Programming
+          grade: 20.0
+        - course_name: Computer Simulation
+          grade: 20.0
+        - course_name: Compiler Design
+          grade: 20.0
+        - course_name: Computer Networks
+          grade: 20.0
+        - course_name: Operating Systems
+          grade: 17.2
+        - course_name: Computer Struct & Lang
 - title: Skills
   type: skills
   contents:
