@@ -37,13 +37,13 @@ So in each Maximum, we checked which element matters. After this calculation, we
 
 
 This work raises an interesting question if this network does not use its total capacity, what happens if it does? It is an essential question since it has been proved that robustness needs more parameters, and if our network does not use its total capacity, it somehow means it has fewer parameters. To mitigate this issue, I proposed median-neuron, which calculates
-$$y=median(X_i-W_i)+b$$ instead of $$y=max(\|X_i-W_i\|)$$.\
+$$y=median(X_i-W_i)+b$$ instead of $$y=max(\|X_i-W_i\|)$$.
 At first, it seems this neuron could get higher accuracy and robust accuracy since the median is a robust function by its nature. Nevertheless, we were not able to train this network properly.
 
-In addition to the median, we tried $$r$$-the element in the sorted array function. It means each neuron has a learnable $$R$$, and its output is calculated as follows\
-$$y=(Sorted(X_i-W_i)_R)+b$$\
-to make these $$R$$s learnable, we should apply some normalization to the $$R$$-th element function; Therefore, during training, we applied\
-$$y=\sum_{i} {Sorted_i(X_j-W_j)}{T(\|R-i\|)}+b$$\
+In addition to the median, we tried $$r$$-the element in the sorted array function. It means each neuron has a learnable $$R$$, and its output is calculated as follows
+<center>$$y=(Sorted(X_i-W_i)_R)+b$$</center>
+to make these $$R$$s learnable, we should apply some normalization to the $$R$$-th element function; Therefore, during training, we applied
+<center>$$y=\sum_{i} {Sorted_i(X_j-W_j)}{T(\|R-i\|)}+b$$</center>
 In which T is a decreasing function. By making T steeper, we converge to the $$R$$-th function.
 
 The code is available on [GitHub](https://github.com/ckodser/L_inf_dist_mean).
