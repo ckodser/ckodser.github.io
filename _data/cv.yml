@@ -28,10 +28,13 @@
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2020
+      items:
+        - First Place, Sharif University Codejam
     - year: 2019
       items:
         - Silver Medal, International Olympiad in Informatics
-        - First Place, The 7-th Ferdowsi Collegiate Programming Contest
+        - First Team, The 7-th Ferdowsi Collegiate Programming Contest
         - Bronze Medal Info1Cup
     - year: 2018
       items:
