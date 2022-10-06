@@ -155,7 +155,7 @@
           grade: 19.5
         - course_name: Linear Algebra
           grade: 18.8
-        - course_name: Eng Probability And Statatic
+        - course_name: Eng Probability And Statistic
           grade: 18.2
     - title: Labs
       items:
