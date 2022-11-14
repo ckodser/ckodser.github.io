@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: My Projects as a Researcher
+description: My Projects as a researcher in the RIMLab.
 nav: true
 nav_order: 2
 display_categories: [Robustness, Game Theory, Reinforcement learning]
