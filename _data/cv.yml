@@ -16,8 +16,8 @@
       year: 2019
       description:
         - Computer Engineering
-        - GPA, 18.33/20
-        - last two semesters' average grade, 19.66/20
+        - GPA, 18.42/20
+        - last two years average grade, 19.51/20
     - title: High School
       institution: National Organization for Development of Exceptional Talents, Tehran, Iran
       year: 2016
@@ -25,9 +25,36 @@
         - Mathematics and Physics
         - General Grade Average (GPA), 18.22/20
 
+
+{}
+\resumeItemResearchDes{
+  -
+- title: Research Experience
+  type: time_table
+  contents:
+    - title: Internship in Interpretability and Sparsity in Deep Neural Networks
+      institution: Institute of Science and Technology Austria (IST Austria)
+      year: Feb 2023 - Sep 2023
+      description:
+        - Supervised by <a href="https://people.csail.mit.edu/alistarh"> Prof. Dan Alistarh </a> <br>
+        - Results in "Sparsity-Guided Debugging for Deep Neural Networks" <a href="https://arxiv.org/abs/2310.04519"> arXiv </a>
+        - In this study, we enhanced the performance of various interpretability methods by initially sparsifying the network on a selected sample, followed by the application of the interpretability method. This approach proposes a solution to the challenges presented by polysemantic neurons, which are activated by multiple distinct concepts, allowing for an in-depth investigation into the activation triggers of a neuron on a sample. This is particularly useful when the sample may pertain to a lesser known functionality of the neuron.}
+    - title: Research Assistant in Robust and Interpretable Machine Learning Lab
+      institution: Sharif University of Technology
+      year: Aug 2021 - Present
+      description:
+        - Supervised by <a href="http://sharif.ir/~rohban/"> Prof. Mohammad Hossein Rohban </a>
+        - Robust Out-of-Distribution Detection Using GAN Architecture <a \href="https://proceedings.neurips.cc/paper_files/paper/2022/file/1f6591cc41be737e9ba4cc487ac8082d-Paper-Conference.pdf"> (NeurIPS 2022) </a>
+        - Initially, we identified vulnerabilities in existing Robust Out-of-Distribution (OOD) detection methods to end-to-end adversarial attacks. Subsequently, we proposed a novel OOD detection method, inspired by Generative Adversarial Network (GAN) architecture and adversarial training, which achieved state-of-the-art results in robust OOD detection.
+        - Aligning Self-Interested Neurons in Deep Neural Networks
+        - We explored a scenario where neurons are self-interested, aiming to increase the strength of their connection weights to subsequent layer neurons. We demonstrated that when all neurons rationally update their weights, the resulting behavior closely resembles Gradient Descent. This characteristic enables the training of deeper networks under a self-interested neurons scenario compared to previous approaches, thereby extending the applicability of this method to real-world problems.
+
 - title: Honors and Awards
   type: time_table
   contents:
+    - year: 2022
+      items:
+        - International Collegiate Programming Contest (ICPC) World Final participation
     - year: 2020
       items:
         - First Place, Sharif University Codejam
@@ -46,15 +73,16 @@
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Robust Machine Learning
+    - title: Trustworthy Machine Learning
       items:
-        - Adversasrial Training
-        - Out of Distribution Detection
+        - Interpretability
+        - Sparsity
+        - Out-of-Distribution Detection
+        - Robustness
     - title: Game Theory
       items:
-        - Self-Interest Neurons
         - Mechanic Design
-        - Reinforcement Learning in Game theory
+        - Self-Interest Neurons
 
 - title: Teaching
   type: time_table

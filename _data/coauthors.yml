@@ -1,20 +1,29 @@
+"Alistarh":
+  - firstname: ["Dan"]
+    url: https://people.csail.mit.edu/alistarh/
+
 "Rohban":
   - firstname: ["Mohammad Hossein"]
     url: http://sharif.ir/~rohban/
 
-"Manzuri Shalmani":
-  - firstname: ["Mohammad Taghi"]
-    url: http://sharif.ir/~manzuri/
+"Iofinova":
+  - firstname: ["Eugenia"]
+  - url: https://ohaijen.github.io/
 
 "Azizmalayeri":
   - firstname: ["Mohammad"]
     url: https://www.linkedin.com/in/mohammad-azizmalayeri?originalSubdomain=ir
 
+
+"Manzuri Shalmani":
+  - firstname: ["Mohammad Taghi"]
+    url: http://sharif.ir/~manzuri/
+
 "Zohrabi":
   - firstname: ["Reihaneh"]
-    url: http://sharif.ir/~rohban/
+    url: https://www.linkedin.com/in/reihanehzohrabi/?originalSubdomain=ir
 
 "Zarei":
   - firstname: ["Arman"]
-    url: http://sharif.ir/~rohban/
+    url: https://www.linkedin.com/in/arman-zarei-02b82994/?originalSubdomain=ir
 
