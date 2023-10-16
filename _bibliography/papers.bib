@@ -17,9 +17,11 @@
 }
 
 @article{moakhar2023spade,
-  title={SPADE: Sparsity-Guided Debugging for Deep Neural Networks},
-  author={Moakhar, Arshia Soltani and Iofinova, Eugenia and Alistarh, Dan},
+  title={SPADE: Sparsity-Guided Debugging for Deep Neural Networks. <a href="https://arxiv.org/abs/2310.04519">(arXiv)</a>},
+  author={Arshia Soltani Moakhar*,  Eugenia Iofinova*,  Dan Alistarh},
   journal={arXiv preprint arXiv:2310.04519},
   year={2023},
+  abstract={Interpretability, broadly defined as mechanisms for understanding why and how machine learning models reach their decisions, is one of the key open goals at the intersection of deep learning theory and practice. Towards this goal, multiple tools have been proposed to aid a human examiner in reasoning about a network's behavior in general or on a set of instances. However, the outputs of these tools-such as input saliency maps or neuron visualizations-are frequently difficult for a human to interpret, or even misleading, due, in particular, to the fact that neurons can be multifaceted, i.e., a single neuron can be associated with multiple distinct feature combinations. In this paper, we present a new general approach to address this problem, called SPADE, which, given a trained model and a target sample, uses sample-targeted pruning to provide a "trace" of the network's execution on the sample, reducing the network to the connections that are most relevant to the specific prediction. We demonstrate that preprocessing with SPADE significantly increases both the accuracy of image saliency maps across several interpretability methods and the usefulness of neuron visualizations, aiding humans in reasoning about network behavior. Our findings show that sample-specific pruning of connections can disentangle multifaceted neurons, leading to consistently improved interpretability.
+  },
   selected={true}
 }
