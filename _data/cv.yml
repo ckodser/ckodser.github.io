@@ -177,6 +177,8 @@
           grade: 19.9
         - course_name: Theory of Machines & Languages
           grade: 19.5
+        - course_name: Medical Imaging
+          grade: 18.9
         - course_name: Linear Algebra
           grade: 18.8
         - course_name: Eng Probability And Statistic
