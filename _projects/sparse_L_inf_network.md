@@ -16,8 +16,11 @@ L-inf dist neurons are introduced by [zhang2021towards](https://github.com/zbh20
     This illustration shows how an L-inf distance neuron works.
 </div>
 
-As shown in the illustration, each neuron calculated the L-inf dist of its input to some learnable point, plus a fixed constant. With this formulation, the Lipschitz of each neuron output with respect to its input is $$1$$; Therefore, each layer Lipschitz is equal to $$1$$, and further, the whole network is Lipschitz one. Lipschitz’s networks could easily certify their robustness under L-inf perturbations.
-In the first experiment, I Found out this network could sparsify with a 98% purring ratio without losing accuracy or certified accuracy.
+As shown in the illustration, each neuron calculated the L-inf dist of its input to some learnable point, plus a fixed constant. 
+With this formulation, the Lipschitz of each neuron output with respect to its input is $$1$$; Therefore, each layer Lipschitz is equal to $$1$$, and further, the whole network is Lipschitz one. 
+Lipschitz’s networks could easily certify their robustness under L-inf perturbations.
+
+In the first experiment, I discovered that this network could be pruned by a staggering 98% without any loss in accuracy or certified accuracy.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -25,11 +28,12 @@ In the first experiment, I Found out this network could sparsify with a 98% purr
     </div>
 </div>
 <div class="caption">
-    This illustration shows how an L-inf distance neuron is sparsified. 
+    The sparsification of an L-Inf distance neuron, where only certain dimensions are considered, effectively reducing the edges by 98%.
 </div>
 
-As shown above, neurons calculate L-inf distance only in some dimensions and other dimensions ignored, each dimension is an edge in the above graph.
-Which means we remove 98% of edges, without any accuracy, certified accuracy decrease.
+As depicted above, the neurons calculate the L-inf distance only along certain dimensions,
+while others are ignored. In this visualization, each dimension corresponds to an edge in the graph, 
+illustrating a substantial reduction of 98% in connections without compromising accuracy or certified accuracy.
 
 The approach in which we chose edges to remove was straightforward. Using the training dataset, we count how many samples a specific edge causes the L-inf distance change. L-inf distance could be seen as a max function on absolute values. Mathematically\
 $$\| W \| = max(\|W_i\|)$$\
