@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: My Researcher Projects
+description: My Research Projects
 nav: true
 nav_order: 2
 display_categories: [Robustness, Game Theory, Reinforcement learning]
