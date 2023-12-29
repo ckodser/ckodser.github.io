@@ -8,7 +8,7 @@ profile:
   image: prof_pic2.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Computer Engineering Department<br>Sharif University of Technology<br>Tehran, Iran </p>
+    <p>Computer Engineering Department<br>Sharif University of Technology </p>
 
 news: false  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
