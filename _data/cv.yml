@@ -35,7 +35,7 @@
         - Supervised by <a href="https://people.csail.mit.edu/alistarh"> Prof. Dan Alistarh </a> <br>
         - Results in "Sparsity-Guided Debugging for Deep Neural Networks" <a href="https://arxiv.org/abs/2310.04519"> arXiv </a>
         - In this study, we enhanced the performance of various interpretability methods by initially sparsifying the network on a selected sample, followed by the application of the interpretability method. This approach proposes a solution to the challenges presented by polysemantic neurons, which are activated by multiple distinct concepts, allowing for an in-depth investigation into the activation triggers of a neuron on a sample. This is particularly useful when the sample may pertain to a lesser known functionality of the neuron.}
-    - title: Research Assistant in Robust and Interpretable Machine Learning Lab
+    - title: Volunteer (Unpaid) Research Assistant in Robust and Interpretable Machine Learning Lab
       institution: Sharif University of Technology
       year: Aug 2021 - Present
       description:
@@ -99,7 +99,7 @@
       description: Affiliated with the National Organization for Development of Exceptional Talents.
       year: 2021
     - title: Game Theory Course Design, Team Leader
-      institution: Rastaiha(NGO)
+      institution: Student-run Rastaiha education group
       description:
         - The team designed a two parts online course for high school students.
         - The first part topic was "Truthful Allocation Mechanisms Without Payments."
@@ -124,16 +124,6 @@
     - title: Algorithmic Problem Design Team Leader
       institution: National Summer camp
       year: 2020
-
-    - title: Data Analyst, 3 month
-      institution: Tosan Ofogh Hezareh
-      description:
-        - Tosan is an Algorithmic Trading company.
-      year: 2021
-
-    - title: Android developer Intern, 3 month
-      institution: YektaNet, Advertisement Company
-      year: 2018
 
 - title: Online Courses
   type: nested_list
