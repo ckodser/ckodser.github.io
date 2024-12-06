@@ -25,6 +25,5 @@ threshold. (b): MountainCar-V0 visualized state. (c): average reward of the algo
 in part (a) compared to vanilla policy gradient, showing the usefulness of programmer intuition.
 Models were trained on 500 episodes each for 1000 steps. Mean and standard deviation are averaged
 across 20 runs.
-
-you can read more from the paper [OpenReview](https://openreview.net/pdf?id=gyl8r8ANcd).
 </div>
+you can read more from the paper [OpenReview](https://openreview.net/pdf?id=gyl8r8ANcd).
