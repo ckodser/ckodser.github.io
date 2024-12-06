@@ -2,8 +2,11 @@
 layout: post
 title: CLIP-Dissect  Automatic Description of Neuron Representations in Deep Vision Networks
 tags: Interpretability
+date: 2024-11-02 15:09:00
+description: summary of CLIP-Dissect  Automatic Description of Neuron Representations in Deep Vision Networks
 categories: Summary
 thumbnail: assets/CLIP-Dissect_Automatic_Description_of_Neuron_Representations_in_Deep_Vision_Networks/image13.png
+featured: true
 ---
 [2204.10965] CLIP-Dissect: Automatic Description of Neuron Representations in Deep Vision Networks
 Their algorithm has three steps. In the first step using a clip model, an image dataset, and a concept set, they do the following. for each pair of concept and image they calculate their similarity (easy with CLIP). They just first compute embeddings for each concept and image and use dot products to compute similarity. 
