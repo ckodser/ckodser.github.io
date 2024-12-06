@@ -1,12 +1,10 @@
 ---
 layout: post
 title: Emergent World Representations  Exploring a Sequence Model Trained on a Synthetic Task
-tags: Interpretability
-date: 2024-11-02 15:09:00
 description: summary of Emergent World Representations  Exploring a Sequence Model Trained on a Synthetic Task
-categories: Summary
-thumbnail: assets/Emergent_World_Representations_Exploring_a_Sequence_Model_Trained_on_a_Synthetic_Task/image11.png
-featured: true
+categories: Interpretability
+img: assets/Emergent_World_Representations_Exploring_a_Sequence_Model_Trained_on_a_Synthetic_Task/image11.png
+importance: 1
 ---
 https://arxiv.org/abs/2210.13382
 Task is comming up with valid othello board moves. Predict othello board state from hidden state activations. State of each cell is empty & black & white. linear prob doesn’t work but one layer MLP leads to 98% accuracy. 

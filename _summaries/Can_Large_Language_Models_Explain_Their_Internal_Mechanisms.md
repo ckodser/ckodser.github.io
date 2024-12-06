@@ -1,12 +1,10 @@
 ---
 layout: post
 title: Can Large Language Models Explain Their Internal Mechanisms?
-tags: Interpretability
-date: 2024-11-02 15:09:00
 description: summary of Can Large Language Models Explain Their Internal Mechanisms?
-categories: Summary
-thumbnail: assets/Can_Large_Language_Models_Explain_Their_Internal_Mechanisms/image10.png
-featured: true
+categories: Interpretability
+img: assets/Can_Large_Language_Models_Explain_Their_Internal_Mechanisms/image10.png
+importance: 1
 ---
 This way then shows that by the up purple circle the information about the united kingdom is already fetched to the model. 
 <div class="row">

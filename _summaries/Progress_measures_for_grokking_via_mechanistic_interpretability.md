@@ -1,12 +1,10 @@
 ---
 layout: post
 title: Progress measures for grokking via mechanistic interpretability
-tags: Interpretability
-date: 2024-11-02 15:09:00
 description: summary of Progress measures for grokking via mechanistic interpretability
-categories: Summary
-thumbnail: assets/img/faviconDALLE.ico
-featured: true
+categories: Interpretability
+img: assets/img/faviconDALLE.ico
+importance: 1
 ---
 https://arxiv.org/abs/2301.05217
 A simple network which gets ab= and learns to output (a+b)%p will do a weird thing. It first maps a, b to sin(ka), cos(ka), sin(kb), cos(kb) for several k values using a simple embedding matrix.  in the attention and MLP inputs it calculates sin and cos of (a+b). Using output of MLP neurons and unembed which together forms a n->p linear projection it calculates logit_c=sum(cos(k(a+b-c))) for many k. if c=a+b then for any k this value is 1 and logit is large.  

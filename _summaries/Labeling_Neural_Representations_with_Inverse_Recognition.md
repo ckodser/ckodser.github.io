@@ -1,12 +1,10 @@
 ---
 layout: post
 title: Labeling Neural Representations with Inverse Recognition
-tags: Interpretability
-date: 2024-11-02 15:09:00
 description: summary of Labeling Neural Representations with Inverse Recognition
-categories: Summary
-thumbnail: assets/Labeling_Neural_Representations_with_Inverse_Recognition/image12.png
-featured: true
+categories: Interpretability
+img: assets/Labeling_Neural_Representations_with_Inverse_Recognition/image12.png
+importance: 1
 ---
 https://arxiv.org/abs/2311.13594
 have a large dataset that each sample has some known concepts. For each neuron, find the concept that its AUC is higher if the label is that concept. report that concept as the neuron functionality. 

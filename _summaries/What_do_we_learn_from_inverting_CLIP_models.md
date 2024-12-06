@@ -1,12 +1,10 @@
 ---
 layout: post
 title: What do we learn from inverting CLIP models?
-tags: Interpretability
-date: 2024-11-02 15:09:00
 description: summary of What do we learn from inverting CLIP models?
-categories: Summary
-thumbnail: assets/What_do_we_learn_from_inverting_CLIP_models/image16.png
-featured: true
+categories: Interpretability
+img: assets/What_do_we_learn_from_inverting_CLIP_models/image16.png
+importance: 1
 ---
 https://arxiv.org/pdf/2403.02580v1
 how to use CLIP as a text to image? 
