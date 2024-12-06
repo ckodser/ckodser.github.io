@@ -3,7 +3,7 @@ layout: post
 title: An Overview of Early Vision in InceptionV1
 description: summary of An Overview of Early Vision in InceptionV1
 categories: Summary
-img: assets/An_Overview_of_Early_Vision_in_InceptionV1/image5.png
+img: assets/img/An_Overview_of_Early_Vision_in_InceptionV1/image5.png 
 importance: 1
 ---
 https://distill.pub/2020/circuits/early-vision/

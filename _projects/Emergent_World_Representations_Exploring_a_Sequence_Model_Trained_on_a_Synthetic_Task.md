@@ -3,7 +3,7 @@ layout: post
 title: Emergent World Representations Exploring a Sequence Model Trained on a Synthetic Task
 description: summary of Emergent World Representations  Exploring a Sequence Model Trained on a Synthetic Task
 categories: Summary
-img: assets/Emergent_World_Representations_Exploring_a_Sequence_Model_Trained_on_a_Synthetic_Task/image11.png
+img: assets/img/Emergent_World_Representations_Exploring_a_Sequence_Model_Trained_on_a_Synthetic_Task/image11.png 
 importance: 1
 ---
 https://arxiv.org/abs/2210.13382

@@ -3,7 +3,7 @@ layout: post
 title: What do we learn from inverting CLIP models?
 description: summary of What do we learn from inverting CLIP models?
 categories: Summary
-img: assets/What_do_we_learn_from_inverting_CLIP_models/image16.png
+img: assets/img/What_do_we_learn_from_inverting_CLIP_models/image16.png 
 importance: 1
 ---
 https://arxiv.org/pdf/2403.02580v1

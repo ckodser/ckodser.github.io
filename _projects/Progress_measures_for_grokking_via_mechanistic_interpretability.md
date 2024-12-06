@@ -3,7 +3,7 @@ layout: post
 title: Progress measures for grokking via mechanistic interpretability
 description: summary of Progress measures for grokking via mechanistic interpretability
 categories: Summary
-img: assets/img/faviconDALLE.ico
+img: assets/img/faviconDALLE.ico 
 importance: 1
 ---
 https://arxiv.org/abs/2301.05217

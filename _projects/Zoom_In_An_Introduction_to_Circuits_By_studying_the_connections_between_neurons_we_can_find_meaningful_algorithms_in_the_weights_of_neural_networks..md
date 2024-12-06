@@ -3,7 +3,7 @@ layout: post
 title: Zoom In An Introduction to Circuits By studying the connections between neurons, we can find meaningful algorithms in the weights of neural networks.
 description: summary of Zoom In  An Introduction to Circuits  By studying the connections between neurons, we can find meaningful algorithms in the weights of neural networks.
 categories: Summary
-img: assets/Zoom_In_An_Introduction_to_Circuits_By_studying_the_connections_between_neurons_we_can_find_meaningful_algorithms_in_the_weights_of_neural_networks./image20.png
+img: assets/img/Zoom_In_An_Introduction_to_Circuits_By_studying_the_connections_between_neurons_we_can_find_meaningful_algorithms_in_the_weights_of_neural_networks./image20.png 
 importance: 1
 ---
 Three Speculative Claims about Neural Networks

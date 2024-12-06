@@ -3,7 +3,7 @@ layout: post
 title: A Mathematical Framework for Transformer Circuits
 description: summary of A Mathematical Framework for Transformer Circuits
 categories: Summary
-img: assets/img/faviconDALLE.ico
+img: assets/img/faviconDALLE.ico 
 importance: 1
 ---
 A Mathematical Framework for Transformer Circuits
