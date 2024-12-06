@@ -6,6 +6,8 @@ categories: Summary
 img: assets/img/faviconDALLE.ico 
 importance: 1
 ---
+
+
 https://arxiv.org/abs/2301.05217
 A simple network which gets ab= and learns to output (a+b)%p will do a weird thing. It first maps a, b to sin(ka), cos(ka), sin(kb), cos(kb) for several k values using a simple embedding matrix.  in the attention and MLP inputs it calculates sin and cos of (a+b). Using output of MLP neurons and unembed which together forms a n->p linear projection it calculates logit_c=sum(cos(k(a+b-c))) for many k. if c=a+b then for any k this value is 1 and logit is large.  
 How do they prove their network is doing this?

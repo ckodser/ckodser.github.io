@@ -6,6 +6,8 @@ categories: Summary
 img: assets/img/What_do_we_learn_from_inverting_CLIP_models/image16.png 
 importance: 1
 ---
+
+
 https://arxiv.org/pdf/2403.02580v1
 how to use CLIP as a text to image? 
 by doing this optimization:

@@ -6,6 +6,8 @@ categories: Summary
 img: assets/img/Emergent_World_Representations_Exploring_a_Sequence_Model_Trained_on_a_Synthetic_Task/image11.png 
 importance: 1
 ---
+
+
 https://arxiv.org/abs/2210.13382
 Task is comming up with valid othello board moves. Predict othello board state from hidden state activations. State of each cell is empty & black & white. linear prob doesn’t work but one layer MLP leads to 98% accuracy. 
 lets change worldstate manually and see if predictions match our changes. To do this they first change the world model from top five layers like the image below.

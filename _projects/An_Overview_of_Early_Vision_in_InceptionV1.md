@@ -6,6 +6,8 @@ categories: Summary
 img: assets/img/An_Overview_of_Early_Vision_in_InceptionV1/image5.png 
 importance: 1
 ---
+
+
 https://distill.pub/2020/circuits/early-vision/
 first layer of inceptionV1 has three groups of neurons.
 Gabor filters are like edge detectors. but each of them could only detect edges at a specific angle. 

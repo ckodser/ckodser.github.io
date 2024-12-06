@@ -6,6 +6,8 @@ categories: Summary
 img: assets/img/Can_Large_Language_Models_Explain_Their_Internal_Mechanisms/image10.png 
 importance: 1
 ---
+
+
 This way then shows that by the up purple circle the information about the united kingdom is already fetched to the model. 
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">

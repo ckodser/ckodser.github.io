@@ -6,6 +6,8 @@ categories: Summary
 img: assets/img/Labeling_Neural_Representations_with_Inverse_Recognition/image12.png 
 importance: 1
 ---
+
+
 https://arxiv.org/abs/2311.13594
 have a large dataset that each sample has some known concepts. For each neuron, find the concept that its AUC is higher if the label is that concept. report that concept as the neuron functionality. 
 used Imagenet dataset. Each sample has many concepts and also add hyper concepts from worldnet to it (.e.g. dataset has dog breeds and dog is a hyper class)
