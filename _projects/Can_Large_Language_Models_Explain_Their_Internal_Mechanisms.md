@@ -2,7 +2,7 @@
 layout: post
 title: Can Large Language Models Explain Their Internal Mechanisms?
 description: summary of Can Large Language Models Explain Their Internal Mechanisms?
-categories: Interpretability
+categories: Summary
 img: assets/Can_Large_Language_Models_Explain_Their_Internal_Mechanisms/image10.png
 importance: 1
 ---

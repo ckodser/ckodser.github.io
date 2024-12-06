@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Scaling Monosemanticity  Extracting Interpretable Features from Claude 3 Sonnet
+title: Scaling Monosemanticity Extracting Interpretable Features from Claude 3 Sonnet
 description: summary of Scaling Monosemanticity  Extracting Interpretable Features from Claude 3 Sonnet
-categories: Interpretability
+categories: Summary
 img: assets/img/faviconDALLE.ico
 importance: 1
 ---

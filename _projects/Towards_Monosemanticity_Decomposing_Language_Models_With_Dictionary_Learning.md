@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Towards Monosemanticity  Decomposing Language Models With Dictionary Learning
+title: Towards Monosemanticity Decomposing Language Models With Dictionary Learning
 description: summary of Towards Monosemanticity  Decomposing Language Models With Dictionary Learning
-categories: Interpretability
+categories: Summary
 img: assets/Towards_Monosemanticity_Decomposing_Language_Models_With_Dictionary_Learning/image17.png
 importance: 1
 ---
