@@ -130,11 +130,6 @@ disqus_shortname: ckodser # put your disqus shortname
 # -----------------------------------------------------------------------------
 
 collections:
-  summaries:
-    defaults:
-      layout: post
-    output: true
-    permalink: /summaries/:path/
   news:
     defaults:
       layout: post
