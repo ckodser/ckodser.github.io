@@ -17,8 +17,7 @@ Features are connected by weights, forming circuits. 2
 These circuits can also be rigorously studied and understood.
 Claim 3: Universality
 Analogous features and circuits form across models and tasks.
-To support Claim 1 (features) they suggest there are some neurons corresponding to curves (around 60 pixels and at a
-specific angle) like below. There are some related shapes that use curves but do not count as one.
+To support Claim 1 (features) they suggest there are some neurons corresponding to curves (around 60 pixels and at a specific angle) like below. There are some related shapes that use curves but do not count as one.
 <h3> Understanding Features </h3>
 <h4> curves </h4>
 <div class="row">
