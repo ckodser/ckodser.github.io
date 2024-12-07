@@ -1,13 +1,16 @@
 ---
 layout: page
 title: sparsity for interpretability
-description: Leveraging sample sparsity to improve interpretability of neural networks 
+description: Leveraging sample sparsity to improve interpretability of neural networks
 img: assets/img/spade/images/SPADE_method_Square_jitter.png
 importance: 1
 category: Interpretability
 ---
 
-In this paper we improved interpretability methods by first pruning the model on the sample of interest and then apply the interpretability method. This approach let we apply global interpretability methods as a local interpretability. We showed with our experiments that this approach will improve the interpretability methods performance including feature visualization and saliency maps.
+In this paper we improved interpretability methods by first pruning the model on the sample of interest and then apply
+the interpretability method. This approach let we apply global interpretability methods as a local interpretability. We
+showed with our experiments that this approach will improve the interpretability methods performance including feature
+visualization and saliency maps.
 
 <h2> SPADE </h2>
 <div class="row">

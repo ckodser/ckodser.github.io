@@ -7,12 +7,15 @@ importance: 1
 category: Interpretability
 ---
 
-When You have a program, and you want to use AI init, you usually don't want to rewrite the program from scratch again. 
-You want to out-source some decision makings to AI and maintain your source code structure. 
-Current machine learning libraries, however, do not let you do that. If you want to use them you should rewrite everything around them. 
+When You have a program, and you want to use AI init, you usually don't want to rewrite the program from scratch again.
+You want to out-source some decision makings to AI and maintain your source code structure.
+Current machine learning libraries, however, do not let you do that. If you want to use them you should rewrite
+everything around them.
 
-In this paper we introduce BasedOn. A library that let you have learnable If statements. You write your If Statement and arguments that its decision should be based. The code will automatically learn that if statement in such a way that maximized the reward. 
-BasedOn uses RL techniques under the hood hence reward could be non-differentiable, allowing maximum flexibility.  
+In this paper we introduce BasedOn. A library that let you have learnable If statements. You write your If Statement and
+arguments that its decision should be based. The code will automatically learn that if statement in such a way that
+maximized the reward.
+BasedOn uses RL techniques under the hood hence reward could be non-differentiable, allowing maximum flexibility.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
