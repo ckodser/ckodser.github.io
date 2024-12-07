@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: A Mathematical Framework for Transformer Circuits
 description: summary of A Mathematical Framework for Transformer Circuits
 categories: Summary

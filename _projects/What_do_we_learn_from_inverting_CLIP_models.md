@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: What do we learn from inverting CLIP models?
 description: summary of What do we learn from inverting CLIP models?
 categories: Summary

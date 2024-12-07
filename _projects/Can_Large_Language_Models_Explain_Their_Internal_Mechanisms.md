@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Can Large Language Models Explain Their Internal Mechanisms?
 description: summary of Can Large Language Models Explain Their Internal Mechanisms?
 categories: Summary

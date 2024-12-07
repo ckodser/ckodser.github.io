@@ -5,7 +5,7 @@ permalink: /projects/
 description: My Research Projects
 nav: true
 nav_order: 2
-display_categories: [Interpretability, Robustness, Summary]
+display_categories: [Interpretability, Robustness]
 horizontal: false
 ---
 

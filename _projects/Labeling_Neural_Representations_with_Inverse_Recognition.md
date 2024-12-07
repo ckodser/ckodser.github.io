@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Labeling Neural Representations with Inverse Recognition
 description: summary of Labeling Neural Representations with Inverse Recognition
 categories: Summary

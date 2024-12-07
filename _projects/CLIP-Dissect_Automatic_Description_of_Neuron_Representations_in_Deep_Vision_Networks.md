@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: CLIPDissect Automatic Description of Neuron Representations in Deep Vision Networks
 description: summary of CLIP-Dissect  Automatic Description of Neuron Representations in Deep Vision Networks
 categories: Summary

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Progress measures for grokking via mechanistic interpretability
 description: summary of Progress measures for grokking via mechanistic interpretability
 categories: Summary

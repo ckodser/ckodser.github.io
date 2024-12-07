@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Emergent World Representations Exploring a Sequence Model Trained on a Synthetic Task
 description: summary of Emergent World Representations  Exploring a Sequence Model Trained on a Synthetic Task
 categories: Summary

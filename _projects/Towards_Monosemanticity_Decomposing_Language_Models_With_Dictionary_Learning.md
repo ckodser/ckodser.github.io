@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Towards Monosemanticity Decomposing Language Models With Dictionary Learning
 description: summary of Towards Monosemanticity  Decomposing Language Models With Dictionary Learning
 categories: Summary
