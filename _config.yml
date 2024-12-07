@@ -11,7 +11,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A
 footer_text: >
 
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website, research, Arshia Soltani Moakhar, ckodser, adversarial training, OOD detection  # add your own keywords or leave empty
+keywords: academic-website, research, Arshia Soltani Moakhar, ckodser, adversarial training, OOD detection, Interpretability  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon3.ico  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -148,8 +148,6 @@ giscus:
   emit_metadata: 0
   lang: en
 
-# Disqus comments (DEPRECATED)
-disqus_shortname: al-folio # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
@@ -294,7 +292,6 @@ jekyll-archives:
     category: "/blog/category/:name/"
 
 display_tags: ['Interpretability'] # this tags will be dispalyed on the front page of your blog
-display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
 display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
