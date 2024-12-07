@@ -29,7 +29,7 @@ The optimization of input and output data utilizes an  $$L_2$$ loss, comparing s
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/deep_gradient_leckage.png"
+        {% include figure.liquid path="assets/img/deep_gradient_leckage.png"
         title="Data Leakage pipeline with LoRA fine-tuning in federated training" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
