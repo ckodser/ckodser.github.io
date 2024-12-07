@@ -16,7 +16,7 @@ BasedOn uses RL techniques under the hood hence reward could be non-differentiab
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/basedOn/img1.png" title="SPADE" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/basedOn/img1.png" title="SPADE" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

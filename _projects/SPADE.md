@@ -12,7 +12,7 @@ In this paper we improved interpretability methods by first pruning the model on
 <h2> SPADE </h2>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/spade/images/SPADE_method_Square_jitter.png" title="SPADE" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/spade/images/SPADE_method_Square_jitter.png" title="SPADE" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -27,7 +27,7 @@ When we apply SPADE we first prune the network on our specific sample. This mean
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/spade/images/all.png" title="SPADE on a toy model" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/spade/images/all.png" title="SPADE on a toy model" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -40,7 +40,7 @@ When we apply SPADE we first prune the network on our specific sample. This mean
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/spade/images/SPADE_fig1_notrojan_nospadefirst.png" title="SPADE on a toy model" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/spade/images/SPADE_fig1_notrojan_nospadefirst.png" title="SPADE on a toy model" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -49,7 +49,7 @@ When we apply SPADE we first prune the network on our specific sample. This mean
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/spade/images/backdoored_model.png" title="SPADE on a toy model" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/spade/images/backdoored_model.png" title="SPADE on a toy model" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

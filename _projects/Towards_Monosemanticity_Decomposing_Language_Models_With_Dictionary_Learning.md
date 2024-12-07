@@ -12,13 +12,13 @@ Towards Monosemanticity: Decomposing Language Models With Dictionary Learning
 they tried to understand this network
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
-            {% include figure.html path='assets\img\Towards_Monosemanticity_Decomposing_Language_Models_With_Dictionary_Learning\image17.png' class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid path='assets\img\Towards_Monosemanticity_Decomposing_Language_Models_With_Dictionary_Learning\image17.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>
 They believe our neural networks simulated a much larger, much sparser neural networks
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
-            {% include figure.html path='assets\img\Towards_Monosemanticity_Decomposing_Language_Models_With_Dictionary_Learning\image18.png' class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid path='assets\img\Towards_Monosemanticity_Decomposing_Language_Models_With_Dictionary_Learning\image18.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>
 sparse autoencoder tries to reconstruct MLP activation with a one hidden layer network. So it is 

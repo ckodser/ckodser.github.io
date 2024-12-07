@@ -9,7 +9,7 @@ category: Robustness
 L-inf dist neurons are introduced by [zhang2021towards](https://github.com/zbh2047/L_inf-dist-net). With this neuron, they have achieved superior certified accuracy on various datasets, including CIFAR-10.
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/inf-neuron.png" title="L-Inf distance neuron" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/inf-neuron.png" title="L-Inf distance neuron" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -24,7 +24,7 @@ In the first experiment, I discovered that this network could be pruned by a sta
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/sparseNeuron.png" title="sparsed L-Inf distance neuron" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/sparseNeuron.png" title="sparsed L-Inf distance neuron" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

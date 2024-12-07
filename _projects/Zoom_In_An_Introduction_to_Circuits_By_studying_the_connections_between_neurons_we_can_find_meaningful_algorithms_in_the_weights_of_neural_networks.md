@@ -22,7 +22,7 @@ To support Claim 1 (features) they suggest there are some neurons corresponding 
 <h4> curves </h4>
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
-            {% include figure.html path='assets\img\Zoom_In_An_Introduction_to_Circuits_By_studying_the_connections_between_neurons_we_can_find_meaningful_algorithms_in_the_weights_of_neural_networks\image20.png' class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid path='assets\img\Zoom_In_An_Introduction_to_Circuits_By_studying_the_connections_between_neurons_we_can_find_meaningful_algorithms_in_the_weights_of_neural_networks\image20.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>
 How are they sure that these neurons do curve detection?
@@ -30,14 +30,14 @@ feature visualization, dataset examples, synthetic exampleswhen rotating a sampl
 <h4> High-Low Frequency Detectors </h4>
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
-            {% include figure.html path='assets\img\Zoom_In_An_Introduction_to_Circuits_By_studying_the_connections_between_neurons_we_can_find_meaningful_algorithms_in_the_weights_of_neural_networks\image19.png' class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid path='assets\img\Zoom_In_An_Introduction_to_Circuits_By_studying_the_connections_between_neurons_we_can_find_meaningful_algorithms_in_the_weights_of_neural_networks\image19.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>
 these features detect high frequency in one side and low frequency in the other side probably to detect edges and background (out of focus and low frequency) from foreground (high frequency)
 <h4> Dog feature  </h4>
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
-            {% include figure.html path='assets\img\Zoom_In_An_Introduction_to_Circuits_By_studying_the_connections_between_neurons_we_can_find_meaningful_algorithms_in_the_weights_of_neural_networks\image21.png' class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid path='assets\img\Zoom_In_An_Introduction_to_Circuits_By_studying_the_connections_between_neurons_we_can_find_meaningful_algorithms_in_the_weights_of_neural_networks\image21.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>
 Detects dogs from any angle. used feature vis and dataset samples to prove.
@@ -46,14 +46,14 @@ Detects dogs from any angle. used feature vis and dataset samples to prove.
 earlier curves which are smaller act as tangents of the longer curves. Same sided curves boost the curves in the next layer, and opposite sided curves inhibited next layer curve detectors.
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
-            {% include figure.html path='assets\img\Zoom_In_An_Introduction_to_Circuits_By_studying_the_connections_between_neurons_we_can_find_meaningful_algorithms_in_the_weights_of_neural_networks\image25.png' class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid path='assets\img\Zoom_In_An_Introduction_to_Circuits_By_studying_the_connections_between_neurons_we_can_find_meaningful_algorithms_in_the_weights_of_neural_networks\image25.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>
 <h4> Dog detectors </h4>
 There are two separate paths in inception for detecting dog heads. The first one detects left oriented heads, while the second one detects right oriented heads. 
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
-            {% include figure.html path='assets\img\Zoom_In_An_Introduction_to_Circuits_By_studying_the_connections_between_neurons_we_can_find_meaningful_algorithms_in_the_weights_of_neural_networks\image23.png' class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid path='assets\img\Zoom_In_An_Introduction_to_Circuits_By_studying_the_connections_between_neurons_we_can_find_meaningful_algorithms_in_the_weights_of_neural_networks\image23.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>
 Then by combining them, the network detects heads in any pose. 
@@ -61,12 +61,12 @@ Then by combining them, the network detects heads in any pose.
 the same story here, car is composed of car wheels, windows, car body. 
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
-            {% include figure.html path='assets\img\Zoom_In_An_Introduction_to_Circuits_By_studying_the_connections_between_neurons_we_can_find_meaningful_algorithms_in_the_weights_of_neural_networks\image15.png' class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid path='assets\img\Zoom_In_An_Introduction_to_Circuits_By_studying_the_connections_between_neurons_we_can_find_meaningful_algorithms_in_the_weights_of_neural_networks\image15.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>
 But after this some interesting things happen. The network decides to move the car to superposition. 
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
-            {% include figure.html path='assets\img\Zoom_In_An_Introduction_to_Circuits_By_studying_the_connections_between_neurons_we_can_find_meaningful_algorithms_in_the_weights_of_neural_networks\image2.png' class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid path='assets\img\Zoom_In_An_Introduction_to_Circuits_By_studying_the_connections_between_neurons_we_can_find_meaningful_algorithms_in_the_weights_of_neural_networks\image2.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>
