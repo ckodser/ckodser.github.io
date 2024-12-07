@@ -30,7 +30,7 @@ and heading the algorithmic problem design team for the national summer camp in 
 Furthering my education, I majored in computer engineering and joined Dr. Rohban's Lab. 
 In this lab (Robust and Interpretable Machine Learning Lab), I published a paper in NeurIPS 2022 
 on adversarially robust Out-of-Distribution detection. 
-This is not my only venture in the lab; you can read about some failed projects on the <a href="projects/" >Project </a>. 
+This is not my only venture in the lab; you can read about some failed projects on the <a href="/projects/" >Project </a>. 
 
 Since commencing my bachelor's degree, I have been intrigued by Game Theory. 
 To delve deeper, I completed various online and in-person courses, 
