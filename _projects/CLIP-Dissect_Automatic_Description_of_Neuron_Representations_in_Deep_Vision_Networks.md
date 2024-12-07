@@ -14,12 +14,12 @@ In the second step, if we have a single neuron in mind they compute the neuron a
 in the last step they find the most similar column in the table P and return that concept as the neuron functionality. 
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
-            {% include figure.liquid path='assets\img\CLIP-Dissect_Automatic_Description_of_Neuron_Representations_in_Deep_Vision_Networks\image13.png' class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid path='assets/img/CLIP-Dissect_Automatic_Description_of_Neuron_Representations_in_Deep_Vision_Networks/image13.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>
 Interesting thing is that while all concepts should be in the concept set, even if those concepts are missing from the imageset, they might be able to return those concepts. probably because CLIP is great.
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
-            {% include figure.liquid path='assets\img\CLIP-Dissect_Automatic_Description_of_Neuron_Representations_in_Deep_Vision_Networks\image6.png' class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid path='assets/img/CLIP-Dissect_Automatic_Description_of_Neuron_Representations_in_Deep_Vision_Networks/image6.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>

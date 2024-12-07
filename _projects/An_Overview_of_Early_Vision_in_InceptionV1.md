@@ -14,13 +14,13 @@ Gabor filters are like edge detectors. but each of them could only detect edges 
 Color Contrast filters will be activated if they see one color in one side of their field of view and another color in another side. 
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
-            {% include figure.liquid path='assets\img\An_Overview_of_Early_Vision_in_InceptionV1\image5.png' class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid path='assets/img/An_Overview_of_Early_Vision_in_InceptionV1/image5.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>
 Second layer has many groups. 
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
-            {% include figure.liquid path='assets\img\An_Overview_of_Early_Vision_in_InceptionV1\image4.png' class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid path='assets/img/An_Overview_of_Early_Vision_in_InceptionV1/image4.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>
 it gets more and more complex as we go deeper. 
