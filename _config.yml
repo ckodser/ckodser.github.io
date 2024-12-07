@@ -254,7 +254,6 @@ plugins:
   - jekyll-tabs
   - jekyll-toc
   - jekyll-twitter-plugin
-  - jekyll-target-blank
   - jemoji
 
 # Sitemap settings
