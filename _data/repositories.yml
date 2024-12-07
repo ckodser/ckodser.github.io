@@ -1,6 +1,8 @@
 github_users:
   - ckodser
 
+repo_description_lines_max: 10
+
 github_repos:
   - rohban-lab/ATD
   - ckodser/osServer
