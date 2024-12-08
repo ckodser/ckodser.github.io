@@ -1,7 +1,7 @@
 ---
 layout: page
 title: The True Sample Complexity of Active Learning
-description: 
+description: A different definition of active learning label complexity
 categories: ActiveLeanring
 img: assets/img/true-active/img.png 
 importance: 1
@@ -59,17 +59,17 @@ for all targets $$h \in C$$.
 
 <h1> Composing Hypothesis Classes </h1>
 
-Assume we have groups of classifiers $$C_1, C_2, \ldots, C_\infinity$$, and we for each of these groups we have an active learning algorithm that finds a good classifier in $$C_i$$ if the optimal classifier is in $$C_i$$.
+Assume we have groups of classifiers $$C_1, C_2, \ldots, C_\infty$$, and we for each of these groups we have an active learning algorithm that finds a good classifier in $$C_i$$ if the optimal classifier is in $$C_i$$.
 The question is how can we merge these algorithms to find a good classifier in $$C$$?
 
 They provide an algorithm that does this. This the resulting label complexity. 
 
 Theorem 8 For any distribution $$D$$, let $$C_1, C_2, \ldots$$ be a sequence of classes such that for each $$i$$, the pair 
-$$(C_i, D)$$ has sample complexity at most $$S_i(\epsilon, \delta, h)$$ for all $h \in C_i$$. Let
-$$ C = \bigcup_{i=1}^\infinity C_i $$. Then $$(C, D)$$ has a sample complexity at most
+$$(C_i, D)$$ has sample complexity at most $$S_i(\epsilon, \delta, h)$$ for all $$h \in C_i$$. Let
+$$ C = \bigcup_{i=1}^\infty C_i $$. Then $$(C, D)$$ has a sample complexity at most
 
 $$
-\min_{i:h \in C_i} \max \{ 4i^2S_i(\farc{\epsilon}{2}, \frac{\delta}{2}, h), 2i^2 72 \ln(\frac{4i}{\delta})\}
+\min_{i:h \in C_i} \max \{ 4i^2S_i(\frac{\epsilon}{2}, \frac{\delta}{2}, h), 2i^2 72 \ln(\frac{4i}{\delta})\}
 $$
 for any $$h\in C$$. In particular, Algorithm 1 achieves this, when
 used with the $$A_i$$ algorithms that each achieve the $$S_i(\epsilon, \delta, h)$$ 
@@ -80,7 +80,7 @@ Then they prove a very important and cool theorem. They show that the reverse is
 They show that is we have a algorithm that is polylog with definition 2, then we can break the classifier space in a $$C_1, C_2, \ldots$$ sequence, that each of $$C_i$$ has a polylog algorithm with definition 1 (verifiable active learning). 
 
 Theorem 9 For any $$(C, D)$$ learnable at an exponential
-rate, there exists a sequence $$C_1, C_2, \ldots$$ with $$ C = \bigcup_{i=1}^\infinity C_i $$
+rate, there exists a sequence $$C_1, C_2, \ldots$$ with $$ C = \bigcup_{i=1}^\infty C_i $$
 ,
 and a sequence of active learning algorithms $$A_1, A_2, \ldots$$
 such that the algorithm $$A_i$$ achieves verifiable sample complexity at most $$\gamma_i polylog_i(\frac{1}{\epsilon\delta})$$ for the pair $$(C_i, D)$$.
@@ -95,8 +95,8 @@ class of binary decision trees using a finite number of axis parallel splits.
 3. Linear Separators
 
 <h2> Composition results</h2>
-They show that if you can achieve a polylog label complexity on some distribution $$D$$, you can achieve it in a close distribution $$D'$$ such that $$\frac{1}{\lambda}D(A)\leq D'(A) \leq \lambda D(A)$$ for some $$\lambda$$ and all $$A$$.
-They show that if you can achieve a polylog label complexity on $$D_1$$ and $$D_2$$, you can achieve polylog label complexity on the linear combinations of them. 
+1. They show that if you can achieve a polylog label complexity on some distribution $$D$$, you can achieve it in a close distribution $$D'$$ such that $$\frac{1}{\lambda}D(A)\leq D'(A) \leq \lambda D(A)$$ for some $$\lambda$$ and all $$A$$.
+2. They show that if you can achieve a polylog label complexity on $$D_1$$ and $$D_2$$, you can achieve polylog label complexity on the linear combinations of them. 
 
 
 
