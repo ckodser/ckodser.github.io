@@ -6,6 +6,7 @@ img: assets/img/Attention_is_all_you_need.jpg
 importance: 1
 category: Robustness
 ---
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid path="assets/img/Attention_is_all_you_need.jpg"
