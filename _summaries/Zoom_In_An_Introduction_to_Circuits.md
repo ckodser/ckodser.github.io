@@ -12,13 +12,13 @@ By studying the connections between neurons, we can find meaningful algorithms i
 
 Three Speculative Claims about Neural Networks <br>
 
-1. Claim 1: Features </b>
+1. **Claim 1: Features**
    Features are the fundamental unit of neural networks.
    They correspond to directions. 1 These features can be rigorously studied and understood.
-2. Claim 2: Circuits
+2. **Claim 2: Circuits**
    Features are connected by weights, forming circuits. 2
    These circuits can also be rigorously studied and understood.
-3. Claim 3: Universality
+3. **Claim 3: Universality**
    Analogous features and circuits form across models and tasks.
 
 To support Claim 1 (features) they suggest there are some neurons corresponding to curves (around 60 pixels and at a
@@ -33,12 +33,13 @@ specific angle) like below. There are some related shapes that use curves but do
 How are they sure that these neurons do curve detection?
 1. feature visualization, dataset examples, synthetic examples
 2.when rotating a sample, curve detections stop firing and curve detections corresponding to the next angle starts firing
-3. looking at weights suggests they detect curves<div class="row">
-        <div class="col-sm mt-3 mt-md-0">
-            {% include figure.liquid path='assets/img/Zoom_In_An_Introduction_to_Circuits/image1.png' class="img-fluid rounded z-depth-1" %}
-        </div>
-    </div>
-4.next layers features that uses these needs curves (like circle need curves)
+3. looking at weights suggests they detect curves
+
+<div class="col-sm mt-3 mt-md-0">
+   {% include figure.liquid path='assets/img/Zoom_In_An_Introduction_to_Circuits/image1.png' class="img-fluid rounded z-depth-1" %}
+</div>
+
+4. next layers features that uses these needs curves (like circle need curves)
 5. make these circuits by hand (setting weights) and the behavior is very similar to the neurons.
 
 
