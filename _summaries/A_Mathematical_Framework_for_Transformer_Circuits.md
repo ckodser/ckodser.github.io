@@ -3,7 +3,7 @@ layout: page
 title: A Mathematical Framework for Transformer Circuits
 description: In Transformers residual stream is the main object and layers read and write from/to it. 
 categories: Interpretability
-img: assets/img/A_Mathematical_Framework_for_Transformer_Circuits/img.png 
+img: assets/img/A_Mathematical_Framework_for_Transformer_Circuits/img_3.png 
 importance: 1
 link: https://transformer-circuits.pub/2021/framework/index.html
 ---
