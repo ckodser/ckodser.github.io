@@ -67,8 +67,8 @@
       "location": "",
       "position": "Main Graph Theory Instructor",
       "url": "",
-      "startDate": "2021-01-01",
-      "endDate": "2021-12-31",
+      "startDate": "2021",
+      "endDate": "2021",
       "summary": "40 students who are chosen from 10000 students by three exams participate in the summer camp.",
       "highlights": []
     },
@@ -77,8 +77,8 @@
       "location": "",
       "position": "Algorithm Instructor",
       "url": "",
-      "startDate": "2021-01-01",
-      "endDate": "2022-12-31",
+      "startDate": "2021",
+      "endDate": "2022",
       "summary": "The national team consists of the four chosen students from 10000 students. I am responsible for some graph algorithms, e.g., maximum flow.",
       "highlights": []
     },
@@ -87,8 +87,8 @@
       "location": "",
       "position": "Algorithm Instructor",
       "url": "",
-      "startDate": "2021-01-01",
-      "endDate": "2021-12-31",
+      "startDate": "2021",
+      "endDate": "2021",
       "summary": "Affiliated with the National Organization for Development of Exceptional Talents.",
       "highlights": []
     },
@@ -97,8 +97,8 @@
       "location": "",
       "position": "Game Theory Course Design, Team Leader",
       "url": "",
-      "startDate": "2021-01-01",
-      "endDate": "2021-12-31",
+      "startDate": "2021",
+      "endDate": "2021",
       "summary": "The team designed a two parts online course for high school students. The first part topic was 'Truthful Allocation Mechanisms Without Payments.' The second part was about collaboration. Core Value and Shapley Value.",
       "highlights": []
     },
@@ -107,8 +107,8 @@
       "location": "",
       "position": "Algorithm tutor",
       "url": "",
-      "startDate": "2020-01-01",
-      "endDate": "2021-12-31",
+      "startDate": "2020",
+      "endDate": "2021",
       "summary": "Hiva has achieved a national gold medal in INOI. She was the first woman to achieve this medal in the past ten years.",
       "highlights": []
     }
@@ -116,49 +116,49 @@
   "awards": [
     {
       "title": "World Final participation",
-      "date": "2022-01-01",
+      "date": "2022",
       "awarder": "International Collegiate Programming Contest (ICPC)",
       "url": "",
       "summary": ""
     },
     {
       "title": "First Place",
-      "date": "2020-01-01",
+      "date": "2020",
       "awarder": "Sharif University Codejam",
       "url": "",
       "summary": ""
     },
     {
       "title": "Silver Medal",
-      "date": "2019-01-01",
+      "date": "2019",
       "awarder": "International Olympiad in Informatics (IOI)",
       "url": "",
       "summary": ""
     },
     {
       "title": "First Team",
-      "date": "2019-01-01",
+      "date": "2019",
       "awarder": "The 7-th Ferdowsi Collegiate Programming Contest",
       "url": "",
       "summary": ""
     },
     {
       "title": "Bronze Medal",
-      "date": "2019-01-01",
+      "date": "2019",
       "awarder": "Info1Cup",
       "url": "",
       "summary": ""
     },
     {
       "title": "National Gold medal (first place)",
-      "date": "2018-01-01",
+      "date": "2018",
       "awarder": "National Olympiad in Informatics",
       "url": "",
       "summary": ""
     },
     {
       "title": "National Silver medal",
-      "date": "2017-01-01",
+      "date": "2017",
       "awarder": "National Olympiad in Informatics",
       "url": "",
       "summary": ""
@@ -167,70 +167,70 @@
   "certificates": [
     {
       "name": "Deep Learning Specialization",
-      "date": "2021-01-01",
+      "date": "2021",
       "issuer": "Coursera",
       "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/3U56KCTFN8KD",
       "icon": ""
     },
     {
       "name": "Neural Networks and Deep Learning",
-      "date": "2021-01-01",
+      "date": "2021",
       "issuer": "Coursera",
       "url": "https://www.coursera.org/account/accomplishments/certificate/2WXT6RD5A8LY",
       "icon": ""
     },
     {
       "name": "Improving Deep Neural Networks, Hyperparameter Tuning, Regularization and Optimization",
-      "date": "2021-01-01",
+      "date": "2021",
       "issuer": "Coursera",
       "url": "https://www.coursera.org/account/accomplishments/certificate/UMK6LL2VAKLX",
       "icon": ""
     },
     {
       "name": "Structuring Machine Learning Projects",
-      "date": "2021-01-01",
+      "date": "2021",
       "issuer": "Coursera",
       "url": "https://www.coursera.org/account/accomplishments/certificate/B9CYKBBNCEL9",
       "icon": ""
     },
     {
       "name": "Convolutional Neural Networks",
-      "date": "2021-01-01",
+      "date": "2021",
       "issuer": "Coursera",
       "url": "https://www.coursera.org/account/accomplishments/certificate/62R7MENJTSCR",
       "icon": ""
     },
     {
       "name": "Sequence Models",
-      "date": "2021-01-01",
+      "date": "2021",
       "issuer": "Coursera",
       "url": "https://www.coursera.org/account/accomplishments/certificate/BEAF6BY4LNKD",
       "icon": ""
     },
     {
       "name": "Practical Reinforcement Learning",
-      "date": "2021-01-01",
+      "date": "2021",
       "issuer": "Coursera",
       "url": "https://www.coursera.org/account/accomplishments/certificate/MMVX9T8RWVVW",
       "icon": ""
     },
     {
       "name": "Build Basic Generative Adversarial Networks (GANs)",
-      "date": "2021-01-01",
+      "date": "2021",
       "issuer": "Coursera",
       "url": "https://www.coursera.org/account/accomplishments/certificate/9EQQCMTTVTEZ",
       "icon": ""
     },
     {
       "name": "Game Theory",
-      "date": "2020-01-01",
+      "date": "2020",
       "issuer": "Coursera",
       "url": "https://www.coursera.org/account/accomplishments/certificate/WDCQMGAWS8B9",
       "icon": ""
     },
     {
       "name": "Game Theory II, Advanced Applications",
-      "date": "2020-01-01",
+      "date": "2020",
       "issuer": "Coursera",
       "url": "https://www.coursera.org/account/accomplishments/certificate/9QCQN979T7YL",
       "icon": ""
@@ -293,8 +293,7 @@
       "name": "Game Theory",
       "icon": "",
       "keywords": [
-        "Mechanism Design",
-        "Self-Interest Neurons"
+        "Mechanism Design"
       ]
     }
   ]
