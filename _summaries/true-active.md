@@ -71,6 +71,7 @@ $$ C = \bigcup_{i=1}^\infty C_i $$. Then $$(C, D)$$ has a sample complexity at m
 $$
 \min_{i:h \in C_i} \max \{ 4i^2S_i(\frac{\epsilon}{2}, \frac{\delta}{2}, h), 2i^2 72 \ln(\frac{4i}{\delta})\}
 $$
+
 for any $$h\in C$$. In particular, Algorithm 1 achieves this, when
 used with the $$A_i$$ algorithms that each achieve the $$S_i(\epsilon, \delta, h)$$ 
 sample complexity.
