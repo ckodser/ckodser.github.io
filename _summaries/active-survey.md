@@ -138,7 +138,7 @@ $$\theta_0^h(\lambda \epsilon) \lambda^2 \leq \theta_h(\epsilon) \leq \frac{\the
 Third Theorem is about merging to distribution. 
 
 
-Suppose there exist $$\lambda \in (0, 1)$$ and distributions $$P^{'}$$ and $$P^{"}$$ over $$X$$ such that $$P = \lambda P^{'} + (1 - \lambda) P^{"}$$. For $$\epsilon > 0$$, let $$\theta_h(\epsilon), \theta^{'}_^h(\epsilon),$$ and $$\theta^{"}_^h(\epsilon)$$ denote the disagreement coefficients of $$h$$ with respect to $$C$$ under $$P, P^{'},$$ and $$P^{"}$$, respectively. Then $$\forall \epsilon > 0$$,
+Suppose there exist $$\lambda \in (0, 1)$$ and distributions $$P^{'}$$ and $$P^{"}$$ over $$X$$ such that $$P = \lambda P^{'} + (1 - \lambda) P^{"}$$. For $$\epsilon > 0$$, let $$\theta_h(\epsilon), \theta^{'}_h(\epsilon),$$ and $$\theta^{"}_h(\epsilon)$$ denote the disagreement coefficients of $$h$$ with respect to $$C$$ under $$P, P^{'},$$ and $$P^{"}$$, respectively. Then $$\forall \epsilon > 0$$,
 
 $$\theta_h(\epsilon) \leq \theta^{'}_h(\epsilon/\lambda) + \theta^{"}_h(\epsilon/(1 - \lambda))$$
 
