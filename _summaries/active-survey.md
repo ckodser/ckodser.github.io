@@ -22,7 +22,7 @@ So no matter how many samples we use and check their label we are not able to re
 
 <h1> Definitions </h1>
 
-1. For any classifier $$h$$, define $$er(h) = P_{XY} ((x, y) : h(x) \neq y), called the error rate;
+1. For any classifier $$h$$, define $$er(h) = P_{XY} ((x, y) : h(x) \neq y)$$, called the error rate;
 2. $$\nu = \inf_{h\in C} er(h)$$
 3.  Algorithm $$A$$, achieves label complexity $$\Lambda$$ if, for every integer $$n \geq \Lambda(\epsilon, \delta,P_{XY} )$$, if $$h$$ is the classifier produced by running $$A$$ with budget $$n$$, then with probability at least $$1 − \delta$$, $$er(h) \leq \epsilon$$.
 4. $$d = vc(C)$$
@@ -30,7 +30,7 @@ So no matter how many samples we use and check their label we are not able to re
 {g \in C : P(x : g(x) \neq h(x)) \leq \epsilon}$$
 6. Define the region of disagreement of $$H$$ as
 $$DIS(C) = {x \in X : \exists_{h,g \in C} s.t. h(x) \neq g(x)}$$
-7.  define the disagreement coefficient of $$h$$ with respect to $$C$$ under $$P$$ as
+7.  Define the disagreement coefficient of $$h$$ with respect to $$C$$ under $$P$$ as
 $$\theta_h (r_0) = \max(\sup_{r>r_0} \frac{P(DIS(B (h, r)))}{r},  1)$$.
 8. define $$\theta(r_0) = \theta_{f^*}(r_0)$$.
 8. Condition 2.3. For some $$a \in [1, \infty)$$ and $$\alpha \in [0, 1]$$, for every $$h \in C$$,
@@ -40,7 +40,7 @@ $$P(x : h(x) \neq f^*(x)) \leq a (er(h) − er(f^*))^{\alpha}$$.
 In noisy case we have 
 
 Theorem 3.4. The passive learning algorithm ERM(C, .) achieves a
-label complexity $\Lambda$ such that, for any distribution $$P_{XY}$$, $$\forall \epsilon, \delta \in (0, 1)$$,
+label complexity $$\Lambda$$ such that, for any distribution $$P_{XY}$$, $$\forall \epsilon, \delta \in (0, 1)$$,
 
 $$
 \Lambda(\nu + \epsilon, \delta, P_{XY}) \leq \frac{1}{\epsilon} \left( d \log \left( \theta(\nu + \epsilon) \right) + \log \left( \frac{1}{\delta} \right) \right)
@@ -73,8 +73,8 @@ $$\Lambda(\nu + \epsilon, \delta, P_{XY}) \geq q \frac{\nu^2}{\epsilon^2} (d + \
 
 
 Furthermore, for any $$a \in [4, \infty), \alpha \in (0, 1]$$, and sufficiently small $$\epsilon, \delta > 0$$, there exists a distribution $$P_{XY}$$ satisfying Condition 2.3 (in fact,
-satisfying (2.1) or (2.2), for $\alpha < 1$ or $\alpha = 1$, respectively) with these
-values of a and $\alpha$, such that
+satisfying (2.1) or (2.2), for $$\alpha < 1$$ or $$\alpha = 1$$, respectively) with these
+values of a and $$\alpha$$, such that
 
 $$\Lambda(\nu + \epsilon, \delta, P_{XY}) \geq q a^2 \left( \frac{1}{\epsilon} \right)^{2 - 2\alpha} (d + \log(1/\delta)).$$
 
@@ -116,4 +116,63 @@ The normal analysis of $$A^2$$ algorithm have $$\theta(\nu + \epsilon)^2$$ inste
 <h1> Bounding the Disagreement Coefficient </h1>
 
 
+Some properties of Disagreement Coefficient
+
+Let $$\epsilon \in (0, \infty)$$ and $$c \in (1, \infty)$$. Then $$\theta_h(\epsilon/c) \leq c\theta_h(\epsilon)$$
+and $$\theta_h(\epsilon)/c \leq \theta_h(c\epsilon)$$.
+
+
+Second Theorem is about changing distribution a little bit. 
+
+Let $$\lambda \in (0, 1)$$, and suppose $$P$$ and $$P_0$$ are distributions
+over $$X$$ such that $$\lambda P_0 \leq P \leq (1/\lambda)P_0$$.
+For all $$\epsilon > 0$$, let $$\theta_h(\epsilon)$$ and $$\theta_0^h(\epsilon)$$
+denote the disagreement coefficients of $$h$$ with respect to $$C$$ under $$P$$
+and $$P_0$$, respectively. Then $$\forall \epsilon > 0$$,
+
+$$\theta_0^h(\lambda \epsilon) \lambda^2 \leq \theta_h(\epsilon) \leq \frac{\theta_0^h(\epsilon/\lambda)}{\lambda^2}$$
+
+
+Third Theorem is about merging to distribution. 
+
+
+Suppose there exist $$\lambda \in (0, 1)$$ and distributions $$P^{'}$$ and $$P^{"}$$ over $$X$$ such that $$P = \lambda P^{'} + (1 - \lambda) P^{"}$$. For $$\epsilon > 0$$, let $$\theta_h(\epsilon), \theta^{'}_^h(\epsilon),$$ and $$\theta^{"}_^h(\epsilon)$$ denote the disagreement coefficients of $$h$$ with respect to $$C$$ under $$P, P^{'},$$ and $$P^{"}$$, respectively. Then $$\forall \epsilon > 0$$,
+
+$$\theta_h(\epsilon) \leq \theta^{'}_h(\epsilon/\lambda) + \theta^{"}_^h(\epsilon/(1 - \lambda))$$
+
+Fourth Theorem is about Merging two classification sets
+
+
+Let $$C^{'}$$ and $$C^{"}$$ be sets of classifiers such that $$C = C^{'}\cup C^{"}$$,
+and let $$P$$ be a distribution over $$X$$. For all $$\epsilon > 0$$, let $$\theta_h(\epsilon), \theta_h^{'}(\epsilon),$$ and
+$$\theta_h^{"}(\epsilon)$$ denote the disagreement coefficients of $$h$$ with respect to $$C, C^{'}$$,
+and $$C^{"},$$ respectively, under $$P$$. Then $$\forall\epsilon > 0$$,
+
+$$
+\max \left\{ \theta_h^{'}(\epsilon), \theta_h^{"}(\epsilon) \right\} &\leq \theta_h(\epsilon) \leq \theta_h^{'}(\epsilon) + \theta_h^{"}(\epsilon) + 2
+$$
+
+<h2> Asymptotic Behavior </h2>
+
+In this section they say lets discuss $$P(DIS(B (h, r_0)))$$ directly rater than $\theta_h(r_0) = \sup_{r>r_0} \frac{P(DIS(B (h, r)))}{r}$.
+
+They proved these theorems which are easy to understand.
+
+Corollary 7.10. 
+$$\theta_h(\epsilon) = O(1)$$ if and only if $$P(DIS(B(h, \epsilon))) = O(\epsilon)$$.
+
+Definition 7.11.
+For any classifier $$h$$ and set of classifiers $$H$$, define the
+disagreement core of $$h$$ with respect to $$H$$ under $$P$$ as
+$$\partial_{H} h = \lim_{r\to 0} DIS(B_{H}(h, r))$$.
+
+
+Lemma 7.12.
+$$\theta_h(\epsilon) = o(1/\epsilon)$$ if and only if $$P(\partial_{H} h) = 0$$.
+
+Lemma 7.13. 
+For all $$r\in [0, 1]$$, $$DIS(B(h, r)) \subseteq \{x : P(\{x\}) \leq r\}$$.
+
+
+<h2> Axis-aligned Rectangles </h2>
 
