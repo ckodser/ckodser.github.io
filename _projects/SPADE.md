@@ -4,6 +4,7 @@ title: sparsity for interpretability
 description: Leveraging sample sparsity to improve interpretability of neural networks 
 img: assets/img/spade/images/SPADE_method_Square_jitter.png
 importance: 1
+giscus_comments: true
 category: Interpretability
 ---
 

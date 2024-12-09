@@ -4,6 +4,7 @@ title: Certified Robust Neural Network
 description: Certify Robustness using median neurons
 img: assets/img/inf-neuron.png
 importance: 1
+giscus_comments: true
 category: Robustness
 ---
 L-inf dist neurons are introduced by [zhang2021towards](https://github.com/zbh2047/L_inf-dist-net). With this neuron, they have achieved superior certified accuracy on various datasets, including CIFAR-10.

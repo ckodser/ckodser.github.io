@@ -5,6 +5,7 @@ description: In Transformers residual stream is the main object and layers read 
 categories: Interpretability
 img: assets/img/A_Mathematical_Framework_for_Transformer_Circuits/img_3.png 
 importance: 1
+giscus_comments: true
 link: https://transformer-circuits.pub/2021/framework/index.html
 ---
 

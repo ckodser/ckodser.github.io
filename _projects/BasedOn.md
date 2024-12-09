@@ -4,6 +4,7 @@ title: BasedOn
 description: Using Learnable If Statements for Interpretability
 img: assets/img/basedOn/Code.png
 importance: 1
+giscus_comments: true
 category: Interpretability
 ---
 

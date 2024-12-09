@@ -5,6 +5,7 @@ description: A different definition of active learning label complexity
 categories: ActiveLeanring
 img: assets/img/true-active/img.png 
 importance: 1
+giscus_comments: true
 link: https://www.cs.cmu.edu/~ninamf/papers/true-active.pdf
 ---
 

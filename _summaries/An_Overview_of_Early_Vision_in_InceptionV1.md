@@ -5,6 +5,7 @@ description: inceptionV1 feature maps of different layers
 categories: Interpretability
 img: assets/img/An_Overview_of_Early_Vision_in_InceptionV1/img.png 
 importance: 1
+giscus_comments: true
 link: https://distill.pub/2020/circuits/early-vision/
 ---
 

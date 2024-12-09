@@ -4,6 +4,7 @@ title: Data Leakage of LoRA in federated training
 description: This article highlights the potential risks of reconstructing private data from the gradients shared in Federated Learning, especially when using the LoRA finetuning technique.
 img: assets/img/Attention_is_all_you_need.jpg
 importance: 1
+giscus_comments: true
 category: Robustness
 ---
 

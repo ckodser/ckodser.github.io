@@ -5,6 +5,7 @@ description: Active Learning for Agnostic classification
 categories: ActiveLeanring
 img: assets/img/active-survey/img.png 
 importance: 1
+giscus_comments: true
 link: https://web.ics.purdue.edu/~hanneke/docs/active-survey/active-survey.pdf
 ---
 
