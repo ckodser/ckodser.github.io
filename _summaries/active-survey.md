@@ -23,27 +23,27 @@ So no matter how many samples we use and check their label we are not able to re
 <h1> Definitions </h1>
 
 1. For any classifier $$h$$, define $$er(h) = P_{XY} ((x, y) : h(x) \neq y)$$, called the error rate;
-2. $$\nu = \inf_{h\in C} er(h)$$
+2. Define $$\nu = \inf_{h\in C} er(h)$$
 3.  Algorithm $$A$$, achieves label complexity $$\Lambda$$ if, for every integer $$n \geq \Lambda(\epsilon, \delta,P_{XY} )$$, if $$h$$ is the classifier produced by running $$A$$ with budget $$n$$, then with probability at least $$1 − \delta$$, $$er(h) \leq \epsilon$$.
-4. $$d = vc(C)$$
+4. Define $$d = vc(C)$$
 5.  Define the $$\epsilon$$-ball centered at $$h$$ as $$B_{C,P}(h, \epsilon) =
 {g \in C : P(x : g(x) \neq h(x)) \leq \epsilon}$$
 6. Define the region of disagreement of $$H$$ as
 $$DIS(C) = {x \in X : \exists_{h,g \in C} s.t. h(x) \neq g(x)}$$
 7.  Define the disagreement coefficient of $$h$$ with respect to $$C$$ under $$P$$ as
 $$\theta_h (r_0) = \max(\sup_{r>r_0} \frac{P(DIS(B (h, r)))}{r},  1)$$.
-8. define $$\theta(r_0) = \theta_{f^*}(r_0)$$.
+8. Define $$\theta(r_0) = \theta_{f^*}(r_0)$$.
 8. Condition 2.3. For some $$a \in [1, \infty)$$ and $$\alpha \in [0, 1]$$, for every $$h \in C$$,
 $$P(x : h(x) \neq f^*(x)) \leq a (er(h) − er(f^*))^{\alpha}$$.
 
 <h1>  Passive Learning </h1>
 In noisy case we have 
 
-Theorem 3.4. The passive learning algorithm ERM(C, .) achieves a
+**Theorem 3.4.** The passive learning algorithm ERM(C, .) achieves a
 label complexity $$\Lambda$$ such that, for any distribution $$P_{XY}$$, $$\forall \epsilon, \delta \in (0, 1)$$,
 
 $$
-\Lambda(\nu + \epsilon, \delta, P_{XY}) \leq \frac{1}{\epsilon} \left( d \log \left( \theta(\nu + \epsilon) \right) + \log \left( \frac{1}{\delta} \right) \right)
+\Lambda(\nu + \epsilon, \delta, P_{XY}) \leq \frac{\epsilon+\nu}{\epsilon^2} \left( d \log \left( \theta(\nu + \epsilon) \right) + \log \left( \frac{1}{\delta} \right) \right)
 $$
 
 and for the case with $$a, \alpha$$ we have 
@@ -121,6 +121,8 @@ Some properties of Disagreement Coefficient
 Let $$\epsilon \in (0, \infty)$$ and $$c \in (1, \infty)$$. Then $$\theta_h(\epsilon/c) \leq c\theta_h(\epsilon)$$
 and $$\theta_h(\epsilon)/c \leq \theta_h(c\epsilon)$$.
 
+They also show that $$\theta_h(\epsilon) = O(1)$$  is equal to $$\theta_h(0) < \infty$$,
+
 
 Second Theorem is about changing distribution a little bit. 
 
@@ -144,13 +146,33 @@ Fourth Theorem is about Merging two classification sets
 
 
 Let $$C^{'}$$ and $$C^{"}$$ be sets of classifiers such that $$C = C^{'}\cup C^{"}$$,
-and let $$P$$ be a distribution over $$X$$. For all $$\epsilon > 0$$, let $$\theta_h(\epsilon), \theta_h^{'}(\epsilon),$$ and
-$$\theta_h^{"}(\epsilon)$$ denote the disagreement coefficients of $$h$$ with respect to $$C, C^{'}$$,
+and let $$P$$ be a distribution over $$X$$. For all $$\epsilon > 0$$, let $$\theta_h(\epsilon), \theta^{'}_h(\epsilon),$$ and
+$$\theta^{"}_h(\epsilon)$$ denote the disagreement coefficients of $$h$$ with respect to $$C, C^{'}$$,
 and $$C^{"},$$ respectively, under $$P$$. Then $$\forall\epsilon > 0$$,
 
 $$
-\max \left\{ \theta_h^{'}(\epsilon), \theta_h^{"}(\epsilon) \right\} &\leq \theta_h(\epsilon) \leq \theta_h^{'}(\epsilon) + \theta_h^{"}(\epsilon) + 2
+\max \left\{ \theta_h^{'}(\epsilon), \theta_h^{"}(\epsilon) \right\} \leq \theta_h(\epsilon) \leq \theta_h^{'}(\epsilon) + \theta_h^{"}(\epsilon) + 2
 $$
+
+The most interesting Lemma is 
+
+**Lemma 7.12.** $$\theta_h(\epsilon) = o(1/\epsilon) \iff \Pr \left( \lim_{r \to 0} DIS(B_h(h, r)) \right) = 0.$$
+
+
+<h2> discrete distribution </h2>
+every discrete distribution P has 
+$$\theta_h(\epsilon) = o(\frac{1}{\epsilon})$$.
+
+The proof uses this lemma which is very easy to prove.
+
+
+**Lemma 7.13.**
+$$\forall r \in [0, 1], \quad DIS(B(h, r)) \subseteq \left\{x : P(\{x\}) \leq r\right\}$$
+
+
+**Theorem 7.14.**
+If $$\exists\{x_i\}_{i\in\mathbb{N}}$$ in $$X$$ such that $$P(\{x_i : i \in \mathbb{N}\}) = 1$$, then $$\theta_h(\epsilon) = o(1/\epsilon).$$
+
 
 <h2> Asymptotic Behavior </h2>
 
@@ -158,21 +180,43 @@ In this section they say lets discuss $$P(DIS(B (h, r_0)))$$ directly rater than
 
 They proved these theorems which are easy to understand.
 
-Corollary 7.10. 
+**Corollary 7.10.**
 $$\theta_h(\epsilon) = O(1)$$ if and only if $$P(DIS(B(h, \epsilon))) = O(\epsilon)$$.
 
-Definition 7.11.
+**Definition 7.11.**
 For any classifier $$h$$ and set of classifiers $$H$$, define the
 disagreement core of $$h$$ with respect to $$H$$ under $$P$$ as
 $$\partial_{H} h = \lim_{r\to 0} DIS(B_{H}(h, r))$$.
 
 
-Lemma 7.12.
+**Lemma 7.12.**
 $$\theta_h(\epsilon) = o(1/\epsilon)$$ if and only if $$P(\partial_{H} h) = 0$$.
 
-Lemma 7.13. 
+**Lemma 7.13.**
 For all $$r\in [0, 1]$$, $$DIS(B(h, r)) \subseteq \{x : P(\{x\}) \leq r\}$$.
 
+<h2> Linear Separators </h2>
+This part is omitted. 
 
 <h2> Axis-aligned Rectangles </h2>
+
+This is like interval learning but in a higher dimension. Assume we have space with $$k$$ dimensions. 
+
+Hanneke found that a certain noise-robust
+halving-style active learning algorithm achieves a label complexity that,
+if $$p = P(x : f(x) = +1) > 5\nu$$, is
+
+$$
+\frac{k^3}{p}\left(\frac{\nu^2}\epsilon^2} + 1 \right) \text{polylog} \left(\frac{k}{\epsilon \delta p}\right)$$
+
+Also if $$P$$ the uniform distribution over $$[0, 1]^k$$, then 
+$$\limsup_{\epsilon \to 0} \frac{P(DIS(B(h, \epsilon)))}{\epsilon} < k$$
+
+
+They also show that 
+
+$$
+\theta_h(\epsilon) \leq \frac{k^3}{p} \cdot \text{polylog} \left(\frac{k}{p \epsilon}\right).
+$$
+
 
