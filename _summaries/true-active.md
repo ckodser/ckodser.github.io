@@ -45,7 +45,7 @@ function $$h^*\in C$$.
 both $$\frac{1}{\epsilon}$$ and $$\frac{1}{\delta}$$ and linear only in some finite target dependent constant $$\gamma_{h^*}$$. This contrasts sharply with the infamous $$\frac{1}{\epsilon}$$ lower bounds mentioned above, which have been
 identified for verifiable sample complexity.
 
-With this definition their goal is to achieve polylog bounds on $$\epsilon$$ and $$\delta$$ but potentially linear in $$\gamma_{h^*}$$.
+With this definition their goal is to achieve polylog bounds on $$\frac{1}{\epsilon}$$ and $$\frac{1}{\delta}$$ but potentially linear in $$\gamma_{h^*}$$.
 
 <h2> With Definition 2 Active learning is always good</h2>
 
@@ -54,7 +54,7 @@ With definition 1 we know that we have a lower bound of $$\frac{1}{\epsilon}$$, 
 Corollary 7. For any $$C$$ with finite VC dimension, and any
 distribution $$D$$ over $$X$$, there is an active learning algorithm
 that achieves a sample complexity $$S(\epsilon, \delta, h)$$ such that
-$$S(\epsilon, \delta, h)$$ = $$o(\epsilon)$$
+$$S(\epsilon, \delta, h)$$ = $$o(\frac{1}{\epsilon})$$
 for all targets $$h \in C$$.
 
 <h1> Composing Hypothesis Classes </h1>
@@ -62,7 +62,7 @@ for all targets $$h \in C$$.
 Assume we have groups of classifiers $$C_1, C_2, \ldots, C_\infty$$, and we for each of these groups we have an active learning algorithm that finds a good classifier in $$C_i$$ if the optimal classifier is in $$C_i$$.
 The question is how can we merge these algorithms to find a good classifier in $$C$$?
 
-They provide an algorithm that does this. This the resulting label complexity. 
+They provide an algorithm that does this. This is the resulting label complexity. 
 
 Theorem 8 For any distribution $$D$$, let $$C_1, C_2, \ldots$$ be a sequence of classes such that for each $$i$$, the pair 
 $$(C_i, D)$$ has sample complexity at most $$S_i(\epsilon, \delta, h)$$ for all $$h \in C_i$$. Let
@@ -75,7 +75,7 @@ $$
 for any $$h\in C$$. In particular, Algorithm 1 achieves this, when
 used with the $$A_i$$ algorithms that each achieve the $$S_i(\epsilon, \delta, h)$$ 
 sample complexity.
-This is cool since if we have a algorithm fro each $$A_i$$ that is polylog in $$\epsilon$$ and $$\delta$$ then their combination would be polylog. 
+This is cool since if we have a algorithm fro each $$A_i$$ that is polylog in $$\frac{1}{\epsilon}$$ and $$\frac{1}{\delta}$$ then their combination would be polylog. 
 
 Then they prove a very important and cool theorem. They show that the reverse is also correct. 
 They show that is we have a algorithm that is polylog with definition 2, then we can break the classifier space in a $$C_1, C_2, \ldots$$ sequence, that each of $$C_i$$ has a polylog algorithm with definition 1 (verifiable active learning). 
