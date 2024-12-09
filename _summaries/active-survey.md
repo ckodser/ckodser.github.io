@@ -3,7 +3,7 @@ layout: page
 title: Active Learning Survey
 description: Active Learning for Agnostic classification
 categories: ActiveLeanring
-img: assets/img/active-servey/img.png 
+img: assets/img/active-survey/img.png 
 importance: 1
 link: https://web.ics.purdue.edu/~hanneke/docs/active-survey/active-survey.pdf
 ---
@@ -58,7 +58,7 @@ there exists a distribution $$P_{XY}$$ for which $$er(f^*) = \nu$$ and
 
 $$\Lambda(\nu + \epsilon, \delta, P_{XY}) \geq \Omega\left(\frac{\nu+\epsilon}{\epsilon^2}(d+\log(1/\delta))\right)$$.
 
-Furthermore, for $$a ,\alpha $$, and sufficiently small $\epsilon, \delta > 0$, there exists a distribution $P_{XY}$ with these values of $$a, \alpha$$, such that
+Furthermore, for $$a ,\alpha $$, and sufficiently small $$\epsilon, \delta > 0$$, there exists a distribution $$P_{XY}$$ with these values of $$a, \alpha$$, such that
 
 $$\Lambda(\nu + \epsilon, \delta, P_{XY}) \geq \Omega\left(a\left(\frac{1}{\epsilon}\right)^{2-\alpha}(d+\log(1/\delta))\right)$$.
 
@@ -140,7 +140,7 @@ Third Theorem is about merging to distribution.
 
 Suppose there exist $$\lambda \in (0, 1)$$ and distributions $$P^{'}$$ and $$P^{"}$$ over $$X$$ such that $$P = \lambda P^{'} + (1 - \lambda) P^{"}$$. For $$\epsilon > 0$$, let $$\theta_h(\epsilon), \theta^{'}_^h(\epsilon),$$ and $$\theta^{"}_^h(\epsilon)$$ denote the disagreement coefficients of $$h$$ with respect to $$C$$ under $$P, P^{'},$$ and $$P^{"}$$, respectively. Then $$\forall \epsilon > 0$$,
 
-$$\theta_h(\epsilon) \leq \theta^{'}_h(\epsilon/\lambda) + \theta^{"}_^h(\epsilon/(1 - \lambda))$$
+$$\theta_h(\epsilon) \leq \theta^{'}_h(\epsilon/\lambda) + \theta^{"}_h(\epsilon/(1 - \lambda))$$
 
 Fourth Theorem is about Merging two classification sets
 
@@ -151,7 +151,7 @@ $$\theta^{"}_h(\epsilon)$$ denote the disagreement coefficients of $$h$$ with re
 and $$C^{"},$$ respectively, under $$P$$. Then $$\forall\epsilon > 0$$,
 
 $$
-\max \left\{ \theta_h^{'}(\epsilon), \theta_h^{"}(\epsilon) \right\} \leq \theta_h(\epsilon) \leq \theta_h^{'}(\epsilon) + \theta_h^{"}(\epsilon) + 2
+\max \left\{ \theta^{'}_h(\epsilon), \theta^{"}_h(\epsilon) \right\} \leq \theta_h(\epsilon) \leq \theta^{'}_h(\epsilon) + \theta^{"}_h(\epsilon) + 2
 $$
 
 The most interesting Lemma is 
@@ -159,7 +159,7 @@ The most interesting Lemma is
 **Lemma 7.12.** $$\theta_h(\epsilon) = o(1/\epsilon) \iff \Pr \left( \lim_{r \to 0} DIS(B_h(h, r)) \right) = 0.$$
 
 
-<h2> discrete distribution </h2>
+<h2> Discrete Distribution </h2>
 every discrete distribution P has 
 $$\theta_h(\epsilon) = o(\frac{1}{\epsilon})$$.
 
@@ -207,9 +207,10 @@ halving-style active learning algorithm achieves a label complexity that,
 if $$p = P(x : f(x) = +1) > 5\nu$$, is
 
 $$
-\frac{k^3}{p}\left(\frac{\nu^2}\epsilon^2} + 1 \right) \text{polylog} \left(\frac{k}{\epsilon \delta p}\right)$$
+\frac{k^3}{p}\left(\frac{\nu^2}{\epsilon^2} + 1 \right) \text{polylog} \left(\frac{k}{\epsilon \delta p}\right)$$
 
 Also if $$P$$ the uniform distribution over $$[0, 1]^k$$, then 
+
 $$\limsup_{\epsilon \to 0} \frac{P(DIS(B(h, \epsilon)))}{\epsilon} < k$$
 
 
