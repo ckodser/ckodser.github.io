@@ -20,34 +20,29 @@ input matrix $$X \in \mathbb{R}^{n \times d}$$ has (full) rank $$d$$. $$y \in \m
 the square loss:
 $$w^* = arg\min_{w \in \mathbb{R}^d} \mathcal{L}(w),$$
 where $$\mathcal{L}(w) = \sum_{i=1}^n (x_i^\top w - y_i)^2 = \|X w - y\|_2^2.$$
+
 Given both matrix $$X$$ and vector $$y$$, the least squares solution can be directly computed as $$w_* = X^+ y$$, where $$X^+$$ is the pseudo-inverse. 
 
 <h1> Standard volume sampling </h1>
 
-Given $X \in \mathbb{R}^{n \times d}$ and a size $k \geq d$, standard volume sampling jointly chooses a set $S$ of $k$ indices in $[n]$ with probability
+Given $$X \in \mathbb{R}^{n \times d}$$ and a size $$k \geq d$$, standard volume sampling jointly chooses a set $$S$$ of $$k$$ indices in $$[n]$$ with probability
 
 $$\Pr(S) = \frac{\det(X_S^T X_S)}{\binom{n-d}{k-d} \det(X^T X)}$$
 
-after getting target value of set $S$, we set  $w^*_{S} = (X_S)^+ y_S$.
+after getting target value of set $$S$$, we set  $$w^*_{S} = (X_S)^+ y_S$$.
 
 The main property of this approach is that
 $$
 \mathbb{E}[w^*_S] = w^*
 $$.
 
-They have shown that this approach can not grantee any $$1+\epsilon$$ multiplicative error rate in some cases. 
+They have shown that this approach can not grantee any $$1+\epsilon$$ multiplicative error rate with out checking labels of half of the data points in some cases. 
 
 <h1> Rescaled volume sampling </h1>
 
-Define 
-$$l_i = x_i^{\top}(X^{\top}X)^{-1}x_i$$
+Define  $$l_i = x_i^{\top}(X^{\top}X)^{-1}x_i$$ and  $$q_i = \frac{l_i}{d}$$.
 
-and
-$$q_i = \frac{l_i}{d}$$.
-
-Sample $$k$$ row indices 
-$$\pi_1, \ldots, \pi_k$$
-with replacement from $$\{1, \ldots, n\}$$ according to 
+Sample $$k$$ row indices  $$\pi_1, \ldots, \pi_k$$ with replacement from $$\{1, \ldots, n\}$$ according to 
 
 $$
 \Pr(\pi) \sim \det \left( \sum_{i=1}^k \frac{1}{q_{\pi_i}} x_{\pi_i} x_{\pi_i}^\top \right) \prod_{i=1}^k q_{\pi_i}.
@@ -55,8 +50,7 @@ $$
 
 Define $$Q_{\pi} = \sum_{i=1}^k \frac{1}{q_{\pi_i}} \mathbf{e}_{\pi_i} \mathbf{e}_{\pi_i}^\top \in \mathbb{R}^{n \times n}$$
 
-A good classifier is calculatble from 
-
+A good classifier is calculated from
 
 $$w_*^{\pi} = \arg \min_{w \in \mathbb{R}^d}  \left\|Q_{\pi}^{\frac{1}{2}} (X w - y) \right\|_2^2$$
 
