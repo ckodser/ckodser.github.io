@@ -46,8 +46,8 @@ rss_icon:
 # Layout
 # -----------------------------------------------------------------------------
 
-navbar_fixed: true
-footer_fixed: False
+navbar_fixed: false
+footer_fixed: false
 search_enabled: true
 socials_in_search: true
 bib_search: true
