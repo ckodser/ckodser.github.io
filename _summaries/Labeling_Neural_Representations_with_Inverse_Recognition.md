@@ -4,7 +4,7 @@ title: Labeling Neural Representations with Inverse Recognition
 description: summary of Labeling Neural Representations with Inverse Recognition
 categories: Summary
 img: assets/img/Labeling_Neural_Representations_with_Inverse_Recognition/image12.png 
-importance: 1
+importance: 2
 ---
 
 
