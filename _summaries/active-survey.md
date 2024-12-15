@@ -197,7 +197,11 @@ $$\theta_h(\epsilon) = o(1/\epsilon)$$ if and only if $$P(\partial_{H} h) = 0$$.
 For all $$r\in [0, 1]$$, $$DIS(B(h, r)) \subseteq \{x : P(\{x\}) \leq r\}$$.
 
 <h2> Linear Separators </h2>
-This part is omitted. 
+In this case, we find $$\theta_h(\epsilon) = o(1/ \epsilon)$$ is guaranteed as long as $P$ has a density; the stronger $$\theta_h(\epsilon) = O(1)$$ guarantee is
+obtained as long as the density is bounded, has bounded support, and
+the separating hyperplane of $$h$$ passes through the support at a continuity point of the density.
+
+The assumptions seems very reasonable.
 
 <h2> Axis-aligned Rectangles </h2>
 
