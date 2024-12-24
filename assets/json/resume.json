@@ -32,7 +32,6 @@
     {
       "institution": "National Organization for Development of Exceptional Talents, Tehran, Iran",
       "location": "Tehran, Iran",
-      "url": "",
       "area": "Mathematics and Physics",
       "studyType": "High School",
       "startDate": "2016-09-01",
@@ -45,28 +44,30 @@
     {
       "name": "Institute of Science and Technology Austria (IST Austria)",
       "position": "Internship in Interpretability and Sparsity in Deep Neural Networks",
-      "url": "",
+      "location": "Vienna, Austria",
       "startDate": "2023-02-01",
       "endDate": "2023-09-01",
-      "summary": "Supervised by Prof. Dan Alistarh. Results in 'Sparsity-Guided Debugging for Deep Neural Networks' arXiv. In this study, we enhanced the performance of various interpretability methods by initially sparsifying the network on a selected sample, followed by the application of the interpretability method. This approach proposes a solution to the challenges presented by polysemantic neurons, which are activated by multiple distinct concepts, allowing for an in-depth investigation into the activation triggers of a neuron on a sample. This is particularly useful when the sample may pertain to a lesser known functionality of the neuron.",
+      "prof": "Dan Alistarh",
+      "url": "https://icml.cc/virtual/2024/poster/33092",
+      "summary": "In this study, we enhanced the performance of various interpretability methods by initially sparsifying the network on a selected sample, followed by the application of the interpretability method. This approach proposes a solution to the challenges presented by polysemantic neurons, which are activated by multiple distinct concepts, allowing for an in-depth investigation into the activation triggers of a neuron on a sample. This is particularly useful when the sample may pertain to a lesser known functionality of the neuron.",
       "highlights": ["Sparsity-Guided Debugging for Deep Neural Networks"]
     },
     {
       "name": "Sharif University of Technology",
+      "location": "Tehran, Iran",
       "position": "Volunteer (Unpaid) Research Assistant in Robust and Interpretable Machine Learning Lab",
-      "url": "",
       "startDate": "2021-08-01",
       "endDate": "2024-12-08",
-      "summary": "Supervised by Prof. Mohammad Hossein Rohban. Robust Out-of-Distribution Detection Using GAN Architecture (NeurIPS 2022). Initially, we identified vulnerabilities in existing Robust Out-of-Distribution (OOD) detection methods to end-to-end adversarial attacks. Subsequently, we proposed a novel OOD detection method, inspired by Generative Adversarial Network (GAN) architecture and adversarial training, which achieved state-of-the-art results in robust OOD detection. Aligning Self-Interested Neurons in Deep Neural Networks. We explored a scenario where neurons are self-interested, aiming to increase the strength of their connection weights to subsequent layer neurons. We demonstrated that when all neurons rationally update their weights, the resulting behavior closely resembles Gradient Descent. This characteristic enables the training of deeper networks under a self-interested neurons scenario compared to previous approaches, thereby extending the applicability of this method to real-world problems.",
+      "prof": "Mohammad Hossein Rohban",
+      "url":"https://proceedings.neurips.cc/paper_files/paper/2022/hash/1f6591cc41be737e9ba4cc487ac8082d-Abstract-Conference.html",
+      "summary": "Initially, we identified vulnerabilities in existing Robust Out-of-Distribution (OOD) detection methods to end-to-end adversarial attacks. Subsequently, we proposed a novel OOD detection method, inspired by Generative Adversarial Network (GAN) architecture and adversarial training, which achieved state-of-the-art results in robust OOD detection. Aligning Self-Interested Neurons in Deep Neural Networks. We explored a scenario where neurons are self-interested, aiming to increase the strength of their connection weights to subsequent layer neurons. We demonstrated that when all neurons rationally update their weights, the resulting behavior closely resembles Gradient Descent. This characteristic enables the training of deeper networks under a self-interested neurons scenario compared to previous approaches, thereby extending the applicability of this method to real-world problems.",
       "highlights": ["Robust Out-of-Distribution Detection Using GAN Architecture", "Aligning Self-Interested Neurons in Deep Neural Networks"]
     }
   ],
   "volunteer": [
     {
       "organization": "Summer camp for Iran National Olympiad in Informatics",
-      "location": "",
       "position": "Main Graph Theory Instructor",
-      "url": "",
       "startDate": "2021",
       "endDate": "2021",
       "summary": "40 students who are chosen from 10000 students by three exams participate in the summer camp.",
@@ -74,9 +75,7 @@
     },
     {
       "organization": "National Team camp for Iran National Olympiad in Informatics",
-      "location": "",
       "position": "Algorithm Instructor",
-      "url": "",
       "startDate": "2021",
       "endDate": "2022",
       "summary": "The national team consists of the four chosen students from 10000 students. I am responsible for some graph algorithms, e.g., maximum flow.",
@@ -84,9 +83,7 @@
     },
     {
       "organization": "Allameh Helli High School",
-      "location": "",
       "position": "Algorithm Instructor",
-      "url": "",
       "startDate": "2021",
       "endDate": "2021",
       "summary": "Affiliated with the National Organization for Development of Exceptional Talents.",
@@ -94,9 +91,7 @@
     },
     {
       "organization": "Student-run Rastaiha education group",
-      "location": "",
       "position": "Game Theory Course Design, Team Leader",
-      "url": "",
       "startDate": "2021",
       "endDate": "2021",
       "summary": "The team designed a two parts online course for high school students. The first part topic was 'Truthful Allocation Mechanisms Without Payments.' The second part was about collaboration. Core Value and Shapley Value.",
@@ -104,9 +99,7 @@
     },
     {
       "organization": "Hiva Karami & Negar Arj",
-      "location": "",
       "position": "Algorithm tutor",
-      "url": "",
       "startDate": "2020",
       "endDate": "2021",
       "summary": "Hiva has achieved a national gold medal in INOI. She was the first woman to achieve this medal in the past ten years.",
@@ -117,51 +110,37 @@
     {
       "title": "World Final participation",
       "date": "2022",
-      "awarder": "International Collegiate Programming Contest (ICPC)",
-      "url": "",
-      "summary": ""
+      "awarder": "International Collegiate Programming Contest (ICPC)"
     },
     {
       "title": "First Place",
       "date": "2020",
-      "awarder": "Sharif University Codejam",
-      "url": "",
-      "summary": ""
+      "awarder": "Sharif University Codejam"
     },
     {
       "title": "Silver Medal",
       "date": "2019",
-      "awarder": "International Olympiad in Informatics (IOI)",
-      "url": "",
-      "summary": ""
+      "awarder": "International Olympiad in Informatics (IOI)"
     },
     {
       "title": "First Team",
       "date": "2019",
-      "awarder": "The 7-th Ferdowsi Collegiate Programming Contest",
-      "url": "",
-      "summary": ""
+      "awarder": "The 7-th Ferdowsi Collegiate Programming Contest"
     },
     {
       "title": "Bronze Medal",
       "date": "2019",
-      "awarder": "Info1Cup",
-      "url": "",
-      "summary": ""
+      "awarder": "Info1Cup"
     },
     {
       "title": "National Gold medal (first place)",
       "date": "2018",
-      "awarder": "National Olympiad in Informatics",
-      "url": "",
-      "summary": ""
+      "awarder": "National Olympiad in Informatics"
     },
     {
       "title": "National Silver medal",
       "date": "2017",
-      "awarder": "National Olympiad in Informatics",
-      "url": "",
-      "summary": ""
+      "awarder": "National Olympiad in Informatics"
     }
   ],
   "certificates": [
