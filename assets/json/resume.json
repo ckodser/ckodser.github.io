@@ -154,67 +154,78 @@
       "name": "Deep Learning Specialization",
       "date": "2021",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/3U56KCTFN8KD"
+      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/3U56KCTFN8KD",
+      "icon": ""
     },
     {
       "name": "Neural Networks and Deep Learning",
       "date": "2021",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/2WXT6RD5A8LY"
+      "url": "https://www.coursera.org/account/accomplishments/certificate/2WXT6RD5A8LY",
+      "icon": ""
     },
     {
       "name": "Improving Deep Neural Networks, Hyperparameter Tuning, Regularization and Optimization",
       "date": "2021",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/UMK6LL2VAKLX"
+      "url": "https://www.coursera.org/account/accomplishments/certificate/UMK6LL2VAKLX",
+      "icon": ""
     },
     {
       "name": "Structuring Machine Learning Projects",
       "date": "2021",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/B9CYKBBNCEL9"
+      "url": "https://www.coursera.org/account/accomplishments/certificate/B9CYKBBNCEL9",
+      "icon": ""
     },
     {
       "name": "Convolutional Neural Networks",
       "date": "2021",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/62R7MENJTSCR"
+      "url": "https://www.coursera.org/account/accomplishments/certificate/62R7MENJTSCR",
+      "icon": ""
     },
     {
       "name": "Sequence Models",
       "date": "2021",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/BEAF6BY4LNKD"
+      "url": "https://www.coursera.org/account/accomplishments/certificate/BEAF6BY4LNKD",
+      "icon": ""
     },
     {
       "name": "Practical Reinforcement Learning",
       "date": "2021",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/MMVX9T8RWVVW"
+      "url": "https://www.coursera.org/account/accomplishments/certificate/MMVX9T8RWVVW",
+      "icon": ""
     },
     {
       "name": "Build Basic Generative Adversarial Networks (GANs)",
       "date": "2021",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/9EQQCMTTVTEZ"
+      "url": "https://www.coursera.org/account/accomplishments/certificate/9EQQCMTTVTEZ",
+      "icon": ""
     },
     {
       "name": "Game Theory",
       "date": "2020",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/WDCQMGAWS8B9"
+      "url": "https://www.coursera.org/account/accomplishments/certificate/WDCQMGAWS8B9",
+      "icon": ""
     },
     {
       "name": "Game Theory II, Advanced Applications",
       "date": "2020",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/9QCQN979T7YL"
+      "url": "https://www.coursera.org/account/accomplishments/certificate/9QCQN979T7YL",
+      "icon": ""
     }
   ],
   "skills": [
     {
       "name": "Machine Learning",
-      "level": "Advance"
+      "level": "Advance",
+      "icon": "",
       "keywords": [
         "Python",
         "Pytorch",
@@ -243,16 +254,19 @@
   "languages": [
     {
       "language": "English",
-      "fluency": "TOFEL 106"
+      "fluency": "TOFEL 106",
+      "icon": ""
     },
     {
       "language": "Persian",
-      "fluency": "Fluent"
+      "fluency": "Fluent",
+      "icon": ""
     }
   ],
   "interests": [
     {
-      "name": "Trustworthy Machine Learning"
+      "name": "Trustworthy Machine Learning",
+      "icon": "",
       "keywords": [
         "Interpretability",
         "Sparsity",
@@ -261,7 +275,8 @@
       ]
     },
     {
-      "name": "Game Theory"
+      "name": "Game Theory",
+      "icon": "",
       "keywords": [
         "Mechanism Design"
       ]
