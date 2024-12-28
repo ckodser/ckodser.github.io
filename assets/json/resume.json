@@ -108,21 +108,25 @@
   ],
   "awards": [
     {
+      "url": "https://ckodser.github.io/assets/pdf/2021ICPCWorldFinalsPLACE.pdf",
       "title": "World Final participation",
       "date": "2022",
       "awarder": "International Collegiate Programming Contest (ICPC)"
     },
     {
+      "url": "https://way2pay.ir/216079/",
       "title": "First Place",
       "date": "2020",
       "awarder": "Sharif University Codejam"
     },
     {
+      "url": "https://stats.ioinformatics.org/people/6837",
       "title": "Silver Medal",
       "date": "2019",
       "awarder": "International Olympiad in Informatics (IOI)"
     },
     {
+      "url": "https://www.zoomit.ir/video-report/343379-fum-fcpc-2019-mashhad-video-report/",
       "title": "First Team",
       "date": "2019",
       "awarder": "The 7-th Ferdowsi Collegiate Programming Contest"
@@ -133,11 +137,13 @@
       "awarder": "Info1Cup"
     },
     {
+      "url": "https://opedia.ir/%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87_%DB%8C_%D8%A7%D9%84%D9%85%D9%BE%DB%8C%D8%A7%D8%AF/%D8%AF%D8%A7%D9%86%D8%B4_%D9%BE%DA%98%D9%88%D9%87%D8%A7%D9%86/%DB%B1%DB%B3%DB%B9%DB%B7",
       "title": "National Gold medal (first place)",
       "date": "2018",
       "awarder": "National Olympiad in Informatics"
     },
     {
+      "url": "https://opedia.ir/%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87_%DB%8C_%D8%A7%D9%84%D9%85%D9%BE%DB%8C%D8%A7%D8%AF/%D8%AF%D8%A7%D9%86%D8%B4_%D9%BE%DA%98%D9%88%D9%87%D8%A7%D9%86/%DB%B1%DB%B3%DB%B9%DB%B6",
       "title": "National Silver medal",
       "date": "2017",
       "awarder": "National Olympiad in Informatics"
@@ -148,78 +154,67 @@
       "name": "Deep Learning Specialization",
       "date": "2021",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/3U56KCTFN8KD",
-      "icon": ""
+      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/3U56KCTFN8KD"
     },
     {
       "name": "Neural Networks and Deep Learning",
       "date": "2021",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/2WXT6RD5A8LY",
-      "icon": ""
+      "url": "https://www.coursera.org/account/accomplishments/certificate/2WXT6RD5A8LY"
     },
     {
       "name": "Improving Deep Neural Networks, Hyperparameter Tuning, Regularization and Optimization",
       "date": "2021",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/UMK6LL2VAKLX",
-      "icon": ""
+      "url": "https://www.coursera.org/account/accomplishments/certificate/UMK6LL2VAKLX"
     },
     {
       "name": "Structuring Machine Learning Projects",
       "date": "2021",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/B9CYKBBNCEL9",
-      "icon": ""
+      "url": "https://www.coursera.org/account/accomplishments/certificate/B9CYKBBNCEL9"
     },
     {
       "name": "Convolutional Neural Networks",
       "date": "2021",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/62R7MENJTSCR",
-      "icon": ""
+      "url": "https://www.coursera.org/account/accomplishments/certificate/62R7MENJTSCR"
     },
     {
       "name": "Sequence Models",
       "date": "2021",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/BEAF6BY4LNKD",
-      "icon": ""
+      "url": "https://www.coursera.org/account/accomplishments/certificate/BEAF6BY4LNKD"
     },
     {
       "name": "Practical Reinforcement Learning",
       "date": "2021",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/MMVX9T8RWVVW",
-      "icon": ""
+      "url": "https://www.coursera.org/account/accomplishments/certificate/MMVX9T8RWVVW"
     },
     {
       "name": "Build Basic Generative Adversarial Networks (GANs)",
       "date": "2021",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/9EQQCMTTVTEZ",
-      "icon": ""
+      "url": "https://www.coursera.org/account/accomplishments/certificate/9EQQCMTTVTEZ"
     },
     {
       "name": "Game Theory",
       "date": "2020",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/WDCQMGAWS8B9",
-      "icon": ""
+      "url": "https://www.coursera.org/account/accomplishments/certificate/WDCQMGAWS8B9"
     },
     {
       "name": "Game Theory II, Advanced Applications",
       "date": "2020",
       "issuer": "Coursera",
-      "url": "https://www.coursera.org/account/accomplishments/certificate/9QCQN979T7YL",
-      "icon": ""
+      "url": "https://www.coursera.org/account/accomplishments/certificate/9QCQN979T7YL"
     }
   ],
   "skills": [
     {
       "name": "Machine Learning",
-      "level": "Advance",
-      "icon": "",
+      "level": "Advance"
       "keywords": [
         "Python",
         "Pytorch",
@@ -248,19 +243,16 @@
   "languages": [
     {
       "language": "English",
-      "fluency": "TOFEL 106",
-      "icon": ""
+      "fluency": "TOFEL 106"
     },
     {
       "language": "Persian",
-      "fluency": "Fluent",
-      "icon": ""
+      "fluency": "Fluent"
     }
   ],
   "interests": [
     {
-      "name": "Trustworthy Machine Learning",
-      "icon": "",
+      "name": "Trustworthy Machine Learning"
       "keywords": [
         "Interpretability",
         "Sparsity",
@@ -269,8 +261,7 @@
       ]
     },
     {
-      "name": "Game Theory",
-      "icon": "",
+      "name": "Game Theory"
       "keywords": [
         "Mechanism Design"
       ]
