@@ -9,10 +9,6 @@ giscus_comments: true
 link: https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html
 ---
 
-Certainly! Here is your text with grammatical errors and typos corrected:
-
----
-
 They learned a Sparse Autoencoder (SAE) on the middle layer of the Claude 3 Sonnet residual stream. They trained three SAEs on the middle layer residual stream: one with 1 million features, one with 4 million features, and one with 34 million features.
 
 # Are the Learned Features Interpretable?
