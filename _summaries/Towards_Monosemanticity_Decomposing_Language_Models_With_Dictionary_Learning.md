@@ -8,7 +8,7 @@ importance: 2
 ---
 
 
-Given a transformer network, the researchers aim to understand the MLP activations. Their approach involves learning an autoencoder, as illustrated in the image below:
+Given a transformer network, the researchers aim to understand the MLP activations. Their learn an autoencoder, as illustrated in the image below:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -16,7 +16,8 @@ Given a transformer network, the researchers aim to understand the MLP activatio
     </div>
 </div>
 
-In this approach, a linear layer +ReLU projects the activations to a much larger space and then projects them back to the MLP activation space. These two layers are trained to minimize the reconstruction error while ensuring that the middle layer remains sparse. The sparse autoencoder reconstructs MLP activations using a network with one hidden layer. Thus, the process is as follows:
+In this approach, a linear layer +ReLU projects the activations to a much larger space and then projects them back to the MLP activation space. These two layers are trained to minimize the reconstruction error while maximizing the middle layer sparsity. Which they do with a MSE loss for reconstruction and a L1 loss for sparsity.
+The sparse autoencoder reconstructs MLP activations using a network with one hidden layer. Thus, the process is as follows:
 
 MLP activations —(linear+ReLU)—> hidden layer (sparse features) —(linear)—> MLP activations.
 
