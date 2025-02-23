@@ -4,7 +4,7 @@ title: Towards Monosemanticity Decomposing Language Models With Dictionary Learn
 description: How SAE works
 categories: Summary
 img: assets/img/Towards_Monosemanticity_Decomposing_Language_Models_With_Dictionary_Learning/image17.png 
-importance: 2
+importance: 1
 ---
 
 
