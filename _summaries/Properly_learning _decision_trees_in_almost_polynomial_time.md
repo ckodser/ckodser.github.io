@@ -22,7 +22,7 @@ link: https://arxiv.org/abs/2109.00637
   For a size-$$s$$ tree (on uniform data distribution), $$\Delta(T) \leq \log s$$.
 - **A restriction**: A restriction $$π$$ of a function $$f : \{±1\}^n \to {±1}$$, denoted $$f_π$$, 
 is the subfunction of $$f$$ that one obtains by fixing a subset of the variables to constants (i.e. $$x_i = b$$ for $$i \in [n]$$ and $$b \in {±1}$$). We write $$|π|$$ to denote the number of variables fixed by $$π$$.
-- $$n$$ is the number of dimensions in the input.
+- We define $$n$$ as the number of input dimensions.
 ---
 
 #### **2. Influence of a Variable**
