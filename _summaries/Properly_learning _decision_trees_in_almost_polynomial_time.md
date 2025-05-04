@@ -2,7 +2,7 @@
 layout: page
 title: Properly learning decision trees in almost polynomial time
 description: learning a decision tree for unifrom random data distribution in O(s ^ log(log(s)))
-categories: [Summary, ActiveLeanring]
+categories: [Summary, ActiveLearning]
 img: assets/img/Properly_learning _decision_trees_in_almost_polynomial_time/img.png 
 importance: 1
 giscus_comments: true
