@@ -29,9 +29,10 @@ is the subfunction of $$f$$ that one obtains by fixing a subset of the variables
 #### **2. Influence of a Variable**
 The **influence** of a variable $$x_i$$ with respect to a function $$f : \{±1\}^n \to {±1}$$ is defined as:
 \
+<center>
 $$
 \text{Inf}_i(f) := \Pr_{x \sim \{±1\}^n}[f(x) \neq f(x^{\sim i})],
-$$ \
+$$</center> \
 where $$x^{\sim i}$$ denotes $$x$$ with the $$i$$-th variable rerandomized (flipped with probability $$ \frac{1}{2}$$).
 
 ---
@@ -49,15 +50,15 @@ Let $$f$$ be computable by a size-$$s$$ decision tree $$T$$, and let $$ \tau > 0
 
 1. **Error Bound**:
     \
-$$
+    <center>$$
     \Pr_{x \sim \{±1\}^n}\big[f(x) \neq T^*(x)\big] \leq \tau \log s.
-    $$ \
+    $$ </center>
 2. **Influence of Variables**:
     For every node $$v$$ in $$T^*$$, let $$i(v)$$ denote the variable queried at $$v$$. Then:
     \
-$$
+    <center>$$
     \text{Inf}_{i(v)}(f_v) \geq \tau,
-    $$ \
+    $$</center> \
     where $$f_v$$ is the restriction of $$f$$ along the root-to-$$v$$ path in $$T^*$$.
 
  This is because 
@@ -67,62 +68,60 @@ $$
   If the root is $$ \tau$$-influential, then we prune left and right subtree recursively. When both sides are $$ \tau$$-influential, and the root is also $$ \tau$$-influential, then the whole tree is $$ \tau$$-influential. 
   The error of the resulting tree is equal to 
   \
-$$
+    <center>$$
     \Pr_{x \sim \{±1\}^n}\big[f(x) \neq T^*(x)\big]  = 
-  $$ \
+  $$</center> \
     Defining $$P_l:=\Pr_{x \sim \{±1\}^n}[x_{i(\text{root})}=-1]$$ and $$P_r:=\Pr_{x \sim \{±1\}^n}[x_{i(\text{root})}=1]$$, we have
-$$
+    <center>$$
   P_l\cdot \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1}\big[f(x) \neq T^*_l(x)\big] + P_r\cdot \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=+1}\big[f(x) \neq T^*_r(x)\big] 
-    $$ \
+    $$</center> \
     From the theorem we know that pruning subtrees is accurate so the error of the resulting tree is less than
     \
-$$
-  \leq \Pr_{x \sim \{±1\}^n}[x_{i(\text{root})}=-1]\cdot \tau \log s + \Pr_{x \sim \{±1\}^n}[x_{i(\text{root})}=1]\cdot \tau \log s = \tau \log s 
-    $$ \
+    <center>$$
+  \leq P_l\cdot \tau \log s + P_r\cdot \tau \log s = \tau \log s 
+    $$</center> 
 > 2. If the root is not $$ \tau$$-influential: We have to remove the root along one of its subtrees and then recursively prune the remaining subtree. 
     It is clear that the resulting tree is $$ \tau$$-influential. We calculate the error of the resulting tree in two steps. Assume we remove left subtree. $$x^{!i}$$ denotes $$x$$ with the $$i$$-th variable flipped.
     \
-$$
+    <center>$$
     \Pr_{x \sim \{±1\}^n}\big[f(x) \neq T^*(x)\big]  = 
-  $$ \
+  $$</center> \
     Defining $$P_l:=\Pr_{x \sim \{±1\}^n}[x_{i(\text{root})}=-1]$$ and $$P_r:=\Pr_{x \sim \{±1\}^n}[x_{i(\text{root})}=1]$$, we have
-$$
+    <center>$$
   P_l\cdot \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1}\big[f(x) \neq T^*_r(x^{!i})\big] + P_r\cdot \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=+1}\big[f(x) \neq T^*_r(x)\big] 
-    $$ \
+    $$</center> \
    \
-$$
+    <center>$$
   \leq P_l\cdot \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1}\big[f(x) \neq T^*_r(x^{!i})\big] + P_r\cdot \tau \log s 
-    $$ \
+    $$</center> \
     cases where $$f(x) \neq T^*_r(x^{!i})$$ are two groups. 
 >    1. $$f(x) = f(x^{!i})$$ so $$f(x^{!i}) \neq T^*_r(x^{!i})$$
     These samples should not be that large since $$f_r(x)$$ is approximate by $$T^*_r(x)$$. 
     \
-$$ \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1}\big[f(x) \neq T^*_r(x^{!i})\big] \text{ and }  \big[f(x) = f(x^{!i})\big] \leq $$ \
+    <center>$$ \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1}\big[f(x) \neq T^*_r(x^{!i})\big] \text{ and }  \big[f(x) = f(x^{!i})\big] \leq $$ </center>\
     \
-$$ \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1} \big[f(x^{!i}) \neq T^*_r(x^{!i})] \leq \tau \log s $$ \
+    <center>$$ \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1} \big[f(x^{!i}) \neq T^*_r(x^{!i})] \leq \tau \log s $$ </center>
 >    2. $$f(x) \neq f(x^{!i})$$ so $$f(x^{!i}) = T^*_r(x^{!i})$$ 
         These are the samples that effected the influence of the root, so intuitively since the root influence is low, their number should not be too large. 
         \
-$$ \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1}\big[f(x) \neq T^*_r(x^{!i})\big] \text{ and }  \big[f(x) \neq f(x^{!i})\big] \leq $$ \
+    <center>$$ \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1}\big[f(x) \neq T^*_r(x^{!i})\big] \text{ and }  \big[f(x) \neq f(x^{!i})\big] \leq $$ </center>\
         \
-$$ \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1} \big[f(x) \neq f(x^{!i})\big] = $$ \ 
+    <center>$$ \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1} \big[f(x) \neq f(x^{!i})\big] = $$ </center> \ 
         if $$f(x) \neq f(x^{!i})$$ then $$f(x^{!i}) \neq f(x)$$ so it is equal to 
         \
-$$ \Pr_{x \sim \{±1\}^n} \big[f(x) \neq f(x^{!i})\big] = 2\text{inf}_{i}(f)$$ \ 
+    <center>$$ \Pr_{x \sim \{±1\}^n} \big[f(x) \neq f(x^{!i})\big] = 2\text{inf}_{i}(f)$$ </center>\ 
         since we don't rerandomize but force the change.
 >  combining these we have the error is less than
-  \
-$$
-  \leq P_l\cdot (2\text{inf}_{i}(f) + \tau \log (s/2)) + P_r\cdot \tau \log (s/2) \leq
-  $$ \
-$$
+  \<center>$$
+  \leq P_l\cdot (2\text{inf}_{i}(f) + \tau \log (s/2)) + P_r\cdot \tau \log (s/2) \leq$$</center> \
+    <center>$$
   \leq P_l\cdot (2\tau + \tau \log (s/2)) + P_r\cdot \tau \log (s/2)
-  $$ \
+  $$ </center>\
  Given that $$P_l=P_r=1/2$$, we have
-  \
+  \ <center>
 $$
   = \tau+ \tau \log (s/2) = \tau \log s
-  $$ \
+  $$</center> 
 
 ---
 
@@ -134,19 +133,19 @@ $$
      - This is because 
 
  > \
-$$ \text{total influence} = \sum_i \text{Inf}_i(f) = \sum_i E_{x \sim \{±1\}^n}[ f(x) \neq f(x^{\sim i})]=E_{x \sim \{±1\}^n}[\sum_i f(x) \neq f(x^{\sim i})] =$$ \
+    <center>$$ \text{total influence} = \sum_i \text{Inf}_i(f) = \sum_i E_{x \sim \{±1\}^n}[ f(x) \neq f(x^{\sim i})]=E_{x \sim \{±1\}^n}[\sum_i f(x) \neq f(x^{\sim i})] =$$ </center>\
       if $$i$$ is not queried in any node from root to leaf $$x$$ reaches then $$f(x) = f(x^{\sim i})$$. So it is equal to 
       \
-$$E_{x \sim \{±1\}^n}[\sum_{i \in [i(v) \text{ for } v \text{ in path root to leaf that } x \text{ reaches}] } f(x) \neq f(x^{\sim i})] $$ \
+    <center>$$E_{x \sim \{±1\}^n}[\sum_{i \in [i(v) \text{ for } v \text{ in path root to leaf that } x \text{ reaches}] } f(x) \neq f(x^{\sim i})] $$ </center>\
       If we think about the effect of each $$v$$ in this we have
       \
-$$ \sum_{v \in \text{Tree}} P_{x \sim \{±1\}^n }[x \text{ reaches } v] \cdot E_{x \sim \text{subtree of } v }[ f(x) \neq f(x^{\sim i(v)})] = \sum_{v \in \text{Tree}} P_{x \sim \{±1\}^n }[x \text{ reaches } v] \cdot \text{inf}_{i(v)}(f_v)$$ \
+    <center>$$ \sum_{v \in \text{Tree}} P_{x \sim \{±1\}^n }[x \text{ reaches } v] \cdot E_{x \sim \text{subtree of } v }[ f(x) \neq f(x^{\sim i(v)})] = \sum_{v \in \text{Tree}} P_{x \sim \{±1\}^n }[x \text{ reaches } v] \cdot \text{inf}_{i(v)}(f_v)$$ </center>\
       Since inf is always less than $$1$$. 
       \
-$$ \leq \sum_{v \in \text{Tree}} P_{x \sim \{±1\}^n }[x \text{ reaches } v]$$ \
+    <center>$$ \leq \sum_{v \in \text{Tree}} P_{x \sim \{±1\}^n }[x \text{ reaches } v]$$ </center> \
       If we switch back and check how many nodes a sample has effect on we get
       \
-$$= E_{x \sim \{±1\}^n}[\text{Depth of leaf that } x \text{ reaches}] = \Delta(f)$$ \
+    <center>$$= E_{x \sim \{±1\}^n}[\text{Depth of leaf that } x \text{ reaches}] = \Delta(f)$$ </center> \
       For unifrom data distribution this is less than $$ \log s$$.
  
    - Therefore, the number of variables with influence $$ \geq \tau$$ is at most $$(\log s)/\tau$$. 
@@ -155,10 +154,10 @@ $$= E_{x \sim \{±1\}^n}[\text{Depth of leaf that } x \text{ reaches}] = \Delta(
    - We can easily remove any node with depth more than $$d=\log(s/\epsilon)$$. This is because the error of doing so would be at most $$ \epsilon$$.So the run time will be:
 > There is an algorithm which, given as input $$ \varepsilon > 0$$, $$s \in \mathbb{N}$$, and query access to a size-$$s$$ decision tree $$f : \{\pm 1\}^n 	\to \{\pm 1\}$$, runs in time
 \
-$$ \widetilde{O}(n^2) \cdot \left(\frac{s}{\varepsilon}
+    <center>$$ \widetilde{O}(n^2) \cdot \left(\frac{s}{\varepsilon}
 \right)^{O\left(\log \left(\frac{\log s}{\varepsilon}
 \right)
-\right)} $$ \
+\right)} $$ </center> \
 and outputs a size-$$s$$ decision tree hypothesis $$T$$ that, with high probability, satisfies
 $$ \mathrm{dist}(T, f) \leq \varepsilon. $$
 
