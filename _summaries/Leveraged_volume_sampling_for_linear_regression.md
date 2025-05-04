@@ -2,7 +2,7 @@
 layout: page
 title: Leveraged volume sampling for linear regression
 description: Active Learning in linear regression with multiplicative error rate bounds
-categories: [Summary, ActiveLeanring]
+categories: [Summary, ActiveLearning]
 img: assets/img/Leveraged_volume_sampling_for_linear_regression/img.png 
 importance: 1
 giscus_comments: true
