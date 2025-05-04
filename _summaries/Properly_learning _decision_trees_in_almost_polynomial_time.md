@@ -85,7 +85,7 @@ Let $$f$$ be computable by a size-$$s$$ decision tree $$T$$, and let $$ \tau > 0
     <center>$$
   P_l\cdot \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1}\big[f(x) \neq T^*_r(x^{!i})\big] + P_r\cdot \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=+1}\big[f(x) \neq T^*_r(x)\big] 
     $$</center>
-    <center>$$leq P_l\cdot \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1}\big[f(x) \neq T^*_r(x^{!i})\big] + P_r\cdot \tau \log s 
+    <center>$$\leq P_l\cdot \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1}\big[f(x) \neq T^*_r(x^{!i})\big] + P_r\cdot \tau \log s 
     $$</center> 
     cases where $$f(x) \neq T^*_r(x^{!i})$$ are two groups. 
 >    1. $$f(x) = f(x^{!i})$$ so $$f(x^{!i}) \neq T^*_r(x^{!i})$$
@@ -93,25 +93,18 @@ Let $$f$$ be computable by a size-$$s$$ decision tree $$T$$, and let $$ \tau > 0
     <center>$$ \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1}\big[f(x) \neq T^*_r(x^{!i})\big] \text{ and }  \big[f(x) = f(x^{!i})\big] \leq $$ </center>
     <center>$$ \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1} \big[f(x^{!i}) \neq T^*_r(x^{!i})] \leq \tau \log s $$ </center>
 >    2. $$f(x) \neq f(x^{!i})$$ so $$f(x^{!i}) = T^*_r(x^{!i})$$ 
-        These are the samples that effected the influence of the root, so intuitively since the root influence is low, their number should not be too large. 
-        \
+        These are the samples that effected the influence of the root, so intuitively since the root influence is low, their number should not be too large.
     <center>$$ \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1}\big[f(x) \neq T^*_r(x^{!i})\big] \text{ and }  \big[f(x) \neq f(x^{!i})\big] \leq $$ </center>
-        \
-    <center>$$ \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1} \big[f(x) \neq f(x^{!i})\big] = $$ </center> 
-        if $$f(x) \neq f(x^{!i})$$ then $$f(x^{!i}) \neq f(x)$$ so it is equal to 
-        
-    <center>$$ \Pr_{x \sim \{±1\}^n} \big[f(x) \neq f(x^{!i})\big] = 2\text{inf}_{i}(f)$$ </center> 
+    
+>    <center>$$ \Pr_{x \sim \{±1\}^n |x_{i(\text{root})}=-1} \big[f(x) \neq f(x^{!i})\big] = $$ </center> 
+        if $$f(x) \neq f(x^{!i})$$ then $$f(x^{!i}) \neq f(x)$$ so it is equal to
+>    <center>$$ \Pr_{x \sim \{±1\}^n} \big[f(x) \neq f(x^{!i})\big] = 2\text{inf}_{i}(f)$$ </center> 
         since we don't rerandomize but force the change.
->  combining these we have the error is less than
-    <center> $$
-  \leq P_l\cdot (2\text{inf}_{i}(f) + \tau \log (s/2)) + P_r\cdot \tau \log (s/2) \leq$$ </center> 
-    <center> $$
-  \leq P_l\cdot (2\tau + \tau \log (s/2)) + P_r\cdot \tau \log (s/2)
-  $$ </center>
- Given that $$P_l=P_r=1/2$$, we have
-    <center>$$
-  = \tau+ \tau \log (s/2) = \tau \log s
-  $$</center> 
+>    combining these we have the error is less than
+>    <center> $$\leq P_l\cdot (2\text{inf}_{i}(f) + \tau \log (s/2)) + P_r\cdot \tau \log (s/2) \leq$$ </center>
+>    <center> $$\leq P_l\cdot (2\tau + \tau \log (s/2)) + P_r\cdot \tau \log (s/2)$$ </center> 
+>    Given that $$P_l=P_r=1/2$$, we have
+>    <center>$$= \tau+ \tau \log (s/2) = \tau \log s$$</center> 
 
 ---
 
