@@ -2,7 +2,7 @@
 layout: page
 title: Scaling Monosemanticity Extracting Interpretable Features from Claude 3 Sonnet
 description: Scale SAE to Claude 3 Sonnet
-categories: Summary
+categories: [Summary, Interpretability]
 img: assets/img/SAE_Scaling.png
 importance: 1
 giscus_comments: true

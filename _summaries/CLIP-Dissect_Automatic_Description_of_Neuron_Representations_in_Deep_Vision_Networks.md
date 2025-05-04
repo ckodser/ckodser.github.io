@@ -2,7 +2,7 @@
 layout: page
 title: CLIP-Dissect Automatic Description of Neuron Representations
 description: Find concepts that activates a neuron using a image dataset
-categories: Interpretability
+categories: [Summary, Interpretability]
 img: assets/img/CLIP-Dissect_Automatic_Description_of_Neuron_Representations_in_Deep_Vision_Networks/image13.png 
 importance: 1
 giscus_comments: true

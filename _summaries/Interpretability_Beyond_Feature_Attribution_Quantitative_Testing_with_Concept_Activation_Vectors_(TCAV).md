@@ -2,7 +2,7 @@
 layout: page
 title: Interpretability Beyond Feature Attribution Quantitative Testing with Concept Activation Vectors (TCAV)
 description: summary of Interpretability Beyond Feature Attribution  Quantitative Testing with Concept Activation Vectors (TCAV)
-categories: Summary
+categories: [Summary, Interpretability]
 img: assets/img/Interpretability_Beyond_Feature_Attribution_Quantitative_Testing_with_Concept_Activation_Vectors_(TCAV)/image9.png 
 importance: 2
 ---

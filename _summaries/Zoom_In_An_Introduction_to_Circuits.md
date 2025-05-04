@@ -2,7 +2,7 @@
 layout: page
 title: Zoom In An Introduction to Circuits
 description: Investigate Vision Circuits by Studying the Connections between Neurons
-categories: Interpretability
+categories: [Summary, Interpretability]
 img: assets/img/Zoom_In_An_Introduction_to_Circuits/image20.png
 link: https://distill.pub/2020/circuits/zoom-in/
 importance: 1

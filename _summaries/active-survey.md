@@ -2,7 +2,7 @@
 layout: page
 title: Active Learning Survey
 description: Active Learning for Agnostic classification
-categories: ActiveLeanring
+categories: [Summary, ActiveLearning]
 img: assets/img/active-survey/img.png 
 importance: 1
 giscus_comments: true

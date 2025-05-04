@@ -2,7 +2,7 @@
 layout: page
 title: An Overview of Early Vision in InceptionV1
 description: inceptionV1 feature maps of different layers
-categories: Interpretability
+categories: [Summary, Interpretability]
 img: assets/img/An_Overview_of_Early_Vision_in_InceptionV1/img.png 
 importance: 1
 giscus_comments: true

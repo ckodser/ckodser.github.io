@@ -2,7 +2,7 @@
 layout: page
 title: The True Sample Complexity of Active Learning
 description: A different definition of active learning label complexity
-categories: ActiveLeanring
+categories: [Summary, ActiveLearning]
 img: assets/img/true-active/img.png 
 importance: 1
 giscus_comments: true
