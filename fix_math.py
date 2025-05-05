@@ -1,0 +1,84 @@
+s=r"""
+
+#### Upper Bounds:
+**Theorem 3 (Upper bound for approximate representation)**
+For every $f$ with decision tree size $s$ and every $\epsilon \in (0, \frac{1}{2})$, the heuristic constructs an approximate decision tree of size at most $s^{O(\log(s/\epsilon) \log(1/\epsilon))}$.
+
+**Proof:**
+
+The proof of this theorem relies on tracking a "cost" metric of the bare tree $T^{\circ}$ being built by the $BUILDTOPDOWNDT(f, ε)$ heuristic. The heuristic terminates when the $f$-completion of $T^{\circ}$ is an $\epsilon$-approximation of $f$.
+
+
+The total influence of a function $f: \{0,1\}^n \rightarrow \{\pm1\}$, denoted $\text{Inf}(f)$, is defined as:
+$$\text{Inf}(f) = \sum_{i=1}^n \text{Inf}_i(f)$$ [cite: 183]
+
+where $\text{Inf}_i(f)$ is the influence of variable $x_i$ on $f$, defined as:
+$$\text{Inf}_i(f) := \text{Pr}_{x \sim \{0,1\}^n}[f(x) \ne f(x^{\oplus i})]$$
+with $x$ drawn uniformly at random and $x^{\oplus i}$ denoting $x$ with its $i$-th coordinate flipped.
+
+**1. Definition and Properties of "Cost"**
+The cost of a bare tree $T^{\circ}$ relative to a function $f: \{0,1\}^n \rightarrow \{\pm1\}$ is defined as:
+$$\text{cost}_f(T^{\circ}) = \sum_{\text{leaf } \ell \in T^{\circ}} 2^{-|\ell|} \cdot \text{Inf}(f_\ell)$$
+where $|\ell|$ is the depth of leaf $\ell$ and $f_\ell$ is the restriction of $f$ by the path leading to $\ell$.
+
+Lemma 5.1 states the following properties of the cost:
+1. $\text{error}(T^{\circ}, f) \le \text{cost}_f(T^{\circ})$. This means if the cost drops below $\epsilon$, the heuristic can terminate.
+2. When a leaf $\ell$ in $T^{\circ}$ is replaced by a query to variable $x_i$, resulting in a new bare tree $(T^{\circ})'$, the cost decreases by the score of the leaf: $\text{cost}_f((T^{\circ})') = \text{cost}_f(T^{\circ}) - 2^{-|\ell|} \cdot \text{Inf}_i(f_\ell)$. The score of a leaf $\ell$ is defined as $2^{-|\ell|} \cdot \text{Inf}_{i(\ell)}(f_\ell)$, where $x_{i(\ell)}$ is the most influential variable of $f_\ell$.
+
+**2. Lower Bounds on the Score of the Leaf Selected**
+The heuristic splits the leaf with the highest score. The proof uses two lower bounds on this score.
+
+Lemma 5.2 states that at step $j$, `BUILDTOPDOWNDT(f, ε)` selects a leaf $\ell^*$ with score at least $\frac{\epsilon}{(j+1)\log(s)}$. This is derived from the fact that if the completion is not an $\epsilon$-approximation, there must be a leaf $\ell$ with $2^{-|\ell|} \cdot \text{error}(f_\ell, \pm 1) > \frac{\epsilon}{j+1}$. Using the relationship $\text{Var}(g) \ge \text{error}(g, \pm 1)$ and Theorem 12 ($\max_i \text{Inf}_i(f) \ge \frac{\text{Var}(f)}{\log s}$ ), it follows that $2^{-|\ell|} \cdot \text{Inf}_i(f_\ell) > \frac{\epsilon}{(j+1)\log(s)}$ for some variable $x_i$. Since the heuristic picks the leaf with the maximum score, the selected leaf's score is at least this value.
+
+Lemma 5.4 provides a second lower bound, useful when the cost is large. If at step $j$, $\text{cost}_f(T^{\circ}) \ge \epsilon \log(4s/\epsilon)$, the selected leaf $\ell^*$ has score at least $\frac{\text{cost}_f(T^{\circ})}{(j+1)\log(4s/\epsilon)\log(s)}$. This lemma uses Lemma 5.3, which bounds the total influence of a size-$s$ decision tree: $\text{Inf}(f) \le \text{Var}(f) \log(4s/\text{Var}(f))$.
+
+**3. Proof of Theorem 3**
+Let $C_j$ be the cost after $j$ steps. The size of the resulting tree is $j+1$ if the algorithm terminates at step $j$. The algorithm terminates when $C_j \le \epsilon$. The analysis proceeds in two phases:
+
+**Phase 1:** Reduce the cost until it is below $\epsilon \log(4s/\epsilon)$.
+While $C_j > \epsilon \log(4s/\epsilon)$, the heuristic selects a leaf with score at least $\frac{C_j}{(j+1)\log(4s/\epsilon)\log(s)}$ (from Lemma 5.4).
+From Lemma 5.1, $C_{j+1} \le C_j - \frac{C_j}{(j+1)\log(4s/\epsilon)\log(s)} = C_j \left(1 - \frac{1}{(j+1)\log(4s/\epsilon)\log(s)}\right)$.
+After $k$ steps,
+$$C_k \le C_0 \prod_{j=1}^k \left(1 - \frac{1}{j\log(4s/\epsilon)\log(s)}\right) \le C_0 \exp\left(-\sum_{j=1}^k \frac{1}{j\log(4s/\epsilon)\log(s)}\right)$$
+Using $\sum_{j=1}^k \frac{1}{j} \approx \log k$,
+$$C_k \le C_0 \exp\left(-\frac{\log k}{\log(4s/\epsilon)\log(s)}\right)$$
+Since $C_0 = \text{Inf}(f) \le \log s$, setting $k = s^{\log(4s/\epsilon)\log(1/\epsilon)}$ ensures $C_k \le \epsilon \log(4s/\epsilon)$.
+
+**Phase 2:** Reduce the cost from below $\epsilon \log(4s/\epsilon)$ to $\epsilon$.
+Once $C_j \le \epsilon \log(4s/\epsilon)$, the heuristic selects a leaf with score at least $\frac{\epsilon}{(j+1)\log s}$ (from Lemma 5.2).
+$C_{j+1} \le C_j - \frac{\epsilon}{(j+1)\log s}$.
+For $m > k$, $C_k - C_m \ge \sum_{j=k+1}^m \frac{\epsilon}{(j+1)\log s} \ge \frac{\epsilon}{\log s}(\log m - \log k)$.
+To ensure $C_m \le \epsilon$, we need $C_k - \epsilon \ge \frac{\epsilon}{\log s}(\log m - \log k)$. Setting $\log m = \frac{\log s}{\epsilon} (C_k - \epsilon) + \log k$.
+Using $C_k \le \epsilon \log(4s/\epsilon)$ and the value of $k$ from Phase 1, $m \le s^{2\log(4s/\epsilon)\log(1/\epsilon)}$.
+
+The total number of steps is at most $m$, so the size of the decision tree is at most $m+1$, which is $s^{O(\log(s/\epsilon) \log(1/\epsilon))}$.
+
+Thus, for any function $f$ with decision tree size $s$ and error parameter $\epsilon \in (0, \frac{1}{2})$, the heuristic constructs an approximate decision tree of size at most $s^{O(\log(s/\epsilon) \log(1/\epsilon))}$.
+"""
+
+
+import re
+
+def format_math_strings(text):
+  """
+  Replaces math delimiters in a string according to specified rules.
+
+  Args:
+    text: The input string.
+
+  Returns:
+    The modified string.
+  """
+  text = re.sub(r'\[cite:\s*(\d+\s*(,\s*\d+\s*)*)\]', '', text)
+
+  # Replace $$...$$ with <center>$$...$$</center>
+  text = re.sub(r'\$\$(.*?)\$\$', r'<center>$$\1$$</center>', text)
+
+  # Replace $...$ with $$...$$
+  text = re.sub(r'\$(.*?)\$', r'$$\1$$', text)
+
+  return text
+
+# Example usage:
+output_string = format_math_strings(s)
+print(output_string)
