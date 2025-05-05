@@ -61,13 +61,15 @@ The cost of a bare tree $$T^{\circ}$$ relative to a function $$f: \{0,1\}^n \rig
 where $$|\ell|$$ is the depth of leaf $$\ell$$ and $$f_\ell$$ is the restriction of $$f$$ by the path leading to $$\ell$$.
 
 Lemma 5.1 states the following properties of the cost:
-1. $$\text{error}(T^{\circ}, f) \le \text{cost}_f(T^{\circ})$$. This means if the cost drops below $$\epsilon$$, the heuristic can terminate.
-2. When a leaf $$\ell$$ in $$T^{\circ}$$ is replaced by a query to variable $$x_i$$, resulting in a new bare tree $$(T^{\circ})'$$, the cost decreases by the score of the leaf: $$\text{cost}_f((T^{\circ})') = \text{cost}_f(T^{\circ}) - 2^{-|\ell|} \cdot \text{Inf}_i(f_\ell)$$. The score of a leaf $$\ell$$ is defined as $$2^{-|\ell|} \cdot \text{Inf}_{i(\ell)}(f_\ell)$$, where $$x_{i(\ell)}$$ is the most influential variable of $$f_\ell$$.
+First $$\text{error}(T^{\circ}, f) \le \text{cost}_f(T^{\circ})$$. This means if the cost drops below $$\epsilon$$, the heuristic can terminate.
+
+Second when a leaf $$\ell$$ in $$T^{\circ}$$ is replaced by a query to variable $$x_i$$, resulting in a new bare tree $$(T^{\circ})'$$, the cost decreases by the score of the leaf: $$\text{cost}_f((T^{\circ})') = \text{cost}_f(T^{\circ}) - 2^{-|\ell|} \cdot \text{Inf}_i(f_\ell)$$. The score of a leaf $$\ell$$ is defined as $$2^{-|\ell|} \cdot \text{Inf}_{i(\ell)}(f_\ell)$$, where $$x_{i(\ell)}$$ is the most influential variable of $$f_\ell$$.
 
 **2. Lower Bounds on the Score of the Leaf Selected**
 The heuristic splits the leaf with the highest score. The proof uses two lower bounds on this score.
 
-Lemma 5.2 states that at step $$j$$, `BUILDTOPDOWNDT(f, ε)` selects a leaf $$\ell^*$$ with score at least $$\frac{\epsilon}{(j+1)\log(s)}$$. This is derived from the fact that if the completion is not an $$\epsilon$$-approximation, there must be a leaf $$\ell$$ with $$2^{-|\ell|} \cdot \text{error}(f_\ell, \pm 1) > \frac{\epsilon}{j+1}$$. Using the relationship $$\text{Var}(g) \ge \text{error}(g, \pm 1)$$ and Theorem 12 ($$\max_i \text{Inf}_i(f) \ge \frac{\text{Var}(f)}{\log s}$$ ), it follows that $$2^{-|\ell|} \cdot \text{Inf}_i(f_\ell) > \frac{\epsilon}{(j+1)\log(s)}$$ for some variable $$x_i$$. Since the heuristic picks the leaf with the maximum score, the selected leaf's score is at least this value.
+Lemma 5.2 states that at step $$j$$, the algorithm selects a leaf $$\ell^*$$ with score at least $$\frac{\epsilon}{(j+1)\log(s)}$$. This is derived from the fact that if the completion is not an $$\epsilon$$-approximation, there must be a leaf $$\ell$$ with $$2^{-|\ell|} \cdot \text{error}(f_\ell, \pm 1) > \frac{\epsilon}{j+1}$$. 
+Using the relationship $$\text{Var}(g) \ge \text{error}(g, \pm 1)$$ and Theorem 12 ($$\max_i \text{Inf}_i(f) \ge \frac{\text{Var}(f)}{\log s}$$ ), it follows that $$2^{-|\ell|} \cdot \text{Inf}_i(f_\ell) > \frac{\epsilon}{(j+1)\log(s)}$$ for some variable $$x_i$$. Since the heuristic picks the leaf with the maximum score, the selected leaf's score is at least this value.
 
 Lemma 5.4 provides a second lower bound, useful when the cost is large. If at step $$j$$, $$\text{cost}_f(T^{\circ}) \ge \epsilon \log(4s/\epsilon)$$, the selected leaf $$\ell^*$$ has score at least $$\frac{\text{cost}_f(T^{\circ})}{(j+1)\log(4s/\epsilon)\log(s)}$$. This lemma uses Lemma 5.3, which bounds the total influence of a size-$$s$$ decision tree: $$\text{Inf}(f) \le \text{Var}(f) \log(4s/\text{Var}(f))$$.
 
