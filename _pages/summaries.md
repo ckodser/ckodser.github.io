@@ -37,12 +37,23 @@ horizontal: false
   {% endif %}
   {% endfor %}
 <h2 class="category">Other Summaries</h2>
-{% assign all_projects = site.summaries %}
-{% assign uncategorized_projects = all_projects %}
-{% for category in page.display_categories %}
-  {% assign uncategorized_projects = uncategorized_projects | where_exp: "item", "item.categories == nil or item.categories.size == 0 or item.categories contains category != true" %}
-{% endfor %}
-{% assign sorted_uncategorized = uncategorized_projects | sort: "importance" %}
+  {% assign displayed_categories = page.display_categories %}
+  {% assign uncategorized_list = "" | split: "" %} 
+    {% for project in site.summaries %}
+    {% assign should_be_in_other = true %}
+    {% if project.categories %}
+      {% for project_category in project.categories %}
+        {% if displayed_categories contains project_category %}
+          {% assign should_be_in_other = false %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% if should_be_in_other %}
+      {% assign uncategorized_list = uncategorized_list | push: project %}
+    {% endif %}
+  {% endfor %}
+  {% assign sorted_uncategorized = uncategorized_list | sort: "importance" %}
+
 {% if page.horizontal %}
 <div class="container">
   <div class="row row-cols-1 row-cols-md-2">
