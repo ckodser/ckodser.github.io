@@ -39,7 +39,6 @@ The paper proposes and analyzes a heuristic for constructing decision trees for 
 #### Lower Bounds:
 - For any error parameter $$ \varepsilon \in (0, \frac{1}{2}) $$, there exists a function $$ f $$ with decision tree size $$ s \leq 2^{\tilde{O}(\sqrt{n})} $$ such that the heuristic produces a decision tree of size:
   <center>$$s^{\Omega\left(\log \tilde{s}\right)}.$$</center>
-#### Upper Bounds:
 
 #### Upper Bounds:
 **Theorem 3 (Upper bound for approximate representation)**
@@ -47,19 +46,18 @@ For every $$f$$ with decision tree size $$s$$ and every $$\epsilon \in (0, \frac
 
 **Proof:**
 
-The proof of this theorem relies on tracking a "cost" metric of the bare tree $$T^{\circ}$$ being built by the $$BUILDTOPDOWNDT(f, ε)$$ heuristic. The heuristic terminates when the $$f$$-completion of $$T^{\circ}$$ is an $$\epsilon$$-approximation of $$f$$.
-
+The proof of this theorem relies on tracking a "cost" metric of the bare tree $$T^{\circ}$$ being built by the above algorithm. The heuristic terminates when the $$f$$-completion of $$T^{\circ}$$ is an $$\epsilon$$-approximation of $$f$$.
 
 The total influence of a function $$f: \{0,1\}^n \rightarrow \{\pm1\}$$, denoted $$\text{Inf}(f)$$, is defined as:
-<center>$$$$\text{Inf}(f) = \sum_{i=1}^n \text{Inf}_i(f)$$$$</center> 
+<center>$$\text{Inf}(f) = \sum_{i=1}^n \text{Inf}_i(f)$$</center> 
 
 where $$\text{Inf}_i(f)$$ is the influence of variable $$x_i$$ on $$f$$, defined as:
-<center>$$$$\text{Inf}_i(f) := \text{Pr}_{x \sim \{0,1\}^n}[f(x) \ne f(x^{\oplus i})]$$$$</center>
+<center>$$\text{Inf}_i(f) := \text{Pr}_{x \sim \{0,1\}^n}[f(x) \ne f(x^{\oplus i})]$$</center>
 with $$x$$ drawn uniformly at random and $$x^{\oplus i}$$ denoting $$x$$ with its $$i$$-th coordinate flipped.
 
 **1. Definition and Properties of "Cost"**
 The cost of a bare tree $$T^{\circ}$$ relative to a function $$f: \{0,1\}^n \rightarrow \{\pm1\}$$ is defined as:
-<center>$$$$\text{cost}_f(T^{\circ}) = \sum_{\text{leaf } \ell \in T^{\circ}} 2^{-|\ell|} \cdot \text{Inf}(f_\ell)$$$$</center>
+<center>$$\text{cost}_f(T^{\circ}) = \sum_{\text{leaf } \ell \in T^{\circ}} 2^{-|\ell|} \cdot \text{Inf}(f_\ell)$$</center>
 where $$|\ell|$$ is the depth of leaf $$\ell$$ and $$f_\ell$$ is the restriction of $$f$$ by the path leading to $$\ell$$.
 
 Lemma 5.1 states the following properties of the cost:
@@ -80,9 +78,9 @@ Let $$C_j$$ be the cost after $$j$$ steps. The size of the resulting tree is $$j
 While $$C_j > \epsilon \log(4s/\epsilon)$$, the heuristic selects a leaf with score at least $$\frac{C_j}{(j+1)\log(4s/\epsilon)\log(s)}$$ (from Lemma 5.4).
 From Lemma 5.1, $$C_{j+1} \le C_j - \frac{C_j}{(j+1)\log(4s/\epsilon)\log(s)} = C_j \left(1 - \frac{1}{(j+1)\log(4s/\epsilon)\log(s)}\right)$$.
 After $$k$$ steps,
-<center>$$$$C_k \le C_0 \prod_{j=1}^k \left(1 - \frac{1}{j\log(4s/\epsilon)\log(s)}\right) \le C_0 \exp\left(-\sum_{j=1}^k \frac{1}{j\log(4s/\epsilon)\log(s)}\right)$$$$</center>
+<center>$$C_k \le C_0 \prod_{j=1}^k \left(1 - \frac{1}{j\log(4s/\epsilon)\log(s)}\right) \le C_0 \exp\left(-\sum_{j=1}^k \frac{1}{j\log(4s/\epsilon)\log(s)}\right)$$</center>
 Using $$\sum_{j=1}^k \frac{1}{j} \approx \log k$$,
-<center>$$$$C_k \le C_0 \exp\left(-\frac{\log k}{\log(4s/\epsilon)\log(s)}\right)$$$$</center>
+<center>$$C_k \le C_0 \exp\left(-\frac{\log k}{\log(4s/\epsilon)\log(s)}\right)$$</center>
 Since $$C_0 = \text{Inf}(f) \le \log s$$, setting $$k = s^{\log(4s/\epsilon)\log(1/\epsilon)}$$ ensures $$C_k \le \epsilon \log(4s/\epsilon)$$.
 
 **Phase 2:** Reduce the cost from below $$\epsilon \log(4s/\epsilon)$$ to $$\epsilon$$.
