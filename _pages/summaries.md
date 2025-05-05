@@ -37,7 +37,7 @@ horizontal: false
   {% endif %}
   {% endfor %}
 <h2 class="category">Other Summaries</h2>
-{% assign uncategorized_projects = site.summaries | where_exp: "item", "item.categories == nil or item.categories.size == 0 or item.categories - page.display_categories != empty" %}
+{% assign uncategorized_projects = site.summaries | where_exp: "item", "item.categories == nil or item.categories.size == 0 or (item.categories | concat: page.display_categories | uniq | size) == (item.categories.size + page.display_categories.size)" %}
 {% assign sorted_uncategorized = uncategorized_projects | sort: "importance" %}
 {% if page.horizontal %}
 <div class="container">
