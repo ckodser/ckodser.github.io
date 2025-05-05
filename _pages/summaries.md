@@ -40,7 +40,7 @@ horizontal: false
 {% assign all_projects = site.summaries %}
 {% assign uncategorized_projects = all_projects %}
 {% for category in page.display_categories %}
-  {% assign uncategorized_projects = uncategorized_projects | where_exp: "item", "item.categories == nil or item.categories.size == 0 or item.categories contains category == false" %}
+  {% assign uncategorized_projects = uncategorized_projects | where_exp: "item", "item.categories == nil or item.categories.size == 0 or item.categories contains category != true" %}
 {% endfor %}
 {% assign sorted_uncategorized = uncategorized_projects | sort: "importance" %}
 {% if page.horizontal %}
