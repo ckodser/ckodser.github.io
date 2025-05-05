@@ -36,4 +36,27 @@ horizontal: false
   </div>
   {% endif %}
   {% endfor %}
+
+
+<!-- Display uncategorized projects -->
+<h2 class="category">Other Summaries</h2>
+{% assign uncategorized_projects = site.summaries | where_exp: "item", "item.categories == nil or item.categories.size == 0 or item.categories - page.display_categories != empty" %}
+{% assign sorted_uncategorized = uncategorized_projects | sort: "importance" %}
+
+{% if page.horizontal %}
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-2">
+  {% for project in sorted_uncategorized %}
+    {% include projects_horizontal.liquid %}
+  {% endfor %}
+  </div>
+</div>
+{% else %}
+<div class="row row-cols-1 row-cols-md-3">
+  {% for project in sorted_uncategorized %}
+    {% include projects.liquid %}
+  {% endfor %}
+</div>
+{% endif %}
+
 </div>
