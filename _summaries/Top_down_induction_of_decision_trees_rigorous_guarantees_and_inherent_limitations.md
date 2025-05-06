@@ -19,26 +19,30 @@ The paper proposes and analyzes a heuristic for constructing decision trees for 
 ### Key Steps in the Heuristic
 
 1. **Initialization:**
-   - Start with an empty decision tree $$ T^\circ $$ (a tree with unlabeled leaves).
+   - Start with an empty decision tree $$ T^\circ $$ (a bare decision tree is a tree with unlabeled leaves).
 
 2. **Scoring:**
    - For each current leaf $$ \ell $$, calculate the influence of variables in the sub-function $$ f_\ell $$ represented by that leaf.
-     - The most influential variable at leaf $$ \ell $$ is denoted $$ x_i(\ell) $$, where $$ \mathrm{Inf}_i(f_\ell) \geq \mathrm{Inf}_j(f_\ell) $$ for all $$ j $$.
+     - The most influential variable at leaf $$ \ell $$ is denoted $$ x_i(\ell) $$, where $$ \mathrm{Inf}_{i}(f_{\ell}) \geq \mathrm{Inf}_j(f_{\ell}) $$ for all $$ j $$.
      - Assign a score to each leaf:  
-       <center>$$\text{score}(\ell) = \Pr_{x \sim \{0,1\}^n}[x \text{ reaches } \ell] \cdot \mathrm{Inf}_{i(\ell)}(f_\ell) = 2^{-\lvert \ell \rvert} \cdot \mathrm{Inf}_{i(\ell)}(f_\ell),$$</center>  
+       
+$$\text{score}(\ell) = \Pr_{x \sim \{0,1\}^n}[x \text{ reaches } \ell] \cdot \mathrm{Inf}_{i(\ell)}(f_{\ell}) = 2^{-\lvert \ell \rvert} \cdot \mathrm{Inf}_{i(\ell)}(f_{\ell}),$$
+  
        where $$\lvert \ell \rvert$$ is the depth of leaf $$ \ell $$.
 
 3. **Splitting:**
    - Identify the leaf $$ \ell^* $$ with the highest score and split the tree at this leaf using the variable $$ x_{i(\ell^*)} $$.
 
 4. **Stopping Criterion:**
-   - Repeat the scoring and splitting process until the $$ f $$-completion of $$ T^\circ $$ is an $$\varepsilon$$-approximation of $$ f $$, where the error is bounded by $$ \varepsilon $$.
+   - Repeat the scoring and splitting process until the $$ f $$-completion of $$ T^\circ $$ is an $$\varepsilon$$-approximation of $$ f $$, where the error is bounded by $$ \varepsilon $$. $$ f $$-completion means assigning the best label to each leaf of $$T^\circ$$ such that it is best matched by $$ f $$.
 
 ---
 
 #### Lower Bounds:
 - For any error parameter $$ \varepsilon \in (0, \frac{1}{2}) $$, there exists a function $$ f $$ with decision tree size $$ s \leq 2^{\tilde{O}(\sqrt{n})} $$ such that the heuristic produces a decision tree of size:
-  <center>$$s^{\Omega\left(\log \tilde{s}\right)}.$$</center>
+  
+$$s^{\Omega\left(\log \tilde{s}\right)}.$$
+
 
 #### Upper Bounds:
 **Theorem 3 (Upper bound for approximate representation)**
@@ -49,27 +53,36 @@ For every $$f$$ with decision tree size $$s$$ and every $$\epsilon \in (0, \frac
 The proof of this theorem relies on tracking a "cost" metric of the bare tree $$T^{\circ}$$ being built by the above algorithm. The heuristic terminates when the $$f$$-completion of $$T^{\circ}$$ is an $$\epsilon$$-approximation of $$f$$.
 
 The total influence of a function $$f: \{0,1\}^n \rightarrow \{\pm1\}$$, denoted $$\text{Inf}(f)$$, is defined as:
-<center>$$\text{Inf}(f) = \sum_{i=1}^n \text{Inf}_i(f)$$</center> 
 
-where $$\text{Inf}_i(f)$$ is the influence of variable $$x_i$$ on $$f$$, defined as:
-<center>$$\text{Inf}_i(f) := \text{Pr}_{x \sim \{0,1\}^n}[f(x) \ne f(x^{\oplus i})]$$</center>
+$$\text{Inf}(f) = \sum_{i=1}^n \text{Inf}_{i}(f)$$
+
+where $$\text{Inf}_{i}(f)$$ is the influence of variable $$x_i$$ on $$f$$, defined as:
+
+$$\text{Inf}_{i}(f) := \text{Pr}_{x \sim \{0,1\}^n}[f(x) \ne f(x^{\oplus i})]$$
+
 with $$x$$ drawn uniformly at random and $$x^{\oplus i}$$ denoting $$x$$ with its $$i$$-th coordinate flipped.
 
 **1. Definition and Properties of "Cost"**
 The cost of a bare tree $$T^{\circ}$$ relative to a function $$f: \{0,1\}^n \rightarrow \{\pm1\}$$ is defined as:
-<center>$$\text{cost}_f(T^{\circ}) = \sum_{\text{leaf } \ell \in T^{\circ}} 2^{-|\ell|} \cdot \text{Inf}(f_\ell)$$</center>
+
+$$\text{cost}_f(T^{\circ}) = \sum_{\text{leaf } \ell \in T^{\circ}} 2^{-|\ell|} \cdot \text{Inf}(f_\ell)$$
+
 where $$|\ell|$$ is the depth of leaf $$\ell$$ and $$f_\ell$$ is the restriction of $$f$$ by the path leading to $$\ell$$.
 
 Lemma 5.1 states the following properties of the cost:
 First $$\text{error}(T^{\circ}, f) \le \text{cost}_f(T^{\circ})$$. This means if the cost drops below $$\epsilon$$, the heuristic can terminate.
 
-Second when a leaf $$\ell$$ in $$T^{\circ}$$ is replaced by a query to variable $$x_i$$, resulting in a new bare tree $$(T^{\circ})'$$, the cost decreases by the score of the leaf: $$\text{cost}_f((T^{\circ})') = \text{cost}_f(T^{\circ}) - 2^{-|\ell|} \cdot \text{Inf}_i(f_\ell)$$. The score of a leaf $$\ell$$ is defined as $$2^{-|\ell|} \cdot \text{Inf}_{i(\ell)}(f_\ell)$$, where $$x_{i(\ell)}$$ is the most influential variable of $$f_\ell$$.
+Second when a leaf $$\ell$$ in $$T^{\circ}$$ is replaced by a query to variable $$x_i$$, 
+resulting in a new bare tree $$(T^{\circ})'$$, the cost decreases by the score of the leaf: 
+$$\text{cost}_{f}((T^{\circ})') = \text{cost}_{f}(T^{\circ}) - 2^{-|\ell|} \cdot \text{Inf}_{i}(f_{\ell})$$. 
+The score of a leaf $$\ell$$ is defined as $$2^{-|\ell|} \cdot \text{Inf}_{i(\ell)}(f_\ell)$$, 
+where $$x_{i(\ell)}$$ is the most influential variable of $$f_{\ell}$$.
 
 **2. Lower Bounds on the Score of the Leaf Selected**
 The heuristic splits the leaf with the highest score. The proof uses two lower bounds on this score.
 
-Lemma 5.2 states that at step $$j$$, the algorithm selects a leaf $$\ell^*$$ with score at least $$\frac{\epsilon}{(j+1)\log(s)}$$. This is derived from the fact that if the completion is not an $$\epsilon$$-approximation, there must be a leaf $$\ell$$ with $$2^{-|\ell|} \cdot \text{error}(f_\ell, \pm 1) > \frac{\epsilon}{j+1}$$. 
-Using the relationship $$\text{Var}(g) \ge \text{error}(g, \pm 1)$$ and Theorem 12 ($$\max_i \text{Inf}_i(f) \ge \frac{\text{Var}(f)}{\log s}$$ ), it follows that $$2^{-|\ell|} \cdot \text{Inf}_i(f_\ell) > \frac{\epsilon}{(j+1)\log(s)}$$ for some variable $$x_i$$. Since the heuristic picks the leaf with the maximum score, the selected leaf's score is at least this value.
+Lemma 5.2 states that at step $$j$$, the algorithm selects a leaf $$\ell^*$$ with score at least $$\frac{\epsilon}{(j+1)\log(s)}$$. This is derived from the fact that if the completion is not an $$\epsilon$$-approximation, there must be a leaf $$\ell$$ with $$2^{-|\ell|} \cdot \text{error}(f_{\ell}, \pm 1) > \frac{\epsilon}{j+1}$$. 
+Using the relationship $$\text{Var}(g) \ge \text{error}(g, \pm 1)$$ and Theorem 12 ($$\max_i \text{Inf}_{i}(f) \ge \frac{\text{Var}(f)}{\log s}$$ ), it follows that $$2^{-|\ell|} \cdot \text{Inf}_{i}(f_{\ell}) > \frac{\epsilon}{(j+1)\log(s)}$$ for some variable $$x_i$$. Since the heuristic picks the leaf with the maximum score, the selected leaf's score is at least this value.
 
 Lemma 5.4 provides a second lower bound, useful when the cost is large. If at step $$j$$, $$\text{cost}_f(T^{\circ}) \ge \epsilon \log(4s/\epsilon)$$, the selected leaf $$\ell^*$$ has score at least $$\frac{\text{cost}_f(T^{\circ})}{(j+1)\log(4s/\epsilon)\log(s)}$$. This lemma uses Lemma 5.3, which bounds the total influence of a size-$$s$$ decision tree: $$\text{Inf}(f) \le \text{Var}(f) \log(4s/\text{Var}(f))$$.
 
@@ -80,9 +93,13 @@ Let $$C_j$$ be the cost after $$j$$ steps. The size of the resulting tree is $$j
 While $$C_j > \epsilon \log(4s/\epsilon)$$, the heuristic selects a leaf with score at least $$\frac{C_j}{(j+1)\log(4s/\epsilon)\log(s)}$$ (from Lemma 5.4).
 From Lemma 5.1, $$C_{j+1} \le C_j - \frac{C_j}{(j+1)\log(4s/\epsilon)\log(s)} = C_j \left(1 - \frac{1}{(j+1)\log(4s/\epsilon)\log(s)}\right)$$.
 After $$k$$ steps,
-<center>$$C_k \le C_0 \prod_{j=1}^k \left(1 - \frac{1}{j\log(4s/\epsilon)\log(s)}\right) \le C_0 \exp\left(-\sum_{j=1}^k \frac{1}{j\log(4s/\epsilon)\log(s)}\right)$$</center>
+
+$$C_k \le C_0 \prod_{j=1}^k \left(1 - \frac{1}{j\log(4s/\epsilon)\log(s)}\right) \le C_0 \exp\left(-\sum_{j=1}^k \frac{1}{j\log(4s/\epsilon)\log(s)}\right)$$
+
 Using $$\sum_{j=1}^k \frac{1}{j} \approx \log k$$,
-<center>$$C_k \le C_0 \exp\left(-\frac{\log k}{\log(4s/\epsilon)\log(s)}\right)$$</center>
+
+$$C_k \le C_0 \exp\left(-\frac{\log k}{\log(4s/\epsilon)\log(s)}\right)$$
+
 Since $$C_0 = \text{Inf}(f) \le \log s$$, setting $$k = s^{\log(4s/\epsilon)\log(1/\epsilon)}$$ ensures $$C_k \le \epsilon \log(4s/\epsilon)$$.
 
 **Phase 2:** Reduce the cost from below $$\epsilon \log(4s/\epsilon)$$ to $$\epsilon$$.
