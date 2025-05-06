@@ -9,6 +9,27 @@ giscus_comments: true
 link: https://arxiv.org/abs/1911.07375
 ---
 
+### Notations and Definitions
+
+**Bare Decision Tree**: $$ T^\circ $$ is a bare decision tree which means it has unlabeled leaves).
+
+**influence**: $$\text{Inf}_{i}(f)$$ is the influence of variable $$x_i$$ on $$f$$, defined as:
+
+$$\text{Inf}_{i}(f) := \text{Pr}_{x \sim \{0,1\}^n}[f(x) \ne f(x^{\oplus i})]$$
+
+with $$x$$ drawn uniformly at random and $$x^{\oplus i}$$ denoting $$x$$ with its $$i$$-th coordinate flipped.
+
+**Total Influence**:
+The total influence of a function $$f: \{0,1\}^n \rightarrow \{\pm1\}$$, denoted $$\text{Inf}(f)$$, is defined as:
+
+$$\text{Inf}(f) = \sum_{i=1}^n \text{Inf}_{i}(f)$$
+
+**error of bare tree**: $$\text{error}(T^{\circ}, f)$$ is the error of bare tree $$T^{\circ}$$ on function $$f$$, where we labeled leaves such that the error is minimized.
+
+**error of function and $$\pm 1$$**: $$\text{error}(f, \pm 1)$$ is the error of $$f$$ with respect to $$+1$$ or $$-1$$ whichever best matches $$f$$ and gives it a low error. 
+
+
+---
 
 ### Method: **Top-Down Decision Tree Construction (BuildTopDownDT)**
 
@@ -19,7 +40,7 @@ The paper proposes and analyzes a heuristic for constructing decision trees for 
 ### Key Steps in the Heuristic
 
 1. **Initialization:**
-   - Start with an empty decision tree $$ T^\circ $$ (a bare decision tree is a tree with unlabeled leaves).
+   - Start with an empty decision tree $$ T^\circ $$.
 
 2. **Scoring:**
    - For each current leaf $$ \ell $$, calculate the influence of variables in the sub-function $$ f_\ell $$ represented by that leaf.
@@ -52,15 +73,6 @@ For every $$f$$ with decision tree size $$s$$ and every $$\epsilon \in (0, \frac
 
 The proof of this theorem relies on tracking a "cost" metric of the bare tree $$T^{\circ}$$ being built by the above algorithm. The heuristic terminates when the $$f$$-completion of $$T^{\circ}$$ is an $$\epsilon$$-approximation of $$f$$.
 
-The total influence of a function $$f: \{0,1\}^n \rightarrow \{\pm1\}$$, denoted $$\text{Inf}(f)$$, is defined as:
-
-$$\text{Inf}(f) = \sum_{i=1}^n \text{Inf}_{i}(f)$$
-
-where $$\text{Inf}_{i}(f)$$ is the influence of variable $$x_i$$ on $$f$$, defined as:
-
-$$\text{Inf}_{i}(f) := \text{Pr}_{x \sim \{0,1\}^n}[f(x) \ne f(x^{\oplus i})]$$
-
-with $$x$$ drawn uniformly at random and $$x^{\oplus i}$$ denoting $$x$$ with its $$i$$-th coordinate flipped.
 
 **1. Definition and Properties of "Cost"**
 The cost of a bare tree $$T^{\circ}$$ relative to a function $$f: \{0,1\}^n \rightarrow \{\pm1\}$$ is defined as:
@@ -86,7 +98,7 @@ $$\frac{\epsilon}{(j+1)\log(s)}$$. This is derived from the fact that if the com
 $$\epsilon$$-approximation, there must be a leaf $$\ell$$ with 
 $$2^{-|\ell|} \cdot \text{error}(f_{\ell}, \pm 1) > \frac{\epsilon}{j+1}$$. 
 Using the relationship $$\text{Var}(g) \ge \text{error}(g, \pm 1)$$ 
-and Theorem 12 ($$\max_{i} \text{Inf}_{i}(f) \ge \frac{\text{Var}(f)}{\log s}$$ ), 
+and [Paper: Every decision tree has an influential variable](https://arxiv.org/abs/cs/0508071) ($$\max_{i} \text{Inf}_{i}(f) \ge \frac{\text{Var}(f)}{\log s}$$ ), 
 it follows that $$2^{-|\ell|} \cdot \text{Inf}_{i}(f_{\ell}) > \frac{\epsilon}{(j+1)\log(s)}$$ for some variable $$x_i$$. 
 Since the heuristic picks the leaf with the maximum score, the selected leaf's score is at least this value.
 
