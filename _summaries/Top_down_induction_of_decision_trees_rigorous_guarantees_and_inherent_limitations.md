@@ -28,7 +28,7 @@ The paper proposes and analyzes a heuristic for constructing decision trees for 
        
 $$\text{score}(\ell) = \Pr_{x \sim \{0,1\}^n}[x \text{ reaches } \ell] \cdot \mathrm{Inf}_{i(\ell)}(f_{\ell}) = 2^{-\lvert \ell \rvert} \cdot \mathrm{Inf}_{i(\ell)}(f_{\ell}),$$
   
-       where $$\lvert \ell \rvert$$ is the depth of leaf $$ \ell $$.
+where $$\lvert \ell \rvert$$ is the depth of leaf $$ \ell $$.
 
 3. **Splitting:**
    - Identify the leaf $$ \ell^* $$ with the highest score and split the tree at this leaf using the variable $$ x_{i(\ell^*)} $$.
@@ -81,8 +81,14 @@ where $$x_{i(\ell)}$$ is the most influential variable of $$f_{\ell}$$.
 **2. Lower Bounds on the Score of the Leaf Selected**
 The heuristic splits the leaf with the highest score. The proof uses two lower bounds on this score.
 
-Lemma 5.2 states that at step $$j$$, the algorithm selects a leaf $$\ell^*$$ with score at least $$\frac{\epsilon}{(j+1)\log(s)}$$. This is derived from the fact that if the completion is not an $$\epsilon$$-approximation, there must be a leaf $$\ell$$ with $$2^{-|\ell|} \cdot \text{error}(f_{\ell}, \pm 1) > \frac{\epsilon}{j+1}$$. 
-Using the relationship $$\text{Var}(g) \ge \text{error}(g, \pm 1)$$ and Theorem 12 ($$\max_i \text{Inf}_{i}(f) \ge \frac{\text{Var}(f)}{\log s}$$ ), it follows that $$2^{-|\ell|} \cdot \text{Inf}_{i}(f_{\ell}) > \frac{\epsilon}{(j+1)\log(s)}$$ for some variable $$x_i$$. Since the heuristic picks the leaf with the maximum score, the selected leaf's score is at least this value.
+Lemma 5.2 states that at step $$j$$, the algorithm selects a leaf $$\ell^*$$ with score at least 
+$$\frac{\epsilon}{(j+1)\log(s)}$$. This is derived from the fact that if the completion is not an 
+$$\epsilon$$-approximation, there must be a leaf $$\ell$$ with 
+$$2^{-|\ell|} \cdot \text{error}(f_{\ell}, \pm 1) > \frac{\epsilon}{j+1}$$. 
+Using the relationship $$\text{Var}(g) \ge \text{error}(g, \pm 1)$$ 
+and Theorem 12 ($$\max_{i} \text{Inf}_{i}(f) \ge \frac{\text{Var}(f)}{\log s}$$ ), 
+it follows that $$2^{-|\ell|} \cdot \text{Inf}_{i}(f_{\ell}) > \frac{\epsilon}{(j+1)\log(s)}$$ for some variable $$x_i$$. 
+Since the heuristic picks the leaf with the maximum score, the selected leaf's score is at least this value.
 
 Lemma 5.4 provides a second lower bound, useful when the cost is large. If at step $$j$$, $$\text{cost}_f(T^{\circ}) \ge \epsilon \log(4s/\epsilon)$$, the selected leaf $$\ell^*$$ has score at least $$\frac{\text{cost}_f(T^{\circ})}{(j+1)\log(4s/\epsilon)\log(s)}$$. This lemma uses Lemma 5.3, which bounds the total influence of a size-$$s$$ decision tree: $$\text{Inf}(f) \le \text{Var}(f) \log(4s/\text{Var}(f))$$.
 
