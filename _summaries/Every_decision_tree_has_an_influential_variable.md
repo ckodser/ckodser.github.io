@@ -19,7 +19,7 @@ This summary focuses exclusively on the technical aspects of the paper concernin
 * **Influence ($$Inf_{i}(f)$$):** The influence of the $$i$$-th coordinate on $$f$$ is defined as $$Inf_{i}(f) = 2 \Pr_{x,x^{(i)}}[f(x) \neq f(x^{(i)})]$$. Here, $$x$$ is drawn from $$\{-1,1\}_{(p)}^{n}$$ and $$x^{(i)}$$ is formed by rerandomizing the $$i$$-th coordinate of $$x$$ using the probability measure $$p_i$$. In the uniform measure case ($$p=1/2$$), this definition aligns with $$Inf_{i}[f] = \Pr[f(x) \ne f(x \oplus i)]$$.
 * **DDT:** A decision tree.
 * **Probability of Querying a Variable ($$\delta_{i}(T)$$):** For a DDT $$T$$ computing a function $$f:\{-1,1\}_{(p)}^{n}\rightarrow\{-1,1\}$$, $$\delta_{i}(T) = \Pr_{x\in\{-1,1\}_{(p)}^{n}}[T \text{ queries } x_{i}]$$.
-* **Expected Cost ($$\Delta(T)$$):** For a DDT $$T$$, the expected cost is $$\Delta(T) = \sum_{i=1}^{n} \delta_{i}(T) = E[\text{\#coords T queries on } x]$$.
+* **Expected Cost ($$\Delta(T)$$):** For a DDT $$T$$, the expected cost is $$\Delta(T) = \sum_{i=1}^{n} \delta_{i}(T) = E[\text{#coords T queries on } x]$$.
 * **Minimum Expected Cost ($$\Delta(f)$$):** $$\Delta(f)$$ denotes the minimum of $$\Delta(T)$$ over all DDTs $$T$$ computing $$f:\{-1,1\}_{(p)}^{n}\rightarrow\{-1,1\}$$.
 
 ### Main Theorems and Proofs
@@ -58,13 +58,13 @@ Obviously, given the random variable $$X_{t-1}$$ we can determine the first $$t$
 <details>
 <summary>why</summary>
 
-This is because $$u[t-1]$$ and $$u[t]$$ differ only along a single dimension, which is $$i(t)$$. Additionally, $$y$$ is unrelated to $$X_{t-1}$$, so its distribution is independent. In $$u[t] = x_{J[t]} y$$, the dimensions not contained in $$J[t]$$ are set to match those of $$y$$; therefore, they retain their original distribution $$\Omega$$.
+This is because $u[t-1]$ and $u[t]$ differ only along a single dimension, which is $i(t)$. Additionally, $y$ is unrelated to $X_{t-1}$, so its distribution is independent. In $u[t] = x_{J[t]} y$, the dimensions not contained in $J[t]$ are set to match those of $y$; therefore, they retain their original distribution $\Omega$.
 
-The dimensions in $$J[t]$$ are set to those of $$x$$, specifically the $$t, t+1, \ldots, s$$-th dimensions along the root-to-$$x$$ path. These dimensions are distinct from the first $$t-1$$ dimensions of $$x$$ and thus also preserve their original distribution.
+The dimensions in $J[t]$ are set to those of $x$, specifically the $t, t+1, \ldots, s$-th dimensions along the root-to-$x$ path. These dimensions are distinct from the first $t-1$ dimensions of $x$ and thus also preserve their original distribution.
 
-As a result, $$u[t]$$ is distributed according to $$\Omega^{(i_t)}$$ whenever $$i_t = i \in [n]$$.
+As a result, $u[t]$ is distributed according to $\Omega^{(i_t)}$ whenever $i_t = i \in [n]$.
 
-This means, $$E[(f(u[t-1])\neq f(u[t]))\cdot 1_{\{i_t=i\}}|X_{t-1}]$$ is equal to $$E_{x, y \sim \Omega^{(i_t)}}[(f(x)\neq f(y))\cdot 1_{\{i_t(x)=i\}}]=Inf_i(f) 1_{i_t(x)=i}$$.
+This means, $$E[(f(u[t-1])\neq f(u[t]))\cdot 1_{\{i_t=i\}}|X_{t-1}]=E_{x, y \sim \Omega^{(i_t)}}[(f(x)\neq f(y))\cdot 1_{\{i_t(x)=i\}}]=Inf_i(f) 1_{i_t(x)=i}$$.
 </details>
 
 
@@ -73,6 +73,8 @@ Using the above
 $$Var[f] \leq \sum_{t=1}^{n} \sum_{i=1}^{n} E[Inf_i(f)\cdot 1_{\{i_t=i\}}] = \sum_{i=1}^{n} Inf_i(f)\sum_{t=1}^{n} E[1_{\{i_t=i\}}] = \sum_{i=1}^{n} Inf_i(f) \delta_i(T)$$
 
 
+
+-----------------------------------------------
 **Corollary 1.2:** For every $$f:\{-1,1\}_{(p)}^{n}\rightarrow\{-1,1\}$$, we have 
 
 
