@@ -34,8 +34,8 @@ This summary focuses exclusively on the technical aspects of the paper concernin
 
 ### Lemma 1
 
-- Let $$k$$ be the number of nodes in a reduced decision tree over $$V_n$$ of rank $$r$$, where $$n \ge r \ge 1$$. Then $$2^{r+1}-1 \le k \le (2\sum_{i=0}^{r}\binom{n}{i})-1 < 2(en/r)^r$$.
-- If $$r=0$$ then $$|F_n^r|=2$$. Else if $$n \le r$$ then $$|F_n^r|=2^{2^n}$$, and if $$n > r$$ then $$|F_n^r| \le (8n)^{(en/r)^r}$$.
+- Let $$k$$ be the number of nodes in a reduced decision tree over $$V_n$$ of rank $$r$$, where $$n \ge r \ge 1$$. Then $$2^{r+1}-1 \le k \le (2\sum_{i=0}^{r}\binom{n}{i})-1 < 2(\frac{en}{r})^r$$.
+- If $$r=0$$ then $$|F_n^r|=2$$. Else if $$n \le r$$ then $$|F_n^r|=2^{2^n}$$, and if $$n > r$$ then $$|F_n^r| \le (8n)^{(\frac{en}{r})^r}$$.
 
 **Proof of Lemma 1:**
 
@@ -44,14 +44,14 @@ Let $$L(n,r)$$ be the maximum number of leaves of any reduced decision tree over
 $$L(0,r)=1$$ for all $$r \ge 0$$.
 $$L(n,0)=1$$ for all $$n \ge 0$$.
 $$L(n,r)=L(n-1,r)+L(n-1,r-1)$$ for all $$n,r \ge 1$$, because the variable in the root of a reduced tree does not appear in its subtrees.
-The solution for this recurrence for $$n \ge r$$ is $$L(n,r)=\sum_{i=0}^{r}\binom{n}{i}$$, which is bounded by $$(en/r)^r$$ for $$n \ge r \ge 1$$. Since a binary tree has one less internal node than leaves, this yields the second and third inequalities for $$k$$.
+The solution for this recurrence for $$n \ge r$$ is $$L(n,r)=\sum_{i=0}^{r}\binom{n}{i}$$, which is bounded by $$(\frac{en}{r})^r$$ for $$n \ge r \ge 1$$. Since a binary tree has one less internal node than leaves, this yields the second and third inequalities for $$k$$.
 
 (ii) If $$r=0$$, $$F_n^r$$ contains only constant functions, so $$|F_n^r|=2$$. If $$n \le r$$, $$T_n^r$$ includes every full binary decision tree of depth $$n$$, so $$F_n^r$$ includes all Boolean functions on $$X_n$$, and thus $$|F_n^r|=2^{2^n}$$. 
-If $$n > r \ge 1$$, each function in $$F_n^r$$ is represented by a binary tree with at most $$k=(en/r)^r$$ leaves. The number of distinct binary decision trees on $$n$$ variables with at most $$k$$ leaves is at most 
+If $$n > r \ge 1$$, each function in $$F_n^r$$ is represented by a binary tree with at most $$k=(\frac{en}{r})^r$$ leaves. The number of distinct binary decision trees on $$n$$ variables with at most $$k$$ leaves is at most 
 
 $$\sum_{i=1}^{k}\frac{2^{i}n^{i-1}}{2i-1}\binom{2i-1}{i}<(2n)^{k}\sum_{i=1}^{k}\binom{2k-1}{i}<(2n)^{k}2^{2k-1}<(8n)^{k}$$. 
 
-Therefore, $$|F_n^r| \le (8n)^{(en/r)^r}$$.
+Therefore, $$|F_n^r| \le (8n)^{(\frac{en}{r})^r}$$.
 
 ---
 
@@ -122,7 +122,7 @@ For any single function with error at least $$\epsilon$$, the probability that i
 For any $$n \ge r \ge 1$$, any target function $$f \in F_n^r$$, any probability distribution $$P$$ on $$X_n$$, and any $$0 < \epsilon, \delta < 1$$, given a sample $$S$$ derived from a sequence of at least $$\frac{1}{\epsilon}((\frac{en}{r})^{r}\ln(8n)+\ln\frac{1}{\delta})$$ random examples of $$f$$ (chosen independently according to $$P$$), with probability at least $$1-\delta$$, FIND$$(S,r)$$ (or FINDMIN(S)) produces a hypothesis $$g \in F_n^r$$ that has error at most $$\epsilon$$.
 
 **Proof of Theorem 2:**
-By Lemma 1, $$|F_n^r| \le (8n)^{(en/r)^r}$$ for $$n \ge r \ge 1$$. Hence by Lemma 4, with probability at least $$1-\delta$$, every hypothesis $$g \in F_n^r$$ consistent with $$S$$ has error at most $$\epsilon$$. Since FIND$$(S,r)$$ and FINDMIN(S) produce one of these hypotheses, the result follows.
+By Lemma 1, $$|F_n^r| \le (8n)^{(\frac{en}{r})^r}$$ for $$n \ge r \ge 1$$. Hence by Lemma 4, with probability at least $$1-\delta$$, every hypothesis $$g \in F_n^r$$ consistent with $$S$$ has error at most $$\epsilon$$. Since FIND$$(S,r)$$ and FINDMIN(S) produce one of these hypotheses, the result follows.
 
 -----
 
