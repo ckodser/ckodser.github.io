@@ -55,18 +55,12 @@ $$Var[f] \leq \sum_{t=1}^{n} \sum_{i=1}^{n} E[E[(f(u[t-1])\neq f(u[t]))\cdot 1_{
 Obviously, given the random variable $$X_{t-1}$$ we can determine the first $$t$$ node in the path thus determining $$i_t$$. Proof magic happened here: we can show that conditional on $$X_{t-1}$$, the pair $$(u[t-1], u[t])$$ has the distribution $$\Omega^{(i_t)}$$ if $$i_t = i \in [n]$$.
 
 
-<details>
-<summary>why</summary>
-
-This is because $u[t-1]$ and $u[t]$ differ only along a single dimension, which is $i(t)$. Additionally, $y$ is unrelated to $X_{t-1}$, so its distribution is independent. In $u[t] = x_{J[t]} y$, the dimensions not contained in $J[t]$ are set to match those of $y$; therefore, they retain their original distribution $\Omega$.
-
-The dimensions in $J[t]$ are set to those of $x$, specifically the $t, t+1, \ldots, s$-th dimensions along the root-to-$x$ path. These dimensions are distinct from the first $t-1$ dimensions of $x$ and thus also preserve their original distribution.
-
-As a result, $u[t]$ is distributed according to $\Omega^{(i_t)}$ whenever $i_t = i \in [n]$.
-
-This means, $$E[(f(u[t-1])\neq f(u[t]))\cdot 1_{\{i_t=i\}}|X_{t-1}]=E_{x, y \sim \Omega^{(i_t)}}[(f(x)\neq f(y))\cdot 1_{\{i_t(x)=i\}}]=Inf_i(f) 1_{i_t(x)=i}$$.
-</details>
-
+> This is because $$u[t-1]$$ and $$u[t]$$ differ only along a single dimension, which is $$i(t)$$. Additionally, $$y$$ is unrelated to $$X_{t-1}$$, so its distribution is independent. In $$u[t] = x_{J[t]} y$$, the dimensions not contained in $$J[t]$$ are set to match those of $$y$$; therefore, they retain their original distribution $$\Omega$$.
+> The dimensions in $$J[t]$$ are set to those of $$x$$, specifically the $$t, t+1, \ldots, s$$-th dimensions along the root-to-$$x$$ path. These dimensions are distinct from the first $$t-1$$ dimensions of $$x$$ and thus also preserve their original distribution.
+> As a result, $$u[t]$$ is distributed according to $$\Omega^{(i_t)}$$ whenever $$i_t = i \in [n]$$.
+> This means,
+> 
+> $$E[(f(u[t-1])\neq f(u[t]))\cdot 1_{\{i_t=i\}}|X_{t-1}]=E_{x, y \sim \Omega^{(i_t)}}[(f(x)\neq f(y))\cdot 1_{\{i_t(x)=i\}}]=Inf_i(f) 1_{i_t(x)=i}$$.
 
 Using the above 
 
