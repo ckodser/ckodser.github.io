@@ -39,10 +39,12 @@ They first show that if they have a realizable function, and they sample some da
 
 ### Lemma 1
 
-1. Let $$k$$ be the number of nodes in a reduced decision tree over $$V_n$$ of rank $$r$$, where $$n \geq r \geq 1$$. Then $$2^{r+1}-1 \leq k \leq (2\sum_{i=0}^{r}\binom{n}{i})-1 < 2(\frac{en}{r})^r$$.
-2. If $$r=0$$ then $$|F_n^r|=2$$. Else if $$n\leq r$$ then $$|F_n^r|=2^{2^n}$$, 
+(i) Let $$k$$ be the number of nodes in a reduced decision tree over $$V_n$$ of rank $$r$$, where $$n \geq r \geq 1$$. Then $$2^{r+1}-1 \leq k \leq (2\sum_{i=0}^{r}\binom{n}{i})-1 < 2(\frac{en}{r})^r$$.
+
+
+(ii) If $$r=0$$ then $$|F_n^r|=2$$. Else if $$n\leq r$$ then $$|F_n^r|=2^{2^n}$$, 
 and if $$n>r$$ then
-$$|F_n^r|\leq {(8n)}^{{(\frac{en}{r})}^r}$$.
+$$|F_n^r|\leq (8n)^{(\frac{en}{r})^r}$$.
 
 **Proof of Lemma 1:**
 
@@ -83,7 +85,7 @@ Therefore, $$|F_n^r| \leq (8n)^{(\frac{en}{r})^r}$$.
 
 ### Lemma 3 (Time of FIND)
 
-For any nonempty sample $$S$$ of a function on $$X_n$$ and $$r \geqq 0$$, the time 
+For any nonempty sample $$S$$ of a function on $$X_n$$ and $$r \geq 0$$, the time 
 of FIND$$(S,r)$$ is $$O(|S|(n+1)^{2r})$$.
 
 **Proof of Lemma 3:**
