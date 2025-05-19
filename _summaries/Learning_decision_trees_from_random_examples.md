@@ -9,7 +9,7 @@ giscus_comments: true
 link: https://www.sciencedirect.com/science/article/pii/0890540189900011
 ---
 
-This summary focuses exclusively on the technical aspects of the paper concerning learning decision trees, including definitions, notations, the main theorems, and their proofs.
+They first show that if they have a realizable function, and they sample some datapoints, then a consistent decision tree with these samples has a low error. Then They proposed an algorithm that finds a decision tree with min rank that is consistent with the samples. Then they move their analysis from rank to nodes. 
 
 
 ### Definitions and Notations for Decision Trees
@@ -40,7 +40,9 @@ This summary focuses exclusively on the technical aspects of the paper concernin
 ### Lemma 1
 
 1. Let $$k$$ be the number of nodes in a reduced decision tree over $$V_n$$ of rank $$r$$, where $$n \geq r \geq 1$$. Then $$2^{r+1}-1 \leq k \leq (2\sum_{i=0}^{r}\binom{n}{i})-1 < 2(\frac{en}{r})^r$$.
-2. If $$r=0$$ then $$|F_n^r|=2$$. Else if $$n \leq r$$ then $$|F_n^r|=2^{2^n}$$, and if $$n > r$$ then $$|F_n^r| \leq (8n)^{(\frac{en}{r})^r}$$.
+2. If $$r=0$$ then $$|F_n^r|=2$$. Else if $$n\leq r$$ then $$|F_n^r|=2^{2^n}$$, 
+and if $$n>r$$ then
+$$|F_n^r|\leq {(8n)}^{{(\frac{en}{r})}^r}$$.
 
 **Proof of Lemma 1:**
 
@@ -87,12 +89,20 @@ of FIND$$(S,r)$$ is $$O(|S|(n+1)^{2r})$$.
 **Proof of Lemma 3:**
 Let $$T(i,r)$$ be the max time for FIND$$(S,r)$$ when $$S$$ is a sample on $$X_n$$ with $$1 \leq |S| \leq m$$ and at most $$i$$ variables are informative.
 If $$i=0$$, $$T(i,r)$$ is $$O(1)$$ (since $$|S|=1$$). If $$r=0$$, $$T(i,r)$$ is $$O(m)$$.
-For $$r \geq 1$$, steps 1 and 3 (determining informative variables) take $$O(mn)$$ time. Each of the two recursive calls in step 3A takes at most $$T(i-1, r-1)$$ time, as $$v$$ is no longer informative. These calls are made at most $$i$$ times, totaling $$2iT(i-1, r-1)$$ for step 3A. Step 3C.1 makes at most one recursive call to $$FIND(S_0^v, r)$$ or $$FIND(S_1^v, r)$$, taking at most $$T(i-1, r)$$ time.
+For $$r \geq 1$$, steps 1 and 3 (determining informative variables) take $$O(mn)$$ time. Each of the two recursive calls in step 3.1 takes at most $$T(i-1, r-1)$$ time, as $$v$$ is no longer informative. These calls are made at most $$i$$ times, totaling $$2iT(i-1, r-1)$$ for step 3.1. Step 3.3.1 makes at most one recursive call to $$FIND(S_0^v, r)$$ or $$FIND(S_1^v, r)$$, taking at most $$T(i-1, r)$$ time.
+
 Therefore, for $$r \geq 1$$: $$T(i,r) \leq O(mn) + 2iT(i-1,r-1) + T(i-1,r)$$.
-Given $$T(0,r) \leq c_1$$ and $$T(i,0) \leq c_1$$ for all $$i,r \geq 0$$, and $$T(i,r) \leq c_2 + 2iT(i-1,r-1) + T(i-1,r)$$ for $$i,r \geq 1$$, where $$c_1=O(m)$$ and $$c_2=O(mn)$$.
+Given $$T(0,r) \leq c_1$$ 
+
+and $$T(i,0) \leq c_1$$ for all $$i,r \geq 0$$, and $$T(i,r) \leq c_2 + 2iT(i-1,r-1) + T(i-1,r)$$ for $$i,r \geq 1$$, where $$c_1=O(m)$$ and $$c_2=O(mn)$$.
+
+
 It follows that $$T(i,r) \leq c_2i + 2\sum_{j=1}^{i}jT(j-1,r-1)+c_1 \leq c_1+c_2i+i(i+1)T(i,r-1)$$.
+
 Solving this, $$T(i,r) < c_1+c_2(i+1)+(i+1)^2T(i,r-1)$$.
+
 This leads to $$T(i,r) < c_2\sum_{j=0}^{r-1}(i+1)^{2j+1}+c_1\sum_{j=0}^{r}(i+1)^{2j} \leq O(mn(i+1)^{2r-1}+m(i+1)^{2r})$$.
+
 Since $$i \leq n$$ and $$m=|S|$$, the time for FIND$$(S,r)$$ is $$O(|S|(n+1)^{2r})$$.
 
 -----
