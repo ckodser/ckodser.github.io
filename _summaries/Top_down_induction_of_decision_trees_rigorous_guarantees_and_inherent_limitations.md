@@ -79,7 +79,8 @@ The cost of a bare tree $$T^{\circ}$$ relative to a function $$f: \{0,1\}^n \rig
 
 $$\text{cost}_f(T^{\circ}) = \sum_{\text{leaf } \ell \in T^{\circ}} 2^{-|\ell|} \cdot \text{Inf}(f_\ell)$$
 
-where $$|\ell|$$ is the depth of leaf $$\ell$$ and $$f_\ell$$ is the restriction of $$f$$ by the path leading to $$\ell$$.
+where $$|\ell|$$ is the depth of leaf $$\ell$$ and $$f_\ell$$ 
+is the restriction of $$f$$ by the path leading to $$\ell$$.
 
 Lemma 5.1 states the following properties of the cost:
 First $$\text{error}(T^{\circ}, f) \le \text{cost}_f(T^{\circ})$$. This means if the cost drops below $$\epsilon$$, the heuristic can terminate.

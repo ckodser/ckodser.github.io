@@ -105,7 +105,11 @@ Solving this, $$T(i,r) < c_1+c_2(i+1)+(i+1)^2T(i,r-1)$$.
 
 This leads to $$T(i,r) < c_2\sum_{j=0}^{r-1}(i+1)^{2j+1}+c_1\sum_{j=0}^{r}(i+1)^{2j} \leq O(mn(i+1)^{2r-1}+m(i+1)^{2r})$$.
 
-Since $$i \leq n$$ and $$m=|S|$$, the time for FIND$$(S,r)$$ is $$O(|S|(n+1)^{2r})$$.
+Since $$i \leq n$$ and $$m=|S|$$, 
+the time for FIND$$(S,r)$$ is $$O(|S|(n+1)^{2r}).$$
+
+
+
 
 -----
 
@@ -157,7 +161,13 @@ If $$n > r \geq 1$$, each function in $$F_n^r$$ is represented by a binary tree 
 
 $$\sum_{i=1}^{k}\frac{2^{i}n^{i-1}}{2i-1}\binom{2i-1}{i}<(2n)^{k}\sum_{i=1}^{k}\binom{2k-1}{i}<(2n)^{k}2^{2k-1}<(8n)^{k}$$. 
 
-Therefore, $$|F_n^r| \leq (8n)^{(\frac{en}{r})^r}$$.
+Therefore, 
+
+
+$$|F_n^r| \leq (8n)^{(\frac{en}{r})^r}.$$
+
+
+
 
 -----
 
