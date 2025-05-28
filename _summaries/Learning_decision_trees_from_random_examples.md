@@ -206,4 +206,21 @@ Let $$p(n)$$ be any polynomial. There is a learning algorithm that, given random
 This follows directly from Theorems 1 and 3.
 
 
+-----
+
+Some notes on Corollary 1 (a simpler form)
+
+## Corollary 2
+
+ There is a learning algorithm that, given random examples drawn according to any distribution on $${0,1}^n$$ of any target function represented by a decision tree on $$n$$ Boolean variables with at most $$p\in \text{polynomial}(n)$$ nodes, produces, with probability at least $$1-\delta$$, a hypothesis (represented as a decision tree) that has error at most $$\epsilon$$, and rank at most $$\lfloor \log p \rfloor\in O(\text{polylog}(n))$$. 
+ The number of random examples required is 
+ 
+$$O(\frac{1}{\epsilon}\cdot(\log(1/\delta)+\log(n)\cdot(\frac{en}{\lfloor \log p \rfloor})^{\lfloor \log p \rfloor})) < O(\frac{1}{\epsilon}\cdot(\log(1/\delta)+\log(n)\cdot(\frac{en})^{\text{polylog(n)})) =?= O(\frac{1}{\epsilon}\cdot(\log(1/\delta)+\cdot(\frac{en})^{\text{polylog(n)}))$$
+
+
+and computation time required is
+
+
+$$O(\frac{1}{\epsilon}\cdot(\log(1/\delta)+\cdot(\frac{en})^{\text{polylog(n)})\codt n^{2\log(p)})< O(\frac{1}{\epsilon}\cdot(\log(1/\delta)+\cdot(\frac{en})^{\text{polylog(n)})) n^{2\text{polylog}(p)})= O(\frac{1}{\epsilon}\cdot(\log(1/\delta)+\cdot(\frac{en})^{\text{polylog(n)}))$$.
+
 
