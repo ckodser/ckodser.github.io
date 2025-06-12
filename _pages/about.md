@@ -30,7 +30,7 @@ and heading the algorithmic problem design team for the national summer camp in 
 Furthering my education, I majored in computer engineering and joined Dr. Rohban's Lab. 
 In this lab (Robust and Interpretable Machine Learning Lab), I published a paper in NeurIPS 2022 
 on adversarially robust Out-of-Distribution detection. 
-This is not my only venture in the lab; you can read about some failed projects on the <a href="/projects/" >Project </a>. 
+This is not my only venture in the lab; you can read about some failed projects on the <a href="/projects/" >Project</a>. 
 
 Since commencing my bachelor's degree, I have been intrigued by Game Theory. 
 To delve deeper, I completed various online and in-person courses, 
@@ -40,7 +40,7 @@ I initiated a project within Dr. Rohban's Lab focusing on these topics.
 This project aimed at aligning self-interested neurons in a neural network with a local utility function.
 
 Additionally, during an internship at the Institute of Science and Technology Austria (IST Austria), 
-I submitted a paper to ICLR 2024 concerning the utilization of sparsity to enhance interpretability. 
+I published a paper at <a href="https://icml.cc/virtual/2024/poster/33092">ICML 2024</a> on the utilization of sparsity to enhance interpretability. 
 Under the mentorship of Professor Dan Alistarh, this internship introduced me to the intriguing literature 
 surrounding Sparsity and Interpretability, which I find very fascinating.
 
