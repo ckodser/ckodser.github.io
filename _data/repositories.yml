@@ -5,6 +5,8 @@ repo_description_lines_max: 10
 
 github_repos:
   - rohban-lab/ATD
+  - IST-DASLab/SPADE
+  - Kaleidoscope-Dataset/Kaleidoscope-Dataset.github.io
   - ckodser/osServer
   - ckodser/youtube
   - IR1401-Spring-Final-Projects/cookbook1401-6_9
