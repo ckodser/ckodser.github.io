@@ -5,7 +5,7 @@ permalink: /summaries/
 description: Paper summaries
 nav: true
 nav_order: 5
-display_categories: [ActiveLearning, Interpretability]
+display_categories: [Hallucination, Interpretability, ActiveLearning]
 horizontal: false
 ---
 
