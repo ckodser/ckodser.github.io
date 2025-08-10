@@ -52,7 +52,7 @@ They also show that the model looks at those previous tokens that are really mat
     </div>
 </div>
 
-- They trained a GPT-2 model which learned the data
+- They trained a GPT-2 model which learned the data (For an example, look at the image in Part 2.2)
 - They defined the level of reasoning skills
   - level-0: Go in circles and check if you can calculate a variable and if you can, calculate it. 
   - level-1: uses topological sort + gives shortest CoT.
@@ -85,4 +85,38 @@ When they wanted to know what knowledge the model has about a variable, they att
 
 # Part 2.2
 
-LLMs are not perfect in reasoning. 
+LLMs are not perfect in reasoning. Sometimes by just saying that they made a mistake somewhere, they can correct themselves. 
+They tried to improve their LLM reasoning model. Using the iGSM, they found out that in that dataset the main reason an LLM returned the wrong answer was that the model tries to compute a variable that is not ready for computation. 
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path='assets/img/Physics_of_Language_Models/solution.png' class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+- The model sometimes knows it made a mistake 50%-70% of the time. 
+- Error detection is easy. You can train a model on error-free data, and it already knows when some data is wrong. 
+- You can improve reasoning using this, when the model regrets and knows it made a mistake role back and generate that step again. From 78% -> 80%. Note that beam search doesn't improve reasoning.
+
+But it is better if the model corrects itself. To investigate this, they wanted a dataset that solutions sometimes have error, but it corrects itself later. This is an example of this dataset. 
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid path='assets/img/Physics_of_Language_Models/dataset_with_error.png' class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+- Doesn't this encourage model to make mistake? Shouldn't we mask the labels of mistake? so that the model doesn't learn the mistake but only to correct it mistake? Answer: even with p=0.5 the accuracy of the model increases. 
+- When p increases, the model doesn't make more mistakes **that much** (it actually makes more mistakes by a little bit.) with temp=0. 
+- LoRA on error-free models with the new dataset with error doesn't help.
+  - Full fine-tuning works if you use lots of data. 
+- So Error correction is harder than Error detection. 
+
+## data with error generation
+The method that works is that you move a later step of reasoning back, and the model midway of this reasoning step should understand that it is not yet ready for this step and output the [BACK] token.
+This encourages that model to not skip reasoning steps. 
+
+## Beam search 
+ 
+Beam search is not that good. beam search with 32 tokens increases accuracy from 78% to 79%. 
+
