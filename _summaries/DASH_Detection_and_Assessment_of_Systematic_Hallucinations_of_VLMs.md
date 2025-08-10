@@ -2,14 +2,14 @@
 layout: page
 title: DASH Detection and Assessment of Systematic Hallucinations of VLMs
 description: Make a dataset that VLMs hallucinate and wrongly think things exist in images 
-categories: Hallucination
-img: assets/img/DASH_Detection_and_Assessment_of_Systematic_Hallucinations_of_VLMs.png 
+categories: [Summary, Hallucination]
+img: assets/img/DASH_Detection_and_Assessment/DASH_Detection_and_Assessment_of_Systematic_Hallucinations_of_VLMs.png 
 importance: 1
 giscus_comments: true
 link: https://arxiv.org/abs/2503.23573
 ---
 
-In this paper they build a dataset that makes VLMs Hallucinate. They used two approaches  DASH-LLM, DASH-OPT.
+In this paper they build a dataset that makes VLMs Hallucinate. They used two approaches DASH-LLM, and DASH-OPT.
 
 ## DASH-LLM
 
@@ -26,7 +26,7 @@ Then they filtered the retrieved images based on these two filters.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path='assets/img/DASH_Detection_and_Assessment_of_Systematic_Hallucinations_of_VLMs3.png' class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path='assets/img/DASH_Detection_and_Assessment/DASH_Detection_and_Assessment_of_Systematic_Hallucinations_of_VLMs3.png' class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -53,7 +53,7 @@ So they find 50 similar images in LAION-5B and then filtered images with the [ob
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid path='assets/img/DASH_Detection_and_Assessment_of_Systematic_Hallucinations_of_VLMs4.png' class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path='assets/img/DASH_Detection_and_Assessment/DASH_Detection_and_Assessment_of_Systematic_Hallucinations_of_VLMs4.png' class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
