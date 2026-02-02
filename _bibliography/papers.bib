@@ -67,8 +67,9 @@
 }
 
 @misc{salazar2025kaleidoscopeinlanguageexamsmassively,
-      title={Kaleidoscope: In-language Exams for Massively Multilingual Vision Evaluation <a href="https://arxiv.org/abs/2504.07072"> (arXiv)</a>},
-      author={Israfel Salazar and Manuel Fernández Burda and Shayekh Bin Islam and Arshia Soltani Moakhar and Shivalika Singh and Fabian Farestam and Angelika Romanou and Danylo Boiko and Dipika Khullar and Mike Zhang and Dominik Krzemiński and Jekaterina Novikova and Luísa Shimabucoro and Joseph Marvin Imperial and Rishabh Maheshwary and Sharad Duwal and Alfonso Amayuelas and Swati Rajwal and Jebish Purbey and Ahmed Ruby and Nicholas Popovič and Marek Suppa and Azmine Toushik Wasi and Ram Mohan Rao Kadiyala and Olga Tsymboi and Maksim Kostritsya and Bardia Soltani Moakhar and Gabriel da Costa Merlin and Otávio Ferracioli Coletti and Maral Jabbari Shiviari and MohammadAmin farahani fard and Silvia Fernandez and María Grandury and Dmitry Abulkhanov and Drishti Sharma and Andre Guarnier De Mitri and Leticia Bossatto Marchezi and Johan Obando-Ceron and Nazar Kohut and Beyza Ermis and Desmond Elliott and Enzo Ferrante and Sara Hooker and Marzieh Fadaee},
+      abbr={ICLR},
+      title={Kaleidoscope: In-language Exams for Massively Multilingual Vision Evaluation <a href="https://openreview.net/forum?id=zCYXhSy9UH"> (ICLR)</a>},
+      author={Israfel Salazar* and Manuel Fernández Burda* and Shayekh Bin Islam* and Arshia Soltani Moakhar* and Shivalika Singh* and Fabian Farestam* and Angelika Romanou* and Danylo Boiko and Dipika Khullar and Mike Zhang and Dominik Krzemiński and Jekaterina Novikova and Luísa Shimabucoro and Joseph Marvin Imperial and Rishabh Maheshwary and Sharad Duwal and Alfonso Amayuelas and Swati Rajwal and Jebish Purbey and Ahmed Ruby and Nicholas Popovič and Marek Suppa and Azmine Toushik Wasi and Ram Mohan Rao Kadiyala and Olga Tsymboi and Maksim Kostritsya and Bardia Soltani Moakhar and Gabriel da Costa Merlin and Otávio Ferracioli Coletti and Maral Jabbari Shiviari and MohammadAmin farahani fard and Silvia Fernandez and María Grandury and Dmitry Abulkhanov and Drishti Sharma and Andre Guarnier De Mitri and Leticia Bossatto Marchezi and Johan Obando-Ceron and Nazar Kohut and Beyza Ermis and Desmond Elliott and Enzo Ferrante and Sara Hooker and Marzieh Fadaee},
       year={2025},
       eprint={2504.07072},
       archivePrefix={arXiv},
@@ -76,4 +77,49 @@
       url={https://arxiv.org/abs/2504.07072},
       abstract={The evaluation of vision-language models (VLMs) has mainly relied on English-language benchmarks, leaving significant gaps in both multilingual and multicultural coverage. While multilingual benchmarks have expanded, both in size and languages, many rely on translations of English datasets, failing to capture cultural nuances. In this work, we propose Kaleidoscope, as the most comprehensive exam benchmark to date for the multilingual evaluation of vision-language models. Kaleidoscope is a large-scale, in-language multimodal benchmark designed to evaluate VLMs across diverse languages and visual inputs. Kaleidoscope covers 18 languages and 14 different subjects, amounting to a total of 20,911 multiple-choice questions. Built through an open science collaboration with a diverse group of researchers worldwide, Kaleidoscope ensures linguistic and cultural authenticity. We evaluate top-performing multilingual vision-language models and find that they perform poorly on low-resource languages and in complex multimodal scenarios. Our results highlight the need for progress on culturally inclusive multimodal evaluation frameworks.},
       selected={true}
+}
+
+@misc{jafariraviz2026failingexplorelanguagemodels,
+      title={Failing to Explore: Language Models on Interactive Tasks <a href="https://arxiv.org/abs/2601.22345"> (arXiv)</a>}, 
+      author={Mahdi JafariRaviz* and Keivan Rezaei* and Arshia Soltani Moakhar* and Zahra Sodagar and Yize Cheng and Soheil Feizi},
+      year={2026},
+      eprint={2601.22345},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2601.22345}, 
+      abstract={We evaluate language models on their ability to explore interactive environments under a limited interaction budget. We introduce three parametric tasks with controllable exploration difficulty, spanning continuous and discrete environments. Across state-of-the-art models, we find systematic under-exploration and suboptimal solutions, with performance often significantly worse than simple explore--exploit heuristic baselines and scaling weakly as the budget increases. Finally, we study two lightweight interventions: splitting a fixed budget into parallel executions, which surprisingly improves performance despite a no-gain theoretical result for our tasks, and periodically summarizing the interaction history, which preserves key discoveries and further improves exploration.},
+      selected={true}
+}
+
+@article{moakhar2026active,
+abbr={ICLR},
+  title={Active Learning for Decision Trees with Provable Guarantees <a href="https://openreview.net/forum?id=NOkjJPJIit"> (ICLR)</a>},
+  author={Moakhar, Arshia Soltani and Laoaron, Tanapoom and Ghahremani, Faraz and Banihashem, Kiarash and Hajiaghayi, MohammadTaghi},
+  journal={ICLR},
+  year={2026},
+  abstract={This paper advances the theoretical understanding of active learning label complexity for decision trees as binary classifiers. We make two main contributions. First, we provide the first analysis of the disagreement coefficient for decision trees—a key parameter governing active learning label complexity. Our analysis holds under two natural assumptions required for achieving polylogarithmic label complexity: (i) each root-to-leaf path queries distinct feature dimensions, and (ii) the input data has a regular, grid-like structure. We show these assumptions are essential, as relaxing them leads to polynomial label complexity. Second, we present the first general active learning algorithm for binary classification that achieves a multiplicative error guarantee, producing a $(1+\epsilon)$-approximate classifier. By combining these results, we design an active learning algorithm for decision trees that uses only a polylogarithmic number of label queries in the dataset size, under the stated assumptions. Finally, we establish a label complexity lower bound, showing our algorithm’s dependence on the error tolerance $\epsilon$ is close to optimal.},
+  selected={true}
+}
+
+@misc{cheng2026llmagentstemporallyblind,
+      title={Your LLM Agents are Temporally Blind: The Misalignment Between Tool Use Decisions and Human Time Perception}, 
+      author={Yize Cheng* and Arshia Soltani Moakhar* and Chenrui Fan* and Parsa Hosseini and Kazem Faghih and Zahra Sodagar and Wenxiao Wang and Soheil Feizi},
+      year={2026},
+      eprint={2510.23853},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2510.23853}, 
+      abstract={Large language model (LLM) agents are increasingly used to interact with and execute tasks in dynamic environments. However, a critical yet overlooked limitation of these agents is that they, by default, assume a stationary context, failing to account for the real-world time elapsed between messages. We refer to this as "temporal blindness". This limitation hinders decisions about when to invoke tools, leading agents to either over-rely on stale context and skip needed tool calls, or under-rely on it and redundantly repeat tool calls. To study this challenge, we constructed TicToc, a diverse dataset of multi-turn user-agent message trajectories across 76 scenarios, spanning dynamic environments with high, medium, and low time sensitivity. We collected human preferences between "calling a tool" and "directly answering" on each sample, and evaluated how well LLM tool-calling decisions align with human preferences under varying amounts of elapsed time. Our analysis reveals that existing models display poor alignment with human temporal perception, with no model achieving a normalized alignment rate better than 65% when given time stamp information. We also show that naive, prompt-based alignment techniques have limited effectiveness for most models, but specific post-training alignment can be a viable way to align multi-turn LLM tool use with human temporal perception. Our data and findings provide a first step toward understanding and mitigating temporal blindness, offering insights to foster the development of more time-aware and human-aligned agents.},
+      selected={true}
+}
+
+@misc{parast2026ghosthallucinationinducingimagegeneration,
+      abbr={ICLR},
+      title={GHOST: Hallucination-Inducing Image Generation for Multimodal LLMs <a href="https://openreview.net/forum?id=f4TACE7HhU">(ICLR)</a>}, 
+      author={Aryan Yazdan Parast and Parsa Hosseini and Hesam Asadollahzadeh and Arshia Soltani Moakhar and Basim Azam and Soheil Feizi and Naveed Akhtar},
+      year={2026},
+      eprint={2509.25178},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2509.25178}, 
 }
