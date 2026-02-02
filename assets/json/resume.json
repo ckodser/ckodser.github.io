@@ -4,20 +4,31 @@
     "label": "Researcher",
     "image": "",
     "email": "arshia.soltani2@gmail.com",
-    "phone": "(912) 838-1385",
+    "phone": "(240) 305-7433",
     "url": "https://ckodser.github.io",
-    "summary": "An Iranian machine learning researcher focused on Interpretability and Safety.",
+    "summary": "A machine learning researcher working on trustworthy machine learning, Agentic Language Models, and Theoretical Computer Science.",
     "location": {
       "address": "x",
       "postalCode": "x",
-      "city": "Tehran",
-      "countryCode": "Iran",
-      "region": "Tehran"
+      "city": "Hyattsville",
+      "countryCode": "United States",
+      "region": "Maryland"
     },
     "profiles": [
     ]
   },
   "education": [
+    {
+      "institution": "University of Maryland, College Park, Maryland",
+      "location": "Maryland, USA",
+      "url": "https://umd.edu/",
+      "area": "Computer Engineering",
+      "studyType": "PhD",
+      "startDate": "2025-07-14",
+      "endDate": "",
+      "score": "",
+      "courses": []
+    },
     {
       "institution": "Sharif University of Technology, Tehran, Iran",
       "location": "Tehran, Iran",
