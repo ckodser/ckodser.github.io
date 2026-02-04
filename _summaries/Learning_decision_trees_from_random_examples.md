@@ -134,7 +134,7 @@ with probability at least $$1-\delta$$, every hypothesis $$g \in F_n$$
 that is consistent with all of these examples has error at most $$\epsilon$$.
 
 ### **Proof of Lemma 4:**
-For any single function with error at least $$\epsilon$$, the probability that it is consistent with $$m$$ random examples is at most $$(1-\epsilon)^m \leq e^{-\epsilon m}$$. Hence, the probability that any function in $$F_n$$ that has error at least $$\epsilon$$ is consistent with $$m$$ random examples is at most $$\lvert F_n \rverte^{-\epsilon m}$$. Setting this to $$\delta$$ and solving for $$m$$ gives the result.
+For any single function with error at least $$\epsilon$$, the probability that it is consistent with $$m$$ random examples is at most $$(1-\epsilon)^m \leq e^{-\epsilon m}$$. Hence, the probability that any function in $$F_n$$ that has error at least $$\epsilon$$ is consistent with $$m$$ random examples is at most $$\lvert F_n \rvert e^{-\epsilon m}$$. Setting this to $$\delta$$ and solving for $$m$$ gives the result.
 
 -----
 
@@ -221,4 +221,4 @@ $$O(\frac{1}{\epsilon}\cdot(\log(1/\delta)+\log(n)\cdot(\frac{en}{\lfloor \log p
 and computation time required is
 
 
-$$O(\frac{1}{\epsilon}\cdot(\log(1/\delta)+\cdot(\frac{en})^{\text{polylog(n)})\codt n^{2\log(p)})< O(\frac{1}{\epsilon}\cdot(\log(1/\delta)+\cdot(\frac{en})^{\text{polylog(n)})) n^{2\text{polylog}(p)})= O(\frac{1}{\epsilon}\cdot(\log(1/\delta)+\cdot(\frac{en})^{\text{polylog(n)}))$$.
+$$O(\frac{1}{\epsilon}\cdot(\log(1/\delta)+\cdot(\frac{en})^{\text{polylog(n)})\cdot n^{2\log(p)})< O(\frac{1}{\epsilon}\cdot(\log(1/\delta)+\cdot(\frac{en})^{\text{polylog(n)})) n^{2\text{polylog}(p)})= O(\frac{1}{\epsilon}\cdot(\log(1/\delta)+\cdot(\frac{en})^{\text{polylog(n)}))$$.
