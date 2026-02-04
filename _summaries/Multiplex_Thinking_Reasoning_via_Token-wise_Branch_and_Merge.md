@@ -1,16 +1,16 @@
 ---
 layout: page
-img: assets/img/Multiplex_Thinking_Reasoning_via_Token-wise_Branch-and-Merge/image4.png
-importance: 1
-giscus_comments: true
-title: Multiplex Thinking: Reasoning via Token-wise Branch-and-Merge
+title: Multiplex Thinking: Reasoning via Token-wise Branch_and_Merge
 description: Make soft-thinking a bit random. Then train with GRPO.
 categories: [Reasoning]
+img: assets/img/Multiplex_Thinking_Reasoning_via_Token-wise_Branch_and_Merge/image4.png
+importance: 1
+giscus_comments: true
 link: https://arxiv.org/pdf/2601.08808
 ---
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
-            {% include figure.liquid path='assets/img/Multiplex_Thinking_Reasoning_via_Token-wise_Branch-and-Merge/image4.png' class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid path='assets/img/Multiplex_Thinking_Reasoning_via_Token-wise_Branch_and_Merge/image4.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>
 
@@ -28,20 +28,20 @@ The final soft input token is weighted average of token embeddings with $w(v)$ w
 1) Multiplex representations help without training. (Multiplex Thinking-I)
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
-            {% include figure.liquid path='assets/img/Multiplex_Thinking_Reasoning_via_Token-wise_Branch-and-Merge/image1.png' class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid path='assets/img/Multiplex_Thinking_Reasoning_via_Token-wise_Branch_and_Merge/image1.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>
 
 2) K>1 is enough. K=2,3,6 they all work.
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
-            {% include figure.liquid path='assets/img/Multiplex_Thinking_Reasoning_via_Token-wise_Branch-and-Merge/image2.png' class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid path='assets/img/Multiplex_Thinking_Reasoning_via_Token-wise_Branch_and_Merge/image2.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>
 
 3) They improve both Pass-1 till Pass-1024
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
-            {% include figure.liquid path='assets/img/Multiplex_Thinking_Reasoning_via_Token-wise_Branch-and-Merge/image3.png' class="img-fluid rounded z-depth-1" %}
+            {% include figure.liquid path='assets/img/Multiplex_Thinking_Reasoning_via_Token-wise_Branch_and_Merge/image3.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>
