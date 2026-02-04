@@ -7,14 +7,15 @@ import sys
 from pathlib import Path
 
 PIPE_IN_SINGLE_LINE_DISPLAY = re.compile(r"\$\$[^$]*\|[^$]*\$\$")
+DOUBLE_BACKSLASH_MATH = re.compile(r"\$\$[^$]*\\\\[^$]*\$\$")
 FENCE_RE = re.compile(r"^\s*(```|~~~)")
 PIPE_WITH_SPACES = re.compile(r"\s\|\s")
 ABS_BAR = re.compile(r"\|([^|\n]+?)\|")
 
 
 def _fix_line(line: str) -> str:
-    fixed = PIPE_WITH_SPACES.sub(lambda _: " \\\\mid ", line)
-    fixed = ABS_BAR.sub(lambda m: f"\\\\lvert {m.group(1)} \\\\rvert", fixed)
+    fixed = PIPE_WITH_SPACES.sub(lambda _: " \\mid ", line)
+    fixed = ABS_BAR.sub(lambda m: f"\\lvert {m.group(1)} \\rvert", fixed)
     return fixed
 
 
@@ -45,6 +46,9 @@ def process_file(path: Path, fix: bool) -> tuple[bool, bool, list[tuple[int, str
                 if new_line != line:
                     lines[idx - 1] = new_line
                     changed = True
+
+        if DOUBLE_BACKSLASH_MATH.search(line):
+            violations.append((idx, line.rstrip()))
 
     if fix and changed:
         path.write_text("\n".join(lines) + "\n", encoding="utf-8")
