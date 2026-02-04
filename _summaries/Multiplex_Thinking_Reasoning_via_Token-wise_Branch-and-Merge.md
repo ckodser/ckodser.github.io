@@ -1,12 +1,12 @@
 ---
-title: Multiplex Thinking: Reasoning via Token-wise Branch-and-Merge
-description: Make soft-thinking a bit random. Then train with GRPO.
-categories: [Reasoning]
-link: https://arxiv.org/pdf/2601.08808
 layout: page
 img: assets/img/Multiplex_Thinking_Reasoning_via_Token-wise_Branch-and-Merge/image4.png
 importance: 1
 giscus_comments: true
+title: Multiplex Thinking: Reasoning via Token-wise Branch-and-Merge
+description: Make soft-thinking a bit random. Then train with GRPO.
+categories: [Reasoning]
+link: https://arxiv.org/pdf/2601.08808
 ---
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
