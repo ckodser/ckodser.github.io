@@ -43,7 +43,9 @@ To test this, they replace a soft token with a discrete token, either the 1st do
 Then they try to figure out where the model ignores other tokens and starts to only consider the most dominant token. They find some soft thinking reasoning tokens that have two different dominant tokens, $T_i^1$ and $T_i^2$ for instance. Then they make a soft thinking token consist only of those two tokens: $S_i=0.6 T_i^1 + 0.4 T_i^2$. They again test
 
 1) $[X, S_1, S_2, \cdots, S_{i-1}, T_i^1]$
+
 2) $[X, S_1, S_2, \cdots, S_{i-1}, T_i^2]$
+
 3) $[X, S_1, S_2, \cdots, S_{i-1}, S_i]$
 
 They get the top 5 predicted tokens for the first two lines. Then they investigate the behaviour of the soft thinking (third line). They see that when the model goes deeper into layers, the predicted tokens have less and less intersection with the second dominant token prediction and more intersection with the first dominant token prediction.
@@ -64,7 +66,7 @@ Finally, they also take a soft thinking reasoning path and extract the most domi
 They investigate two types of noise they can add to logits:
 
 - Dirichlet sampling:
-First multiply probabilities by a constant $0 < \gamma << 1$. Then get the probabilities from $Dir(\gamma p)$.
+First multiply probabilities by a constant $0 < \gamma < < 1$. Then get the probabilities from $Dir(\gamma p)$.
 The Dirichlet sampling works as follows: sample $Y_i\sim gamma(\alpha_i, \text{scale}=1)$.
 Then $\hat{\pi}_i= \frac{Y_i}{\sum_j Y_j}$.
 
