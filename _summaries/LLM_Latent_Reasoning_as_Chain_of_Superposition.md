@@ -20,9 +20,10 @@ They first argue that these $Z_i$s should lie in the linear space of the input t
 
 To train these models, they use the following loss:
 
- $$\ell_{\text{sup}} = \frac{1}{N} \sum_{i=1}^{N} \frac{1}{|J_i|} \sum_{t \in J_i} (-\log p_{\theta}(x_t | \mathcal{I}_i; \text{LTSuM}))$$.
+ $$\ell_{\text{sup}} = \frac{1}{N} \sum_{i=1}^{N} \frac{1}{|J_i|} \sum_{t \in J_i} (-\log p_{\theta}(x_t | {I}_i; \text{LTSuM}))$$.
 
-$J_i$ is the set of indices of tokens in chunk $i$. $N$ is the total number of chunks, and $p_{\theta_{LLM}}(x_t | \mathcal{I}_i; \text{LTSuM})$ is the probability that the model gives the correct token $x_t$ given the previous summaries $[X, z_0, z_1, \cdots, z_i]$. So it measures how well the model predicts the future tokens given the $Z_i$s. Note that in this phase the model is not given the previous chunks' actual text, only the summaries.
+$J_i$ is the set of indices of tokens in chunk $i$. $N$ is the total number of chunks, and $p_{\theta_{LLM}}(x_t | {I}_i; \text{LTSuM})$ is the probability that the model gives the correct token $x_t$ given the previous summaries $[X, z_0, z_1, \cdots, z_i]$. 
+So it measures how well the model predicts the future tokens given the $Z_i$s. Note that in this phase the model is not given the previous chunks' actual text, only the summaries.
 
 However, $\theta_{enc}$ is used to generate $Z_i$s given the previous context. So to generate $L_i$ the model sees $X, S_0, \cdots, S_i$, but not any $L_i$.
 
