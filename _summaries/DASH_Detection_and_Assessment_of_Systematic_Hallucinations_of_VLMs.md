@@ -42,11 +42,11 @@ where $$L_\text{vlm}(c)$$ measures howmuch the generated object mislead the vlm 
 In more detail, $$q(c)$$ is the function that generates images from the embedding.
 we have:
 
-$$L_{vlm}(c) = - \log p_{vlm}(\text{"Yes"} \\mid q(c), \text{Is there [object] in this image?})$$
+$$L_{vlm}(c) = - \log p_{vlm}(\text{"Yes"} \mid q(c), \text{Is there [object] in this image?})$$
 
 and
 
-$$L_{det}(c) = - \log (1 - p_{det}([object] \\mid q(c)))$$
+$$L_{det}(c) = - \log (1 - p_{det}([object] \mid q(c)))$$
 
 the final image is called  `(qimg)` and then they apply the normal knn search and filtering.
 So they find 50 similar images in LAION-5B and then filtered images with the [object] or those that LLM doesn't hallucinate.

@@ -77,9 +77,9 @@ The proof of this theorem relies on tracking a "cost" metric of the bare tree $$
 **1. Definition and Properties of "Cost"**
 The cost of a bare tree $$T^{\circ}$$ relative to a function $$f: \{0,1\}^n \rightarrow \{\pm1\}$$ is defined as:
 
-$$\text{cost}_f(T^{\circ}) = \sum_{\text{leaf } \ell \in T^{\circ}} 2^{-\\lvert \ell \\rvert} \cdot \text{Inf}(f_\ell)$$
+$$\text{cost}_f(T^{\circ}) = \sum_{\text{leaf } \ell \in T^{\circ}} 2^{-\lvert \ell \rvert} \cdot \text{Inf}(f_\ell)$$
 
-where $$\\lvert \ell \\rvert$$ is the depth of leaf $$\ell$$ and $$f_\ell$$
+where $$\lvert \ell \rvert$$ is the depth of leaf $$\ell$$ and $$f_\ell$$
 is the restriction of $$f$$ by the path leading to $$\ell$$.
 
 Lemma 5.1 states the following properties of the cost:
@@ -87,8 +87,8 @@ First $$\text{error}(T^{\circ}, f) \le \text{cost}_f(T^{\circ})$$. This means if
 
 Second when a leaf $$\ell$$ in $$T^{\circ}$$ is replaced by a query to variable $$x_i$$,
 resulting in a new bare tree $$(T^{\circ})'$$, the cost decreases by the score of the leaf:
-$$\text{cost}_{f}((T^{\circ})') = \text{cost}_{f}(T^{\circ}) - 2^{-\\lvert \ell \\rvert} \cdot \text{Inf}_{i}(f_{\ell})$$.
-The score of a leaf $$\ell$$ is defined as $$2^{-\\lvert \ell \\rvert} \cdot \text{Inf}_{i(\ell)}(f_\ell)$$,
+$$\text{cost}_{f}((T^{\circ})') = \text{cost}_{f}(T^{\circ}) - 2^{-\lvert \ell \rvert} \cdot \text{Inf}_{i}(f_{\ell})$$.
+The score of a leaf $$\ell$$ is defined as $$2^{-\lvert \ell \rvert} \cdot \text{Inf}_{i(\ell)}(f_\ell)$$,
 where $$x_{i(\ell)}$$ is the most influential variable of $$f_{\ell}$$.
 
 **2. Lower Bounds on the Score of the Leaf Selected**
@@ -97,10 +97,10 @@ The heuristic splits the leaf with the highest score. The proof uses two lower b
 Lemma 5.2 states that at step $$j$$, the algorithm selects a leaf $$\ell^*$$ with score at least
 $$\frac{\epsilon}{(j+1)\log(s)}$$. This is derived from the fact that if the completion is not an
 $$\epsilon$$-approximation, there must be a leaf $$\ell$$ with
-$$2^{-\\lvert \ell \\rvert} \cdot \text{error}(f_{\ell}, \pm 1) > \frac{\epsilon}{j+1}$$.
+$$2^{-\lvert \ell \rvert} \cdot \text{error}(f_{\ell}, \pm 1) > \frac{\epsilon}{j+1}$$.
 Using the relationship $$\text{Var}(g) \ge \text{error}(g, \pm 1)$$
 and [Paper: Every decision tree has an influential variable](https://arxiv.org/abs/cs/0508071) ($$\max_{i} \text{Inf}_{i}(f) \ge \frac{\text{Var}(f)}{\log s}$$ ),
-it follows that $$2^{-\\lvert \ell \\rvert} \cdot \text{Inf}_{i}(f_{\ell}) > \frac{\epsilon}{(j+1)\log(s)}$$ for some variable $$x_i$$.
+it follows that $$2^{-\lvert \ell \rvert} \cdot \text{Inf}_{i}(f_{\ell}) > \frac{\epsilon}{(j+1)\log(s)}$$ for some variable $$x_i$$.
 Since the heuristic picks the leaf with the maximum score, the selected leaf's score is at least this value.
 
 Lemma 5.4 provides a second lower bound, useful when the cost is large. If at step $$j$$, $$\text{cost}_f(T^{\circ}) \ge \epsilon \log(4s/\epsilon)$$, the selected leaf $$\ell^*$$ has score at least $$\frac{\text{cost}_f(T^{\circ})}{(j+1)\log(4s/\epsilon)\log(s)}$$. This lemma uses Lemma 5.3, which bounds the total influence of a size-$$s$$ decision tree: $$\text{Inf}(f) \le \text{Var}(f) \log(4s/\text{Var}(f))$$.

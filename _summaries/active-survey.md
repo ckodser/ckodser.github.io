@@ -66,7 +66,7 @@ $$\Lambda(\nu + \epsilon, \delta, P_{XY}) \geq \Omega\left(a\left(\frac{1}{\epsi
 <h1> Lower bounds of active learning </h1>
 
 There exists a universal constant $$q \in (0, \infty)$$ such that, if
-$$\\lvert C \\rvert \geq 3$$, then for any label complexity $$\Lambda$$ achieved by an active learning
+$$\lvert C \rvert \geq 3$$, then for any label complexity $$\Lambda$$ achieved by an active learning
 algorithm, for any $$\nu \in (0, 1/2)$$ and sufficiently small $$\epsilon, \delta > 0$$, there
 exists a distribution $$P_{XY}$$ with $$er(f^*) = \nu$$ such that
 

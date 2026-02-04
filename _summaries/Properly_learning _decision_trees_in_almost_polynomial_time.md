@@ -22,7 +22,7 @@ link: https://arxiv.org/abs/2109.00637
    $$
    For a size-$$s$$ tree (on uniform data distribution), $$ \Delta(T) \leq \log s$$.
 - **A restriction**: A restriction $$\pi$$ of a function $$f : \{\pm1\}^n \to \{\pm1\}$$, denoted $$f_\pi$$,
-is the subfunction of $$f$$ that one obtains by fixing a subset of the variables to constants (i.e. $$x_i = b$$ for $$i \in [n]$$ and $$b \in \{\pm1\}$$). We write $$\\lvert \pi \\rvert$$ to denote the number of variables fixed by $$\pi$$.
+is the subfunction of $$f$$ that one obtains by fixing a subset of the variables to constants (i.e. $$x_i = b$$ for $$i \in [n]$$ and $$b \in \{\pm1\}$$). We write $$\lvert \pi \rvert$$ to denote the number of variables fixed by $$\pi$$.
 - We define $$n$$ as the number of input dimensions.
 
 ---
@@ -68,14 +68,14 @@ Let $$f$$ be computable by a size-$$s$$ decision tree $$T$$, and let $$ \tau > 0
     The error of the resulting tree is equal to
     $$\Pr_{x \sim \{\pm1\}^n}\big[f(x) \neq T^*(x)\big]   =$$
     Defining $$P_l:=\Pr_{x \sim \{\pm1\}^n}[x_{i(\text{root})}=-1]$$ and $$P_r:=\Pr_{x \sim \{\pm1\}^n}[x_{i(\text{root})}=1]$$, we have
-    $$P_l\cdot \Pr_{x \sim \{\pm1\}^n \\lvert x_{i(\text{root})}=-1}\big[f(x) \neq T^*_l(x)\big] + P_r\cdot \Pr_{x \sim \{\pm1\}^n  \\rvertx_{i(\text{root})}=+1}\big[f(x) \neq T^*_r(x)\big]$$
+    $$P_l\cdot \Pr_{x \sim \{\pm1\}^n \lvert x_{i(\text{root})}=-1}\big[f(x) \neq T^*_l(x)\big] + P_r\cdot \Pr_{x \sim \{\pm1\}^n  \rvertx_{i(\text{root})}=+1}\big[f(x) \neq T^*_r(x)\big]$$
     From the theorem we know that pruning subtrees is accurate so the error of the resulting tree is less than
     $$\leq P_l\cdot \tau \log s + P_r\cdot \tau \log s = \tau \log s$$
 > 2.  If the root is not $$\tau$$-influential: We have to remove the root along one of its subtrees and then recursively prune the remaining subtree.
     It is clear that the resulting tree is $$\tau$$-influential. We calculate the error of the resulting tree in two steps. Assume we remove left subtree. $$x^{!i}$$ denotes $$x$$ with the $$i$$-th variable flipped.
     $$\Pr_{x \sim \{\pm1\}^n}\big[f(x) \neq T^*(x)\big]   =$$
     Defining $$P_l:=\Pr_{x \sim \{\pm1\}^n}[x_{i(\text{root})}=-1]$$ and $$P_r:=\Pr_{x \sim \{\pm1\}^n}[x_{i(\text{root})}=1]$$, we have
-    $$P_l\cdot \Pr_{x \sim \{\pm1\}^n \\lvert x_{i(\text{root})}=-1}\big[f(x) \neq T^*_r(x^{!i})\big] + P_r\cdot \Pr_{x \sim \{\pm1\}^n  \\rvertx_{i(\text{root})}=+1}\big[f(x) \neq T^*_r(x)\big]$$
+    $$P_l\cdot \Pr_{x \sim \{\pm1\}^n \lvert x_{i(\text{root})}=-1}\big[f(x) \neq T^*_r(x^{!i})\big] + P_r\cdot \Pr_{x \sim \{\pm1\}^n  \rvertx_{i(\text{root})}=+1}\big[f(x) \neq T^*_r(x)\big]$$
     $$\leq P_l\cdot \Pr_{x \sim \{\pm1\}^n \mid x_{i(\text{root})}=-1}\big[f(x) \neq T^*_r(x^{!i})\big] + P_r\cdot \tau \log s$$
     cases where $$f(x) \neq T^*_r(x^{!i})$$ are two groups.
     1. $$f(x) = f(x^{!i})$$ so $$f(x^{!i}) \neq T^*_r(x^{!i})$$ These samples should not be that large since $$f_r(x)$$ is approximate by $$T^*_r(x)$$.

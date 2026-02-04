@@ -50,13 +50,13 @@ L_{exp}(\theta_{\text{llm}}) + L_{lat}(\theta_{\text{llm}}).$$
 
 We have
 
-$$L_{exp}(\theta_{\text{llm}}) = \frac{1}{\\lvert S_{\text{exp}} \\rvert} \sum_{t \in S_{\text{exp}}} (-\log q_t[y_t])$$
+$$L_{exp}(\theta_{\text{llm}}) = \frac{1}{\lvert S_{\text{exp}} \rvert} \sum_{t \in S_{\text{exp}}} (-\log q_t[y_t])$$
 
 This is normal SFT on normal data.
 
 For the latent part they add noise to $\alpha_i$ like this: $\tilde{p}_t = \text{softmax} \left( \log \alpha_t + g_t \right) \quad g_t \sim \text{Gumbel}(0, 1)$. They then do a somewhat normal SFT on them.
 
-$$L_{lat}(\theta_{\text{llm}}) = \frac{1}{\\lvert S_{\text{lat}} \\rvert} \sum_{t \in S_{\text{lat}}} \mathbb{E}_{\mathbf{g}} \left[ \text{KL}(\tilde{p}_t(\mathbf{g}) \,\mid\, \mathbf{q}_t) \right] $$
+$$L_{lat}(\theta_{\text{llm}}) = \frac{1}{\lvert S_{\text{lat}} \rvert} \sum_{t \in S_{\text{lat}}} \mathbb{E}_{\mathbf{g}} \left[ \text{KL}(\tilde{p}_t(\mathbf{g}) \,\mid\, \mathbf{q}_t) \right] $$
 
 # Model compresses a reasoning path
 

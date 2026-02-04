@@ -19,7 +19,7 @@ labels with high probability.
 input matrix $$X \in \mathbb{R}^{n \times d}$$ has (full) rank $$d$$. $$y \in \mathbb{R}^n$$ is the target vector. The goal of the learner is to find a weight vector $$w \in \mathbb{R}^d$$ that minimizes
 the square loss:
 $$w^* = arg\min_{w \in \mathbb{R}^d} \mathcal{L}(w),$$
-where $$\mathcal{L}(w) = \sum_{i=1}^n (x_i^\top w - y_i)^2 = \\\lvert X w - y\ \\rvert_2^2.$$
+where $$\mathcal{L}(w) = \sum_{i=1}^n (x_i^\top w - y_i)^2 = \lvert X w - y\ \rvert_2^2.$$
 
 Given both matrix $$X$$ and vector $$y$$, the least squares solution can be directly computed as $$w_* = X^+ y$$, where $$X^+$$ is the pseudo-inverse.
 
@@ -52,6 +52,6 @@ Define $$Q_{\pi} = \sum_{i=1}^k \frac{1}{q_{\pi_i}} \mathbf{e}_{\pi_i} \mathbf{e
 
 A good classifier is calculated from
 
-$$w_*^{\pi} = \arg \min_{w \in \mathbb{R}^d}  \left\\\lvert Q_{\pi}^{\frac{1}{2}} (X w - y) \right\ \\rvert_2^2$$
+$$w_*^{\pi} = \arg \min_{w \in \mathbb{R}^d}  \left\lvert Q_{\pi}^{\frac{1}{2}} (X w - y) \right\ \rvert_2^2$$
 
 And if $$k \in O(d \ln (\frac{d}{\delta}) + \frac{d}{\epsilon \delta})$$ the produced model will have a loss less than $$1+\epsilon$$ times the best regression with probability at least $$1 - \delta$$.

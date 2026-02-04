@@ -60,7 +60,7 @@ The dimensions in $$J[t]$$ are set to those of $$x$$, specifically the $$t, t+1,
 As a result, $$u[t]$$ is distributed according to $$\Omega^{(i_t)}$$ whenever $$i_t = i \in [n]$$.
 This means:
 
-$$E[(f(u[t-1])\neq f(u[t]))\cdot 1_{\{i_t=i\}\mid X_{t-1}]=E_{x, y \sim \Omega^{(i_t)}}[(f(x)\neq f(y))\cdot 1_{\{i_t(x)=i\}}]=Inf_i(f) 1_{i_t(x)=i}.$$
+$$E[(f(u[t-1])\neq f(u[t]))\cdot 1_{\{i_t=i\}} \mid X_{t-1}] = E_{x, y \sim \Omega^{(i_t)}}[(f(x)\neq f(y))\cdot 1_{\{i_t(x)=i\}}] = Inf_i(f) 1_{i_t(x)=i}.$$
 
 Using the above
 
