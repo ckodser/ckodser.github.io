@@ -24,7 +24,7 @@ This summary focuses exclusively on the technical aspects of the paper concernin
 
 ### Main Theorems and Proofs
 
-**Theorem 1.1:** Let $$f:\{-1,1\}_{(p)}^{n}\rightarrow\{-1,1\}$$ and let $$T$$ be a DDT computing $$f$$. Then 
+**Theorem 1.1:** Let $$f:\{-1,1\}_{(p)}^{n}\rightarrow\{-1,1\}$$ and let $$T$$ be a DDT computing $$f$$. Then
 
 
 $$Var[f]\le\sum_{i=1}^{n}\delta_{i}(T)Inf_{i}(f).$$
@@ -34,9 +34,9 @@ $$Var[f]\le\sum_{i=1}^{n}\delta_{i}(T)Inf_{i}(f).$$
 **Proof of Theorem 1.1:**
 Let $$x$$ and $$y$$ be random inputs chosen independently from $$\Omega = (\{-1,1\}^n, \mu_{(p)})$$. For a subset $$J\subseteq[n]$$, let $$x_{J}y$$ denote the hybrid input that agrees with $$x$$ on coordinates in $$J$$ and with $$y$$ on coordinates in $$[n]\setminus J$$.
 
-Let $$i_1, \dots, i_s$$ be the sequence of variables queried by $$T$$ on input $$x$$. $$s$$ is a random variable representing the number of queried variables. For $$t \ge 0$$, let $$J[t] = \{i_r : s \ge r > t\}$$. It is the dimensions of the last $$s-t$$ node in the root to $$x$$ path. 
+Let $$i_1, \dots, i_s$$ be the sequence of variables queried by $$T$$ on input $$x$$. $$s$$ is a random variable representing the number of queried variables. For $$t \ge 0$$, let $$J[t] = \{i_r : s \ge r > t\}$$. It is the dimensions of the last $$s-t$$ node in the root to $$x$$ path.
 
-last Define $$u[t] = x_{J[t]}y$$. $$u[t]$$ means the datapoint agreeing with $$x$$ on the last $$s-t$$ dimensions' of the nodes in the root to $$x$$ path and other dimensions are set to match that of $$y$$. 
+last Define $$u[t] = x_{J[t]}y$$. $$u[t]$$ means the datapoint agreeing with $$x$$ on the last $$s-t$$ dimensions' of the nodes in the root to $$x$$ path and other dimensions are set to match that of $$y$$.
 
 **We are slowly transforming $$x$$ to $$y$$ by slowly changing its dimension one by one to match that of $$y$$. We are doing it in a way that if in a step the label changed, that is counted in influence of some node. This is why we start from the bottom and go up. This way when a dimension changes if the labels also change, that is counted in influence of that node.**
 
@@ -50,7 +50,7 @@ $$Var[f] \leq \sum_{t=1}^{n} \sum_{i=1}^{n} E[(f(u[t-1])\neq f(u[t]))\cdot 1_{\{
 
 We define $$X_t$$ as the sequence of variables that $$T$$ queries on $$x$$ till time $$t$$. $$X_t = (x_{i_1}, x_{i_2}, \cdots, x_{i_{\min(t, s)}})$$
 
-$$Var[f] \leq \sum_{t=1}^{n} \sum_{i=1}^{n} E[E[(f(u[t-1])\neq f(u[t]))\cdot 1_{\{i_t=i\}}|X_{t-1}]]$$
+$$Var[f] \leq \sum_{t=1}^{n} \sum_{i=1}^{n} E[E[(f(u[t-1])\neq f(u[t]))\cdot 1_{\{i_t=i\}}\mid X_{t-1}]]$$
 
 Obviously, given the random variable $$X_{t-1}$$ we can determine the first $$t$$ node in the path thus determining $$i_t$$. Proof magic happened here: we can show that conditional on $$X_{t-1}$$, the pair $$(u[t-1], u[t])$$ has the distribution $$\Omega^{(i_t)}$$ if $$i_t = i \in [n]$$.
 
@@ -60,16 +60,16 @@ The dimensions in $$J[t]$$ are set to those of $$x$$, specifically the $$t, t+1,
 As a result, $$u[t]$$ is distributed according to $$\Omega^{(i_t)}$$ whenever $$i_t = i \in [n]$$.
 This means:
 
-$$E[(f(u[t-1])\neq f(u[t]))\cdot 1_{\{i_t=i\}}|X_{t-1}]=E_{x, y \sim \Omega^{(i_t)}}[(f(x)\neq f(y))\cdot 1_{\{i_t(x)=i\}}]=Inf_i(f) 1_{i_t(x)=i}.$$
+$$E[(f(u[t-1])\neq f(u[t]))\cdot 1_{\{i_t=i\}\mid X_{t-1}]=E_{x, y \sim \Omega^{(i_t)}}[(f(x)\neq f(y))\cdot 1_{\{i_t(x)=i\}}]=Inf_i(f) 1_{i_t(x)=i}.$$
 
-Using the above 
+Using the above
 
 $$Var[f] \leq \sum_{t=1}^{n} \sum_{i=1}^{n} E[Inf_i(f)\cdot 1_{\{i_t=i\}}] = \sum_{i=1}^{n} Inf_i(f)\sum_{t=1}^{n} E[1_{\{i_t=i\}}] = \sum_{i=1}^{n} Inf_i(f) \delta_i(T)$$
 
 
 
 -----------------------------------------------
-**Corollary 1.2:** For every $$f:\{-1,1\}_{(p)}^{n}\rightarrow\{-1,1\}$$, we have 
+**Corollary 1.2:** For every $$f:\{-1,1\}_{(p)}^{n}\rightarrow\{-1,1\}$$, we have
 
 
 $$\Delta(f)\ge\frac{Var(f)}{Inf_{max}(f)}$$

@@ -38,7 +38,7 @@ horizontal: false
   {% endfor %}
 <h2 class="category">Other Summaries</h2>
   {% assign displayed_categories = page.display_categories %}
-  {% assign uncategorized_list = "" | split: "" %} 
+  {% assign uncategorized_list = "" | split: "" %}
     {% for project in site.summaries %}
     {% assign should_be_in_other = true %}
     {% if project.categories %}

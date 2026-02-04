@@ -3,7 +3,7 @@ layout: page
 title: Active Learning Survey
 description: Active Learning for Agnostic classification
 categories: [Summary, ActiveLearning]
-img: assets/img/active-survey/img.png 
+img: assets/img/active-survey/img.png
 importance: 1
 giscus_comments: true
 link: https://web.ics.purdue.edu/~hanneke/docs/active-survey/active-survey.pdf
@@ -15,11 +15,11 @@ link: https://web.ics.purdue.edu/~hanneke/docs/active-survey/active-survey.pdf
 They used an example to explain that in active learning we are facing two different scenarios which one of them is very hard for active learning. In the hard scenario the label complexity of active learning is very high and the only thing differentiate between these two scenario is the target function. Therefore, when they report label complexity of algorithms it is usually based on properties of target function.
 
 
-The example is as follows: 
-Assume our data is 1D data points with binary labels and ew want to learn an interval such that the classifier assigns + to the datapoints inside the interval and - to the datapoints outside of the interval. 
+The example is as follows:
+Assume our data is 1D data points with binary labels and ew want to learn an interval such that the classifier assigns + to the datapoints inside the interval and - to the datapoints outside of the interval.
 
-They argue that if target function is all -, then it is very hard for us to find the best interval. The only info we have is that the best interval doesn't include any point we already check its label. 
-So no matter how many samples we use and check their label we are not able to return the best classifier. 
+They argue that if target function is all -, then it is very hard for us to find the best interval. The only info we have is that the best interval doesn't include any point we already check its label.
+So no matter how many samples we use and check their label we are not able to return the best classifier.
 
 <h1> Definitions </h1>
 
@@ -38,7 +38,7 @@ $$\theta_h (r_0) = \max(\sup_{r>r_0} \frac{P(DIS(B (h, r)))}{r},  1)$$.
 $$P(x : h(x) \neq f^*(x)) \leq a (er(h) − er(f^*))^{\alpha}$$.
 
 <h1>  Passive Learning </h1>
-In noisy case we have 
+In noisy case we have
 
 **Theorem 3.4.** The passive learning algorithm ERM(C, .) achieves a
 label complexity $$\Lambda$$ such that, for any distribution $$P_{XY}$$, $$\forall \epsilon, \delta \in (0, 1)$$,
@@ -47,7 +47,7 @@ $$
 \Lambda(\nu + \epsilon, \delta, P_{XY}) \leq \frac{\epsilon+\nu}{\epsilon^2} \left( d \log \left( \theta(\nu + \epsilon) \right) + \log \left( \frac{1}{\delta} \right) \right)
 $$
 
-and for the case with $$a, \alpha$$ we have 
+and for the case with $$a, \alpha$$ we have
 
 $$
 \Lambda(\nu + \epsilon, \delta, P_{XY}) \leq a \left( \frac{1}{\epsilon} \right)^{2 - \alpha} \left( d \log \left( \theta \left( a \epsilon^{\alpha} \right) \right) + \log \left( \frac{1}{\delta} \right) \right).
@@ -66,7 +66,7 @@ $$\Lambda(\nu + \epsilon, \delta, P_{XY}) \geq \Omega\left(a\left(\frac{1}{\epsi
 <h1> Lower bounds of active learning </h1>
 
 There exists a universal constant $$q \in (0, \infty)$$ such that, if
-$$|C| \geq 3$$, then for any label complexity $$\Lambda$$ achieved by an active learning
+$$\\lvert C \\rvert \geq 3$$, then for any label complexity $$\Lambda$$ achieved by an active learning
 algorithm, for any $$\nu \in (0, 1/2)$$ and sufficiently small $$\epsilon, \delta > 0$$, there
 exists a distribution $$P_{XY}$$ with $$er(f^*) = \nu$$ such that
 
@@ -87,7 +87,7 @@ $$\Lambda(\nu + \epsilon, \delta, P_{XY}) \geq q a^2 \left( \frac{1}{\epsilon} \
         </div>
 </div>
 
-where $$U$$ is defined by 
+where $$U$$ is defined by
 
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
@@ -100,7 +100,7 @@ They introduced RobustCAL which is similar to $$A^2$$ algorithm. It achieves thi
 $$\Lambda(\nu + \epsilon, \delta, P_{XY}) \leq \theta(\nu + \epsilon)  \left(\frac{\nu^2}{\epsilon^2} + \log (\frac{1}{\epsilon})\right)
 \left(d \log (\theta(\nu + \epsilon)) + \log(\frac{\log (\frac{1}{\delta})}{\delta})\right) $$.
 
-or 
+or
 
 $$
 \Lambda(\nu + \epsilon, \delta,P_{XY}) \leq
@@ -125,7 +125,7 @@ and $$\theta_h(\epsilon)/c \leq \theta_h(c\epsilon)$$.
 They also show that $$\theta_h(\epsilon) = O(1)$$  is equal to $$\theta_h(0) < \infty$$,
 
 
-Second Theorem is about changing distribution a little bit. 
+Second Theorem is about changing distribution a little bit.
 
 Let $$\lambda \in (0, 1)$$, and suppose $$P$$ and $$P_0$$ are distributions
 over $$X$$ such that $$\lambda P_0 \leq P \leq (1/\lambda)P_0$$.
@@ -136,7 +136,7 @@ and $$P_0$$, respectively. Then $$\forall \epsilon > 0$$,
 $$\theta_0^h(\lambda \epsilon) \lambda^2 \leq \theta_h(\epsilon) \leq \frac{\theta_0^h(\epsilon/\lambda)}{\lambda^2}$$
 
 
-Third Theorem is about merging to distribution. 
+Third Theorem is about merging to distribution.
 
 
 Suppose there exist $$\lambda \in (0, 1)$$ and distributions $$P^{'}$$ and $$P^{"}$$ over $$X$$ such that $$P = \lambda P^{'} + (1 - \lambda) P^{"}$$. For $$\epsilon > 0$$, let $$\theta_h(\epsilon), \theta^{'}_h(\epsilon),$$ and $$\theta^{"}_h(\epsilon)$$ denote the disagreement coefficients of $$h$$ with respect to $$C$$ under $$P, P^{'},$$ and $$P^{"}$$, respectively. Then $$\forall \epsilon > 0$$,
@@ -155,13 +155,13 @@ $$
 \max \left\{ \theta^{'}_h(\epsilon), \theta^{"}_h(\epsilon) \right\} \leq \theta_h(\epsilon) \leq \theta^{'}_h(\epsilon) + \theta^{"}_h(\epsilon) + 2
 $$
 
-The most interesting Lemma is 
+The most interesting Lemma is
 
 **Lemma 7.12.** $$\theta_h(\epsilon) = o(1/\epsilon) \iff \Pr \left( \lim_{r \to 0} DIS(B_h(h, r)) \right) = 0.$$
 
 
 <h2> Discrete Distribution </h2>
-every discrete distribution P has 
+every discrete distribution P has
 $$\theta_h(\epsilon) = o(\frac{1}{\epsilon})$$.
 
 The proof uses this lemma which is very easy to prove.
@@ -205,7 +205,7 @@ The assumptions seems very reasonable.
 
 <h2> Axis-aligned Rectangles </h2>
 
-This is like interval learning but in a higher dimension. Assume we have space with $$k$$ dimensions. 
+This is like interval learning but in a higher dimension. Assume we have space with $$k$$ dimensions.
 
 Hanneke found that a certain noise-robust
 halving-style active learning algorithm achieves a label complexity that,
@@ -214,15 +214,13 @@ if $$p = P(x : f(x) = +1) > 5\nu$$, is
 $$
 \frac{k^3}{p}\left(\frac{\nu^2}{\epsilon^2} + 1 \right) \text{polylog} \left(\frac{k}{\epsilon \delta p}\right)$$
 
-Also if $$P$$ the uniform distribution over $$[0, 1]^k$$, then 
+Also if $$P$$ the uniform distribution over $$[0, 1]^k$$, then
 
 $$\limsup_{\epsilon \to 0} \frac{P(DIS(B(h, \epsilon)))}{\epsilon} < k$$
 
 
-They also show that 
+They also show that
 
 $$
 \theta_h(\epsilon) \leq \frac{k^3}{p} \cdot \text{polylog} \left(\frac{k}{p \epsilon}\right).
 $$
-
-

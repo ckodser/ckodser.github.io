@@ -66,21 +66,21 @@ earlier curves which are smaller act as tangents of the longer curves. Same side
         </div>
     </div>
 <h4> Dog detectors </h4>
-There are two separate paths in inception for detecting dog heads. The first one detects left oriented heads, while the second one detects right oriented heads. 
+There are two separate paths in inception for detecting dog heads. The first one detects left oriented heads, while the second one detects right oriented heads.
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
             {% include figure.liquid path='assets/img/Zoom_In_An_Introduction_to_Circuits/image23.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>
-Then by combining them, the network detects heads in any pose. 
+Then by combining them, the network detects heads in any pose.
 <h4> car detection </h4>
-the same story here, car is composed of car wheels, windows, car body. 
+the same story here, car is composed of car wheels, windows, car body.
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
             {% include figure.liquid path='assets/img/Zoom_In_An_Introduction_to_Circuits/image15.png' class="img-fluid rounded z-depth-1" %}
         </div>
     </div>
-But after this some interesting things happen. The network decides to move the car to superposition. 
+But after this some interesting things happen. The network decides to move the car to superposition.
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
             {% include figure.liquid path='assets/img/Zoom_In_An_Introduction_to_Circuits/image2.png' class="img-fluid rounded z-depth-1" %}

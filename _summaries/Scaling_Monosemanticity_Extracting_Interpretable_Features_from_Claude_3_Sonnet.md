@@ -33,7 +33,7 @@ They also found that if they increase the activation of one feature, the model i
 
 ### Automated interpretability
 
-They first generate the feature using a large language model (LLM). They provide the model with many examples that activate that feature and ask the model to determine a common characteristic, 
+They first generate the feature using a large language model (LLM). They provide the model with many examples that activate that feature and ask the model to determine a common characteristic,
 which becomes the feature name. Then, they evaluate this by scoring the description using different samples that activate this feature. More specifically, they provide the sample and feature description to Claude Opus and ask it to score the relatedness on a scale of 0 to 3. They observed that Opus assigns a score of 3 to most of the samples that strongly activate the feature, and as the sample activates the feature more, the score also increases.
 
 <div class="row">

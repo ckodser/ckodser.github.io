@@ -3,7 +3,7 @@ layout: page
 title: Towards Monosemanticity Decomposing Language Models With Dictionary Learning
 description: How SAE works
 categories: [Summary, Interpretability]
-img: assets/img/Towards_Monosemanticity_Decomposing_Language_Models_With_Dictionary_Learning/image17.png 
+img: assets/img/Towards_Monosemanticity_Decomposing_Language_Models_With_Dictionary_Learning/image17.png
 importance: 1
 ---
 
@@ -50,7 +50,7 @@ The researchers employed several methods.
 ## Manual Human Analysis
 
 The first method involves presenting several samples where a feature or neuron is active and asking one of the co-authors to guess the function of this feature/neuron. They recorded the co-author's confidence level—higher confidence indicates that the feature/neuron is more likely meaningful. They found that the confidence on the median neuron is 0, suggesting that the co-author couldn't form a hypothesis about the neuron's function. However, the median confidence on features is higher, indicating that meaning can be easily discerned in randomly chosen features.
-This shows that many of the learned features are probably interpretable. 
+This shows that many of the learned features are probably interpretable.
 
 ## Automated Interpretability – Activations
 

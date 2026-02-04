@@ -17,8 +17,8 @@ L-inf dist neurons are introduced by [zhang2021towards](https://github.com/zbh20
     This illustration shows how an L-inf distance neuron works.
 </div>
 
-As shown in the illustration, each neuron calculated the L-inf dist of its input to some learnable point, plus a fixed constant. 
-With this formulation, the Lipschitz of each neuron output with respect to its input is $$1$$; Therefore, each layer Lipschitz is equal to $$1$$, and further, the whole network is Lipschitz one. 
+As shown in the illustration, each neuron calculated the L-inf dist of its input to some learnable point, plus a fixed constant.
+With this formulation, the Lipschitz of each neuron output with respect to its input is $$1$$; Therefore, each layer Lipschitz is equal to $$1$$, and further, the whole network is Lipschitz one.
 Lipschitz’s networks could easily certify their robustness under L-inf perturbations.
 
 In the first experiment, I discovered that this network could be pruned by a staggering 98% without any loss in accuracy or certified accuracy.
@@ -33,7 +33,7 @@ In the first experiment, I discovered that this network could be pruned by a sta
 </div>
 
 As depicted above, the neurons calculate the L-inf distance only along certain dimensions,
-while others are ignored. In this visualization, each dimension corresponds to an edge in the graph, 
+while others are ignored. In this visualization, each dimension corresponds to an edge in the graph,
 illustrating a substantial reduction of 98% in connections without compromising accuracy or certified accuracy.
 
 The approach in which we chose edges to remove was straightforward. Using the training dataset, we count how many samples a specific edge causes the L-inf distance change. L-inf distance could be seen as a max function on absolute values. Mathematically\

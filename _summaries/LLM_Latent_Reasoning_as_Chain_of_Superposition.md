@@ -24,7 +24,7 @@ $$
 \ell_{\text{sup}} = \frac{1}{N} \sum_{i=1}^{N} \frac{1}{\lvert J_i \rvert} \sum_{t \in J_i} (-\log p_{\theta}(x_t \mid {I}_i; \text{LTSuM}))
 $$
 
-$J_i$ is the set of indices of tokens in chunk $i$. $N$ is the total number of chunks, and $p_{\theta_{LLM}}(x_t \mid {I}_i; \text{LTSuM})$ is the probability that the model gives the correct token $x_t$ given the previous summaries $[X, z_0, z_1, \cdots, z_i]$. 
+$J_i$ is the set of indices of tokens in chunk $i$. $N$ is the total number of chunks, and $p_{\theta_{LLM}}(x_t \mid {I}_i; \text{LTSuM})$ is the probability that the model gives the correct token $x_t$ given the previous summaries $[X, z_0, z_1, \cdots, z_i]$.
 So it measures how well the model predicts the future tokens given the $Z_i$s. Note that in this phase the model is not given the previous chunks' actual text, only the summaries.
 
 However, $\theta_{enc}$ is used to generate $Z_i$s given the previous context. So to generate $L_i$ the model sees $X, S_0, \cdots, S_i$, but not any $L_i$.
@@ -45,18 +45,18 @@ They then use `enc` to compress/translate some CoT data (problem + reasoning + a
 
 They train the model using normal SFT loss for the explicit part and another loss for the latent part.
 
-$$L_{\text{auto}}(\theta_{\text{llm}}) = 
+$$L_{\text{auto}}(\theta_{\text{llm}}) =
 L_{exp}(\theta_{\text{llm}}) + L_{lat}(\theta_{\text{llm}}).$$
 
-We have 
+We have
 
-$$L_{exp}(\theta_{\text{llm}}) = \frac{1}{|S_{\text{exp}}|} \sum_{t \in S_{\text{exp}}} (-\log q_t[y_t])$$
+$$L_{exp}(\theta_{\text{llm}}) = \frac{1}{\\lvert S_{\text{exp}} \\rvert} \sum_{t \in S_{\text{exp}}} (-\log q_t[y_t])$$
 
 This is normal SFT on normal data.
 
 For the latent part they add noise to $\alpha_i$ like this: $\tilde{p}_t = \text{softmax} \left( \log \alpha_t + g_t \right) \quad g_t \sim \text{Gumbel}(0, 1)$. They then do a somewhat normal SFT on them.
 
-$$L_{lat}(\theta_{\text{llm}}) = \frac{1}{|S_{\text{lat}}|} \sum_{t \in S_{\text{lat}}} \mathbb{E}_{\mathbf{g}} \left[ \text{KL}(\tilde{p}_t(\mathbf{g}) \,\|\, \mathbf{q}_t) \right] $$
+$$L_{lat}(\theta_{\text{llm}}) = \frac{1}{\\lvert S_{\text{lat}} \\rvert} \sum_{t \in S_{\text{lat}}} \mathbb{E}_{\mathbf{g}} \left[ \text{KL}(\tilde{p}_t(\mathbf{g}) \,\mid\, \mathbf{q}_t) \right] $$
 
 # Model compresses a reasoning path
 
@@ -80,6 +80,3 @@ They manually made several reasoning paths for GSM8K problems.
 
 
 They measure how much the latent reasoning path intersects with these different paths and calculate a sum-like metric. They show this value is larger than 1.7 for most samples. They argue this is the number of parallel reasoning paths the model follows.
-
-
-

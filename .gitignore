@@ -13,3 +13,4 @@ vendor
 /docshtmlzip/
 
 .idea
+.venv/

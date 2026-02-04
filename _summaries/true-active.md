@@ -3,7 +3,7 @@ layout: page
 title: The True Sample Complexity of Active Learning
 description: A different definition of active learning label complexity
 categories: [Summary, ActiveLearning]
-img: assets/img/true-active/img.png 
+img: assets/img/true-active/img.png
 importance: 1
 giscus_comments: true
 link: https://www.cs.cmu.edu/~ninamf/papers/true-active.pdf
@@ -21,7 +21,7 @@ complexity needed to both find a good classifier and verify that it is good. (Se
         </div>
 </div>
 
-They say definition 2 is a lot easier than definition 1. Definition 1 is equivalent to the case that algorithm return the classifier after some point. Meaning it knows it found a good classifier. In Definition 2 the algorithm suggests classifier at each step that after a certain point is guaranteed to be good. That point however is unknown to the algorithm. We might be able to find an upper bound on the maximum number of labels so that the algorithm found a good classifier using quantities unknown to the algorithm, for example properties of the label distribution. 
+They say definition 2 is a lot easier than definition 1. Definition 1 is equivalent to the case that algorithm return the classifier after some point. Meaning it knows it found a good classifier. In Definition 2 the algorithm suggests classifier at each step that after a certain point is guaranteed to be good. That point however is unknown to the algorithm. We might be able to find an upper bound on the maximum number of labels so that the algorithm found a good classifier using quantities unknown to the algorithm, for example properties of the label distribution.
 
 
 <h1> With Definition 1 </h1>
@@ -63,9 +63,9 @@ for all targets $$h \in C$$.
 Assume we have groups of classifiers $$C_1, C_2, \ldots, C_\infty$$, and we for each of these groups we have an active learning algorithm that finds a good classifier in $$C_i$$ if the optimal classifier is in $$C_i$$.
 The question is how can we merge these algorithms to find a good classifier in $$C$$?
 
-They provide an algorithm that does this. This is the resulting label complexity. 
+They provide an algorithm that does this. This is the resulting label complexity.
 
-Theorem 8 For any distribution $$D$$, let $$C_1, C_2, \ldots$$ be a sequence of classes such that for each $$i$$, the pair 
+Theorem 8 For any distribution $$D$$, let $$C_1, C_2, \ldots$$ be a sequence of classes such that for each $$i$$, the pair
 $$(C_i, D)$$ has sample complexity at most $$S_i(\epsilon, \delta, h)$$ for all $$h \in C_i$$. Let
 $$ C = \bigcup_{i=1}^\infty C_i $$. Then $$(C, D)$$ has a sample complexity at most
 
@@ -74,12 +74,12 @@ $$
 $$
 
 for any $$h\in C$$. In particular, Algorithm 1 achieves this, when
-used with the $$A_i$$ algorithms that each achieve the $$S_i(\epsilon, \delta, h)$$ 
+used with the $$A_i$$ algorithms that each achieve the $$S_i(\epsilon, \delta, h)$$
 sample complexity.
-This is cool since if we have a algorithm fro each $$A_i$$ that is polylog in $$\frac{1}{\epsilon}$$ and $$\frac{1}{\delta}$$ then their combination would be polylog. 
+This is cool since if we have a algorithm fro each $$A_i$$ that is polylog in $$\frac{1}{\epsilon}$$ and $$\frac{1}{\delta}$$ then their combination would be polylog.
 
-Then they prove a very important and cool theorem. They show that the reverse is also correct. 
-They show that is we have a algorithm that is polylog with definition 2, then we can break the classifier space in a $$C_1, C_2, \ldots$$ sequence, that each of $$C_i$$ has a polylog algorithm with definition 1 (verifiable active learning). 
+Then they prove a very important and cool theorem. They show that the reverse is also correct.
+They show that is we have a algorithm that is polylog with definition 2, then we can break the classifier space in a $$C_1, C_2, \ldots$$ sequence, that each of $$C_i$$ has a polylog algorithm with definition 1 (verifiable active learning).
 
 Theorem 9 For any $$(C, D)$$ learnable at an exponential
 rate, there exists a sequence $$C_1, C_2, \ldots$$ with $$ C = \bigcup_{i=1}^\infty C_i $$
@@ -89,7 +89,7 @@ such that the algorithm $$A_i$$ achieves verifiable sample complexity at most $$
 Thus, the aggregation algorithm (Algorithm 1) achieves exponential rates when used with these algorithms.
 
 <h1>  Exponential Rates </h1>
-Some example that  Exponential Rates are achievable. 
+Some example that  Exponential Rates are achievable.
 
 1. Unions of k intervals. for example for k=2 we have classifier that classifies [0.1,0.3] and [0.5,0.7] as + and other points as -. They show that something like this has a disagreement coefficient of $$k+\frac{1}{w(h)}$$.
 2. Ordinary Binary Classification Trees: Let $$X$$ be the cube $$[0,1]^n$$, $$D$$ be the uniform distribution on $$X$$, and $$C$$ be the
@@ -98,8 +98,4 @@ class of binary decision trees using a finite number of axis parallel splits.
 
 <h2> Composition results</h2>
 1. They show that if you can achieve a polylog label complexity on some distribution $$D$$, you can achieve it in a close distribution $$D'$$ such that $$\frac{1}{\lambda}D(A)\leq D'(A) \leq \lambda D(A)$$ for some $$\lambda$$ and all $$A$$.
-2. They show that if you can achieve a polylog label complexity on $$D_1$$ and $$D_2$$, you can achieve polylog label complexity on the linear combinations of them. 
-
-
-
-
+2. They show that if you can achieve a polylog label complexity on $$D_1$$ and $$D_2$$, you can achieve polylog label complexity on the linear combinations of them.
