@@ -15,3 +15,8 @@ repos:
         entry: python3 scripts/check_math_pipes.py --fix
         language: system
         files: ^_summaries/.*\.md$
+      - id: ensure-double-dollar-math
+        name: ensure-double-dollar-math
+        entry: python3 scripts/ensure_double_dollar_math.py --fix
+        language: system
+        files: \.md$

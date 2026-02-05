@@ -177,7 +177,7 @@ If $$\exists\{x_i\}_{i\in\mathbb{N}}$$ in $$X$$ such that $$P(\{x_i : i \in \mat
 
 <h2> Asymptotic Behavior </h2>
 
-In this section they say lets discuss $$P(DIS(B (h, r_0)))$$ directly rater than $\theta_h(r_0) = \sup_{r>r_0} \frac{P(DIS(B (h, r)))}{r}$.
+In this section they say lets discuss $$P(DIS(B (h, r_0)))$$ directly rater than $$\theta_h(r_0) = \sup_{r>r_0} \frac{P(DIS(B (h, r)))}{r}$$.
 
 They proved these theorems which are easy to understand.
 
@@ -197,7 +197,7 @@ $$\theta_h(\epsilon) = o(1/\epsilon)$$ if and only if $$P(\partial_{H} h) = 0$$.
 For all $$r\in [0, 1]$$, $$DIS(B(h, r)) \subseteq \{x : P(\{x\}) \leq r\}$$.
 
 <h2> Linear Separators </h2>
-In this case, we find $$\theta_h(\epsilon) = o(1/ \epsilon)$$ is guaranteed as long as $P$ has a density; the stronger $$\theta_h(\epsilon) = O(1)$$ guarantee is
+In this case, we find $$\theta_h(\epsilon) = o(1/ \epsilon)$$ is guaranteed as long as $$P$$ has a density; the stronger $$\theta_h(\epsilon) = O(1)$$ guarantee is
 obtained as long as the density is bounded, has bounded support, and
 the separating hyperplane of $$h$$ passes through the support at a continuity point of the density.
 

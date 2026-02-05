@@ -10,8 +10,8 @@ link: https://transformer-circuits.pub/2021/framework/index.html
 ---
 
 <h1> One Layer Transformers </h1>
-One layer transformers (without MLP) are combinations of $a$->$b$ and {$a$, …, $b$} -> $c$.
-this is because they either don’t use the attention head which means the score is calculated by a.Encoding.Decoding, or the path uses attention head which means attention head on token $b$ attend to token $a$ and if it attends then token $c$'s probability is raised.
+One layer transformers (without MLP) are combinations of $$a$$->$$b$$ and {$$a$$, …, $$b$$} -> $$c$$.
+this is because they either don’t use the attention head which means the score is calculated by a.Encoding.Decoding, or the path uses attention head which means attention head on token $$b$$ attend to token $$a$$ and if it attends then token $$c$$'s probability is raised.
 
 <div class="row">
         <div class="col-sm mt-3 mt-md-0">
