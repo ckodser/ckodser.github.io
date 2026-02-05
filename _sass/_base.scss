@@ -164,6 +164,74 @@ ul.task-list input[type="checkbox"] {
   text-align: center;
 }
 
+// Summaries & Projects: adaptive image width + expand button
+//
+// Applies only to collection documents (NOT the listing pages like `/summaries/` or `/projects/`).
+body.collection-summaries,
+body.collection-projects {
+  // Center figures so an overlay button can sit bottom-right of the image.
+  .post article figure,
+  .post.distill d-article figure {
+    text-align: center;
+  }
+
+  // Wrapper injected by `assets/js/summary_image_expand.js`.
+  .summary-img-wrap {
+    position: relative;
+    display: inline-block;
+    // Default for square-ish images.
+    max-width: var(--summary-img-max-width, 50%);
+  }
+
+  .summary-img-wrap img {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+  }
+
+  .summary-img-expand {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    line-height: 0;
+  }
+
+  .summary-img-expand svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+
+  .summary-img-expand:hover {
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  .summary-img-expand:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+
+  // On small screens, let images use full width.
+  @media (max-width: 576px) {
+    .summary-img-wrap {
+      max-width: 100%;
+    }
+  }
+}
+
 // Card
 
 .card {

@@ -18,7 +18,7 @@ link: https://arxiv.org/pdf/2509.19170
 
 The fuzzy tokens are just soft tokens with added Gaussian noise.
 
-In soft thinking, if the probabilities of the next token (token \(t\)) are \(p_{t-1,i}\), then standard soft thinking computes \(h_t^0 = p_{t-1}E\), where \(E\) is the token embedding matrix.
+In soft thinking, if the probabilities of the next token (token $$t$$) are $$p_{t-1,i}$$, then standard soft thinking computes $$h_t^0 = p_{t-1}E$$, where $$E$$ is the token embedding matrix.
 
 In fuzzy thinking they have:
 
