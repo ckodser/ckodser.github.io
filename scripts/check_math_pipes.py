@@ -51,6 +51,19 @@ def _math_segments(line: str, in_display: bool) -> tuple[list[str], bool]:
     return segments, in_display
 
 
+def _has_disallowed_double_backslash(segment: str) -> bool:
+    """
+    Reject LaTeX double backslashes (\\) in math, except when surrounded by
+    spaces on both sides: " \\\\ ".
+    """
+    for m in DOUBLE_BACKSLASH_RE.finditer(segment):
+        before_ok = m.start() > 0 and segment[m.start() - 1].isspace()
+        after_ok = m.end() < len(segment) and segment[m.end()].isspace()
+        if not (before_ok and after_ok):
+            return True
+    return False
+
+
 def process_file(path: Path, fix: bool, commands: set[str]) -> tuple[bool, bool, list[tuple[int, str, str]]]:
     """Returns (changed, failed, violations)."""
     violations: list[tuple[int, str, str]] = []
@@ -74,7 +87,7 @@ def process_file(path: Path, fix: bool, commands: set[str]) -> tuple[bool, bool,
 
         segments, in_display = _math_segments(line, in_display)
         for segment in segments:
-            if DOUBLE_BACKSLASH_RE.search(segment):
+            if _has_disallowed_double_backslash(segment):
                 violations.append((idx, line.rstrip(), "double-backslash"))
 
             for cmd in COMMAND_RE.findall(segment):
