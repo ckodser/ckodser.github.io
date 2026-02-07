@@ -10,6 +10,12 @@ repos:
       - id: check-added-large-files
   - repo: local
     hooks:
+      - id: shrink-png-under-500kb
+        name: shrink-png-under-500kb
+        entry: python scripts/shrink_png_under_500kb.py
+        language: python
+        types: [png]
+        additional_dependencies: [Pillow]
       - id: check-summary-math-pipes
         name: check-summary-math-pipes
         entry: python3 scripts/check_math_pipes.py --fix
