@@ -54,11 +54,14 @@ def _math_segments(line: str, in_display: bool) -> tuple[list[str], bool]:
 def _has_disallowed_double_backslash(segment: str) -> bool:
     """
     Reject LaTeX double backslashes (\\) in math, except when surrounded by
-    spaces on both sides: " \\\\ ".
+    spaces on both sides or when followed by a line break: " \\\\ " or " \\\\n".
     """
     for m in DOUBLE_BACKSLASH_RE.finditer(segment):
         before_ok = m.start() > 0 and segment[m.start() - 1].isspace()
-        after_ok = m.end() < len(segment) and segment[m.end()].isspace()
+        after_ok = (
+            m.end() == len(segment)
+            or (m.end() < len(segment) and segment[m.end()].isspace())
+        )
         if not (before_ok and after_ok):
             return True
     return False
