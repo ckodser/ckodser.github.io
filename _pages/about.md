@@ -5,7 +5,7 @@ permalink: /
 
 profile:
   align: right
-  image: prof_pic2.jpg
+  image: IMG_6357.jpg
   image_circular: false # crops the image to make it circular
   address: >
     <p>Computer Engineering Department<br>Sharif University of Technology </p>
@@ -28,18 +28,8 @@ leading the algorithmic problem design team for national team selection contests
 and heading the algorithmic problem design team for the national summer camp in informatics (2020, 2019).
 
 Furthering my education, I majored in computer engineering and joined Dr. Rohban's Lab.
-In this lab (Robust and Interpretable Machine Learning Lab), I published a paper in NeurIPS 2022
+In this lab (Robust and Interpretable Machine Learning Lab), I worked
 on adversarially robust Out-of-Distribution detection.
-This is not my only venture in the lab; you can read about some failed projects on the <a href="/projects/" >Project</a>.
+This is not my only venture in the lab. Later I did an internship at the Institute of Science and Technology Austria (IST Austria) under the mentorship of Professor Dan Alistarh, and worked on the utilization of sparsity to enhance interpretability.
 
-Since commencing my bachelor's degree, I have been intrigued by Game Theory.
-To delve deeper, I completed various online and in-person courses,
-which further piqued my interest in Game Theory and Mechanism Design.
-Driven by my interest in both Game Theory and Machine Learning,
-I initiated a project within Dr. Rohban's Lab focusing on these topics.
-This project aimed at aligning self-interested neurons in a neural network with a local utility function.
-
-Additionally, during an internship at the Institute of Science and Technology Austria (IST Austria),
-I published a paper at <a href="https://icml.cc/virtual/2024/poster/33092">ICML 2024</a> on the utilization of sparsity to enhance interpretability.
-Under the mentorship of Professor Dan Alistarh, this internship introduced me to the intriguing literature
-surrounding Sparsity and Interpretability, which I find very fascinating.
+I started my PhD in University of Maryland under supervision of Professor Soheil Feizi and MohammadTaghi HajiAghayi. I'm working on reasoning LLMs with Soheil and automatic theorem proving with MohammadTaghi.
