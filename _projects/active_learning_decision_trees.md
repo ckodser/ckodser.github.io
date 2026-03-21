@@ -203,6 +203,7 @@ This paper advances the theoretical understanding of **active learning label com
   $$\theta = O\!\left(\ln^d(n)\right)$$
 
   <p>with a matching lower bound of &Omega;(c(ln(n) - c')<sup>d-1</sup>).</p>
+  <p><em><strong>Proof approach:</strong> We decompose each decision tree into simpler components called LineTrees&mdash;classifiers that isolate a single leaf. By fixing a tree h and analyzing DIS(B<sub>H</sub>(h, r)), we break the disagreement region according to which leaf each point reaches and the dimension set of the corresponding leaf in a nearby tree h'. Using Lemma D.2, we reduce the analysis of full trees to line trees, and then apply a counting argument (Proposition 3.5) bounding the number of integer tuples whose product is at most nr, yielding the O(ln<sup>d</sup>(n)) bound.</em></p>
 </div>
 
 <div class="result-card">
@@ -214,6 +215,7 @@ This paper advances the theoretical understanding of **active learning label com
   $$O\!\left(\ln(n)\theta^2\!\left(V_H \ln \theta + \ln \frac{\ln n}{\delta}\right) + \frac{\theta^2}{\epsilon^2}\!\left(V_H \ln \frac{\theta}{\epsilon} + \ln \frac{1}{\delta}\right)\right)$$
 
   <p>queries, where <em>V<sub>H</sub></em> is the VC dimension and &theta; is the disagreement coefficient.</p>
+  <p><em><strong>Proof approach:</strong> The algorithm iteratively prunes the hypothesis set by sampling from the disagreement region and eliminating classifiers whose error lower bound exceeds the best upper bound. The key insight is a two-regime argument: if the optimal error on the disagreement region is small (below 1/(16&theta;)), the hypothesis set radius must halve, so the loop progresses. If it is large, the algorithm enters a direct estimation phase where (1+&epsilon;)-approximation becomes easy because the high error provides a large denominator. The disagreement coefficient &theta; bridges hypothesis ball radius and disagreement region size, enabling this critical inference.</em></p>
 </div>
 
 <div class="result-card">
@@ -225,6 +227,7 @@ This paper advances the theoretical understanding of **active learning label com
   $$O\!\left(\ln^{2d+2}(n)\!\left(2^d(d + \ln \text{dim})d + \ln \frac{1}{\delta}\right) + \frac{\ln^{2d}(n)}{\epsilon^2}\!\left(2^d(d + \text{dim}) \ln \frac{\ln^d(n)}{\epsilon} + \ln \frac{1}{\delta}\right)\right)$$
 
   <p>which is <strong>polylogarithmic</strong> in <em>n</em>.</p>
+  <p><em><strong>Proof approach:</strong> This follows directly by substituting the disagreement coefficient &theta; = O(ln<sup>d</sup>(n)) from Theorem 1.1 and the VC dimension V<sub>H</sub> = O(2<sup>d</sup>(d + ln dim)) of bounded-depth decision trees into the general label complexity bound of Theorem 1.2. Since &theta; is polylogarithmic in n, all terms in the resulting expression remain polylogarithmic in n, with the dependence on tree depth d and feature dimensionality dim appearing in the constant factors.</em></p>
 </div>
 
 <hr class="section-divider">
