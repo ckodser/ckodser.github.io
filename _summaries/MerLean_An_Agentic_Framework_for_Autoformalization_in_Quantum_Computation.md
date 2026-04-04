@@ -7,6 +7,16 @@ img: assets/img/MerLean_An_Agentic_Framework_for_Autoformalization_in_Quantum_Co
 importance: 1
 giscus_comments: true
 link: https://arxiv.org/pdf/2602.16554
+af_short_title: "MerLean"
+af_input: "NLP Document"
+af_output: "Formal Statement + Formal Proof"
+af_agents: [formal_prover]
+af_tools: [lean4_mcp, theorem_search]
+af_tool_notes:
+  lean4_mcp: "lean-lsp-mcp provides lean_goal to inspect proof states and lean_hover_info for type signatures; compilation errors are fed directly back to the agent for correction in the iterative compile-fix loop"
+  theorem_search: "leansearch and loogle query Mathlib lemmas during formalization; also used to find definitions when the agent autonomously introduces auxiliary lemmas not present in the original paper"
+af_agent_notes:
+  formal_prover: "Single LLM agent in a multi-turn compile-fix loop: extracts statements from LaTeX, generates Lean 4 code, compiles it, and feeds compiler errors back for correction; also autonomously introduces auxiliary lemmas as needed"
 ---
 
 

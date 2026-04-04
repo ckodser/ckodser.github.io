@@ -7,6 +7,16 @@ img: assets/img/Agentic_Proof_Automation_A_Case_Study/image2.png
 importance: 1
 giscus_comments: true
 link: https://arxiv.org/pdf/2601.03768
+af_short_title: "Agentic Proof Automation"
+af_input: "Formal Statement"
+af_output: "Formal Proof"
+af_agents: [formal_prover]
+af_tools: [lean4_mcp, file_system]
+af_tool_notes:
+  lean4_mcp: "lean4check compiles a Lean 4 module and returns the error message with enclosing source context when compilation fails"
+  file_system: "Agent searches files by pattern, greps for definitions, reads file contents, and creates or edits files at specific line locations"
+af_agent_notes:
+  formal_prover: "Coding agent (Claude Code / Codex-CLI) explores the codebase for relevant lemmas, generates proof scripts, invokes lean4check, and refines based on the compiler error message"
 ---
 
 

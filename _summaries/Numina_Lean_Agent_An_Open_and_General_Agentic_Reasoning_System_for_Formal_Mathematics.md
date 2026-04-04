@@ -7,6 +7,20 @@ img: assets/img/Numina_Lean_Agent_An_Open_and_General_Agentic_Reasoning_System_f
 importance: 1
 giscus_comments: true
 link: https://arxiv.org/pdf/2601.14027
+af_short_title: "Numina-Lean-Agent"
+af_input: "Formal Statement"
+af_output: "Formal Proof"
+af_agents: [orchestrator, formal_prover, nlp_judge, subagent]
+af_tools: [lean4_mcp, theorem_search, blueprint_tool]
+af_tool_notes:
+  lean4_mcp: "Lean-LSP-MCP provides semantic awareness (proof goals, file diagnostics), code execution (compile snippets, parallel strategy evaluation at single nodes), and theorem retrieval from local projects"
+  theorem_search: "LeanDex performs semantic natural-language search over Lean v4.26.0 packages including Mathlib and FLT"
+  blueprint_tool: "Blueprint Generation decomposes long-horizon tasks into a DAG of verifiable subgoals; revised dynamically based on Lean compilation feedback in a recursive loop"
+af_agent_notes:
+  orchestrator: "General coding agent (Claude Code) autonomously selects and invokes MCP tools to drive the overall proof search"
+  formal_prover: "Agent writes Lean 4 code, compiles it, and iteratively repairs errors using diagnostics from Lean-LSP-MCP"
+  nlp_judge: "Informal Prover subsystem: a Generator produces informal solutions and a Verifier checks correctness; a solution requires 3 independent passing verdicts in up to 20 iterations"
+  subagent: "For lengthy proof trajectories, specific lemmas are isolated and assigned to independent subagents to avoid context-length limitations"
 ---
 
 The input is lean4 formal statement. The goal is to prove the theorem.

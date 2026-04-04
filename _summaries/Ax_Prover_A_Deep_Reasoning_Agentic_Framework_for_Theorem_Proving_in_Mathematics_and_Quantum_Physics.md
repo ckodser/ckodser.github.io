@@ -7,6 +7,19 @@ img: assets/img/Ax_Prover_A_Deep_Reasoning_Agentic_Framework_for_Theorem_Proving
 importance: 1
 giscus_comments: true
 link: https://arxiv.org/pdf/2510.12787
+af_short_title: "Ax-Prover"
+af_input: "Formal Statement"
+af_output: "Formal Proof"
+af_agents: [orchestrator, formal_prover, formal_verifier]
+af_tools: [lean4_mcp, theorem_search, file_system]
+af_tool_notes:
+  lean4_mcp: "lean-lsp-mcp provides lean_diagnostic_messages to compile files, inspect proof state, and diagnose errors step-by-step as the Prover fills in each sorry placeholder"
+  theorem_search: "Agents query Loogle and Leansearch to retrieve relevant theorems and definitions from Mathlib and other Lean libraries during proof construction"
+  file_system: "Agents use read_file, write_file, and list_directory to manage the .lean proof project files between Prover and Verifier steps"
+af_agent_notes:
+  orchestrator: "Receives user input, assigns tasks to the Prover, routes Verifier diagnostics back, and decides termination when proof is certified or max attempts reached"
+  formal_prover: "Generates a natural-language proof sketch, formalizes each step with Lean have statements, then proposes tactics sequentially using lean_diagnostic_messages to evaluate each step"
+  formal_verifier: "Compiles the output file via lean_diagnostic_messages and certifies the proof only if there are no level-1 errors and no remaining sorry or admit tactics"
 ---
 
 They get lean4 formal theorem and output a working proof. They have three agents: **Orchestrator**, **Prover**, **Verifier**. They have a MCP for communicating with lean4 compiler.

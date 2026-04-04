@@ -7,6 +7,16 @@ img: assets/img/M2F_Automated_Formalization_of_Mathematical_Literature_at_Scale/
 importance: 1
 giscus_comments: true
 link: https://arxiv.org/pdf/2602.17016
+af_short_title: "M2F"
+af_input: "NLP Document"
+af_output: "Formal Statement + Formal Proof"
+af_agents: [orchestrator, formal_prover]
+af_tools: [lean4_mcp]
+af_tool_notes:
+  lean4_mcp: "VerifyFile oracle checks whether a file elaborates with zero error-level diagnostics; diagnostics annotated with source ranges guide localized patch proposals in both the statement and proof repair stages"
+af_agent_notes:
+  orchestrator: "Two-stage pipeline: Stage 1 compiles statements with sorry placeholders; Stage 2 repairs proofs. Each stage runs an accept/revert loop guided by compiler feedback"
+  formal_prover: "Iterates a planner and prover to propose candidate proof patches for each placeholder; a patch is committed only if it strictly reduces proof holes without introducing errors"
 ---
 
 They use Human Domain Expert Audit to check the correctness of formalized statements. They make the task easier for the human checker by "Provenance-Linking". The auditor is shown the original textbook text side-by-side with the Lean code, making it easy to verify that nothing was lost or altered in translation.
