@@ -10,12 +10,13 @@ link: https://arxiv.org/pdf/2602.17016
 af_short_title: "M2F"
 af_input: "NLP Document"
 af_output: "Formal Statement + Formal Proof"
-af_agents: [orchestrator, formal_prover]
+af_agents: [statement_extractor, formal_statement, formal_prover]
 af_tools: [lean4_mcp]
 af_tool_notes:
   lean4_mcp: "VerifyFile oracle checks whether a file elaborates with zero error-level diagnostics; diagnostics annotated with source ranges guide localized patch proposals in both the statement and proof repair stages"
 af_agent_notes:
-  orchestrator: "Two-stage pipeline: Stage 1 compiles statements with sorry placeholders; Stage 2 repairs proofs. Each stage runs an accept/revert loop guided by compiler feedback"
+  statement_extractor: "Converting the original PDF or LaTeX document into a sequence of JSON items. Each record is a unit, such as a definition, lemma, or theorem. It also point to the exact text in the latex. "
+  formal_statement: "compiles statements with sorry placeholders."
   formal_prover: "Iterates a planner and prover to propose candidate proof patches for each placeholder; a patch is committed only if it strictly reduces proof holes without introducing errors"
 ---
 

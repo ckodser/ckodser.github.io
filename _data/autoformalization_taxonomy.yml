@@ -1,45 +1,37 @@
 agents:
   - id: orchestrator
     name: Orchestrator
-    description: "Manages overall workflow, coordinates other agents, routes tasks and decides termination"
   - id: formal_prover
     name: Formal Prover
-    description: "Writes and iteratively repairs Lean 4 proof code"
-  - id: formal_verifier
-    name: Formal Verifier
-    description: "Checks that Lean code compiles and is free of proof holes"
-  - id: nlp_judge
-    name: NLP Judge
-    description: "Evaluates correctness of informal/natural language proofs through iterative refinement"
-  - id: synthesis_agent
-    name: Synthesis Agent
-    description: "Constructs mathematical proofs in natural language or LaTeX"
-  - id: adversarial_reviewer
-    name: Adversarial Reviewer
-    description: "Critiques proof drafts and proposes targeted fixes to close logical gaps"
-  - id: computational_agent
-    name: Computational Agent
-    description: "Runs experiments and searches for counterexamples to guide proof strategy"
-  - id: subagent
-    name: Subagent
-    description: "Handles isolated lemmas or long proof sub-tasks independently to manage context limits"
+  - id: formal_statement
+    name: Formalize Statement
+  - id: formalizer
+    name: Formalizer (proof+statement)
+  - id: semantic_check
+    name: NLP=FL Semantic Check
+  - id: break_to_lemma
+    name: Break to Lemma
+  - id: statement_extractor
+    name: Statement Extractor
+  - id: NLP_prover
+    name: Nlp Prover
+  - id: NLP_proof_reviewer
+    name: Nlp Proof Reviewer
+  - id: code_generation
+    name: Code Generation
+  - id: formal_ranker
+    name: Rank Formalizations
 
 tools:
   - id: lean4_mcp
     name: Lean 4 MCP
-    description: "Compiler access, error diagnostics, and proof-state inspection via MCP/LSP"
   - id: theorem_search
     name: Theorem Search
-    description: "Semantic search over Mathlib/FLT libraries (Leansearch, Loogle, LeanDex)"
-  - id: file_system
-    name: File System
-    description: "Read, write, and navigate proof project files"
   - id: literature_search
     name: Document Search
-    description: "Semantic search over mathematical literature and papers for prior art"
-  - id: code_execution
-    name: Code Execution
-    description: "Run experimental programs for numerical exploration and counterexample search"
   - id: blueprint_tool
     name: Blueprint Generator
-    description: "Creates DAG-based proof plans; decomposes long-horizon tasks into verifiable subgoals"
+  - id: code_execution
+    name: Code Execution
+  - id: file_system
+    name: File System

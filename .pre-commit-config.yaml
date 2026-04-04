@@ -26,3 +26,9 @@ repos:
         entry: python3 scripts/ensure_double_dollar_math.py --fix
         language: system
         files: \.md$
+      - id: sync-taxonomy
+        name: sync-taxonomy
+        entry: python3 scripts/sync_taxonomy.py
+        language: system
+        files: ^(_summaries/.*\.md|_data/autoformalization_taxonomy\.yml)$
+        pass_filenames: false

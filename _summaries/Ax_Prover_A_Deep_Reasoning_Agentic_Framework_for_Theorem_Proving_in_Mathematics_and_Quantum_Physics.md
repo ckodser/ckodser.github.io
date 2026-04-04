@@ -10,7 +10,7 @@ link: https://arxiv.org/pdf/2510.12787
 af_short_title: "Ax-Prover"
 af_input: "Formal Statement"
 af_output: "Formal Proof"
-af_agents: [orchestrator, formal_prover, formal_verifier]
+af_agents: [orchestrator, formal_prover]
 af_tools: [lean4_mcp, theorem_search, file_system]
 af_tool_notes:
   lean4_mcp: "lean-lsp-mcp provides lean_diagnostic_messages to compile files, inspect proof state, and diagnose errors step-by-step as the Prover fills in each sorry placeholder"
@@ -19,10 +19,9 @@ af_tool_notes:
 af_agent_notes:
   orchestrator: "Receives user input, assigns tasks to the Prover, routes Verifier diagnostics back, and decides termination when proof is certified or max attempts reached"
   formal_prover: "Generates a natural-language proof sketch, formalizes each step with Lean have statements, then proposes tactics sequentially using lean_diagnostic_messages to evaluate each step"
-  formal_verifier: "Compiles the output file via lean_diagnostic_messages and certifies the proof only if there are no level-1 errors and no remaining sorry or admit tactics"
 ---
 
-They get lean4 formal theorem and output a working proof. They have three agents: **Orchestrator**, **Prover**, **Verifier**. They have a MCP for communicating with lean4 compiler.
+They get lean4 formal theorem and output a working proof. They have three agents: **Orchestrator**, **Prover**, **Verifier**. They have a MCP for communicating with lean4 compiler. **Verifier** just do simple lean compile so can not be called an agent really. It is more of an interface.
 
 # Method
 

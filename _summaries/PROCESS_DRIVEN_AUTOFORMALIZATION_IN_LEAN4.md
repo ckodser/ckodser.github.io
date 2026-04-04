@@ -10,13 +10,13 @@ link: https://arxiv.org/pdf/2406.01940
 af_short_title: "Process-Driven Autoformalization"
 af_input: "NLP Statement + NLP Proof"
 af_output: "Formal Statement + Formal Proof"
-af_agents: [formal_prover, formal_verifier]
+af_agents: [formal_prover, formal_ranker]
 af_tools: [lean4_mcp]
 af_tool_notes:
   lean4_mcp: "Validates the PSV-selected candidate formalization; the compiler result is the final accept/reject signal — the PSV pre-filters candidates to reduce failed invocations"
 af_agent_notes:
   formal_prover: "Fine-tuned Mistral-7B generates multiple candidate formalizations (Lean 4 statement + proof tactics) from an NLP statement and proof"
-  formal_verifier: "Process-Supervised Verifier (PSV) scores each candidate and selects the one most likely to compile, before invoking the Lean 4 compiler"
+  formal_ranker: "Process-Supervised Verifier (PSV) scores each candidate and selects the one most likely to compile and be correct, before invoking the Lean 4 compiler. This also work as a some what help to eliminte semantically uncorrect theorems. "
 ---
 
 ## Dataset

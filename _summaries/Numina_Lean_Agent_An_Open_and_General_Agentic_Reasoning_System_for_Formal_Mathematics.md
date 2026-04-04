@@ -10,17 +10,18 @@ link: https://arxiv.org/pdf/2601.14027
 af_short_title: "Numina-Lean-Agent"
 af_input: "Formal Statement"
 af_output: "Formal Proof"
-af_agents: [orchestrator, formal_prover, nlp_judge, subagent]
+af_agents: [orchestrator, formal_prover, NLP_prover, NLP_proof_reviewer, break_to_lemma]
 af_tools: [lean4_mcp, theorem_search, blueprint_tool]
 af_tool_notes:
   lean4_mcp: "Lean-LSP-MCP provides semantic awareness (proof goals, file diagnostics), code execution (compile snippets, parallel strategy evaluation at single nodes), and theorem retrieval from local projects"
   theorem_search: "LeanDex performs semantic natural-language search over Lean v4.26.0 packages including Mathlib and FLT"
   blueprint_tool: "Blueprint Generation decomposes long-horizon tasks into a DAG of verifiable subgoals; revised dynamically based on Lean compilation feedback in a recursive loop"
 af_agent_notes:
-  orchestrator: "General coding agent (Claude Code) autonomously selects and invokes MCP tools to drive the overall proof search"
+  orchestrator: "General coding agent (Claude Code) autonomously selects and invokes MCP tools to drive the overall proof search. It can call the Discussion Partner that serves as a collaborative network of external language models that the primary agent can proactively query when encountering proof bottlenecks or strategic dilemmas."
   formal_prover: "Agent writes Lean 4 code, compiles it, and iteratively repairs errors using diagnostics from Lean-LSP-MCP"
-  nlp_judge: "Informal Prover subsystem: a Generator produces informal solutions and a Verifier checks correctness; a solution requires 3 independent passing verdicts in up to 20 iterations"
-  subagent: "For lengthy proof trajectories, specific lemmas are isolated and assigned to independent subagents to avoid context-length limitations"
+  NLP_prover: "The Informal Prover operates as a lightweight Gemini-based agent system composed of two models—a Generator and a Verifier—working in an iterative refinement loop. The Generator drafts detailed informal proof solutions."
+  NLP_proof_reviewer: "It asses the NLP Prover agent informal proofs. It independently assessed multiple times by the Verifier; if errors are found, the Verifier provides feedback to the Generator to iteratively correct the solution until it is unanimously accepted as correct."
+  break_to_lemma: "This agent breaks long lemma proofs to smaller subgoals so that the lean4 is not bigger than the context window. They call it subagent mechanism."
 ---
 
 The input is lean4 formal statement. The goal is to prove the theorem.

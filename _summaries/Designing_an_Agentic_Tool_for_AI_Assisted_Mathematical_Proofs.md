@@ -10,7 +10,7 @@ link: https://althofer.de/agentic_strategy_design_for_math_proofs.pdf
 af_short_title: "Designing Agentic Tool (proposal)"
 af_input: "NLP Statement"
 af_output: "Formal Statement + Formal Proof"
-af_agents: [orchestrator, computational_agent, synthesis_agent, adversarial_reviewer]
+af_agents: [orchestrator, code_generation, NLP_prover, NLP_proof_reviewer, formalizer]
 af_tools: [lean4_mcp, literature_search, code_execution]
 af_tool_notes:
   lean4_mcp: "Formalization Bridge translates proof slices into Lean or Coq; compilation failures are extracted as minimal missing obligations (type mismatches, missing lemmas) and fed back into the adversarial review loop as blocking items"
@@ -18,9 +18,10 @@ af_tool_notes:
   code_execution: "Computational Agent writes and runs experimental code for numerical exploration and counterexample search, operating under a dedicated code-review loop before results inform proof strategy"
 af_agent_notes:
   orchestrator: "Controls pipeline routing and human checkpoints based on a confidence score; maintains the Claim Ledger that requires every nontrivial statement to link to a specific evidence object"
-  computational_agent: "Writes and optimizes experimental code for numerical exploration and counterexample search before a proof is attempted, to catch false conjectures early"
-  synthesis_agent: "Constructs meta-prompted proof plans and executes them to produce LaTeX proofs; revises in response to adversarial feedback under a fixed change budget"
-  adversarial_reviewer: "Scrutinizes proof drafts for logical gaps and proposes exact replacement text for the Synthesis Agent to accept or reject"
+  code_generation: "Writes and optimizes experimental code for numerical exploration and counterexample search before a proof is attempted, to catch false conjectures early"
+  NLP_prover: "Constructs meta-prompted proof plans and executes them to produce LaTeX proofs; revises in response to adversarial feedback under a fixed change budget"
+  NLP_proof_reviewer: "Scrutinizes proof drafts for logical gaps and proposes exact replacement text for the Synthesis Agent to accept or reject"
+  formalizer: "After we generate the NLP proof, this agent translate that to lean4. After formalizing the statement a human should check the statement and then the agent generates the proof lean. It maintain a 'Pitfall Registry' to help it avoid repeating known formalization errors."
 ---
 
 This is not a paper really. This is a paper plan. Like there is no experiment. But there is many experiment designes ready.
