@@ -57,3 +57,9 @@ datasets:
     name: Research Papers
   - id: textbook
     name: Textbook
+  - id: CombiBench
+    name: Combibench
+  - id: FormalMath-Lite
+    name: Formalmath Lite
+  - id: ProverBench
+    name: Proverbench
