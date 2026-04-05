@@ -21,7 +21,10 @@ agents:
     name: Code Generation
   - id: formal_ranker
     name: Rank Formalizations
-
+  - id: Autoinformalizer
+    name: Autoinformalizer
+  - id: memory_manager
+    name: Memory Manager
 tools:
   - id: lean4_mcp
     name: Lean 4 MCP
@@ -29,9 +32,28 @@ tools:
     name: Theorem Search
   - id: literature_search
     name: Document Search
-  - id: blueprint_tool
-    name: Blueprint Generator
   - id: code_execution
     name: Code Execution
   - id: file_system
     name: File System
+  - id: blueprint_tool
+    name: Blueprint Tool
+datasets:
+  - id: MiniF2F
+    name: MiniF2F
+  - id: PutnamBench
+    name: PutnamBench
+  - id: FATE
+    name: FATE
+  - id: LeanCat
+    name: LeanCat
+  - id: Mathlib_Theorems
+    name: Mathlib Theorems
+  - id: MATH
+    name: MATH
+  - id: GSM8K
+    name: GSM8K
+  - id: research_papers
+    name: Research Papers
+  - id: textbook
+    name: Textbook

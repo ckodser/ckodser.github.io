@@ -12,6 +12,8 @@ af_input: "NLP Statement + NLP Proof"
 af_output: "Formal Statement + Formal Proof"
 af_agents: [formal_prover, formal_ranker]
 af_tools: [lean4_mcp]
+af_datasets: [Mathlib_Theorems, MATH, GSM8K]
+af_statement_formalization_evaluation: "Human Lean 4 experts manually evaluated the outputs."
 af_tool_notes:
   lean4_mcp: "Validates the PSV-selected candidate formalization; the compiler result is the final accept/reject signal — the PSV pre-filters candidates to reduce failed invocations"
 af_agent_notes:

@@ -12,6 +12,8 @@ af_input: "NLP Statement + NLP Proof"
 af_output: "Formal Statement + Formal Proof"
 af_agents: [formal_prover, semantic_check]
 af_tools: [lean4_mcp, theorem_search]
+af_datasets: [MiniF2F]
+af_statement_formalization_evaluation: "Prove equivilance in Lean4 restricted tactic set with Gemini-2.5-Pro."
 af_agent_notes:
   formal_prover: "Fine-tuned Kimina-Prover-RL-1.7B generates a Lean 4 theorem and proof pair from the NL input, conditioned on top-K retrieved FL demonstrations and their relevance scores"
   semantic_check: "Two-stage verifier: syntactic check compiles the output with the Lean type checker; semantic check uses Gemini-2.5-Pro to prove the biconditional T_FL ↔ T_NL with a restricted tactic set (rfl, simp, ring, nlinarith); failures trigger the repair loop"

@@ -38,6 +38,7 @@ horizontal: false
 .badge-input { background-color: #6c757d; color: #fff; }
 .badge-output { background-color: #28a745; color: #fff; }
 .badge-input, .badge-output { font-size: 0.8rem; padding: 0.3em 0.6em; border-radius: 0.25rem; white-space: nowrap; }
+.af-comparison-table td, .af-comparison-table th { color: #212529; }
 </style>
 <div class="af-overview">
   <a id="autoformalization-overview" href=".#autoformalization-overview">
@@ -112,6 +113,54 @@ horizontal: false
           <td>{% if paper.af_tools contains tool.id %}{% assign tnote = paper.af_tool_notes[tool.id] %}<span class="af-check" {% if tnote %}data-tooltip="{{ tnote }}"{% endif %}>✓</span>{% else %}<span class="af-empty">·</span>{% endif %}</td>
           {% endfor %}
         </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Datasets Used</h3>
+  <div class="table-responsive">
+    <table class="table table-sm table-bordered text-center af-comparison-table">
+      <thead>
+        <tr>
+          <th class="text-left">Paper</th>
+          {% for dataset in site.data.autoformalization_taxonomy.datasets %}
+          <th>{{ dataset.name }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for paper in af_papers %}
+        {% if paper.af_datasets %}
+        <tr>
+          <td class="text-left"><a href="{{ paper.url | relative_url }}">{{ paper.af_short_title | default: paper.title }}</a></td>
+          {% for dataset in site.data.autoformalization_taxonomy.datasets %}
+          <td>{% if paper.af_datasets contains dataset.id %}{% assign dnote = paper.af_dataset_notes[dataset.id] %}<span class="af-check" {% if dnote %}data-tooltip="{{ dnote }}"{% endif %}>✓</span>{% else %}<span class="af-empty">·</span>{% endif %}</td>
+          {% endfor %}
+        </tr>
+        {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Statement Formalization Evaluation</h3>
+  <div class="table-responsive">
+    <table class="table table-sm table-bordered af-comparison-table">
+      <thead>
+        <tr>
+          <th>Paper</th>
+          <th>Evaluation Method</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for paper in af_papers %}
+        {% if paper.af_statement_formalization_evaluation %}
+        <tr>
+          <td><a href="{{ paper.url | relative_url }}">{{ paper.af_short_title | default: paper.title }}</a></td>
+          <td>{{ paper.af_statement_formalization_evaluation }}</td>
+        </tr>
+        {% endif %}
         {% endfor %}
       </tbody>
     </table>

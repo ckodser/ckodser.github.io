@@ -10,14 +10,22 @@ link: https://arxiv.org/pdf/2602.17016
 af_short_title: "M2F"
 af_input: "NLP Document"
 af_output: "Formal Statement + Formal Proof"
-af_agents: [statement_extractor, formal_statement, formal_prover]
+af_agents: [statement_extractor, formal_statement, formal_prover, NLP_prover, break_to_lemma]
 af_tools: [lean4_mcp]
+af_datasets: [textbook, research_papers, FATE]
+af_dataset_notes:
+    research_papers: "Full sections with heterogeneous exposition and implicit assumptions."
+    textbook: "Sections from Real Analysis by Lebl  and Convex Analysis by Rockafellar."
+    FATE: "FATE-H"
+af_statement_formalization_evaluation: "Human domain experts compare the generated Lean declarations directly against the original, source-linked text spans."
 af_tool_notes:
   lean4_mcp: "VerifyFile oracle checks whether a file elaborates with zero error-level diagnostics; diagnostics annotated with source ranges guide localized patch proposals in both the statement and proof repair stages"
 af_agent_notes:
   statement_extractor: "Converting the original PDF or LaTeX document into a sequence of JSON items. Each record is a unit, such as a definition, lemma, or theorem. It also point to the exact text in the latex. "
   formal_statement: "compiles statements with sorry placeholders."
   formal_prover: "Iterates a planner and prover to propose candidate proof patches for each placeholder; a patch is committed only if it strictly reduces proof holes without introducing errors"
+  NLP_prover: "It is more of a proof planner. Though details on how it works is not clear"
+  break_to_lemma: "A specialized utility agent that detects when a generated Lean file becomes too long or complex. It refactors and splits the file at declaration boundaries to preserve namespace context and verifier stability, maintaining a clean dependency chain. Very limited detail are explained in the paper. "
 ---
 
 They use Human Domain Expert Audit to check the correctness of formalized statements. They make the task easier for the human checker by "Provenance-Linking". The auditor is shown the original textbook text side-by-side with the Lean code, making it easy to verify that nothing was lost or altered in translation.

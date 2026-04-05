@@ -34,6 +34,7 @@ def parse_frontmatter(content: str) -> dict:
 def collect_used_ids():
     used_agents: set[str] = set()
     used_tools: set[str] = set()
+    used_datasets: set[str] = set()
 
     for md_path in SUMMARIES_DIR.glob("*.md"):
         content = md_path.read_text(encoding="utf-8")
@@ -44,13 +45,15 @@ def collect_used_ids():
             used_agents.add(str(agent_id))
         for tool_id in fm.get("af_tools") or []:
             used_tools.add(str(tool_id))
+        for dataset_id in fm.get("af_datasets") or []:
+            used_datasets.add(str(dataset_id))
 
-    return used_agents, used_tools
+    return used_agents, used_tools, used_datasets
 
 
 def dump_taxonomy(data: dict) -> str:
     lines = []
-    for section in ("agents", "tools"):
+    for section in ("agents", "tools", "datasets"):
         lines.append(f"{section}:")
         for entry in data.get(section, []):
             lines.append(f"  - id: {entry['id']}")
@@ -59,7 +62,7 @@ def dump_taxonomy(data: dict) -> str:
 
 
 def main():
-    used_agents, used_tools = collect_used_ids()
+    used_agents, used_tools, used_datasets = collect_used_ids()
 
     raw = TAXONOMY_PATH.read_text(encoding="utf-8")
     data = yaml.safe_load(raw) or {}
@@ -68,7 +71,7 @@ def main():
     has_star = False
     messages = []
 
-    for section, used_ids in [("agents", used_agents), ("tools", used_tools)]:
+    for section, used_ids in [("agents", used_agents), ("tools", used_tools), ("datasets", used_datasets)]:
         existing = list(data.get(section) or [])
         existing_ids = {e["id"] for e in existing}
 

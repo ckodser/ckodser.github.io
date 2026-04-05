@@ -10,8 +10,12 @@ link: https://arxiv.org/pdf/2602.16554
 af_short_title: "MerLean"
 af_input: "NLP Document"
 af_output: "Formal Statement + Formal Proof"
-af_agents: [statement_extractor, formalizer, semantic_check]
-af_tools: [lean4_mcp, theorem_search]
+af_agents: [statement_extractor, formalizer, semantic_check, Autoinformalizer]
+af_tools: [lean4_mcp, theorem_search, file_system, ]
+af_datasets: [research_papers]
+af_dataset_notes:
+    research_papers: "Evaluated on three papers on theoretical quantum computing"
+af_statement_formalization_evaluation: "Manual review to ensure all new definitions and axioms are mathematically accurate and rigorously constructed, using Autoinformalizer."
 af_tool_notes:
   lean4_mcp: "lean-lsp-mcp provides lean_goal to inspect proof states and lean_hover_info for type signatures; compilation errors are fed directly back to the agent for correction in the iterative compile-fix loop"
   theorem_search: "leansearch and loogle query Mathlib lemmas during formalization; also used to find definitions when the agent autonomously introduces auxiliary lemmas not present in the original paper"
@@ -19,6 +23,7 @@ af_agent_notes:
   statement_extractor: "Read a raw LaTeX document and extract all mathematical statements into a structured JSON format. Over multiple passes, it refines these extractions by clarifying vague language, introducing necessary intermediate steps, and logically reordering the statements to ensure that all mathematical dependencies are properly established before they are used"
   formalizer: "An autonomous coding agent that translates structured JSON statements into verified Lean 4 code through a continuous compile-fix loop, utilizing diagnostic tools to correct errors. When it encounters advanced mathematics that are not yet supported by the underlying Mathlib library, it employs an axiom-handling fallback; rather than leaving incomplete proofs, it explicitly declares these missing concepts as axioms to maintain transparency about unverified assumptions."
   semantic_check: "Verifying the faithfulness of the generated code. A single API call: Is this formal equal this informal?"
+  Autoinformalizer: "Operating after the formalization pipeline concludes, this agent reverses the entire process. It translates the verified Lean code back into natural, human-readable LaTeX to create a standalone narrative or an interactive blueprint. This allows experts to verify semantic correctness without needing to understand Lean syntax."
 ---
 
 
