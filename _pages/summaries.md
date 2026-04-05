@@ -60,11 +60,13 @@ horizontal: false
       </thead>
       <tbody>
         {% for paper in af_papers %}
+        {% if paper.af_input or paper.af_output %}
         <tr>
           <td><a href="{{ paper.url | relative_url }}">{{ paper.af_short_title | default: paper.title }}</a></td>
           <td><span class="badge badge-input">{{ paper.af_input | default: "—" }}</span></td>
           <td><span class="badge badge-output">{{ paper.af_output | default: "—" }}</span></td>
         </tr>
+        {% endif %}
         {% endfor %}
       </tbody>
     </table>
@@ -83,12 +85,14 @@ horizontal: false
       </thead>
       <tbody>
         {% for paper in af_papers %}
+        {% if paper.af_agents %}
         <tr>
           <td class="text-left"><a href="{{ paper.url | relative_url }}">{{ paper.af_short_title | default: paper.title }}</a></td>
           {% for agent in site.data.autoformalization_taxonomy.agents %}
           <td>{% if paper.af_agents contains agent.id %}{% assign note = paper.af_agent_notes[agent.id] %}<span class="af-check" {% if note %}data-tooltip="{{ note }}"{% endif %}>✓</span>{% else %}<span class="af-empty">·</span>{% endif %}</td>
           {% endfor %}
         </tr>
+        {% endif %}
         {% endfor %}
       </tbody>
     </table>
@@ -107,12 +111,14 @@ horizontal: false
       </thead>
       <tbody>
         {% for paper in af_papers %}
+        {% if paper.af_tools %}
         <tr>
           <td class="text-left"><a href="{{ paper.url | relative_url }}">{{ paper.af_short_title | default: paper.title }}</a></td>
           {% for tool in site.data.autoformalization_taxonomy.tools %}
           <td>{% if paper.af_tools contains tool.id %}{% assign tnote = paper.af_tool_notes[tool.id] %}<span class="af-check" {% if tnote %}data-tooltip="{{ tnote }}"{% endif %}>✓</span>{% else %}<span class="af-empty">·</span>{% endif %}</td>
           {% endfor %}
         </tr>
+        {% endif %}
         {% endfor %}
       </tbody>
     </table>
