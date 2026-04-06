@@ -25,6 +25,16 @@ agents:
     name: Autoinformalizer
   - id: memory_manager
     name: Memory Manager
+  - id: engineering_reviewer
+    name: Engineering Reviewer
+  - id: maintainer
+    name: Maintainer
+  - id: progress
+    name: Progress
+  - id: scanner
+    name: Scanner
+  - id: triage
+    name: Triage
 tools:
   - id: lean4_mcp
     name: Lean 4 MCP
@@ -38,6 +48,12 @@ tools:
     name: File System
   - id: blueprint_tool
     name: Blueprint Tool
+  - id: bash_tool
+    name: Bash Tool
+  - id: git_tools
+    name: Git Tools
+  - id: issue_tracker
+    name: Issue Tracker
 datasets:
   - id: MiniF2F
     name: MiniF2F
