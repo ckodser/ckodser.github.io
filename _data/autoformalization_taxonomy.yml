@@ -35,6 +35,8 @@ agents:
     name: Scanner
   - id: triage
     name: Triage
+  - id: planner
+    name: Planner
 tools:
   - id: lean4_mcp
     name: Lean 4 MCP
@@ -54,6 +56,8 @@ tools:
     name: Git Tools
   - id: issue_tracker
     name: Issue Tracker
+  - id: anti_trivialization_guard
+    name: Anti Trivialization Guard
 datasets:
   - id: MiniF2F
     name: MiniF2F

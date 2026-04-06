@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0c29"/>
+      <stop offset="50%" stop-color="#302b63"/>
+      <stop offset="100%" stop-color="#24243e"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5e72e4"/>
+      <stop offset="100%" stop-color="#ff7eb3"/>
+    </linearGradient>
+    <linearGradient id="arrow-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5e72e4"/>
+      <stop offset="100%" stop-color="#ff7eb3"/>
+    </linearGradient>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg)"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.05" stroke="#fff" stroke-width="0.5">
+    <line x1="0" y1="75" x2="400" y2="75"/>
+    <line x1="0" y1="150" x2="400" y2="150"/>
+    <line x1="0" y1="225" x2="400" y2="225"/>
+    <line x1="100" y1="0" x2="100" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="300"/>
+    <line x1="300" y1="0" x2="300" y2="300"/>
+  </g>
+
+  <!-- Left: NLP document -->
+  <g transform="translate(30, 80)">
+    <rect width="120" height="150" rx="8" fill="#1a1a3e" stroke="#5e72e4" stroke-width="2"/>
+    <rect width="120" height="32" rx="8" fill="#5e72e4" opacity="0.2"/>
+    <line x1="16" y1="16" x2="104" y2="16" stroke="#5e72e4" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+    <line x1="16" y1="50" x2="96" y2="50" stroke="#8888bb" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    <line x1="16" y1="66" x2="84" y2="66" stroke="#8888bb" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    <line x1="16" y1="82" x2="100" y2="82" stroke="#8888bb" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    <line x1="16" y1="98" x2="72" y2="98" stroke="#8888bb" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    <text x="16" y="130" font-family="serif" font-size="18" fill="#ff7eb3" opacity="0.8">&#x2200;x &#x2208; &#x211D;, &#x2203;y</text>
+  </g>
+  <text x="90" y="250" font-family="sans-serif" font-size="14" fill="#8888cc" text-anchor="middle" font-weight="600">NLP</text>
+
+  <!-- Arrow -->
+  <g transform="translate(165, 140)">
+    <rect y="8" width="70" height="16" rx="8" fill="url(#arrow-grad)" opacity="0.4"/>
+    <polygon points="65,0 65,32 85,16" fill="url(#glow)" opacity="0.7"/>
+    <circle r="4" fill="#5e72e4" opacity="0.9">
+      <animate attributeName="cx" values="10;65" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="16;16" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.2" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="4" fill="#ff7eb3" opacity="0.9">
+      <animate attributeName="cx" values="10;65" dur="2s" repeatCount="indefinite" begin="0.7s"/>
+      <animate attributeName="cy" values="16;16" dur="2s" repeatCount="indefinite" begin="0.7s"/>
+      <animate attributeName="opacity" values="1;0.2" dur="2s" repeatCount="indefinite" begin="0.7s"/>
+    </circle>
+    <circle r="4" fill="#a78bfa" opacity="0.9">
+      <animate attributeName="cx" values="10;65" dur="2s" repeatCount="indefinite" begin="1.4s"/>
+      <animate attributeName="cy" values="16;16" dur="2s" repeatCount="indefinite" begin="1.4s"/>
+      <animate attributeName="opacity" values="1;0.2" dur="2s" repeatCount="indefinite" begin="1.4s"/>
+    </circle>
+  </g>
+
+  <!-- Right: Lean 4 terminal -->
+  <g transform="translate(260, 80)">
+    <rect width="120" height="150" rx="8" fill="#1a1a3e" stroke="#28a745" stroke-width="2"/>
+    <rect width="120" height="32" rx="8" fill="#28a745" opacity="0.15"/>
+    <circle cx="16" cy="16" r="5" fill="#ff5f56" opacity="0.8"/>
+    <circle cx="32" cy="16" r="5" fill="#ffbd2e" opacity="0.8"/>
+    <circle cx="48" cy="16" r="5" fill="#27c93f" opacity="0.8"/>
+    <text x="12" y="56" font-family="monospace" font-size="13" fill="#28a745">theorem</text>
+    <text x="12" y="74" font-family="monospace" font-size="12" fill="#a78bfa" opacity="0.8">  (h: &#x2200; x,</text>
+    <text x="12" y="92" font-family="monospace" font-size="12" fill="#a78bfa" opacity="0.8">   P x &#x2192; Q x)</text>
+    <text x="12" y="110" font-family="monospace" font-size="12" fill="#5e72e4" opacity="0.8">  : Prop :=</text>
+    <text x="12" y="128" font-family="monospace" font-size="12" fill="#ff7eb3">  by exact</text>
+    <!-- Checkmark -->
+    <g transform="translate(94, 134)">
+      <circle r="12" fill="#28a745" opacity="0.25"/>
+      <polyline points="-6,0 -1,5 7,-5" fill="none" stroke="#28a745" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+  <text x="320" y="250" font-family="sans-serif" font-size="14" fill="#28a745" text-anchor="middle" font-weight="600">Lean 4</text>
+
+  <!-- Title -->
+  <text x="200" y="36" font-family="sans-serif" font-weight="700" font-size="24" fill="url(#glow)" text-anchor="middle" filter="url(#softglow)">Comparative Overview</text>
+  <text x="200" y="58" font-family="sans-serif" font-size="13" fill="#8888cc" text-anchor="middle" opacity="0.8" letter-spacing="1">Agents &#x2022; Tools &#x2022; Datasets &#x2022; Eval</text>
+
+  <!-- Bottom mini table -->
+  <g transform="translate(70, 262)">
+    <rect width="260" height="30" rx="5" fill="#1a1a3e" stroke="url(#glow)" stroke-width="1" opacity="0.5"/>
+    <line x1="52" y1="3" x2="52" y2="27" stroke="#5e72e4" stroke-width="0.5" opacity="0.3"/>
+    <line x1="104" y1="3" x2="104" y2="27" stroke="#5e72e4" stroke-width="0.5" opacity="0.3"/>
+    <line x1="156" y1="3" x2="156" y2="27" stroke="#5e72e4" stroke-width="0.5" opacity="0.3"/>
+    <line x1="208" y1="3" x2="208" y2="27" stroke="#5e72e4" stroke-width="0.5" opacity="0.3"/>
+    <text x="26" y="19" font-family="sans-serif" font-size="9" fill="#8888cc" text-anchor="middle">PAPER</text>
+    <text x="78" y="19" font-family="sans-serif" font-size="14" fill="#28a745" text-anchor="middle">&#x2713;</text>
+    <text x="130" y="19" font-family="sans-serif" font-size="14" fill="#28a745" text-anchor="middle">&#x2713;</text>
+    <text x="182" y="19" font-family="sans-serif" font-size="14" fill="#555" text-anchor="middle">&#x00B7;</text>
+    <text x="234" y="19" font-family="sans-serif" font-size="14" fill="#28a745" text-anchor="middle">&#x2713;</text>
+  </g>
+</svg>

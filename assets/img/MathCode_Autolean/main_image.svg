@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#c0392b"/>
+    </marker>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="104%">
+      <feDropShadow dx="1" dy="1" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" rx="12" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">MathCode / AUTOLEAN Pipeline</text>
+
+  <!-- Input -->
+  <rect x="30" y="60" width="140" height="60" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="100" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2e7d32">INPUT</text>
+  <text x="100" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">NLP Statement</text>
+  <text x="100" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">(JSON problem)</text>
+
+  <!-- Arrow: Input -> Thinking -->
+  <line x1="170" y1="90" x2="200" y2="90" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Phase 5.2: Thinking/Planning -->
+  <rect x="205" y="55" width="155" height="70" rx="8" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="282" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1565c0">Phase 5.2</text>
+  <text x="282" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Thinking / Planning</text>
+  <text x="282" y="101" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#666">Proof strategy, Mathlib</text>
+  <text x="282" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#666">lemmas, coercion pitfalls</text>
+
+  <!-- Arrow: Thinking -> Formalizer -->
+  <line x1="360" y1="90" x2="390" y2="90" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Phase 5.3: Formalizer/Coder -->
+  <rect x="395" y="55" width="155" height="70" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="472" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#e65100">Phase 5.3</text>
+  <text x="472" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Formalizer / Coder</text>
+  <text x="472" y="101" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#666">Generates Lean 4 file</text>
+  <text x="472" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#666">(statement + opt. proof)</text>
+
+  <!-- Arrow: Formalizer -> Anti-Triv -->
+  <line x1="550" y1="90" x2="580" y2="90" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Anti-Trivialization Guard -->
+  <rect x="585" y="55" width="140" height="70" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="655" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#b71c1c">Guard</text>
+  <text x="655" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Anti-Trivialization</text>
+  <text x="655" y="101" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#666">Rejects True/False</text>
+  <text x="655" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#666">propositions</text>
+
+  <!-- Arrow: Anti-Triv -> Lean Compiler -->
+  <line x1="725" y1="90" x2="755" y2="90" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Lean Compiler -->
+  <rect x="760" y="55" width="120" height="70" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="820" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#6a1b9a">Lean 4</text>
+  <text x="820" y="91" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Compiler</text>
+  <text x="820" y="104" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#666">lake env lean</text>
+
+  <!-- Compile-Repair Loop arrow (Lean -> Formalizer) -->
+  <path d="M 820 125 L 820 150 L 472 150 L 472 125" fill="none" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-red)"/>
+  <text x="646" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#c0392b">Compile-Repair Loop (up to 6 iters)</text>
+
+  <!-- Arrow: Lean Compiler -> Semantic Evaluator (down) -->
+  <path d="M 820 125 L 820 185 L 655 185 L 655 205" fill="none" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="740" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#555">on success</text>
+
+  <!-- Semantic Evaluator -->
+  <rect x="575" y="208" width="160" height="70" rx="8" fill="#e0f2f1" stroke="#00796b" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="655" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#004d40">Semantic Evaluator</text>
+  <text x="655" y="242" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">Grades A-D fidelity</text>
+  <text x="655" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#666">Objects, quantifiers,</text>
+  <text x="655" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#666">hypotheses, conclusions</text>
+
+  <!-- Reject arrow back to Formalizer -->
+  <path d="M 575 243 L 472 243 L 472 125" fill="none" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-red)"/>
+  <text x="520" y="236" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#c0392b">grade &lt; B</text>
+
+  <!-- Arrow: Evaluator -> Output (formalization only) -->
+  <path d="M 735 243 L 780 243" fill="none" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Output box: Formal Statement -->
+  <rect x="785" y="213" width="95" height="60" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="832" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#2e7d32">OUTPUT</text>
+  <text x="832" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#333">Formal Stmt</text>
+  <text x="832" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#333">(+ sorry)</text>
+
+  <!-- Proof Completion Pipeline (lower section) -->
+  <rect x="30" y="310" width="850" height="190" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="455" y="332" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#546e7a">Proof Completion Pipeline (optional --no-formalization-only)</text>
+
+  <!-- Proof Planner -->
+  <rect x="60" y="355" width="160" height="65" rx="8" fill="#e8eaf6" stroke="#3949ab" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="140" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#283593">Proof Planner</text>
+  <text x="140" y="393" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">Generates proof strategy</text>
+  <text x="140" y="406" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#666">Replans after failures</text>
+
+  <!-- Arrow: Planner -> Prover -->
+  <line x1="220" y1="387" x2="270" y2="387" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Proof Prover -->
+  <rect x="275" y="355" width="160" height="65" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="355" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#f57f17">Proof Prover</text>
+  <text x="355" y="393" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">Replaces sorry with proof</text>
+  <text x="355" y="406" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#666">Parallel attempts</text>
+
+  <!-- Arrow: Prover -> Lean Compiler 2 -->
+  <line x1="435" y1="387" x2="485" y2="387" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Lean Compiler (proof) -->
+  <rect x="490" y="355" width="130" height="65" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="555" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#6a1b9a">Lean 4</text>
+  <text x="555" y="391" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Compiler</text>
+  <text x="555" y="404" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#666">Verify proof</text>
+
+  <!-- Compile-repair loop for proof -->
+  <path d="M 555 420 L 555 445 L 355 445 L 355 420" fill="none" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-red)"/>
+  <text x="455" y="458" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#c0392b">Compile-Repair Loop</text>
+
+  <!-- Arrow: Compiler -> Final Output -->
+  <line x1="620" y1="387" x2="670" y2="387" stroke="#555" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Final Output -->
+  <rect x="675" y="355" width="170" height="65" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="760" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#2e7d32">FINAL OUTPUT</text>
+  <text x="760" y="393" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">Formal Statement</text>
+  <text x="760" y="406" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">+ Formal Proof</text>
+
+  <!-- Tools box -->
+  <rect x="30" y="165" width="180" height="125" rx="8" fill="#fff9c4" stroke="#f9a825" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="120" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#f57f17">Tools</text>
+  <text x="45" y="199" font-family="Arial, sans-serif" font-size="9" fill="#333">- Lean 4 Compiler</text>
+  <text x="45" y="213" font-family="Arial, sans-serif" font-size="9" fill="#333">- OpenRouter API</text>
+  <text x="45" y="227" font-family="Arial, sans-serif" font-size="9" fill="#333">- Codex Exec</text>
+  <text x="45" y="241" font-family="Arial, sans-serif" font-size="9" fill="#333">- Claude CLI</text>
+  <text x="45" y="255" font-family="Arial, sans-serif" font-size="9" fill="#333">- Web Search Plugin</text>
+  <text x="45" y="269" font-family="Arial, sans-serif" font-size="9" fill="#333">- File System</text>
+
+  <!-- Evaluation box -->
+  <rect x="240" y="200" width="195" height="90" rx="8" fill="#efebe9" stroke="#6d4c41" stroke-width="1.2" filter="url(#shadow)"/>
+  <text x="337" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4e342e">Evaluation Metrics</text>
+  <text x="250" y="234" font-family="Arial, sans-serif" font-size="9" fill="#333">- Compilation rate</text>
+  <text x="250" y="248" font-family="Arial, sans-serif" font-size="9" fill="#333">- Semantic grade (A-D)</text>
+  <text x="250" y="262" font-family="Arial, sans-serif" font-size="9" fill="#333">- Strict A+ recheck</text>
+  <text x="250" y="276" font-family="Arial, sans-serif" font-size="9" fill="#333">- Double-check mode</text>
+</svg>
