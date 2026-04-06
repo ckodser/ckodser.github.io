@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="bookGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c"/>
+      <stop offset="100%" style="stop-color:#c0392b"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="3" dy="5" stdDeviation="5" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- META badge (left) -->
+  <g transform="translate(145, 225)" filter="url(#shadow)">
+    <rect x="-110" y="-50" width="220" height="100" rx="18" fill="#4267B2"/>
+    <text x="0" y="18" text-anchor="middle" fill="#fff" font-size="52" font-weight="bold">META</text>
+  </g>
+
+  <!-- Textbook (center) -->
+  <g transform="translate(400, 225)" filter="url(#shadow)">
+    <!-- Book spine -->
+    <rect x="-95" y="-120" width="25" height="240" fill="#a93226" rx="3"/>
+    <!-- Book cover -->
+    <rect x="-70" y="-120" width="170" height="240" fill="url(#bookGrad)" rx="5"/>
+    <!-- Book text lines -->
+    <line x1="-40" y1="-70" x2="60" y2="-70" stroke="#fff" stroke-width="2.5" opacity="0.5"/>
+    <line x1="-40" y1="-48" x2="70" y2="-48" stroke="#fff" stroke-width="2.5" opacity="0.5"/>
+    <line x1="-40" y1="-26" x2="55" y2="-26" stroke="#fff" stroke-width="2.5" opacity="0.5"/>
+    <!-- Book title -->
+    <text x="15" y="20" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">Textbook</text>
+    <!-- Math symbols -->
+    <text x="15" y="75" text-anchor="middle" fill="#fff" font-size="36" opacity="0.6">&#x2211; &#x222B;</text>
+  </g>
+
+  <!-- $100K badge (right) -->
+  <g transform="translate(655, 225)" filter="url(#shadow)">
+    <rect x="-100" y="-50" width="200" height="100" rx="50" fill="#27ae60"/>
+    <text x="0" y="20" text-anchor="middle" fill="#fff" font-size="52" font-weight="bold">$100K</text>
+  </g>
+</svg>
