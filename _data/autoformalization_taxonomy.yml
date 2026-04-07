@@ -58,6 +58,8 @@ tools:
     name: Issue Tracker
   - id: anti_trivialization_guard
     name: Anti Trivialization Guard
+  - id: custom_lean4_dsl
+    name: Custom Lean4 Dsl
 datasets:
   - id: MiniF2F
     name: MiniF2F
