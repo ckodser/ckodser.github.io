@@ -95,3 +95,7 @@ datasets:
     name: Proverbench
   - id: ProofNet
     name: Proofnet
+  - id: CriticLeanBench
+    name: Criticleanbench
+  - id: Omni_MATH
+    name: Omni Math
