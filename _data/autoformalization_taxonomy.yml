@@ -99,3 +99,5 @@ datasets:
     name: Criticleanbench
   - id: Omni_MATH
     name: Omni Math
+  - id: APRIL
+    name: APRIL
