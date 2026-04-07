@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 2407.03203v1.pdf
+title: TheoremLlama Transforming General-Purpose LLMs into Lean4 Experts
 description: This paper proposes an end-to-end framework and dataset generation pipeline to train large language models for formal mathematical theorem proving in Lean 4.
 categories: [autoformalization]
 img: assets/img/2407_03203v1_pdf/image5.png
