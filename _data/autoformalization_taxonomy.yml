@@ -37,6 +37,8 @@ agents:
     name: Triage
   - id: planner
     name: Planner
+  - id: proof_assembler
+    name: Proof Assembler
 tools:
   - id: lean4_mcp
     name: Lean 4 MCP
@@ -60,6 +62,12 @@ tools:
     name: Anti Trivialization Guard
   - id: custom_lean4_dsl
     name: Custom Lean4 Dsl
+  - id: auto_solver
+    name: Auto Solver
+  - id: sorrifier
+    name: Sorrifier
+  - id: syntax_refiner
+    name: Syntax Refiner
 datasets:
   - id: MiniF2F
     name: MiniF2F
@@ -85,3 +93,5 @@ datasets:
     name: Formalmath Lite
   - id: ProverBench
     name: Proverbench
+  - id: ProofNet
+    name: Proofnet
