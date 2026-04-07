@@ -4,7 +4,7 @@ title: MathCode / AUTOLEAN
 description: A terminal-based AI coding assistant with a built-in math formalization engine that converts natural language math problems into Lean 4 formal theorem statements and proofs.
 categories: [autoformalization]
 img: assets/img/MathCode_Autolean/banner.png
-importance: 1
+importance: 0.9
 giscus_comments: true
 link: https://github.com/math-ai-org/mathcode
 af_short_title: "MathCode"

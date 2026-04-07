@@ -4,7 +4,7 @@ title: Construction-Verification A Benchmark for Applied Mathematics in Lean 4
 description: A Lean 4 evaluation framework and benchmark requiring explicit solution construction prior to logical verification.
 categories: [autoformalization]
 img: assets/img/Construction_Verification_A_Benchmark_for_Applied_Mathematics_in_Lean_4/image1.png
-importance: 1
+importance: 2
 giscus_comments: true
 link: https://arxiv.org/pdf/2602.01291
 ---

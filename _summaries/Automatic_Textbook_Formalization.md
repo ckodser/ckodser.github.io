@@ -4,7 +4,7 @@ title: Automatic Textbook Formalization
 description: A multi-agent framework utilizing code-capable language models to translate and prove graduate-level mathematical textbooks in the Lean theorem prover.
 categories: [autoformalization]
 img: assets/img/Automatic_Textbook_Formalization/main_image.svg
-importance: 1
+importance: 0.9
 giscus_comments: true
 link: https://arxiv.org/pdf/2604.03071v1
 af_short_title: "Textbook Formalizer"

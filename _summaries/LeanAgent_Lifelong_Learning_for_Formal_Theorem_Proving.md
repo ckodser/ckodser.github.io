@@ -4,7 +4,7 @@ title: LeanAgent, Lifelong Learning for Formal Theorem Proving
 description: A lifelong learning framework for formal theorem proving that combines curriculum learning and progressive training to maintain and extend performance across multiple Lean repositories.
 categories: [autoformalization]
 img: assets/img/2410_06209v8_pdf/image2.png
-importance: 1
+importance: 2
 giscus_comments: true
 link: https://arxiv.org/pdf/2410.06209
 af_short_title: "Lifelong Learner"
