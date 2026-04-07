@@ -11,7 +11,7 @@ af_short_title: "ProofBridge"
 af_input: "NLP Statement + NLP Proof"
 af_output: "Formal Statement + Formal Proof"
 af_agents: [formal_prover, semantic_check]
-af_tools: [lean4_mcp, theorem_search]
+af_tools: [lean4_mcp, mathlib_search]
 af_datasets: [MiniF2F]
 af_statement_formalization_evaluation: "Prove equivilance in Lean4 restricted tactic set with Gemini-2.5-Pro."
 af_agent_notes:
@@ -19,7 +19,7 @@ af_agent_notes:
   semantic_check: "Two-stage verifier: syntactic check compiles the output with the Lean type checker; semantic check uses Gemini-2.5-Pro to prove the biconditional T_FL ↔ T_NL with a restricted tactic set (rfl, simp, ring, nlinarith); failures trigger the repair loop"
 af_tool_notes:
   lean4_mcp: "Lean type checker compiles the generated formalization; error messages and locations from failed compilations are fed back into the bounded repair loop (max 5 attempts)"
-  theorem_search: "Joint embedding model maps NL and FL inputs to a shared 512-dim space via contrastive learning; retrieves top-K FL demonstrations from the training corpus using DAG-aware proof encodings (3.28x better Recall@1 over text-only baselines)"
+  mathlib_search: "Joint embedding model maps NL and FL inputs to a shared 512-dim space via contrastive learning; retrieves top-K FL demonstrations from the training corpus using DAG-aware proof encodings (3.28x better Recall@1 over text-only baselines) the search space is NUMINAMATH-LEAN-PF"
 ---
 
 ## Evaluation method

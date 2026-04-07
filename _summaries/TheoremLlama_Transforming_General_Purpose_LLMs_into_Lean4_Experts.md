@@ -11,10 +11,10 @@ af_short_title: "TheoremLlama"
 af_input: "Formal Statement + NLP Statement + NLP Proof"
 af_output: "Formal Proof"
 af_agents: [Autoinformalizer, formal_prover]
-af_tools: [theorem_search, lean4_mcp]
+af_tools: [mathlib_search, lean4_mcp]
 af_datasets: [MiniF2F]
 af_tool_notes:
-    theorem_search: "Uses a fine-tuned ByT5-Tacgen encoder to align cosine similarity of natural language and formal language theorem statements. It encodes Lean4 statements and informal statements to select the most similar examples, which are used as in-context examples for the deformalization process."
+    mathlib_search: "Uses a fine-tuned ByT5-Tacgen encoder to align cosine similarity of natural language and formal language theorem statements. It encodes Lean4 statements and informal statements to select the most similar examples, which are used as in-context examples for the deformalization process."
     lean4_mcp: "Acts as an automated evaluator that verifies the correctness of generated Lean4 proofs against the Lean4 environment. Utilized during the Iterative Proof Writing phase to filter out incorrect generations and extract only formally verified proofs for use as future in-context examples."
 af_agent_notes:
     Autoinformalizer: "Utilizes the Gemini-1.5-Pro model to write natural language theorem statements and proofs based on formal Lean4 code. Relies on high-quality examples fetched by the Example Retriever to ensure accurate deformalization of extracted theorems, transforming formal logic into human-readable text."

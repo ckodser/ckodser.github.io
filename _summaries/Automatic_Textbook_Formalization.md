@@ -11,7 +11,7 @@ af_short_title: "Textbook Formalizer"
 af_input: "NLP Document"
 af_output: "Formal Statement + Formal Proof"
 af_agents: [formal_statement, formal_prover, semantic_check, engineering_reviewer, maintainer, triage, scanner, progress]
-af_tools: [file_system, lean4_mcp, theorem_search, git_tools, bash_tool, issue_tracker]
+af_tools: [file_system, lean4_mcp, mathlib_search, git_tools, bash_tool, issue_tracker]
 af_datasets: [textbook]
 af_dataset_notes:
     textbook: "Introduction to Algebraic Combinatorics by Darij Grinberg (~500 pages, 340 target theorems/definitions). Chosen for being largely disjoint from existing Mathlib coverage."
@@ -19,7 +19,7 @@ af_statement_formalization_evaluation: "Post-run, an interactive blueprint websi
 af_tool_notes:
   file_tools: "List, read (with line ranges), write, edit (string replacement or line-range replacement), delete, and grep across the project. Write access excludes .tex, .md, .pdf, .txt files. Reviewer agents get read-only access."
   lean4_mcp: "Centralized pool of persistent Lean 4 REPL instances with Mathlib preloaded. Agents send code snippets and receive OK or detailed error messages with goal states. Much faster than lake build for iterative proof development."
-  theorem_search: "Three tools: mathlib_grep (ripgrep regex search across Mathlib source, filterable by declaration kind), mathlib_find_name (exact or fuzzy declaration name search), mathlib_read_file (read Mathlib source with line ranges). Enables discovery of existing lemmas and APIs."
+  mathlib_search: "Three tools: mathlib_grep (ripgrep regex search across Mathlib source, filterable by declaration kind), mathlib_find_name (exact or fuzzy declaration name search), mathlib_read_file (read Mathlib source with line ranges). Enables discovery of existing lemmas and APIs."
   git_tools: "Agents operate in isolated git worktrees. Restricted commands: status, add, commit, diff, log, rebase, restore, checkout_file. Write access constrained to the agent's own branch."
   bash_tool: "Sandboxed shell with an allowlist of safe commands: lake (Lean build system), text processing (cat, grep, sed, awk), file navigation. Dangerous commands (rm -rf, curl, network access) blocked by SafeShell validator."
   issue_tracker: "File-system-based issue tracking (YAML in ISSUES.md). Agents can create_issue (with description and origin) and list_issues (filtered by status). Enables asynchronous coordination between agent roles."

@@ -11,10 +11,10 @@ af_short_title: "Numina-Lean-Agent"
 af_input: "Formal Statement"
 af_output: "Formal Proof"
 af_agents: [orchestrator, formal_prover, NLP_prover, NLP_proof_reviewer, break_to_lemma]
-af_tools: [lean4_mcp, theorem_search, blueprint_tool]
+af_tools: [lean4_mcp, mathlib_search]
 af_tool_notes:
   lean4_mcp: "Lean-LSP-MCP provides semantic awareness (proof goals, file diagnostics), code execution (compile snippets, parallel strategy evaluation at single nodes), and theorem retrieval from local projects"
-  theorem_search: "LeanDex performs semantic natural-language search over Lean v4.26.0 packages including Mathlib and FLT"
+  mathlib_search: "LeanDex performs semantic natural-language search over Lean v4.26.0 packages including Mathlib and FLT"
   blueprint_tool: "Blueprint Generation decomposes long-horizon tasks into a DAG of verifiable subgoals; revised dynamically based on Lean compilation feedback in a recursive loop"
 af_agent_notes:
   orchestrator: "General coding agent (Claude Code) autonomously selects and invokes MCP tools to drive the overall proof search. It can call the Discussion Partner that serves as a collaborative network of external language models that the primary agent can proactively query when encountering proof bottlenecks or strategic dilemmas."

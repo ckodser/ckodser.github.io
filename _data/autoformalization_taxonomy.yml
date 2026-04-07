@@ -42,16 +42,12 @@ agents:
 tools:
   - id: lean4_mcp
     name: Lean 4 MCP
-  - id: theorem_search
-    name: Theorem Search
-  - id: literature_search
-    name: Document Search
+  - id: mathlib_search
+    name: Lean Search
   - id: code_execution
     name: Code Execution
   - id: file_system
     name: File System
-  - id: blueprint_tool
-    name: Blueprint Tool
   - id: bash_tool
     name: Bash Tool
   - id: git_tools
@@ -68,6 +64,8 @@ tools:
     name: Sorrifier
   - id: syntax_refiner
     name: Syntax Refiner
+  - id: web_search
+    name: Web Search
 datasets:
   - id: MiniF2F
     name: MiniF2F

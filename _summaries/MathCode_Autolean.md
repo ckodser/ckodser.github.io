@@ -11,11 +11,11 @@ af_short_title: "MathCode"
 af_input: "NLP Statement"
 af_output: "Formal Statement + Formal Proof"
 af_agents: [planner, formal_statement, formal_prover, NLP_prover]
-af_tools: [lean4_mcp, literature_search, file_system, anti_trivialization_guard]
+af_tools: [lean4_mcp, mathlib_search, file_system, anti_trivialization_guard]
 af_statement_formalization_evaluation: "Two-layer check: (1) hardcoded anti-trivialization guard rejects statements reduced to True/False, (2) LLM-based semantic evaluator grades fidelity A-D against original NLP problem on 5-point checklist (objects, quantifiers, hypotheses, conclusions, multi-part coverage). Optional strict A+ recheck and double-check mode with cross-model agreement."
 af_tool_notes:
   lean4_compiler: "Core verification tool invoked via lake env lean. Compiles generated Lean 4 files against a Mathlib-configured workspace. Provides structured error messages for repair loops. Ground-truth correctness oracle."
-  literature_search: "Optional tool for Thinking and Coding agents via OpenRouter web search plugin. Queries internet for Mathlib documentation, theorem names, and mathematical references. Configurable search engine and max results."
+  mathlib_search: "Optional tool for Thinking and Coding agents via OpenRouter web search plugin. Queries internet for Mathlib documentation, theorem names, and mathematical references. Configurable search engine and max results."
   file_system: "Reads input JSON files from input directory, writes generated Lean files to output directory, maintains detailed per-iteration logs (thinking/coding/compiler stdout/stderr, evaluation payloads, metadata JSON)."
   anti_trivialization_guard: "Deterministic code-level policy check (not an LLM). Parses theorem header and rejects statements where the main proposition is trivially True or False. Enforces sorry in formalization-only mode and no sorry in require-no-sorry mode."
 

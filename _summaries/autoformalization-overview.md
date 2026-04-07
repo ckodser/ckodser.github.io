@@ -63,13 +63,29 @@ img: assets/img/autoformalization-overview/banner.svg
 </div>
 
 <h3>Agents Used</h3>
+{% assign agent_sort = "" %}
+{% for agent in site.data.autoformalization_taxonomy.agents %}
+  {% assign acount = 0 %}
+  {% for paper in af_papers %}
+    {% if paper.af_agents contains agent.id %}{% assign acount = acount | plus: 1 %}{% endif %}
+  {% endfor %}
+  {% assign ainv = 99 | minus: acount %}
+  {% capture asort_entry %}{{ ainv | prepend: "00" | slice: -2, 2 }}:{{ forloop.index0 | prepend: "00" | slice: -2, 2 }}:{{ agent.id }}{% endcapture %}
+  {% assign asort_entry = asort_entry | strip %}
+  {% unless forloop.first %}{% assign agent_sort = agent_sort | append: "," %}{% endunless %}
+  {% assign agent_sort = agent_sort | append: asort_entry %}
+{% endfor %}
+{% assign sorted_agents = agent_sort | split: "," | sort %}
 <div class="table-responsive">
   <table class="table table-sm table-bordered text-center af-comparison-table">
     <thead>
       <tr>
         <th class="text-left">Paper</th>
-        {% for agent in site.data.autoformalization_taxonomy.agents %}
-        <th>{{ agent.name }}</th>
+        {% for entry in sorted_agents %}
+        {% assign eparts = entry | split: ":" %}
+        {% assign eid = eparts[2] %}
+        {% assign edata = site.data.autoformalization_taxonomy.agents | where: "id", eid | first %}
+        <th>{{ edata.name }}</th>
         {% endfor %}
       </tr>
     </thead>
@@ -78,8 +94,10 @@ img: assets/img/autoformalization-overview/banner.svg
       {% if paper.af_agents %}
       <tr>
         <td class="text-left"><a href="{{ paper.url | relative_url }}">{{ paper.af_short_title | default: paper.title }}</a></td>
-        {% for agent in site.data.autoformalization_taxonomy.agents %}
-        <td>{% if paper.af_agents contains agent.id %}{% assign note = paper.af_agent_notes[agent.id] %}<span class="af-check" {% if note %}data-tooltip="{{ note }}"{% endif %}>&#x2713;</span>{% else %}<span class="af-empty">&middot;</span>{% endif %}</td>
+        {% for entry in sorted_agents %}
+        {% assign eparts = entry | split: ":" %}
+        {% assign eid = eparts[2] %}
+        <td>{% if paper.af_agents contains eid %}{% assign note = paper.af_agent_notes[eid] %}<span class="af-check" {% if note %}data-tooltip="{{ note }}"{% endif %}>&#x2713;</span>{% else %}<span class="af-empty">&middot;</span>{% endif %}</td>
         {% endfor %}
       </tr>
       {% endif %}
@@ -89,13 +107,29 @@ img: assets/img/autoformalization-overview/banner.svg
 </div>
 
 <h3>Tools &amp; MCPs Available</h3>
+{% assign tool_sort = "" %}
+{% for tool in site.data.autoformalization_taxonomy.tools %}
+  {% assign tcount = 0 %}
+  {% for paper in af_papers %}
+    {% if paper.af_tools contains tool.id %}{% assign tcount = tcount | plus: 1 %}{% endif %}
+  {% endfor %}
+  {% assign tinv = 99 | minus: tcount %}
+  {% capture tsort_entry %}{{ tinv | prepend: "00" | slice: -2, 2 }}:{{ forloop.index0 | prepend: "00" | slice: -2, 2 }}:{{ tool.id }}{% endcapture %}
+  {% assign tsort_entry = tsort_entry | strip %}
+  {% unless forloop.first %}{% assign tool_sort = tool_sort | append: "," %}{% endunless %}
+  {% assign tool_sort = tool_sort | append: tsort_entry %}
+{% endfor %}
+{% assign sorted_tools = tool_sort | split: "," | sort %}
 <div class="table-responsive">
   <table class="table table-sm table-bordered text-center af-comparison-table">
     <thead>
       <tr>
         <th class="text-left">Paper</th>
-        {% for tool in site.data.autoformalization_taxonomy.tools %}
-        <th>{{ tool.name }}</th>
+        {% for entry in sorted_tools %}
+        {% assign tparts = entry | split: ":" %}
+        {% assign tid = tparts[2] %}
+        {% assign tdata = site.data.autoformalization_taxonomy.tools | where: "id", tid | first %}
+        <th>{{ tdata.name }}</th>
         {% endfor %}
       </tr>
     </thead>
@@ -104,8 +138,10 @@ img: assets/img/autoformalization-overview/banner.svg
       {% if paper.af_tools %}
       <tr>
         <td class="text-left"><a href="{{ paper.url | relative_url }}">{{ paper.af_short_title | default: paper.title }}</a></td>
-        {% for tool in site.data.autoformalization_taxonomy.tools %}
-        <td>{% if paper.af_tools contains tool.id %}{% assign tnote = paper.af_tool_notes[tool.id] %}<span class="af-check" {% if tnote %}data-tooltip="{{ tnote }}"{% endif %}>&#x2713;</span>{% else %}<span class="af-empty">&middot;</span>{% endif %}</td>
+        {% for entry in sorted_tools %}
+        {% assign tparts = entry | split: ":" %}
+        {% assign tid = tparts[2] %}
+        <td>{% if paper.af_tools contains tid %}{% assign tnote = paper.af_tool_notes[tid] %}<span class="af-check" {% if tnote %}data-tooltip="{{ tnote }}"{% endif %}>&#x2713;</span>{% else %}<span class="af-empty">&middot;</span>{% endif %}</td>
         {% endfor %}
       </tr>
       {% endif %}
@@ -115,13 +151,29 @@ img: assets/img/autoformalization-overview/banner.svg
 </div>
 
 <h3>Datasets Used</h3>
+{% assign dataset_sort = "" %}
+{% for dataset in site.data.autoformalization_taxonomy.datasets %}
+  {% assign dcount = 0 %}
+  {% for paper in af_papers %}
+    {% if paper.af_datasets contains dataset.id %}{% assign dcount = dcount | plus: 1 %}{% endif %}
+  {% endfor %}
+  {% assign dinv = 99 | minus: dcount %}
+  {% capture dsort_entry %}{{ dinv | prepend: "00" | slice: -2, 2 }}:{{ forloop.index0 | prepend: "00" | slice: -2, 2 }}:{{ dataset.id }}{% endcapture %}
+  {% assign dsort_entry = dsort_entry | strip %}
+  {% unless forloop.first %}{% assign dataset_sort = dataset_sort | append: "," %}{% endunless %}
+  {% assign dataset_sort = dataset_sort | append: dsort_entry %}
+{% endfor %}
+{% assign sorted_datasets = dataset_sort | split: "," | sort %}
 <div class="table-responsive">
   <table class="table table-sm table-bordered text-center af-comparison-table">
     <thead>
       <tr>
         <th class="text-left">Paper</th>
-        {% for dataset in site.data.autoformalization_taxonomy.datasets %}
-        <th>{{ dataset.name }}</th>
+        {% for entry in sorted_datasets %}
+        {% assign dparts = entry | split: ":" %}
+        {% assign did = dparts[2] %}
+        {% assign ddata = site.data.autoformalization_taxonomy.datasets | where: "id", did | first %}
+        <th>{{ ddata.name }}</th>
         {% endfor %}
       </tr>
     </thead>
@@ -130,8 +182,10 @@ img: assets/img/autoformalization-overview/banner.svg
       {% if paper.af_datasets %}
       <tr>
         <td class="text-left"><a href="{{ paper.url | relative_url }}">{{ paper.af_short_title | default: paper.title }}</a></td>
-        {% for dataset in site.data.autoformalization_taxonomy.datasets %}
-        <td>{% if paper.af_datasets contains dataset.id %}{% assign dnote = paper.af_dataset_notes[dataset.id] %}<span class="af-check" {% if dnote %}data-tooltip="{{ dnote }}"{% endif %}>&#x2713;</span>{% else %}<span class="af-empty">&middot;</span>{% endif %}</td>
+        {% for entry in sorted_datasets %}
+        {% assign dparts = entry | split: ":" %}
+        {% assign did = dparts[2] %}
+        <td>{% if paper.af_datasets contains did %}{% assign dnote = paper.af_dataset_notes[did] %}<span class="af-check" {% if dnote %}data-tooltip="{{ dnote }}"{% endif %}>&#x2713;</span>{% else %}<span class="af-empty">&middot;</span>{% endif %}</td>
         {% endfor %}
       </tr>
       {% endif %}

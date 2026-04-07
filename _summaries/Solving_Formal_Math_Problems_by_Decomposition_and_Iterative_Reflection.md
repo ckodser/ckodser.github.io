@@ -11,14 +11,14 @@ af_short_title: "Delta Prover"
 af_input: "Formal Statement + NLP Statement"
 af_output: "Formal Proof"
 af_agents: [NLP_prover, break_to_lemma, formal_prover]
-af_tools: [lean4_mcp, custom_lean4_dsl, theorem_search]
+af_tools: [lean4_mcp, custom_lean4_dsl, mathlib_search]
 af_datasets: [MiniF2F]
 af_dataset_notes:
     miniF2F: "244 math problems collected from mathematics competitions and the MATH dataset. A more challenging subset consisting strictly of all International Mathematical Olympiad (IMO) problems within the miniF2F-test benchmark."
 af_tool_notes:
     lean4_mcp: "Serves as the absolute ground truth, actively compiling and executing LLM-generated code. When a proof attempt fails, the kernel outputs diagnostic information including the specific error location and current tactic state, guiding the Iterative Proof Repair agent toward a correct solution."
     custom_lean4_dsl: "Built using Lean 4's metaprogramming, this tool provides specialized syntax for high-level proof sketching and goal management. It allows agents to introduce hypotheses, define arbitrary expressions, and isolate sub-problem contexts without needing immediate proofs. Native Lean 4 is optimized for low-level tactics rather than managing unproven, interconnected sub-goals."
-    theorem_search: "Intervenes when the Iterative Proof Repair agent struggles with the vast Mathlib4 library. If the Lean 4 kernel flags an unknown or incorrectly named identifier, this tool searches for and retrieves correct theorem names, definitions, and signatures, injecting retrieved context back into the prompt."
+    mathlib_search: "Intervenes when the Iterative Proof Repair agent struggles with the vast Mathlib4 library. If the Lean 4 kernel flags an unknown or incorrectly named identifier, this tool searches for and retrieves correct theorem names, definitions, and signatures, injecting retrieved context back into the prompt."
 af_agent_notes:
     NLP_prover: "Creates a step-by-step informal proof plan based on the original problem statements. By receiving both the formal and natural language statements, it formulates a high-level strategic outline that bridges human reasoning and formal logic. This informal plan serves as a direct blueprint for the subsequent formal decomposition phase. "
     break_to_lemma: "Utilizes a custom Domain-Specific Language (DSL) to translate the informal proof plan into a formal proof sketch. It breaks down complex, intractable theorems into manageable sub-problems. If downstream proving attempts fail, this agent exhibits reflective capabilities by analyzing the failed sub-problems and regenerating a revised, alternative decomposition sketch."

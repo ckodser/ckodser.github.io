@@ -11,10 +11,10 @@ af_short_title: "Designing Agentic Tool (proposal)"
 af_input: "NLP Statement"
 af_output: "Formal Statement + Formal Proof"
 af_agents: [orchestrator, code_generation, NLP_prover, NLP_proof_reviewer, formalizer]
-af_tools: [lean4_mcp, literature_search, code_execution]
+af_tools: [lean4_mcp, web_search, code_execution]
 af_tool_notes:
   lean4_mcp: "Formalization Bridge translates proof slices into Lean or Coq; compilation failures are extracted as minimal missing obligations (type mismatches, missing lemmas) and fed back into the adversarial review loop as blocking items"
-  literature_search: "Two-pass semantic search: a pre-solve pass identifies prior art and likely techniques; a post-solve pass uses the generated proof structure to detect subsumption by existing results"
+  web_search: "Two-pass semantic search: a pre-solve pass identifies prior art and likely techniques; a post-solve pass uses the generated proof structure to detect subsumption by existing results"
   code_execution: "Computational Agent writes and runs experimental code for numerical exploration and counterexample search, operating under a dedicated code-review loop before results inform proof strategy"
 af_agent_notes:
   orchestrator: "Controls pipeline routing and human checkpoints based on a confidence score; maintains the Claim Ledger that requires every nontrivial statement to link to a specific evidence object"

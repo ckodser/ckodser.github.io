@@ -1387,6 +1387,118 @@ ninja-keys::part(ninja-input-wrapper) {
   }
 }
 
+// Autoformalization metadata badges
+.af-metadata {
+  background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.af-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.af-field {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.af-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--global-text-color-light);
+  white-space: nowrap;
+}
+
+.af-value {
+  font-size: 0.9rem;
+  color: var(--global-text-color);
+}
+
+.af-value--eval {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--global-text-color-light);
+}
+
+.af-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.af-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.2em 0.65em;
+  border-radius: 6px;
+  cursor: default;
+
+  &--agent {
+    background-color: rgba(94, 114, 228, 0.12);
+    color: #5e72e4;
+    border: 1px solid rgba(94, 114, 228, 0.25);
+  }
+
+  &--tool {
+    background-color: rgba(45, 206, 137, 0.12);
+    color: #2dce89;
+    border: 1px solid rgba(45, 206, 137, 0.25);
+  }
+
+  &--dataset {
+    background-color: rgba(251, 99, 64, 0.12);
+    color: #fb6340;
+    border: 1px solid rgba(251, 99, 64, 0.25);
+  }
+
+}
+
+.af-has-tooltip {
+  position: relative;
+  cursor: help;
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
+
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 8px);
+    transform: translateX(-50%);
+    background-color: var(--global-text-color);
+    color: var(--global-bg-color);
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.4;
+    padding: 0.5em 0.75em;
+    border-radius: 6px;
+    width: max-content;
+    max-width: 320px;
+    white-space: normal;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 10;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
 // highlight-search-term
 ::highlight(search) {
   background-color: var(--global-theme-color);

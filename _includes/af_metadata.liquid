@@ -1,0 +1,86 @@
+{% if page.af_input or page.af_output or page.af_agents or page.af_tools or page.af_datasets %}
+<div class="af-metadata">
+
+  {% if page.af_input or page.af_output %}
+  <div class="af-row">
+    {% if page.af_input %}
+    <div class="af-field">
+      <span class="af-label">Input</span>
+      <span class="af-value">{{ page.af_input }}</span>
+    </div>
+    {% endif %}
+    {% if page.af_output %}
+    <div class="af-field">
+      <span class="af-label">Output</span>
+      <span class="af-value">{{ page.af_output }}</span>
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% if page.af_agents %}
+  <div class="af-field">
+    <span class="af-label"><i class="fa-solid fa-robot fa-sm"></i> Agents</span>
+    <span class="af-badges">
+      {% for agent_id in page.af_agents %}
+        {% assign agent_name = agent_id %}
+        {% for a in site.data.autoformalization_taxonomy.agents %}
+          {% if a.id == agent_id %}{% assign agent_name = a.name %}{% endif %}
+        {% endfor %}
+        {% if page.af_agent_notes and page.af_agent_notes[agent_id] %}
+          <span class="af-badge af-badge--agent af-has-tooltip" data-tooltip="{{ page.af_agent_notes[agent_id] }}">{{ agent_name }}</span>
+        {% else %}
+          <span class="af-badge af-badge--agent">{{ agent_name }}</span>
+        {% endif %}
+      {% endfor %}
+    </span>
+  </div>
+  {% endif %}
+
+  {% if page.af_tools %}
+  <div class="af-field">
+    <span class="af-label"><i class="fa-solid fa-wrench fa-sm"></i> Tools</span>
+    <span class="af-badges">
+      {% for tool_id in page.af_tools %}
+        {% assign tool_name = tool_id %}
+        {% for t in site.data.autoformalization_taxonomy.tools %}
+          {% if t.id == tool_id %}{% assign tool_name = t.name %}{% endif %}
+        {% endfor %}
+        {% if page.af_tool_notes and page.af_tool_notes[tool_id] %}
+          <span class="af-badge af-badge--tool af-has-tooltip" data-tooltip="{{ page.af_tool_notes[tool_id] }}">{{ tool_name }}</span>
+        {% else %}
+          <span class="af-badge af-badge--tool">{{ tool_name }}</span>
+        {% endif %}
+      {% endfor %}
+    </span>
+  </div>
+  {% endif %}
+
+  {% if page.af_datasets %}
+  <div class="af-field">
+    <span class="af-label"><i class="fa-solid fa-database fa-sm"></i> Datasets</span>
+    <span class="af-badges">
+      {% for ds_id in page.af_datasets %}
+        {% assign ds_name = ds_id %}
+        {% for d in site.data.autoformalization_taxonomy.datasets %}
+          {% if d.id == ds_id %}{% assign ds_name = d.name %}{% endif %}
+        {% endfor %}
+        {% if page.af_dataset_notes and page.af_dataset_notes[ds_id] %}
+          <span class="af-badge af-badge--dataset af-has-tooltip" data-tooltip="{{ page.af_dataset_notes[ds_id] }}">{{ ds_name }}</span>
+        {% else %}
+          <span class="af-badge af-badge--dataset">{{ ds_name }}</span>
+        {% endif %}
+      {% endfor %}
+    </span>
+  </div>
+  {% endif %}
+
+  {% if page.af_statement_formalization_evaluation %}
+  <div class="af-field">
+    <span class="af-label"><i class="fa-solid fa-clipboard-check fa-sm"></i> Evaluation</span>
+    <span class="af-value af-value--eval">{{ page.af_statement_formalization_evaluation }}</span>
+  </div>
+  {% endif %}
+
+</div>
+{% endif %}
