@@ -2,31 +2,30 @@
 layout: page
 title: Seed-Prover 1.5 Mastering Undergraduate-Level Theorem Proving via Learning from Experience
 description: Documentation of the training methodologies and experimental scaling results of the Seed-Prover 1.5 formal theorem proving model.
-categories: [autoformalizer]
+categories: [autoformalization]
 img: assets/img/Seed_Prover_1_5_Mastering_Undergraduate_Level_Theorem_Proving_via_Learning_from_Experience/image10.png
 importance: 1
 giscus_comments: true
 link: https://arxiv.org/pdf/2512.17260
-af_short_title: "Seed-Prover 1.5"
+af_short_title: "Seed-Prover"
 af_input: "Formal Statement"
 af_output: "Formal Proof"
-af_agents: [nlp_prover, break_to_lemma, formal_prover]
-af_tools: [lean_mcp, mathlib_search, code_execution]
-af_datasets: [PutnamBench, FATE, CombiBench, IMO, Erdős]
+af_agents: [NLP_prover, break_to_lemma, formal_prover]
+af_tools: [lean4_mcp, mathlib_search, code_execution]
+af_datasets: [PutnamBench, FATE, CombiBench, IMO]
 af_tool_notes:
-  lean_mcp: "A REPL-based Python interface for Lean. It compiles individual lemmas sequentially instead of requiring a whole proof, storing the statement header and proven lemmas in the running context, and returns structured feedback to the model."
+  lean4_mcp: "A REPL-based Python interface for Lean. It compiles individual lemmas sequentially instead of requiring a whole proof, storing the statement header and proven lemmas in the running context, and returns structured feedback to the model."
   mathlib_search: "An embedding-based semantic retrieval tool (using sentence transformers and FAISS) calibrated to Mathlib v4.22.0. It identifies relevant theorems, lemmas, or definitions based on semantic similarity to a query."
   code_execution: "An interface that allows the agent to generate and run Python scripts, enabling numerical experiments, calculations, and computational checks during the proving trajectory."
 af_agent_notes:
-  natural_language_prover: "An LLM optimized for generating rigorous, lemma-style natural language proofs. It provides the initial high-level strategic reasoning to guide the formalization process."
+  NLP_prover: "An LLM optimized for generating rigorous, lemma-style natural language proofs. It provides the initial high-level strategic reasoning to guide the formalization process."
   break_to_lemma: "A translation agent trained via Rubric RL (VAPO). It acts as a hierarchical problem decomposer by converting the natural language proofs into lemma-style Lean sketches, outlining auxiliary lemmas with 'sorry' placeholders."
   formal_prover: "A tool-integrated LLM trained via large-scale Agentic Reinforcement Learning. It iteratively attempts to prove or disprove each unsolved lemma within the sketch using tools. If a lemma is verified, it caches it as an axiom to reduce context overhead; if a lemma is disproved, it triggers the sketch model to refine the plan."
 af_datasets_notes:
-  PutnamBench: "A dataset of 660 undergraduate-level problems from the Putnam Mathematical Competition. Seed-Prover 1.5 achieved an 87.9% solve rate (580 problems). The 2025 Putnam Competition problem set. Seed-Prover 1.5 successfully solved 11 out of 12 problems within a 9-hour window."
+  PutnamBench: "87.9% solve rate (580 problems). Seed-Prover 1.5 successfully solved 11 out of 12 problems (The 2025 Putnam Competition problem set) within a 9-hour window."
   FATE: "A benchmark suite featuring FATE-H (100 honors/graduate-level problems) and FATE-X (100 PhD-level qualifying exam problems). The system solved 80% of FATE-H and 33% of FATE-X."
   CombiBench: "A benchmark centered on combinatorial problems often involving novel concepts. Seed-Prover 1.5 achieved a 48% solve rate, though the authors noted significant formalization issues in the dataset."
   IMO: "The 2025 International Mathematical Olympiad problem set. The system solved 5 out of the 6 problems using a moderate compute budget (10 H20-days/problem)."
-  Erdős: "A subset of open mathematical problems/conjectures from the Erdős problem sets. The model solved 15 problems, though the authors note these specific problems were mathematically simpler or simplified due to mis-formalization."
 ---
 
 
