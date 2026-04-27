@@ -12,7 +12,7 @@ af_input: "Formal Statement"
 af_output: "Formal Proof"
 af_agents: [NLP_prover, break_to_lemma, formal_prover]
 af_tools: [lean4_mcp, mathlib_search, code_execution]
-af_datasets: [PutnamBench, FATE, CombiBench, IMO]
+af_datasets: [PutnamBench, FATE, CombiBench, IMO, Erdős]
 af_tool_notes:
   lean4_mcp: "A REPL-based Python interface for Lean. It compiles individual lemmas sequentially instead of requiring a whole proof, storing the statement header and proven lemmas in the running context, and returns structured feedback to the model."
   mathlib_search: "An embedding-based semantic retrieval tool (using sentence transformers and FAISS) calibrated to Mathlib v4.22.0. It identifies relevant theorems, lemmas, or definitions based on semantic similarity to a query."
@@ -26,6 +26,7 @@ af_datasets_notes:
   FATE: "A benchmark suite featuring FATE-H (100 honors/graduate-level problems) and FATE-X (100 PhD-level qualifying exam problems). The system solved 80% of FATE-H and 33% of FATE-X."
   CombiBench: "A benchmark centered on combinatorial problems often involving novel concepts. Seed-Prover 1.5 achieved a 48% solve rate, though the authors noted significant formalization issues in the dataset."
   IMO: "The 2025 International Mathematical Olympiad problem set. The system solved 5 out of the 6 problems using a moderate compute budget (10 H20-days/problem)."
+  Erdős: "A subset of open mathematical problems/conjectures from the Erdős problem sets. The model solved 15 problems, though the authors note these specific problems were mathematically simpler or simplified due to mis-formalization."
 ---
 
 

@@ -43,6 +43,8 @@ agents:
     name: Geometry Solver
   - id: proof_search_algorithm
     name: Proof Search Algorithm
+  - id: subgoal_extractor
+    name: Subgoal Extractor
 tools:
   - id: lean4_mcp
     name: Lean 4 MCP
@@ -109,3 +111,5 @@ datasets:
     name: Ag 30
   - id: IMO
     name: Imo
+  - id: Erdős
+    name: Erdős

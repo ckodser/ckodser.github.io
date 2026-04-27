@@ -2,7 +2,7 @@
 layout: page
 title: Hilbert Recursively Building Formal Proofs with Informal Reasoning
 description: A multi-agent framework that orchestrates general-purpose reasoning models and specialized prover models to recursively decompose and solve formal mathematical theorems.
-categories: [autoformalizer]
+categories: [autoformalization]
 img: assets/img/Hilbert_Recursively_Building_Formal_Proofs_with_Informal_Reasoning/image8.png
 importance: 1
 giscus_comments: true
@@ -10,15 +10,15 @@ link: https://arxiv.org/pdf/2509.22819
 af_short_title: "HILBERT"
 af_input: "Formal Statement"
 af_output: "Formal Proof"
-af_agents: [formal_prover, nlp_prover, break_to_lemma,subgoal_extractor, proof_assembler]
-af_tools: [lean_mcp, mathlib_search]
+af_agents: [formal_prover, NLP_prover, break_to_lemma,subgoal_extractor, proof_assembler]
+af_tools: [lean4_mcp, mathlib_search]
 af_datasets: [MiniF2F, PutnamBench]
 af_tool_notes:
-  lean_mcp: "The Kimina Lean Server running Lean 4. It acts as the formal verification loop, checking the syntactic and mathematical correctness of theorem statements, proof sketches, and formal proofs, and providing detailed error messages to guide the error_corrector. It has a concurrency mechanism built around Python's asyncio library that orchestrates parallel requests across the framework's multiple steps to optimize runtime efficiency."
+  lean4_mcp: "The Kimina Lean Server running Lean 4. It acts as the formal verification loop, checking the syntactic and mathematical correctness of theorem statements, proof sketches, and formal proofs, and providing detailed error messages to guide the error_corrector. It has a concurrency mechanism built around Python's asyncio library that orchestrates parallel requests across the framework's multiple steps to optimize runtime efficiency."
   mathlib_search: "A semantic search engine built with sentence transformers and FAISS indexing. It retrieves the most relevant theorems and tactics from Mathlib by computing cosine similarity against informal theorem descriptions."
 af_agent_notes:
   formal_prover: "A specialized prover LLM (e.g., DeepSeek-V2-7B or Goedel-Prover-V2 32B) that attempts to generate direct formal proofs given a formal theorem statement or an extracted sub-goal. They also attempt to solve subgoals directly with General LLMs as shallow_solver agent. shallow_solver agent: If the formal_prover fails to close a specific sub-goal, this agent uses retrieved theorems and the general-purpose reasoner to write targeted short proofs for that isolated sub-problem."
-  nlp_prover: "A general-purpose reasoning LLM that generates step-by-step informal natural language proofs, and creates a Lean 4 proof sketch that decomposes complex reasoning into logical subgoals with 'sorry' placeholders. Analyzes compilation errors returned by the lean_verifier and iteratively refines incorrect proofs, fixes syntax errors in extracted subgoals, or revises flawed proof sketches based on compiler feedback."
+  NLP_prover: "A general-purpose reasoning LLM that generates step-by-step informal natural language proofs, and creates a Lean 4 proof sketch that decomposes complex reasoning into logical subgoals with 'sorry' placeholders. Analyzes compilation errors returned by the lean_verifier and iteratively refines incorrect proofs, fixes syntax errors in extracted subgoals, or revises flawed proof sketches based on compiler feedback."
   break_to_lemma: "A general-purpose reasoning LLM that generates step-by-step informal natural language proofs, and creates a Lean 4 proof sketch that decomposes complex reasoning into logical subgoals with 'sorry' placeholders. Analyzes compilation errors returned by the lean_verifier and iteratively refines incorrect proofs, fixes syntax errors in extracted subgoals, or revises flawed proof sketches based on compiler feedback. Same agent as nlp prover. There is only one agent that does both."
   subgoal_extractor: "Extracts the 'have' statements from the generated proof sketch, converting them into independent, isolated theorem statements with 'sorry' proofs and relevant contextual hypotheses."
   proof_assembler: "After subgoals are resolved, this agent replaces the 'sorry' placeholders in the proof sketch with calls to the proven subgoal theorems, assembling them back together into a complete proof for the main target theorem."
