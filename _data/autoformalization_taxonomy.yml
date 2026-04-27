@@ -39,6 +39,10 @@ agents:
     name: Planner
   - id: proof_assembler
     name: Proof Assembler
+  - id: geometry_solver
+    name: Geometry Solver
+  - id: proof_search_algorithm
+    name: Proof Search Algorithm
 tools:
   - id: lean4_mcp
     name: Lean 4 MCP
@@ -66,6 +70,8 @@ tools:
     name: Syntax Refiner
   - id: web_search
     name: Web Search
+  - id: yuclid
+    name: Yuclid
 datasets:
   - id: MiniF2F
     name: MiniF2F
@@ -99,3 +105,7 @@ datasets:
     name: Omni Math
   - id: APRIL
     name: APRIL
+  - id: AG-30
+    name: Ag 30
+  - id: IMO
+    name: Imo
