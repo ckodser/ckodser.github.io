@@ -11,6 +11,18 @@
 - title: Education
   type: time_table
   contents:
+    - title: PhD Student
+      institution: Stanford University, Stanford, CA, USA
+      year: 2026 - Present
+      description:
+        - Management Science & Engineering
+        - Advised by <a href="https://msande.stanford.edu/people/amin-saberi">Prof. Amin Saberi</a>
+    - title: PhD Student (transferred to Stanford)
+      institution: University of Maryland, College Park, MD, USA
+      year: 2025 - 2026
+      description:
+        - Computer Science
+        - Advised by <a href="https://www.cs.umd.edu/~sfeizi/">Prof. Soheil Feizi</a> and <a href="http://www.cs.umd.edu/~hajiagha/">Prof. MohammadTaghi Hajiaghayi</a>
     - title: Bachelor
       institution: Sharif University of Technology , Tehran, Iran
       year: 2019

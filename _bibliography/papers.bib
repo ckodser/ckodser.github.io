@@ -124,3 +124,27 @@ abbr={ICLR},
       url={https://arxiv.org/abs/2509.25178},
       selected={false}
 }
+
+@inproceedings{moakhar2026product,
+      abbr={ICML},
+      title={Decision Tree Learning on Product Spaces <a href="https://icml.cc/virtual/2026/poster/65549">(ICML)</a>},
+      author={Arshia Soltani Moakhar and Faraz Ghahremani and Kiarash Banihashem and Mohammad Taghi Hajiaghayi},
+      booktitle={International Conference on Machine Learning (ICML)},
+      year={2026},
+      arxiv={2605.12983},
+      poster={decision_tree_product_spaces_poster.png},
+      abstract={Decision tree learning has long been a central topic in theoretical computer science, driven by its practical importance. A fundamental and widely used method for decision tree construction is the top-down greedy heuristic, which recursively splits on the most influential variable. Despite its empirical success, theoretical analysis of this heuristic has been limited. A recent breakthrough by Blanc et al. (ITCS, 2020) provided the first rigorous theoretical guarantees for the greedy approach, but only under the uniform distribution. We extend this analysis to the more general and practically relevant setting of arbitrary product distributions. Our main result shows that for any function $f$ computable by an optimal decision tree of size $s$, maximum depth $D_{\text{opt}}$, and average depth $\Delta_{\text{opt}}$, the greedy heuristic constructs an $\epsilon$-approximating tree whose size grows at most with $\exp\bigl(\Delta_{\text{opt}} D_{\text{opt}} \log(e/\epsilon)\bigr)$. In the special case where the optimal tree is a full binary tree, this bound improves upon the bound of Blanc et al. and holds under a strictly broader class of distributions. Moreover, we present an algorithm based on the top-down greedy heuristic that is entirely parameter-free---it requires no prior knowledge of the optimal tree's size or depth---offering a practical advantage over Blanc et al.'s method.},
+      selected={true}
+}
+
+@article{moakhar2026beyond,
+      abbr={arXiv},
+      title={Beyond the Library: An Agentic Framework for Autoformalizing Research Mathematics <a href="https://beyondthelibrary.github.io/formal_arxiv/">(Project Page)</a>},
+      author={Arshia Soltani Moakhar and Iman Gholami and Max Springer and Mahdi JafariRaviz and Mohammad Taghi Hajiaghayi},
+      journal={arXiv preprint arXiv:2606.31134},
+      year={2026},
+      arxiv={2606.31134},
+      website={https://beyondthelibrary.github.io/formal_arxiv/},
+      abstract={While Large Language Models (LLMs) have demonstrated exceptional capabilities in mathematical reasoning, they frequently produce subtle errors that evade human detection. Formal mathematical languages like Lean 4 offer mechanical proof checking, strongly motivating the need for autoformalization: the automatic translation of natural language mathematics into verifiable code. Recent trends indicate that general-purpose LLMs, heavily optimized for standard programming, now outperform smaller models explicitly fine-tuned for Lean. Leveraging this shift, we introduce an agentic autoformalization framework powered by general coding LLMs. At the core of our system is an orchestrator that manages a multi-agent pipeline tailored for research-level mathematics. Because cutting-edge research frequently relies on concepts outside the scope of existing libraries like Mathlib, our system dynamically extends necessary type definitions and validates them via a novel Auxiliary Lemma technique before formalizing the primary theorems. We applied our approach to PutnamBench, producing machine-checked Lean proofs for a random sample of 32 problems. Furthermore, we evaluate our system on five papers from the ACM Symposium on Theory of Computing (STOC) spanning combinatorics, communication complexity, mechanism design, and learning theory, successfully formalizing their main theorems and validating the generated formalizations with human experts; for all five we also formalize the proofs alongside the statements, and notably two of them are proved with no axioms beyond Lean's kernel.},
+      selected={true}
+}

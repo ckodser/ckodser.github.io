@@ -8,7 +8,7 @@ profile:
   image: IMG_635.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Computer Engineering Department<br>Sharif University of Technology </p>
+    <p>Management Science &amp; Engineering<br>Stanford University</p>
 
 news: false  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -32,4 +32,4 @@ In this lab (Robust and Interpretable Machine Learning Lab), I worked
 on adversarially robust Out-of-Distribution detection.
 This is not my only venture in the lab. Later I did an internship at the Institute of Science and Technology Austria (IST Austria) under the mentorship of Professor Dan Alistarh, and worked on the utilization of sparsity to enhance interpretability.
 
-I started my PhD in University of Maryland under supervision of Professor Soheil Feizi and MohammadTaghi HajiAghayi. I'm working on reasoning LLMs with Soheil and automatic theorem proving with MohammadTaghi.
+I began my PhD at the University of Maryland under the supervision of Professor Soheil Feizi and Professor MohammadTaghi Hajiaghayi, working on reasoning LLMs with Soheil and automatic theorem proving with MohammadTaghi. In June 2026, I transferred to Stanford University, where I am now a PhD student in the <a href="https://msande.stanford.edu/">Management Science &amp; Engineering</a> department, advised by <a href="https://msande.stanford.edu/people/amin-saberi">Professor Amin Saberi</a>.
