@@ -15,21 +15,12 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: True  # includes social icons at the bottom of the page
 ---
 
-I have wanted to be a researcher since middle school, fascinated by mathematical problems
-and intrigued by challenges. I pursued my interest further in high school by participating
-in the computer science olympiad, which led to my earning a silver medal in the International
-Olympiad in Informatics and participating in ICPC world final.
+I am a PhD student in the <a href="https://msande.stanford.edu/">Management Science &amp; Engineering</a> department at Stanford University, advised by <a href="https://msande.stanford.edu/people/amin-saberi">Professor Amin Saberi</a>.
 
-I also continued to nurture my algorithmic interests by joining the National Olympiad
-in Informatics committee as a member,  contributing to the national olympiad in various capacities.
-These roles include, but are not limited to, serving as the
-summer camp principal graph lecturer (2021),
-leading the algorithmic problem design team for national team selection contests (2021, 2020),
-and heading the algorithmic problem design team for the national summer camp in informatics (2020, 2019).
+I began my PhD at the University of Maryland under the supervision of Professor Soheil Feizi and Professor MohammadTaghi Hajiaghayi, working on reasoning LLMs with Soheil and automatic theorem proving with MohammadTaghi, before transferring to Stanford in June 2026.
 
-Furthering my education, I majored in computer engineering and joined Dr. Rohban's Lab.
-In this lab (Robust and Interpretable Machine Learning Lab), I worked
-on adversarially robust Out-of-Distribution detection.
-This is not my only venture in the lab. Later I did an internship at the Institute of Science and Technology Austria (IST Austria) under the mentorship of Professor Dan Alistarh, and worked on the utilization of sparsity to enhance interpretability.
+Earlier, I majored in computer engineering at Sharif University of Technology and joined Dr. Rohban's Lab (Robust and Interpretable Machine Learning Lab), where I worked on adversarially robust Out-of-Distribution detection. I also did an internship at the Institute of Science and Technology Austria (IST Austria) under the mentorship of Professor Dan Alistarh, working on the utilization of sparsity to enhance interpretability.
 
-I began my PhD at the University of Maryland under the supervision of Professor Soheil Feizi and Professor MohammadTaghi Hajiaghayi, working on reasoning LLMs with Soheil and automatic theorem proving with MohammadTaghi. In June 2026, I transferred to Stanford University, where I am now a PhD student in the <a href="https://msande.stanford.edu/">Management Science &amp; Engineering</a> department, advised by <a href="https://msande.stanford.edu/people/amin-saberi">Professor Amin Saberi</a>.
+My path into research started early. I have wanted to be a researcher since middle school, fascinated by mathematical problems and intrigued by challenges. I pursued this interest in high school through the computer science olympiad, earning a silver medal in the International Olympiad in Informatics and competing in the ICPC world finals.
+
+I also nurtured my algorithmic interests by joining the National Olympiad in Informatics committee, contributing to the national olympiad in various capacities. These roles include, but are not limited to, serving as the summer camp principal graph lecturer (2021), leading the algorithmic problem design team for national team selection contests (2021, 2020), and heading the algorithmic problem design team for the national summer camp in informatics (2020, 2019).
