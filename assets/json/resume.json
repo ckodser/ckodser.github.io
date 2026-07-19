@@ -10,22 +10,33 @@
     "location": {
       "address": "x",
       "postalCode": "x",
-      "city": "Hyattsville",
+      "city": "Stanford",
       "countryCode": "United States",
-      "region": "Maryland"
+      "region": "California"
     },
     "profiles": [
     ]
   },
   "education": [
     {
+      "institution": "Stanford University, Stanford, California",
+      "location": "California, USA",
+      "url": "https://msande.stanford.edu/",
+      "area": "Management Science & Engineering",
+      "studyType": "PhD",
+      "startDate": "2026-06-01",
+      "endDate": "",
+      "score": "",
+      "courses": []
+    },
+    {
       "institution": "University of Maryland, College Park, Maryland",
       "location": "Maryland, USA",
       "url": "https://umd.edu/",
-      "area": "Computer Engineering",
-      "studyType": "PhD",
+      "area": "Computer Science",
+      "studyType": "PhD (transferred to Stanford)",
       "startDate": "2025-07-14",
-      "endDate": "",
+      "endDate": "2026-06-01",
       "score": "",
       "courses": []
     },
